@@ -1,0 +1,51 @@
+<table id="statistics_list" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Map/statistics_list',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#statisticsToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'device_id',width:200,align:'center'">设备ID</th>
+		<th data-options="field:'scress',width:100,align:'center'">点击屏幕</th>
+		<th data-options="field:'parking_path',width:100,align:'center'">点击车位路径</th>
+		<th data-options="field:'parking_spaces',width:100,align:'center'">点击车位查询</th>
+		<th data-options="field:'adv',width:100,align:'center'">点击广告</th>
+		<th data-options="field:'business',width:100,align:'center'">搜索商家</th>
+		<th data-options="field:'wxtimes',width:100,align:'center'">微信扫描次数</th>
+		<!--  <th data-options="field:'stat',width:120,align:'center',formatter:mapstat">操作</th>-->
+	</tr>
+</thead>
+</table>
+
+<div id="statisticsToolbar" style="padding:5px;height:auto">
+	<form id="statisticsFrom">
+		<a href="javascript:;" onclick="statistics_List();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据设备ID搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="statisticsSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+//搜索
+function statisticsSearch(){
+	var queryParams = $('#statistics_list').datagrid('options').queryParams;
+	$.each($("#statisticsFrom").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#statistics_list').datagrid('load');
+}
+//刷新列表
+function statistics_List(){
+	$('#statistics_list').datagrid('reload');
+}
+//操作
+function mapstat(val, row, index){
+	var btn = [];
+	btn.push('<a href="javascript:void(0);" onclick="mapedit('+row.id+')">审核通过</a>');
+	btn.push('<a href="javascript:void(0);" onclick="verifyedit('+row.id+')">编辑</a>');
+	btn.push('<a href="javascript:void(0);" onclick="mapdelete('+row.id+')">删除</a>');
+	return btn.join(' | ');
+	
+}			
+
+</script>

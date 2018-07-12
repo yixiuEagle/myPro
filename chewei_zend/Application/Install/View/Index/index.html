@@ -1,0 +1,25 @@
+<extend name="Public/base"/>
+<block name="header">
+    <li class="active"><a href="javascript:;">安装协议</a></li>
+    <li><a href="javascript:;">环境检测</a></li>
+    <li><a href="javascript:;">创建数据库</a></li>
+    <li><a href="javascript:;">安装</a></li>
+    <li><a href="javascript:;">完成</a></li>
+</block>
+
+<block name="body">
+    <h1>欢迎使用 西竹PHP Web框架V{$version}</h1>
+    <br/><br/>
+    <p>
+    	西竹PHP Web框架集成了接口安全定义、输出接口定义、消息功能集成、客户端升级集成、数据库备份功能、ios消息推送、ios推送证书上传、log日志管理、简单前端APP下载页面。
+    </p>
+    <p>目前支持：Android系统、ios系统</p>
+    <p>开发小组：西竹科技</p>
+    <p>开发人员：yandong monarchzhu</p>
+    <p>小组口号：让开发更简单！</p>
+</block>
+
+<block name="footer" >
+    <a class="btn btn-primary btn-large" href="{:U('Install/step1')}">同意安装</a>
+    <a class="btn btn-large" href="javascript:void(0);" title="亲,您必须同意">不同意</a>
+</block>

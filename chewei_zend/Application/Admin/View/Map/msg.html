@@ -1,0 +1,117 @@
+<table id="msg" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Map/msg',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#mapToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'device_id',width:250,align:'center'">设备ID</th>
+		<!--  <th data-options="field:'mapurl',width:200,align:'center',formatter:buildFace">地图</th>
+		<th data-options="field:'address',width:300,align:'center'">地址</th>
+		<th data-options="field:'offhand',width:80,align:'center'">临时下载价格</th>
+		<th data-options="field:'forever',width:80,align:'center'">永久下载价格</th>-->
+		<th data-options="field:'floor',width:150,align:'center'">楼层</th>
+		<th data-options="field:'rotate',width:150,align:'center'">旋转角度</th>
+		<th data-options="field:'location',width:150,align:'center'">当前位置(x,y)</th>
+		<th data-options="field:'name',width:150,align:'center'">点位名</th>
+		<th data-options="field:'id',width:120,align:'center',formatter:mapstat">操作</th>
+	</tr>
+</thead>
+</table>
+
+<div id="mapToolbar" style="padding:5px;height:auto">
+	<form id="mapFrom">
+		<a href="javascript:;" onclick="msg();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据名称搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="msgSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+	</form>
+</div>
+
+<!-- 编辑 -->
+<div id="mapEditBox" class="easyui-dialog" title="编辑"
+	data-options="modal:true,closed:true,iconCls:'icon-add',
+				buttons:[{text:'确定',iconCls:'icon-ok',
+				handler:function(){$('#mapEditForm').submit();}},
+				{text:'取消',iconCls:'icon-cancel',
+				handler:function(){$('#mapEditBox').dialog('close');}}]"
+	style="width: 500px; height: 400px;"></div>
+<!-- 推送 -->
+<div id="push_mapBox" class="easyui-dialog" title="推送"
+	data-options="modal:true,closed:true,iconCls:'icon-add',
+				buttons:[{text:'确定',iconCls:'icon-ok',
+				handler:function(){$('#pushForm').submit();}},
+				{text:'取消',iconCls:'icon-cancel',
+				handler:function(){$('#push_mapBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+<script type="text/javascript">
+//推送地图
+function push_map(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	var url = '{:U('Map/push_map')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#push_mapBox').dialog({href:url});
+	$('#push_mapBox').dialog('open');
+}
+//搜索
+function msgSearch(){
+	var queryParams = $('#msg').datagrid('options').queryParams;
+	$.each($("#mapFrom").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#msg').datagrid('load');
+}
+//刷新列表
+function msg(){
+	$('#msg').datagrid('reload');
+}
+//图像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+//编辑
+function edit(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	var url = '{:U('Map/editmsg')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#mapEditBox').dialog({href:url});
+	$('#mapEditBox').dialog('open');
+}
+//删除
+function mapdele(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Map/msgdel')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				msg();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+
+}
+//操作
+function mapstat(val, row, index){
+	var btn = [];
+	//btn.push('<a href="javascript:void(0);" onclick="push_map('+row.id+')">推送</a>');
+	btn.push('<a href="javascript:void(0);" onclick="edit('+row.id+')">编辑更新</a>');
+	btn.push('<a href="javascript:void(0);" onclick="mapdele('+row.id+')">删除</a>');
+	return btn.join(' | ');
+	
+}			
+
+</script>

@@ -1,0 +1,87 @@
+<!-- 列表 -->
+<table id="deviceList" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Map/device_list',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#deviceToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'mapname',width:400,align:'center'">地图名称</th>
+		<th data-options="field:'device_id',width:400,align:'center'">设备ID</th>
+		<th data-options="field:'id',width:120,align:'center',formatter:deviceText">操作管理</th>
+	</tr>
+</thead>
+</table>
+
+<div id="deviceToolbar" style="padding:5px;height:auto">
+	<form id="deviceSearchForm">
+		<a href="javascript:;" onclick="deviceList();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据地图名称搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="userSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+		<a href="javascript:;" id="adddevice" onclick="add_device();" class="easyui-linkbutton" iconCls="icon-add">添加</a>
+	</form>
+</div>
+<!-- 编辑 -->
+<div id="EditdeviceBox" class="easyui-dialog" title="编辑"
+	data-options="modal:true,closed:true,iconCls:'icon-edit',
+	buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){Editdevice();}},
+	{text:'取消',iconCls:'icon-cancel',handler:function(){$('EditdeviceBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+
+
+<div id="add_deviceBox" class="easyui-dialog" title="添加"
+	data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){device_Add();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#add').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+	
+	
+<script type="text/javascript">
+//
+function add_device(){
+	var url = '{:U('Map/add_device')}';
+	$('#add_deviceBox').dialog({href:url});
+	$('#add_deviceBox').dialog('open');
+}
+//编辑
+function editDevice(id){
+	var url = '{:U('Map/device_edit')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#EditdeviceBox').dialog({href:url});
+	$('#EditdeviceBox').dialog('open');
+}
+//刷新列表
+function deviceList(){
+	$('#deviceList').datagrid('reload');
+}
+//操作
+function deviceText(val, row, index){
+	return '<a href="javascript:void(0);" onclick="editDevice('+row.id+')">编辑</a> | <a href="javascript:void(0);" onclick="deleteDevice('+row.id+')">删除</a>';
+}			
+//搜索
+function userSearch(){
+	var queryParams = $('#deviceList').datagrid('options').queryParams;
+	$.each($("#deviceSearchForm").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#deviceList').datagrid('load');
+}
+//删除
+function deleteDevice(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Map/devicedel')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				deviceList();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+
+}
+
+
+</script>

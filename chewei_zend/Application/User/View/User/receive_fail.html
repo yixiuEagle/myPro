@@ -1,0 +1,64 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"receive_failForm",theme:'App',onError:function(msg){},onSuccess:receive_fail,inIframe:true});
+	$("#msg").formValidator({onShow:"请输入失败原因",onFocus:"请输入失败原因"}).inputValidator({ min: 2, onError: "输入错误" });  
+})
+
+function receive_fail(){
+	$.post('{:U('User/receive_fail?id='.$info['id'])}', $("#receive_failForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			verify_receive();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#receive_failBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="receive_failForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>uid:</td>
+		<td>{$info.uid}
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>姓名:</td>
+		<td>{$info.name}
+		</td>
+		<td><div id=""></div></td>
+	</tr>
+	<tr>
+		<td>账号:</td>
+		<td>{$info.account}
+		</td>
+		<td><div id=""></div></td>
+	</tr>
+	<tr>
+		<td>金额:</td>
+		<td>{$info.fee}元
+		</td>
+		<td><div id=""></div></td>
+	</tr>
+	<tr>
+		<td>提现方式:</td>
+		<td>
+		<eq name="info.type" value="1">    
+		  	支付宝
+		</eq>
+		<eq name="info.type" value="2">    
+		  	微信
+		</eq>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>失败原因：</td>
+		<td><textarea id="msg" name="msg" style="width:240px;height:100px" ></textarea>
+		</td>
+		<td><div id="msgTip"></div></td>
+	</tr>
+</table>
+</form>

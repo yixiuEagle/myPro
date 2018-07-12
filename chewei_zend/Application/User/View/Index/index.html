@@ -1,0 +1,2559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.3, maximum-scale=2.0, user-scalable=yes" />  -->
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src='__PUBLIC__/js/jquery.min.js '></script>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+		}
+		html,body{
+			padding: 0;
+			margin: 0;
+			height: 100%; 
+			width: 100%;
+			font-size:62.5%;
+			overflow: hidden;
+		}
+		  .contain{
+			height: 101%;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}  
+		.header{
+			height: 10%;
+			width: 100%;
+			background-color: #ccc;
+			position: absolute;
+			margin: 0;
+			padding:0;
+		}
+		.header input{
+			height: 65%;
+			width: 60%;
+			position: absolute;
+			left:4%;
+			top:17.5%;
+			border:none;
+			box-sizing: content-box;
+			font-size: 1.5rem;
+			font-family:'微软雅黑';
+		}	
+		.header button{
+			height: 65%;
+			width: 14%;
+			position: absolute;
+			left:64%;
+			top:17.5%;
+			border:none;
+			box-sizing: content-box;
+			background-color: rgba(249, 99, 55, 0.84);
+			color: white;
+			font-size: 1.5rem;
+			font-family:'微软雅黑';
+		}
+		.map{
+			height: 90%;
+			width: 100%;
+			/*background-image: url('./timg.jpg');*/
+			background-color: rgba(224, 223, 223, 0.83);
+			position: absolute;
+			top:10%;
+			margin: 0;
+			padding:0;
+			overflow:hidden;
+			
+		}
+		.cvs{
+			background-color: green;
+			width: 100%;
+			height: 100%;
+
+		}
+		.details{
+			height: 30%;
+			width: 90%;
+			position: absolute;
+			top:70%;
+			left: 5%;
+			display: none;
+		}
+		.mes{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top:-1px;
+			background-color: #f5f5f5; 
+			border:1px solid gray;
+			border-radius: 2%;
+			border-bottom:none;
+			overflow:scroll;
+		}
+		.circle{
+			height: 0px;
+			width: 18%;
+			padding-top:18%;
+			position: absolute;
+			left:75%;
+			top:-20%;
+			border-radius: 50%;
+			background-image: url('__PUBLIC__/footer_tohere.png');
+			background-size: 100% 100%;
+			cursor:pointer;
+		}
+		.poiname{
+			position: absolute;
+			top: 5%;
+			font-family: Microsoft Yahei;
+		    color: #333;
+		    font-size: 5vw;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    text-overflow: ellipsis;
+		    color:rgba(33, 115, 58, 0.71);
+			font-weight:normal;
+		}
+		.addr{
+			position: absolute;
+			top: 16%;
+			text-align: center;
+    		color: #1925cc;
+    		font-size: 6vw;
+    		width: 100%;
+    		font-family:'微软雅黑';
+    		font-weight: bold;
+		}
+		.des{
+			position: absolute;
+			top: 40%;
+    		color: #333;
+    		font-size: 5vw;
+    		/* overflow:scroll; */
+    		width: 100%;
+    		/* height: 50%; */
+    		font-family:'微软雅黑';
+		}
+		.container{
+			width: 15%;
+			height: 20%;
+			background-color: rgba(245, 245, 245, 1);
+			position: absolute;
+			top: 57%;
+			left:2%;
+			overflow-x: visible;
+			overflow-y: hidden; 
+			padding:0;
+			margin: 0;
+		}
+		.smallcontainer{
+			width: 100%;
+			height: 33.33%;
+			position: absolute;
+			top: 33.33%;
+			border-top: 1px solid rgb(23, 202, 117);
+			border-bottom: 1px solid rgb(23, 202, 117);
+			background-color: #e0dfdf;
+			padding:0;
+			margin: 0;
+		}
+		.lists{
+			width: 100%;
+			height: 200%;
+			padding:0;
+			margin: 0;
+			position: absolute;
+			top:0;
+		}
+		li{
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			line-height: 200%;
+			padding:0;
+			margin: 0;
+			font-size: 5vw;
+			font-family:'STSong';
+		}
+		.location{
+			width:12%;
+			height:8%;
+			position: absolute;
+			top: 78%;
+			left:2%;
+			background-image: url('__PUBLIC__/map_location_icon.png');
+			background-size: 100% 100%;
+		}
+		.up{
+			width:16%;
+			height:8%;
+			position: absolute;
+			background-image: url('__PUBLIC__/up.png');
+			top:10%;
+			left:42%;
+			background-size: 100% 100%;
+		}
+		.down{
+			width:16%;
+			height:8%;
+			position: absolute;
+			background-image: url('__PUBLIC__/down.png');
+			background-size: 100% 100%;
+			bottom:0;
+			left:42%;
+		}
+		.left{
+			/* width:11%;
+			height:22%; */
+			position: absolute;
+			background-image: url('__PUBLIC__/left.png');
+			background-size: 100% 100%;
+			top:48%;
+			left:0%;
+		}
+		.right{
+			/* width:11%;
+			height:22%; */
+			position: absolute;
+			background-image: url('__PUBLIC__/rihgt.png');
+			background-size: 100% 100%;
+			top:48%;
+			right:0%;
+		}
+		.loc{
+			width:16%;
+			height:8%;
+			position: absolute;
+			background-image: url('__PUBLIC__/location_one.png');
+			background-size: 100% 100%;
+			display:none;
+			top:10%;
+			left:25%;
+		}
+		.stype{
+			height: 50%;
+			width: 17%;
+			position: absolute;
+			left:81%;
+			top:25%;
+			border:1px solid orange;
+			border-radius: 15%;
+			box-sizing: content-box;
+			background-color: rgba(232, 96, 56, 0.55);
+			font-size: 1.3rem;
+			font-family:'微软雅黑';
+			text-align: center;
+			line-height: 230%;
+			cursor:pointer ;
+			
+		}
+		.stype:active{
+			background-color: rgba(212, 63, 20, 0.86);
+		}
+		.typebox{
+			width:80%;
+			position: absolute;
+			left:10%;
+			display:none; 
+		}
+		.headtype{
+			width:100%;
+			display:flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+			justify-content:flex-start;
+			text-align: center;
+			line-height:200%;
+			font-size:1.5rem;
+			font-family:'微软雅黑';
+		}
+		.dettype{
+			width:100%;
+			font-size:1.3rem;
+			overflow:scroll;
+			font-family:'微软雅黑';
+		}
+		.searchlist{
+			width:100%;
+			position: absolute;
+			font-size:1.3rem;
+			top:10%;
+			overflow: scroll;
+		}
+		.tishi{
+			width:80%;
+			height:5%;
+			position: absolute;
+			top:88%;
+			left:10%;
+			font-size:1.3rem;
+			text-align: center;
+			display:none;
+			background-color: gray;
+			color:white;
+			line-height:200%;
+		}
+		.cesuo{
+			width:13%;
+			height:7%;
+			position: absolute;
+			top:78%;
+			left:80%;
+			background-image: url('__PUBLIC__/toliect_big_icon.png');
+			background-size: 100% 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class='contain'>
+		<div class='header'>
+			<input id='your-input-id' type="text" placeholder="关键字搜索">
+			<button>搜 索</button>
+			<div class='stype'>分类表</div>
+		</div>
+    	<div class='map'>
+			<canvas id="cvs" style="margin: 0;padding: 0;display: block;">
+			您的浏览器不支持canvas
+			</canvas>
+    	</div>
+    	<div class="container">
+			<div class="smallcontainer">
+				<ul class='lists'>
+				</ul>
+			</div>
+    	</div>
+    	<div class='location'></div>
+    	<div class='up'></div>
+	    <div class='down'></div>
+	    <div class='left'></div>
+	    <div class='right'></div>
+	     <div class='cesuo'></div>
+	    <div class='details'>
+			<div class='mes'>
+				<h3 class='poiname'></h3>
+				<p class='addr'></p>
+				<p class='des'></p>
+			</div>
+			<div class='circle'></div>
+	    </div>
+	    <div class='loc'></div>
+	    <div class='typebox'>
+	    	<div class='headtype'></div>
+	    	<div class='dettype'></div>
+	    </div>
+	    <div class='searchlist'></div>
+	    <div class='tishi'>微信转发分享给自己，可方便你回到这里</div>
+	</div>
+	<!-- <script type="text/javascript" src='__PUBLIC__/js/bscroll.js'></script> -->
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+    	/**二次扫描    **/
+        
+    	/********************/
+	    /* new BScroll(document.getElementsByTagName("body")[0], {
+	        click: true
+	    }); */
+	    $("#your-input-id").bind("input propertychange", function () { 
+	    	$('.searchlist').html('');
+	    	$('.searchlist').css('display','block');
+	    	str=[];
+    		str2=[];
+    		close=true;
+	    	var m=0;
+	    	if($(this).val()!=''){
+	    		for(var i = 0, len = typemes.length; i < len; i++){ 
+					if(typemes[i][1].indexOf($(this).val())!=-1 || typemes[i][3].indexOf($(this).val())!=-1){
+						if($('.searchlist').children('p').length>10){
+							break;
+						}
+						m++;
+						$('.searchlist').append("<p class='word' value='"+typemes[i][1]+"'>"+typemes[i][1]+"<span style='float:right;text-align:right;height:100%;color:red'>"+typemes[i][2]+"</span></p>");
+						$('.word').css('width',$('.searchlist').width());
+						$('.word').css('height',0.7*0.1*($('body')[0].clientHeight));
+						$('.word').css('cursor','pointer');
+						$('.word').css('line-height','300%');
+						$('.word').css('background-color','white');
+						if(i!==len-1){
+							$('.word').css('border-bottom','1px solid gray');
+						}
+					}
+	       		}
+	    	}
+	    	if(m>6){
+	    		$('.searchlist').css('height',6*0.07*($('body')[0].clientHeight));
+	    	}else{
+	    		$('.searchlist').css('height',m*0.07*($('body')[0].clientHeight));
+	    	}
+			
+	    })
+	    $('.searchlist').on("click",".word",function(){
+    		$(this).css('background','#8aabf1');
+    		var self=$(this);
+    		setTimeout(function(){
+    			$('.searchlist').css('display','none');
+        		var selectF=self.find('span').text();
+        		selectName=self.attr('value');
+        		for(var i=0;i<floorlist.length;i++){
+        			if(floorlist[i]==selectF){
+        				floor=i;
+        				lists.style.top=-floor*smallH+'px';
+        				return false;
+        			}
+        		}
+    		},500);	
+    		cxt.translate(originx, originy);
+    		cxt.scale(1/scale, 1/scale);
+			originx -= originx;
+            originy -= originy;
+            cxt.translate(-originx, -originy);
+            scale=1;
+    	})
+    	$('.searchlist').on("touchstart",function(e){
+    		input.blur();
+		});
+    	document.addEventListener("touchstart", function(){}, true);
+    	var input = document.getElementById("your-input-id");
+    	/*回到当前位置*/
+    	$('.location').click(function(){
+    		//window.location.reload();
+    		inintloc();
+    		forlocation();
+    		if(str.length!=0){
+    			//selectfloor=nowfloor;
+    			getstr(selectX2,selectY2);
+    		}
+    	});
+    	function inintloc(){
+    		cxt.translate(originx, originy);
+    		cxt.scale(1/scale, 1/scale);
+			originx -= originx;
+            originy -= originy;
+            cxt.translate(-originx, -originy);
+            scale=1;
+    	}
+    	function forlocation(){
+            standard=standardScale;
+    		floor=nowfloor;
+    		lists.style.top=-floor*smallH+'px';
+    		changeTX+=(nowloc[0]*1/initS-initTX)*standard-changeTX-w/(2*scale)-originx;
+			changeTY+=(nowloc[1]*1/initS-initTY)*standard-changeTY-h/(2*scale)-originy;
+    	}
+    	/**类别筛选**/
+    	var floorlist=[];
+    	var selectName;
+    	var selectX;
+    	var selectY;
+    	var alltype=[];
+    	var typemes=[];
+    	var result = [];
+    	var locmes=[];
+    	var standard=1;
+    	var standardScale;
+    	var stype=document.querySelector(".stype");
+    	$(document).on("click",".stype",function(){
+    		$('.typebox').css('display','block');
+    		$('.headtype').html('');
+    		$('.dettype').html('');
+    		$('.searchlist').css('display','none');
+    		str=[];
+    		str2=[];
+    		locmes=[];
+    		var headnum=Math.ceil(result.length/4);
+    		for(var i = 0, len = typemes.length; i < len; i++){  
+				if(typemes[i][0]==result[0][0]){
+					locmes.push(typemes[i]);
+				}
+       		} 
+    		var typeboxH=headnum+locmes.length*0.6;
+    		if(typeboxH>10){
+    			typeboxH=10;
+    		}
+    		$('.typebox').css('height',typeboxH*0.1*($('body')[0].clientHeight));
+    		$('.typebox').css('border-radius',"5%");
+    		$('.typebox').css('top',(($('body')[0].clientHeight)-($('.typebox')[0].clientHeight))/2);
+    		$('.headtype').css('height',headnum/typeboxH*($('.typebox').height()));
+    		$('.headtype').css('background-color','rgba(128, 128, 128, 0.69)');
+    		//$('.dettype').css('height',locmes.length*0.6*0.1*($('body')[0].clientHeight));
+    		$('.dettype').css('height',$('.typebox')[0].clientHeight-$('.headtype')[0].clientHeight);
+    		$('.dettype').css('background-color','white');
+    		for(var i = 0, len = result.length; i < len; i++){  
+				//$('.headtype').append("<div class='box'><img src='__PUBLIC__/img/logo/"+result[i][0]+".png'><p>"+result[i][0]+"</p></div>");
+				$('.headtype').append("<div class='box'>"+result[i][0]+"</div>");
+				$('.box').css('width',($('.headtype').width())*0.25);
+				$('.box').css('height',($('.headtype').height())/headnum);
+				$('.box').css('cursor','pointer');
+				$('.box').css('line-height',$('.box').height()+"px");
+       		}
+    		for(var i = 0, len = locmes.length; i < len; i++){  
+				$('.dettype').append("<p class='word' value='"+locmes[i][1]+"'>"+locmes[i][1]+"<span style='float:right;text-align:right;height:100%;color:red'>"+locmes[i][2]+"</span></p>");
+				$('.word').css('width',$('.dettype').width());
+				$('.word').css('height',0.6*0.1*($('body')[0].clientHeight));
+				$('.word').css('cursor','pointer');
+				$('.word').css('line-height','300%');
+				if(i!==len-1){
+					$('.word').css('border-bottom','1px solid gray');
+				}
+       		}
+    	});
+    	/**点击某个类别**/
+    	$(document).on("click",".box",function(){
+    		var mes=$(this).text();
+    		$('.dettype').html('');
+    		$('.headtype').html('');
+    		locmes=[];
+    		var headnum=Math.ceil(result.length/4);
+    		for(var i = 0, len = typemes.length; i < len; i++){  
+				if(typemes[i][0]==mes){
+					locmes.push(typemes[i]);
+				}
+       		}
+    		var typeboxH=headnum+locmes.length*0.6;
+    		if(typeboxH>10){
+    			typeboxH=10;
+    		}
+    		$('.typebox').css('height',typeboxH*0.1*($('body')[0].clientHeight));
+    		$('.typebox').css('border-radius',"5%");
+    		$('.typebox').css('top',(($('body')[0].clientHeight)-($('.typebox')[0].clientHeight))/2);
+    		$('.headtype').css('height',headnum/typeboxH*($('.typebox').height()));
+    		$('.headtype').css('background-color','rgba(128, 128, 128, 0.69)');
+    		//$('.dettype').css('height',locmes.length*0.6*0.1*($('body')[0].clientHeight));
+    		$('.dettype').css('height',$('.typebox')[0].clientHeight-$('.headtype')[0].clientHeight);
+    		$('.dettype').css('background-color','white');
+    		for(var i = 0, len = result.length; i < len; i++){  
+				//$('.headtype').append("<div class='box'><img src='__PUBLIC__/img/logo/"+result[i][0]+".png'><p>"+result[i][0]+"</p></div>");
+				$('.headtype').append("<div class='box'>"+result[i][0]+"</div>");
+				$('.box').css('width',($('.headtype').width())*0.25);
+				$('.box').css('height',($('.headtype').height())/headnum);
+				$('.box').css('cursor','pointer');
+				$('.box').css('line-height',$('.box').height()+'px');
+       		}
+    		for(var i = 0, len = locmes.length; i < len; i++){  
+				$('.dettype').append("<p class='word' value='"+locmes[i][1]+"'>"+locmes[i][1]+"<span style='float:right;text-align:right;height:100%;color:red'>"+locmes[i][2]+"</span></p>");
+				$('.word').css('width',$('.dettype').width());
+				//$('.word').css('height',($('.dettype').height())/locmes.length);
+				$('.word').css('height',0.6*0.1*($('body')[0].clientHeight));
+				$('.word').css('line-height','300%');
+				$('.word').css('box-sizing','border-box');
+				$('.word').css('cursor','pointer');
+				if(i!==len-1){
+					$('.word').css('border-bottom','1px solid gray');
+				}
+       		}
+    	})
+    	var self;
+    	/**点击具体地方**/
+    	$('.dettype').on("click",".word",function(){
+    		$(this).css('background','#8aabf1');
+    		self=$(this);
+    		//inintloc();
+    		//forlocation();
+    		setTimeout(function(){
+    			$('.typebox').css('display','none');
+        		var selectF=self.find('span').text();
+        		selectName=self.attr('value');
+        		for(var i=0;i<floorlist.length;i++){
+        			if(floorlist[i]==selectF){
+        				floor=i;
+        				lists.style.top=-floor*smallH+'px';
+        				return false;
+        			}
+        		}
+    		},500);
+			cxt.translate(originx, originy);
+			originx -= originx;
+            originy -= originy;
+            cxt.scale(1/scale, 1/scale); 
+            cxt.translate(-originx, -originy);
+            scale=1;
+            changeTX=0;
+            changeTY=0; 
+    	})
+    	
+   /*路线制定*/
+   var selectfloor;
+   var roadscale=1;
+   	window.confirm = function (message) {
+            var iframe = document.createElement("IFRAME");
+            iframe.style.display = "none";
+            iframe.setAttribute("src", 'data:text/plain,');
+            document.documentElement.appendChild(iframe);
+            var alertFrame = window.frames[0];
+            var result = alertFrame.window.confirm(message);
+            iframe.parentNode.removeChild(iframe);
+            return result;
+    };
+   		var allpoints=[];
+    	var twopoints=[];
+    	var alldianti=[];
+    	var allroad=new Array();
+    	var str=[];
+    	var str2=[];
+    	var neardianti;
+    	var selectX2;
+    	var selectY2;
+    	var selectX3;
+    	var selectY3;
+    	var selectfloor3;
+    	var xxMax;
+    	var xxMin;
+    	var yyMax;
+    	var yyMin;
+    	//点击找到最近厕所路线
+    	$('.cesuo').css('cursor','pointer');
+    	var cesuoX;
+    	var cesuoY;
+    	var xishoujian=[];
+    	$(document).on("click",".cesuo",function(){
+    		loc=null;
+    		selectX3=null;
+    		selectY3=null;
+    		//selectX2=cesuoX;
+    		//selectY2=cesuoY;
+    		selectfloor3=null;
+    		var isflag=false;
+    		for(var i = 0, len = xishoujian.length; i < len; i++){ 
+				if(xishoujian[i][1]==nowfloor){
+					selectX2=xishoujian[i][0].split(',')[0]*1;
+					selectY2=xishoujian[i][0].split(',')[1]*1;
+					isflag=true;
+					selectfloor=nowfloor;
+					break;
+				}
+       		}
+    		if(!isflag){
+    			selectX2=xishoujian[0][0].split(',')[0]*1;
+				selectY2=xishoujian[0][0].split(',')[1]*1;
+				selectfloor=xishoujian[0][1];
+    		}
+    		floor=nowfloor;
+    		smallH=parseInt($('li').height());
+       		lists.style.top=-floor*smallH+'px';
+        	getstr(selectX2,selectY2);
+    	});
+    	//点击出现路线
+    	$(document).on("click",".circle",function(){
+    		if(isShare){
+    			$.ajax({
+        	        type:"post",
+        	        url:"__CONTROLLER__/getSign",//自己填写请求地址
+        	        data:{},
+        	        success:function(result){
+        	            wx.config({
+        	            // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        	            debug: false,
+        	            // 必填，公众号的唯一标识
+        	            appId: 'wxd75116f337fba084',
+        	            // 必填，生成签名的时间戳
+        	            timestamp:result.data.timestamp,
+        	            // 必填，生成签名的随机串
+        	            nonceStr:result.data.nonceStr,
+        	             // 必填，签名，见附录1
+        	             signature:result.data.signature,
+        	             // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        	             jsApiList : [ 'checkJsApi', 'scanQRCode' ,'onMenuShareAppMessage']
+        	             });
+        	          }
+        	    })
+        	    wx.error(function(res) {
+            alert("出错了：" + res.errMsg);//这个地方的好处就是wx.config配置错误，会弹出窗口哪里错误，然后根据微信文档查询即可。
+        });
+        		wx.ready(function() {
+        	        wx.checkJsApi({
+        	             jsApiList : ['scanQRCode'],
+        	             success : function(res) {
+
+        	             }
+        	        });
+       	            wx.scanQRCode({
+       	                needResult : 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+       	                scanType : [ "qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
+       	                success : function(res) {
+       	                var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+       	                var device=result.split('=')[1];
+    	   	                $.ajax({
+    		   	      	        type:"post",
+    		   	      	        url:"__CONTROLLER__/twotime",//自己填写请求地址
+    		   	      	        data:{
+    		   	      	       		'device_id':device
+    		   	      	        },
+    		   	      	   		success:function(result){
+	    		   	      	   	 	if(parseInt(window.location.href.split('=')[1].split('&')[0]/10000)!=parseInt(device/10000)){
+	    		       	            	//alert(JSON.stringify(result));
+	    		       	            	 alert('你当前扫码位置在《'+document.title+'》和目的地《'+result.data.map.mapinfo.mapname+'》不在同一个地图中，请确认打开了正确的目的地记录点。');
+	    		       	            	 window.location.reload(); 
+	    		       	            }
+    		   	      	   			isShare=0;
+    		   	      	   			selectX2=nowloc[0]*1;
+    		   	      	    		selectY2=nowloc[1]*1;
+    		   	      	    		selectX3=selectX2;
+    		   	      	   			selectY3=selectY2
+    		   	      	    		selectfloor=nowfloor;
+    		   	      	   			selectfloor3=selectfloor
+    		   	      	    		nowloc=result.data.location.split(',');
+    		   	      	   			lastfloor=nowfloor;
+    		   	      	    		nowfloor=result.data.floor;
+    		   	      	    		nowangle=result.data.rotate;
+    		   	      	    		getstr(selectX2,selectY2);
+    		   	      	    		$('.details').css('display','none');
+    		   	      	   		}
+    	   	      	    	})
+       	                }
+       	            });
+        	    });
+    		}else{
+    			roadscale=1;
+    			 
+        		$('.details').css('display','none');
+        		close=false;
+        		loc=null;
+        		selectX3=null;
+        		selectY3=null;
+        		selectfloor3=null;
+        		selectX2=selectX;
+        		selectY2=selectY;
+        		selectfloor=floor;
+        		getstr(selectX2,selectY2);
+    		}
+    	})
+    	function getstr(selectX2,selectY2){
+    		str=[];
+    		var adjM=[];
+    		//同层
+    		if(selectfloor==nowfloor){
+    			inintloc();
+    			xxMax=Math.max.apply(Math, [nowloc[0]*1,selectX2]);
+				xxMin=Math.min.apply(Math, [nowloc[0]*1,selectX2]);
+				yyMax=Math.max.apply(Math, [nowloc[1]*1,selectY2]);
+				yyMin=Math.min.apply(Math, [nowloc[1]*1,selectY2]);
+				/* if(xxMax-xxMin>yyMax-yyMin){
+					standard=w/(xxMax-xxMin);
+				}else{
+					standard=h/(yyMax-yyMin);
+				}  */
+				//standard*=0.8;
+				changeTX+=((xxMax+xxMin)/(initS*2)-initTX)*standard-changeTX-w/(2*scale)-originx;
+				changeTY+=((yyMax+yyMin)/(initS*2)-initTY)*standard-changeTY-h/(2*scale)-originy;
+    			var dis=Infinity;
+        		allpoints=[];
+        		var m;
+        		var j;
+        		nearpoint();
+    			allpoint();
+        		for(var i=0;i<allroad.length;i++){
+        			if(allroad[i][0]==nowfloor){
+        				var n=getSpotToLineDistance({x:selectX2,y:selectY2},allroad[i][1],allroad[i][2]);
+            			if(n.distance<dis){
+            				dis=n.distance;
+            				m=n;
+            				j=i;
+            			}
+        			}
+        		}
+    			if(allpoints[allpoints.length-1][1]==-2){
+    				allpoints.pop();
+    			}
+    			allpoints.push([j,-2,m.nodical]);
+    			for(var i=0;i<allpoints.length;i++){
+    				var p=[];
+    				for(var j=0;j<allpoints.length;j++){
+    					var diss;
+    					if(allpoints[i][0]==allpoints[j][0] || allpoints[i][0]==allpoints[j][1] || allpoints[i][1]==allpoints[j][0] || allpoints[i][1]==allpoints[j][1]){
+    						diss=getDisTwoPoint(allpoints[i][2],allpoints[j][2]);
+    					}else{
+    						diss=Infinity;
+    					}
+    					p.push(diss);
+    				}
+    				adjM.push(p);
+    			}
+    			str=searchPath(0,adjM.length-1,adjM);
+    		}else{       //跨层
+    			if(confirm('您当前位置在'+$("ul").find("li").eq(nowfloor).text()+',目的地在'+$("ul").find("li").eq(selectfloor).text()+',点击确定将为您推荐附近可达'+$("ul").find("li").eq(selectfloor).text()+'的电梯')){
+    				floor=nowfloor;
+    				smallH=parseInt($('li').height());
+		       		lists.style.top=-floor*smallH+'px';
+    				var dis=Infinity;
+    	    		allpoints=[];
+    	    		twopoints=[];
+    	    		var m;
+    	    		var j;
+    	    		
+    	    		for(var i=0;i<allroad.length;i++){
+    	    			if(allroad[i][0]==nowfloor){
+    	    				var n=getSpotToLineDistance({x:selectX2,y:selectY2},allroad[i][1],allroad[i][2]);
+    	        			if(n.distance<dis){
+    	        				dis=n.distance;
+    	        				m=n;
+    	        				j=i;
+    	        			}
+    	    			}
+    	    		}
+    				//var neardianti;
+    				var diss=Infinity;
+    				//找到离起点最近的电梯
+    				for(var i=0;i<alldianti.length;i++){
+    	    			if(alldianti[i].cover.split(',').indexOf(''+floor+'')!=-1){
+    	    				var gate=alldianti[i].gate.split(',');
+    	    				var n=getDisTwoPoint({x:nowloc[0]*1,y:nowloc[1]*1},{x:gate[0]*1,y:gate[1]*1});
+    	    				if(n<diss){
+    	        				diss=n;
+    	        				neardianti=gate;
+    	        			}
+    	    			}
+    	    		}
+    				inintloc();
+        			xxMax=Math.max.apply(Math, [nowloc[0]*1,neardianti[0]*1]);
+    				xxMin=Math.min.apply(Math, [nowloc[0]*1,neardianti[0]*1]);
+    				yyMax=Math.max.apply(Math, [nowloc[1]*1,neardianti[1]*1]);
+    				yyMin=Math.min.apply(Math, [nowloc[1]*1,neardianti[1]*1]);
+    				/* if(xxMax-xxMin>yyMax-yyMin){
+    					standard*=w/(xxMax-xxMin);
+    				}else{
+    					standard*=h/(yyMax-yyMin);
+    				}  */
+    				changeTX+=((xxMax+xxMin)/(initS*2)-initTX)*standard-changeTX-w/(2*scale)-originx;
+    				changeTY+=((yyMax+yyMin)/(initS*2)-initTY)*standard-changeTY-h/(2*scale)-originy;
+					//找到离电梯最近的道路
+					nearpoint();
+    				allpoint();
+					var mm;
+    				var jj;
+    				var disss=Infinity;
+    				for(var i=0;i<allroad.length;i++){
+    	    			if(allroad[i][0]==nowfloor){
+    	    				var n=getSpotToLineDistance({x:neardianti[0]*1,y:neardianti[1]*1},allroad[i][1],allroad[i][2]);
+    	        			if(n.distance<disss){
+    	        				disss=n.distance;
+    	        				mm=n;
+    	        				jj=i;
+    	        			}
+    	    			}
+    	    		}
+    				//求出到电梯的邻接矩阵
+    				if(allpoints[allpoints.length-1][1]==-2){
+        				allpoints.pop();
+        			}
+        			allpoints.push([jj,-2,mm.nodical]);
+        			for(var i=0;i<allpoints.length;i++){
+        				var p=[];
+        				for(var j=0;j<allpoints.length;j++){
+        					var diss;
+        					if(allpoints[i][0]==allpoints[j][0] || allpoints[i][0]==allpoints[j][1] || allpoints[i][1]==allpoints[j][0] || allpoints[i][1]==allpoints[j][1]){
+        						diss=getDisTwoPoint(allpoints[i][2],allpoints[j][2]);
+        					}else{
+        						diss=Infinity;
+        					}
+        					p.push(diss);
+        				}
+        				adjM.push(p);
+        			}
+        			str=searchPath(0,adjM.length-1,adjM);
+    			}
+    		}
+    	}
+    	//Dijkstra方法
+		 var POS_INFINITY = Infinity;
+		
+		/**
+		 * @param {number} sourceV 源点的索引，从0开始
+		 * @param {Array} adjMatrix 图的邻接矩阵，是一个二维数组
+		 */
+		
+		function dijkstra(sourceV, adjMatrix) {
+		    var set = [],
+		        path = [],
+		        
+		        dist = [],
+		        distCopy = [],
+		        vertexNum = adjMatrix.length;
+		
+		    var temp, u,
+		        count = 0;
+		
+		    // 初始化
+		    for (var i = 0; i < vertexNum; i++) {
+		        distCopy[i] = dist[i] = POS_INFINITY;
+		        set[i] = false;
+		    }
+		    distCopy[sourceV] = dist[sourceV] = 0;
+		
+		    while (count < vertexNum) {
+		        u = distCopy.indexOf(Math.min.apply(Math, distCopy));
+		        set[u] = true;
+		        distCopy[u] = POS_INFINITY;
+		
+		        for (var i = 0; i < vertexNum; i++) {
+		            if (!set[i] && ((temp = dist[u] + adjMatrix[u][i]) < dist[i])) {
+		                distCopy[i] = dist[i] = temp;
+		                path[i] = u;
+		            }
+		        }
+		        count++;
+		    }
+		
+		    return {
+		        path: path,
+		        dist: dist
+		    };
+		} 
+		
+		/**
+		 * @param {number} v 源点索引, 从0开始
+		 * @param {number} d 非源点索引, 从0开始
+		 * @param {Array} adjMatrix 图的邻接矩阵，是一个二维数组
+		 */
+		function searchPath(v, d, adjMatrix) {
+			 var str1=[];
+		    var graph = dijkstra(v, adjMatrix),
+		        path = graph.path,
+		        dist = graph.dist;
+		    var prev = path[d],
+		        queue = [];
+		        //str = '';
+		    
+		    queue.push(d);
+		    while(prev != v) {
+		        queue.push(prev);
+		        prev = path[prev];
+		    }
+		    queue.push(v);
+		
+		    for (var j = queue.length - 1; j >= 0; j--) {
+		        //str += queue.pop() + ' -> ';
+		        str1.push(queue.pop());
+		    }
+		    //alert(str);
+		    return str1;
+		}
+    	//找到当前位置与最近道路的交点
+    	function nearpoint(){
+    		var dis=Infinity;
+    		var m;
+    		var j;
+    		for(var i=0;i<allroad.length;i++){
+    			if(allroad[i][0]==nowfloor){
+    				var n=getSpotToLineDistance({x:nowloc[0]*1,y:nowloc[1]*1},allroad[i][1],allroad[i][2]);
+        			if(n.distance<dis){
+        				dis=n.distance;
+        				m=n;
+        				j=i;
+        			}
+    			}
+    		}
+    		allpoints.push([j,-1,m.nodical]);
+    	}
+    	//找到所有交点
+    	function allpoint(){
+    		for(var i=0;i<allroad.length;i++){
+    			if(allroad[i][0]==nowfloor){
+    				for(var j=i+1;j<allroad.length;j++){
+    					if(allroad[j][0]==nowfloor){
+    						var mes=getCrossPoint(allroad[i][1],allroad[i][2],allroad[j][1],allroad[j][2]);
+    						if(mes){
+    							//console.log(mes);
+    							allpoints.push([i,j,mes]);
+    						}
+    					}
+    				}
+    			}
+    		}
+    	}
+    	function getDisTwoPoint(onePoint,twoPoint){
+    		var x1=(onePoint.x/initS-initTX)*standard-changeTX;
+    		var y1=(onePoint.y/initS-initTY)*standard-changeTY;
+    		var x2=(twoPoint.x/initS-initTX)*standard-changeTX;
+    		var y2=(twoPoint.y/initS-initTY)*standard-changeTY;
+    		var calX = x2 - x1;        
+    	    var calY = y2 - y1;
+    	    return Math.pow((calX *calX + calY * calY), 0.5);
+    	}
+    	//计算两条直线的交点
+    	function getCrossPoint(lineOneStart,lineOneEnd,lineTwoStart,lineTwoEnd){
+    		var x;
+    		var y;
+    		var x1 = (lineOneStart.x/initS-initTX)*standard-changeTX;
+    		var y1 = (lineOneStart.y/initS-initTY)*standard-changeTY;
+    		var x2 = (lineOneEnd.x/initS-initTX)*standard-changeTX;
+    		var y2 = (lineOneEnd.y/initS-initTY)*standard-changeTY;
+    		var x3 = (lineTwoStart.x/initS-initTX)*standard-changeTX;
+    		var y3 = (lineTwoStart.y/initS-initTY)*standard-changeTY;
+    		var x4 = (lineTwoEnd.x/initS-initTX)*standard-changeTX;
+    		var y4 = (lineTwoEnd.y/initS-initTY)*standard-changeTY;
+    		var k1 = Number.MAX_VALUE;
+    		var k2= Number.MAX_VALUE;
+    		var flag01 = false;
+    		var flag02 = false;
+			if(x1==x3 && y1==y3){
+				var point;
+    			point={
+    				x:x1,
+    				y:y1
+    			};
+    			return point;
+			}
+			if(x1==x4 && y1==y4){
+				var point;
+    			point={
+    				x:x1,
+    				y:y1
+    			};
+    			return point;
+			}
+			if(x2==x3 && y2==y3){
+				var point;
+    			point={
+    				x:x2,
+    				y:y2
+    			};
+    			return point;
+			}
+			if(x2==x4 && y2==y4){
+				var point;
+    			point={
+    				x:x2,
+    				y:y2
+    			};
+    			return point;
+			}
+    		if ((x1 - x2) == 0)
+    			flag01 = true;
+    		if ((x3 - x4) == 0)
+    			flag02 = true;
+
+    		if (!flag01)
+    			k1 = (y1 - y2) / (x1 - x2);
+    		if (!flag02)
+    			k2 = (y3 - y4) / (x3 - x4);
+
+    		if (k1 == k2)
+    			return null;
+
+    		if (flag01) {
+    			if (flag02)
+    				return null;
+    			x = x1;
+    			if (k2 == 0) {
+    				y = y3;
+    			} else {
+    				y = k2 * (x - x4) + y4;
+    			}
+    		} else if (flag02) {
+    			x = x3;
+    			if (k1 == 0) {
+    				y = y1;
+    			} else {
+    				y = k1 * (x - x2) + y2;
+    			}
+    		} else {
+    			if (k1 == 0) {
+    				y = y1;
+    				x = (y - y4) / k2 + x4;
+    			} else if (k2 == 0) {
+    				y = y3;
+    				x = (y - y2) / k1 + x2;
+    			} else {
+    				x = (k1 * x2 - k2 * x4 + y4 - y2) / (k1 - k2);
+    				y = k1 * (x - x2) + y2;
+    			}
+    		}
+    		if (x>=Math.min(x1,x2) && x<=Math.max(x1,x2) && y>=Math.min(y1,y2) && y<=Math.max(y1,y2) && x>=Math.min(x3,x4) && x<=Math.max(x3,x4) && y>=Math.min(y3,y4) && y<=Math.max(y3,y4)) {
+    			var point;
+    			point={
+    				x:x,
+    				y:y
+    			};
+    			return point;
+    		} else {
+    			return null;
+    		}
+    	}
+    	//点到直线的距离
+    	function getSpotToLineDistance(spot,statrLine,endLine) {
+    		var x = (spot.x/initS-initTX)*standard-changeTX;
+    		var y = (spot.y/initS-initTY)*standard-changeTY;
+    		var x1= (statrLine.x/initS-initTX)*standard-changeTX;
+    		var y1= (statrLine.y/initS-initTY)*standard-changeTY;
+    		var x2= (endLine.x/initS-initTX)*standard-changeTX;
+    		var y2 =(endLine.y/initS-initTY)*standard-changeTY;
+			var nodicalEnity;
+    		var cross = (x2 - x1) * (x - x1) + (y2 - y1) * (y - y1); 
+
+    		if (cross <= 0) {
+    			nodicalEnity={
+    					distance:parseFloat(Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1))),
+    					nodical:{
+    						x:x1,
+    						y:y1
+    					}
+    			};
+    			//nodicalEnity.distance = (float) Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1));
+    			//nodicalEnity.nodical = statrLine;
+    			return nodicalEnity;
+    		}
+
+    		var d2 = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
+    		if (cross >= d2) {
+    			nodicalEnity={
+    					distance:parseFloat(Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2))),
+    					nodical:{
+    						x:x2,
+    						y:y2
+    					}
+    			};
+    			//nodicalEnity.distance = (float) Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2));
+    			//nodicalEnity.nodical = endLine;
+    			return nodicalEnity;
+    		}
+
+    		var r = cross / d2;
+    		var px = parseFloat((x1 + (x2 - x1) * r));
+    		var py = parseFloat((y1 + (y2 - y1) * r));
+    		var point={
+    				x:px,
+    				y:py
+    		};
+    		nodicalEnity={
+					distance:parseFloat(Math.sqrt((x - px) * (x - px) + (y - py) * (y - py))),
+					nodical:point
+			};
+    		//nodicalEnity.distance = (float) Math.sqrt((x - px) * (x - px) + (y - py) * (y - py));
+    		//nodicalEnity.nodical = new MyPointF(px, py);
+    		return nodicalEnity;
+    	}
+   /***********************************************/
+    	
+    /*选择楼层触摸事件 */
+    	//开始
+    	var floorNum=4;
+    	var starttop=0;
+    	var floor=0;    //默认第一层
+    	var nowfloor;
+    	var nowangle; //初始角度
+    	var nowloc; //当前位置
+    	var container=document.querySelector(".container");
+    	var lists=document.querySelector(".lists");
+    	var smallcontainer=document.querySelector(".smallcontainer");
+    	var smallH;
+    	container.addEventListener("touchstart",function(e){
+		   e.preventDefault();
+		   var touch = e.touches[0];
+		   startY = touch.pageY;
+		   //initialPos = currentPosition;   //本次滑动前的初始位置
+		   container.style.webkitTransition = ""; //取消动画效果
+		   startT = new Date().getTime(); //记录手指按下的开始时间
+		   isMove = false; //是否产生滑动
+		}.bind(this),false);
+		//进行中
+		container.addEventListener("touchmove",function(e){
+		   e.preventDefault();
+		   var touch = e.touches[0];
+		   var deltaY = touch.pageY - startY;
+		   lists.style.top=parseFloat(starttop)+deltaY+'px';
+		   isMove = true;
+		}.bind(this),false);
+		//结束
+		container.addEventListener("touchend",function(e){
+		   e.preventDefault();
+		   touchfloor=null;
+		   var touch=e.changedTouches[0];
+		   var deltaY = touch.pageY - startY;
+		   //计算手指在屏幕上停留的时间
+		   var deltaT = new Date().getTime() - startT;
+		   if (isMove){ //发生了左右滑动
+		        //使用动画过渡让页面滑动到最终的位置
+		        container.style.webkitTransition = "0.3s ease -webkit-transform";
+		        if(-deltaY>smallH/2 && parseFloat(starttop)>-(floorNum-1)*smallH){
+		        	var m=-deltaY%smallH>smallH/2 ? 1 :0;
+					starttop=parseFloat(starttop)-(Math.floor(-deltaY/smallH)+m)*smallH;
+					starttop=lists.style.top=parseFloat(starttop)>-(floorNum-1)*smallH ? starttop+"px" : -(floorNum-1)*smallH+"px";
+				}else if(deltaY>smallH/2 && parseFloat(starttop)<0 ){
+					var m=deltaY%smallH>smallH/2 ? 1 :0;
+					starttop=parseFloat(starttop)+(Math.floor(deltaY/smallH)+m)*smallH;
+					starttop=lists.style.top=parseFloat(starttop)<0 ? starttop+"px" : 0+"px";
+				}else{
+					lists.style.top=starttop;
+				}
+				floor=Math.abs(parseInt(starttop))/smallH;
+				changefloor(floor);
+				if(selectfloor!=null){
+					if(selectfloor!=nowfloor*1){
+						if(floor==selectfloor){
+							//找到离电梯最近的道路
+							inintloc();
+		        			xxMax=Math.max.apply(Math, [selectX2,neardianti[0]*1]);
+		    				xxMin=Math.min.apply(Math, [selectX2,neardianti[0]*1]);
+		    				yyMax=Math.max.apply(Math, [selectY2,neardianti[1]*1]);
+		    				yyMin=Math.min.apply(Math, [selectY2,neardianti[1]*1]);
+		    				/* if(xxMax-xxMin>yyMax-yyMin){
+		    					standard*=w/(xxMax-xxMin);
+		    				}else{
+		    					standard*=h/(yyMax-yyMin);
+		    				}  */
+		    				changeTX+=((xxMax+xxMin)/(initS*2)-initTX)*standard-changeTX-w/(2*scale)-originx;
+		    				changeTY+=((yyMax+yyMin)/(initS*2)-initTY)*standard-changeTY-h/(2*scale)-originy;
+							var adjM2=[];
+							var mm;
+		    				var jj;
+		    				var diss=Infinity;
+		    				var m;
+		    				var jjj;
+		    				var dis=Infinity;
+		    				twopoints=[];
+		    				for(var i=0;i<allroad.length;i++){
+		    	    			if(allroad[i][0]==selectfloor){
+		    	    				var n=getSpotToLineDistance({x:neardianti[0]*1,y:neardianti[1]*1},allroad[i][1],allroad[i][2]);
+		    	        			if(n.distance<diss){
+		    	        				diss=n.distance;
+		    	        				mm=n;
+		    	        				jj=i;
+		    	        			}
+		    	        			var p=getSpotToLineDistance({x:selectX2,y:selectY2},allroad[i][1],allroad[i][2]);
+		                			if(p.distance<dis){
+		                				dis=p.distance;
+		                				m=p;
+		                				jjj=i;
+		                			}
+		    	    			}
+		    	    		}
+		    				twopoints.push([jj,-1,mm.nodical]);
+		    				//找到目的地这层的所有点
+							for(var i=0;i<allroad.length;i++){
+				    			if(allroad[i][0]==selectfloor){
+				    				for(var j=i+1;j<allroad.length;j++){
+				    					if(allroad[j][0]==selectfloor){
+				    						var mes=getCrossPoint(allroad[i][1],allroad[i][2],allroad[j][1],allroad[j][2]);
+				    						if(mes){
+				    							//console.log(mes);
+				    							twopoints.push([i,j,mes]);
+				    						}
+				    					}
+				    				}
+				    			}
+				    		}
+							twopoints.push([jjj,-2,m.nodical]);
+							for(var i=0;i<twopoints.length;i++){
+			    				var p=[];
+			    				for(var j=0;j<twopoints.length;j++){
+			    					var disss;
+			    					if(twopoints[i][0]==twopoints[j][0] || twopoints[i][0]==twopoints[j][1] || twopoints[i][1]==twopoints[j][0] || twopoints[i][1]==twopoints[j][1]){
+			    						disss=getDisTwoPoint(twopoints[i][2],twopoints[j][2]);
+			    					}else{
+			    						disss=Infinity;
+			    					}
+			    					p.push(disss);
+			    				}
+			    				adjM2.push(p);
+			    			}
+			    			str2=searchPath(0,adjM2.length-1,adjM2);
+						}else if(floor==nowfloor*1){
+							inintloc();
+		        			xxMax=Math.max.apply(Math, [nowloc[0]*1,neardianti[0]*1]);
+		    				xxMin=Math.min.apply(Math, [nowloc[0]*1,neardianti[0]*1]);
+		    				yyMax=Math.max.apply(Math, [nowloc[1]*1,neardianti[1]*1]);
+		    				yyMin=Math.min.apply(Math, [nowloc[1]*1,neardianti[1]*1]);
+		    				/* if(xxMax-xxMin>yyMax-yyMin){
+		    					standard*=w/(xxMax-xxMin);
+		    				}else{
+		    					standard*=h/(yyMax-yyMin);
+		    				}  */
+		    				changeTX+=((xxMax+xxMin)/(initS*2)-initTX)*standard-changeTX-w/(2*scale)-originx;
+		    				changeTY+=((yyMax+yyMin)/(initS*2)-initTY)*standard-changeTY-h/(2*scale)-originy;
+							str=[];
+				    		var adjM=[];
+							var dis=Infinity;
+		    	    		allpoints=[];
+		    	    		twopoints=[];
+		    	    		var m;
+		    	    		var j;
+		    	    		nearpoint();
+		    				allpoint();
+		    	    		for(var i=0;i<allroad.length;i++){
+		    	    			if(allroad[i][0]==nowfloor){
+		    	    				var n=getSpotToLineDistance({x:selectX2,y:selectY2},allroad[i][1],allroad[i][2]);
+		    	        			if(n.distance<dis){
+		    	        				dis=n.distance;
+		    	        				m=n;
+		    	        				j=i;
+		    	        			}
+		    	    			}
+		    	    		}
+		    				//var neardianti;
+		    				var diss=Infinity;
+		    				//找到离起点最近的电梯
+		    				for(var i=0;i<alldianti.length;i++){
+		    	    			if(alldianti[i].cover.split(',').indexOf(''+floor+'')!=-1){
+		    	    				var gate=alldianti[i].gate.split(',');
+		    	    				var n=getDisTwoPoint({x:nowloc[0]*1,y:nowloc[1]*1},{x:gate[0]*1,y:gate[1]*1});
+		    	    				if(n<diss){
+		    	        				diss=n;
+		    	        				neardianti=gate;
+		    	        			}
+		    	    			}
+		    	    		}
+							//找到离电梯最近的道路
+							var mm;
+		    				var jj;
+		    				var disss=Infinity;
+		    				for(var i=0;i<allroad.length;i++){
+		    	    			if(allroad[i][0]==nowfloor){
+		    	    				var n=getSpotToLineDistance({x:neardianti[0]*1,y:neardianti[1]*1},allroad[i][1],allroad[i][2]);
+		    	        			if(n.distance<disss){
+		    	        				disss=n.distance;
+		    	        				mm=n;
+		    	        				jj=i;
+		    	        			}
+		    	    			}
+		    	    		}
+		    				//求出到电梯的邻接矩阵
+		    				if(allpoints[allpoints.length-1][1]==-2){
+		        				allpoints.pop();
+		        			}
+		        			allpoints.push([jj,-2,mm.nodical]);
+		        			for(var i=0;i<allpoints.length;i++){
+		        				var p=[];
+		        				for(var j=0;j<allpoints.length;j++){
+		        					var diss;
+		        					if(allpoints[i][0]==allpoints[j][0] || allpoints[i][0]==allpoints[j][1] || allpoints[i][1]==allpoints[j][0] || allpoints[i][1]==allpoints[j][1]){
+		        						diss=getDisTwoPoint(allpoints[i][2],allpoints[j][2]);
+		        					}else{
+		        						diss=Infinity;
+		        					}
+		        					p.push(diss);
+		        				}
+		        				adjM.push(p);
+		        			}
+		        			str=searchPath(0,adjM.length-1,adjM);
+						}
+					}
+				}
+		    }
+		}.bind(this),false);
+    /*--------------------------*/
+    /*--------改变楼层方法*/
+    	function changefloor(floor){
+    		var arrX=[];
+       		var arrY=[];
+       		$.each(datas.floors[floor].list, function(i1, item1) {
+	            if(item1.type=='线墙'){
+	            	$.each(item1.lines,function(k,v){
+	            		var head=v.start.split(',');
+	            		var tail=v.end.split(',');
+	            		arrX.push(head[0]);
+	            		arrX.push(tail[0]);
+	            		arrY.push(head[1]);
+	            		arrX.push(tail[1]);
+	            	})
+	            }
+			})
+			var xMax=Math.max.apply(Math, arrX);
+			var xMin=Math.min.apply(Math, arrX);
+			var yMax=Math.max.apply(Math, arrY);
+			var yMin=Math.min.apply(Math, arrY);
+			initS=Math.max.apply(Math, [(xMax-xMin)/w,(yMax-yMin)/h]);
+			beishu=initS;       //初始倍数
+			var initCX=(xMax+xMin)/(2*initS);       //初始中心x
+			var initCY=(yMax+yMin)/(2*initS);       //初始中心Y 
+			initTX=initCX-w/2;  //初始平移x
+			initTY=initCY-h/2;  //初始平移Y 
+			//standard=standardScale;
+    	}
+
+    /*--------------------*/
+    	var mapdata;
+    	var datas;
+    	var point;
+    	var isShare;
+    	var lastfloor;
+    	var cvs=document.querySelector("#cvs");
+    	var map=document.querySelector(".map");
+		var cxt=cvs.getContext("2d");
+		var initS,initTX,initTY;
+		var changeTX=0,changeTY=0;
+		var zoomIntensity = 0.2;
+		var x,y;
+        var width =$('body')[0].clientWidth;;
+        var height = $('body')[0].clientHeight*0.9;
+        var scale = 1;
+        var lastscale=scale;
+        var originx = 0;
+        var originy = 0;
+        var visibleWidth = width;
+        var visibleHeight = height;
+        function xunhuan(){
+        	setInterval(function(){
+        		main(mapdata)}, 1000/60);
+        }
+        var zooms = function (touch) {
+                var touch1 = touch[0], touch2 = touch[1];
+
+                var x = touch1.clientX - (touch2 ? touch2.clientX : 0),
+                    y = touch1.clientY - (touch2 ? touch2.clientY : 0);
+                return Math.sqrt((x * x) + (y * y));
+         };
+        var timeOutEvent=0;
+        //缩小
+        //一根手指
+        var startX;
+        var startY;
+        var endX;
+        var endY;
+        var starttime;
+        var endtime;
+        //两根手指
+        var startlen ;
+        var startcenterX;
+        var startcenterY;
+        var endlen ;
+        var flag;
+        var loc;
+        var close=true;
+        cvs.addEventListener("touchstart", handleStart, false);
+		cvs.addEventListener("touchend", handleEnd, false);
+		cvs.addEventListener("touchmove", handleMove, false);
+		//开始触摸
+		function handleStart(e){
+			e.preventDefault();
+			close=false;
+			$('.typebox').css('display','none');
+            $('.details').css('display','none');
+	        $('.poiname').text('');
+		    $('.addr').text('');
+		    $('.des').text('');
+		    //selectName=null;
+		    starttime=Date.parse(new Date());
+			if(e.targetTouches.length==1){
+				input.blur();
+				$('.searchlist').html('');
+				flag=true;
+				startX=e.targetTouches[0].clientX;
+				startY=e.targetTouches[0].clientY;
+				
+				//endtime=startY;
+				
+				//timeOutEvent = setTimeout("longPress(startX,startY)",200);
+			}
+			else if(e.targetTouches.length>=2){
+				flag=false;
+				startlen = zooms(e.targetTouches);
+				startcenterX=(e.targetTouches[0].clientX+e.targetTouches[1].clientX)/2;
+				startcenterY=(e.targetTouches[0].clientY+e.targetTouches[1].clientY)/2;
+			}	
+		}
+		//触摸中
+		function handleMove(e){
+			clearTimeout(timeOutEvent);
+			if(selectName){
+				close=false;
+			}else{
+				close=true;
+			}
+			e.preventDefault(); 
+			if(e.targetTouches.length==1 && flag==true){
+				endX=e.targetTouches[0].clientX;
+				endY=e.targetTouches[0].clientY;
+				cxt.translate(originx, originy);
+				originx-=(endX-startX)/scale;
+				originy-=(endY-startY)/scale;
+				cxt.translate(-originx, -originy);
+				startX=endX;
+				startY=endY;
+			}
+			else if(e.changedTouches.length>=2 ){
+				endlen = zooms(e.changedTouches);
+				getrooms=Math.max(0.5, Math.min(endlen / startlen, 5));
+				var room=Math.max(1/standard, Math.min(getrooms*scale, 20));
+				if(room==1/standard || room==20){
+					getrooms=room/scale;
+				}
+				cxt.translate(originx, originy);
+				originx -= startcenterX/room - startcenterX/scale;
+	            originy -= startcenterY/room - startcenterY/scale;
+	            cxt.scale(getrooms, getrooms);
+	            cxt.translate(-originx, -originy);
+	            scale = room;
+	            visibleWidth = width / scale;
+	            visibleHeight = height / scale;
+	            startlen=endlen;
+			}
+		}
+		//触摸结束
+		function handleEnd(e){
+			clearTimeout(timeOutEvent);
+			e.preventDefault();
+			endtime=Date.parse(new Date());
+			if(e.changedTouches.length==1){
+				if(endtime-starttime<1000){
+					close=true;
+					longPress(startX,startY);
+				}
+				endX=null;
+				endY=null;
+				starttime=null;
+				endtime=null;
+				
+			}else if(e.changedTouches.length>=2){
+				startlen = null;
+				startcenterX = null;
+				startcenterY =null;
+				endlen=null;
+			}
+		}
+		//长按
+		function longPress(startX,startY){
+			selectName=null;
+			 loc=windowTocanvas(cvs,startX,startY);
+			 loc.x=parseInt(loc.x/scale+originx);  
+             loc.y=parseInt(loc.y/scale+originy);
+		}
+		//求出画布的坐标点
+		function windowTocanvas(canvas, x, y) {  
+            var bbox = canvas.getBoundingClientRect();  
+            return {  
+                x: x - bbox.left * (canvas.width / bbox.width),   
+                y: y - bbox.top * (canvas.height / bbox.height) 
+            };  
+
+	    } 
+	  /**
+	   * @description 射线法判断点是否在多边形内部
+	   * @param {Object} p 待判断的点，格式：{ x: X坐标, y: Y坐标 }
+	   * @param {Array} poly 多边形顶点，数组成员的格式同 p
+	   * @return {String} 点 p 和多边形 poly 的几何关系
+	   */
+	  function rayCasting(p, poly) {
+	    var px = p.x,
+	        py = p.y,
+	        flag1 = false
+
+	    for(var i = 0, l = poly.length, j = l - 1; i < l; j = i, i++) {
+	      var sx = poly[i].x,
+	          sy = poly[i].y,
+	          tx = poly[j].x,
+	          ty = poly[j].y
+
+	      // 点与多边形顶点重合
+	      if((sx === px && sy === py) || (tx === px && ty === py)) {
+	        return 'on'
+	      }
+
+	      // 判断线段两端点是否在射线两侧
+	      if((sy < py && ty >= py) || (sy >= py && ty < py)) {
+	        // 线段上与射线 Y 坐标相同的点的 X 坐标
+	        var x = sx + (py - sy) * (tx - sx) / (ty - sy)
+
+	        // 点在多边形的边上
+	        if(x === px) {
+	          return 'on'
+	        }
+
+	        // 射线穿过多边形的边界
+	        if(x > px) {
+	          flag1 = !flag1
+	        }
+	      }
+	    }
+
+	    // 射线穿过多边形边界的次数为奇数时点在多边形内
+	    return flag1 ? 'in' : 'out'
+	  }
+	  //计算旋转后的坐标点
+	  function rota(x0,y0,xcenter,ycenter,angle){
+	  	var l = (angle * Math.PI) / 180; 
+	  	var cosv = Math.cos(l);  
+        var sinv = Math.sin(l); 
+	  	return {
+	  		x : (x0-xcenter)*cosv-(y0-ycenter)*sinv+xcenter, 
+		    y : (x0-xcenter)*sinv+(y0-ycenter)*cosv+ycenter
+	  	};
+	  }
+	  function toObj(x0,y0){
+	  	return{
+	  		x : x0,
+	  		y : y0
+	  	};
+	  }
+        cvs.onmousewheel = function (event){
+                event.preventDefault();
+                // Get mouse offset.
+                var mousex = event.clientX - cvs.offsetLeft;
+                var mousey = event.clientY - cvs.offsetTop;
+                // Normalize wheel to +1 or -1.
+                var wheel = event.wheelDelta/120;
+
+                // Compute zoom factor.
+                var zoom = Math.exp(wheel*zoomIntensity);
+                
+                // Translate so the visible origin is at the context's origin.
+                cxt.translate(originx, originy);
+                // Compute the new visible origin. Originally the mouse is at a
+                // distance mouse/scale from the corner, we want the point under
+                // the mouse to remain in the same place after the zoom, but this
+                // is at mouse/new_scale away from the corner. Therefore we need to
+                // shift the origin (coordinates of the corner) to account for this.
+                originx -= mousex/(scale*zoom) - mousex/scale;
+                originy -= mousey/(scale*zoom) - mousey/scale;
+                
+                // Scale it (centered around the origin due to the trasnslate above).
+                cxt.scale(zoom, zoom);
+                // Offset the visible origin to it's proper position.
+                cxt.translate(-originx, -originy);
+
+                // Update scale and others.
+                scale *= zoom;
+                visibleWidth = width / scale;
+                visibleHeight = height / scale;
+            }
+        var touchfloor=null;
+        function main(data){
+        	cxt.clearRect(originx,originy,cvs.width*15/scale ,cvs.height*15/scale  );
+        	cxt.save();
+       		cxt.translate(width/2,height/2);
+			cxt.rotate((360-nowangle)*Math.PI/180);
+			cxt.translate(-(width/2), -(height/2));
+			if(selectName){
+				standard=standardScale;
+			}
+			if(touchfloor!=null){
+				floor=touchfloor;
+				lists.style.top=-floor*smallH+'px';
+				if(selectfloor!=null){
+					if(selectfloor!=nowfloor*1){
+						if(floor==selectfloor){
+							//找到离电梯最近的道路
+							var adjM2=[];
+							var mm;
+		    				var jj;
+		    				var diss=Infinity;
+		    				var m;
+		    				var jjj;
+		    				var dis=Infinity;
+		    				twopoints=[];
+		    				for(var i=0;i<allroad.length;i++){
+		    	    			if(allroad[i][0]==selectfloor){
+		    	    				var n=getSpotToLineDistance({x:neardianti[0]*1,y:neardianti[1]*1},allroad[i][1],allroad[i][2]);
+		    	        			if(n.distance<diss){
+		    	        				diss=n.distance;
+		    	        				mm=n;
+		    	        				jj=i;
+		    	        			}
+		    	        			var p=getSpotToLineDistance({x:selectX2,y:selectY2},allroad[i][1],allroad[i][2]);
+		                			if(p.distance<dis){
+		                				dis=p.distance;
+		                				m=p;
+		                				jjj=i;
+		                			}
+		    	    			}
+		    	    		}
+		    				twopoints.push([jj,-1,mm.nodical]);
+		    				//找到目的地这层的所有点
+							for(var i=0;i<allroad.length;i++){
+				    			if(allroad[i][0]==selectfloor){
+				    				for(var j=i+1;j<allroad.length;j++){
+				    					if(allroad[j][0]==selectfloor){
+				    						var mes=getCrossPoint(allroad[i][1],allroad[i][2],allroad[j][1],allroad[j][2]);
+				    						if(mes){
+				    							//console.log(mes);
+				    							twopoints.push([i,j,mes]);
+				    						}
+				    					}
+				    				}
+				    			}
+				    		}
+							twopoints.push([jjj,-2,m.nodical]);
+							for(var i=0;i<twopoints.length;i++){
+			    				var p=[];
+			    				for(var j=0;j<twopoints.length;j++){
+			    					var disss;
+			    					if(twopoints[i][0]==twopoints[j][0] || twopoints[i][0]==twopoints[j][1] || twopoints[i][1]==twopoints[j][0] || twopoints[i][1]==twopoints[j][1]){
+			    						disss=getDisTwoPoint(twopoints[i][2],twopoints[j][2]);
+			    					}else{
+			    						disss=Infinity;
+			    					}
+			    					p.push(disss);
+			    				}
+			    				adjM2.push(p);
+			    			}
+			    			str2=searchPath(0,adjM2.length-1,adjM2);
+						}else if(floor==nowfloor*1){
+							str=[];
+				    		var adjM=[];
+							var dis=Infinity;
+		    	    		allpoints=[];
+		    	    		twopoints=[];
+		    	    		var m;
+		    	    		var j;
+		    	    		nearpoint();
+		    				allpoint();
+		    	    		for(var i=0;i<allroad.length;i++){
+		    	    			if(allroad[i][0]==nowfloor){
+		    	    				var n=getSpotToLineDistance({x:selectX2,y:selectY2},allroad[i][1],allroad[i][2]);
+		    	        			if(n.distance<dis){
+		    	        				dis=n.distance;
+		    	        				m=n;
+		    	        				j=i;
+		    	        			}
+		    	    			}
+		    	    		}
+		    				//var neardianti;
+		    				var diss=Infinity;
+		    				//找到离起点最近的电梯
+		    				for(var i=0;i<alldianti.length;i++){
+		    	    			if(alldianti[i].cover.split(',').indexOf(''+floor+'')!=-1){
+		    	    				var gate=alldianti[i].gate.split(',');
+		    	    				var n=getDisTwoPoint({x:nowloc[0]*1,y:nowloc[1]*1},{x:gate[0]*1,y:gate[1]*1});
+		    	    				if(n<diss){
+		    	        				diss=n;
+		    	        				neardianti=gate;
+		    	        			}
+		    	    			}
+		    	    		}
+							//找到离电梯最近的道路
+							var mm;
+		    				var jj;
+		    				var disss=Infinity;
+		    				for(var i=0;i<allroad.length;i++){
+		    	    			if(allroad[i][0]==nowfloor){
+		    	    				var n=getSpotToLineDistance({x:neardianti[0]*1,y:neardianti[1]*1},allroad[i][1],allroad[i][2]);
+		    	        			if(n.distance<disss){
+		    	        				disss=n.distance;
+		    	        				mm=n;
+		    	        				jj=i;
+		    	        			}
+		    	    			}
+		    	    		}
+		    				//求出到电梯的邻接矩阵
+		    				if(allpoints[allpoints.length-1][1]==-2){
+		        				allpoints.pop();
+		        			}
+		        			allpoints.push([jj,-2,mm.nodical]);
+		        			for(var i=0;i<allpoints.length;i++){
+		        				var p=[];
+		        				for(var j=0;j<allpoints.length;j++){
+		        					var diss;
+		        					if(allpoints[i][0]==allpoints[j][0] || allpoints[i][0]==allpoints[j][1] || allpoints[i][1]==allpoints[j][0] || allpoints[i][1]==allpoints[j][1]){
+		        						diss=getDisTwoPoint(allpoints[i][2],allpoints[j][2]);
+		        					}else{
+		        						diss=Infinity;
+		        					}
+		        					p.push(diss);
+		        				}
+		        				adjM.push(p);
+		        			}
+		        			str=searchPath(0,adjM.length-1,adjM);
+						}
+					}
+				}
+			}
+			if(isShare){
+				loc=null;
+				$('.des').text("");
+				$('.details').css('display','block');
+	    		var num=window.location.href.split('=')[1].split('')[5]+'号定位点';
+	    		$('.addr').text(num);
+	    		$('.des').append('<span style="color:red">提示<span/><span style="color:black">:点击"到这去"扫描你身边的定位二维码，立即为你指路。<span/>');
+			}
+        	$.each(datas.floors[floor].list, function(i1, item1) {
+				            if(item1.type=='线墙'){
+				            	$.each(item1.lines,function(k,v){
+				            		var arr=[];
+				            		arr=v.start.split(',');
+				            		var arr1=[];
+				            		arr1=v.end.split(',');
+				            		drawLine((arr[0]/initS-initTX)*standard-changeTX,(arr[1]/initS-initTY)*standard-changeTY,(arr1[0]/initS-initTX)*standard-changeTX,(arr1[1]/initS-initTY)*standard-changeTY,1,'gray');
+				            	})
+				            }
+				            if(item1.type=='通道'){
+				            	$.each(item1.lines,function(k,v){
+				            		if(v.hide!=1){
+				            			var arr=[];
+					            		arr=v.start.split(',');
+					            		var arr1=[];
+					            		arr1=v.end.split(',');
+					            		drawLine((arr[0]/initS-initTX)*standard-changeTX,(arr[1]/initS-initTY)*standard-changeTY,(arr1[0]/initS-initTX)*standard-changeTX,(arr1[1]/initS-initTY)*standard-changeTY,2,'orange');
+				            		}
+				            	})
+				            }
+				            if(item1.type=='车位' || item1.type=='电梯' || item1.type=='占位块' || item1.type=='出口'){
+				            	var arrs=[];
+				            	arrs=item1.locations.split(';');
+				            	arr0=arrs[0];
+				            	arr1=arrs[1];
+				            	var x0=(arr0.split(',')[0]/initS-initTX)*standard-changeTX;
+				            	var y0=(arr0.split(',')[1]/initS-initTY)*standard-changeTY;
+				            	var x1=(arr1.split(',')[0]/initS-initTX)*standard-changeTX;
+				            	var y1=(arr1.split(',')[1]/initS-initTY)*standard-changeTY;
+				            	var h=y1-y0;
+				            	var w=x1-x0;
+				            	if(item1.type=='车位' || item1.type=='占位块'){
+				            		drawRect(x0,y0,w,h,false,true,'#888877',item1.angle,item1.name,item1.type,item1.subtype,item1.des,item1.gate,arr0,arr1);
+				            	}
+				            	if(item1.type=='电梯'){
+				            		if(item1.name=='电梯'){
+				            			drawRect(x0,y0,w,h,false,true,'#FFCF88',item1.angle,item1.name,item1.type,item1.subtype,item1.des,item1.gate);	
+				            		}
+				            		if(item1.name=='楼梯'){
+				            			drawRect(x0,y0,w,h,false,true,'#CEF790',item1.angle,item1.name,item1.type,item1.subtype,item1.des,item1.gate);	
+				            		}
+				            		if(item1.name=='洗手间'){
+				            			drawRect(x0,y0,w,h,false,true,'#AAFFFF',item1.angle,item1.name,item1.type,item1.subtype,item1.des,item1.gate);	
+				            		}else{
+				            			drawRect(x0,y0,w,h,false,true,'#FFCF88',item1.angle,item1.name,item1.type,item1.subtype,item1.des,item1.gate);	    
+				            		}	
+				            	}
+				            	if(item1.type=='出口'){
+				            		drawRect(x0,y0,w,h,false,true,'#08E761',item1.angle,item1.subtype,item1.type);
+				            	}	
+				            }
+				            if(item1.type=='门店'){
+				            	drawShop(item1.type,item1.gate,item1.name,item1.locations,item1.picurl,item1.subtype,item1.des);
+				            }
+			})
+            
+        	if(selectfloor3==nowfloor && selectX3 && selectY3){
+        		myImage = new Image();
+		    	myImage.src ='__PUBLIC__/mudidi.png';
+            	cxt.save(); 
+            	cxt.translate((selectX3/initS-initTX)*standard-changeTX,(selectY3/initS-initTY)*standard-changeTY);
+    			cxt.scale(1/scale,1/scale);
+    			cxt.rotate(nowangle*Math.PI/180);
+    			cxt.translate(-((selectX3/initS-initTX)*standard-changeTX),-((selectY3/initS-initTY)*standard-changeTY));
+            	cxt.drawImage(myImage, (selectX3/initS-initTX)*standard-changeTX-30, (selectY3/initS-initTY)*standard-changeTY-30,60,60); 
+            	cxt.restore();
+        	}
+        	if(selectfloor!=nowfloor){
+        		if(str.length!=0 && floor==nowfloor){
+            		cxt.beginPath();   
+        		    cxt.lineWidth = 10;  
+        		    cxt.strokeStyle = 'green'; 
+        		    cxt.moveTo((nowloc[0]*1/initS-initTX)*standard-changeTX, (nowloc[1]*1/initS-initTY)*standard-changeTY); 
+        		    for(var i=0;i<str.length;i++){
+        		    	cxt.lineTo(allpoints[str[i]][2].x,allpoints[str[i]][2].y); 
+        		    }
+        		    cxt.lineTo((neardianti[0]*1/initS-initTX)*standard-changeTX, (neardianti[1]*1/initS-initTY)*standard-changeTY);  
+        		    cxt.stroke(); 
+            	}
+				if(str2.length!=0 && floor==selectfloor){
+					cxt.beginPath();   
+        		    cxt.lineWidth = 10;  
+        		    cxt.strokeStyle = 'green'; 
+        		    cxt.moveTo((neardianti[0]*1/initS-initTX)*standard-changeTX, (neardianti[1]*1/initS-initTY)*standard-changeTY); 
+        		    for(var i=0;i<str2.length;i++){
+        		    	cxt.lineTo(twopoints[str2[i]][2].x,twopoints[str2[i]][2].y); 
+        		    }
+        		    cxt.lineTo((selectX2/initS-initTX)*standard-changeTX, (selectY2/initS-initTY)*standard-changeTY);  
+        		    cxt.stroke(); 
+				}
+        	}else{
+        		if(str.length!=0 && floor==nowfloor){
+            		cxt.beginPath();   
+        		    cxt.lineWidth = 10;  
+        		    cxt.strokeStyle = 'green'; 
+        		    cxt.moveTo((nowloc[0]*1/initS-initTX)*standard-changeTX, (nowloc[1]*1/initS-initTY)*standard-changeTY); 
+        		    for(var i=0;i<str.length;i++){
+        		    	cxt.lineTo(allpoints[str[i]][2].x,allpoints[str[i]][2].y); 
+        		    }
+        		    cxt.lineTo((selectX2/initS-initTX)*standard-changeTX, (selectY2/initS-initTY)*standard-changeTY);  
+        		    cxt.stroke(); 
+            	} 
+        	}
+        	if(floor==nowfloor){
+           	 /* cxt.beginPath();
+           	//var test=rota(nowloc[0]*1/initS-initTX,nowloc[1]*1/initS-initTY,w/2,h/2,nowangle);
+	            cxt.arc(nowloc[0]*1/initS-initTX-changeTX,nowloc[1]*1/initS-initTY-changeTY,2,0,2*Math.PI);
+	            cxt.fillStyle="red";
+	            cxt.fill();
+	            cxt.closePath();  */
+	            //cxt.beginPath();  
+			    myImage = new Image();
+			    if(isShare){
+			    	myImage.src ='__PUBLIC__/mudidi.png';
+			    }else{
+	            	myImage.src = '__PUBLIC__/img/new_now_location.png';
+			    }
+           	cxt.save(); 
+           	cxt.translate((nowloc[0]*1/initS-initTX)*standard-changeTX,(nowloc[1]*1/initS-initTY)*standard-changeTY);
+   			cxt.scale(1/scale,1/scale);
+   			cxt.rotate(nowangle*Math.PI/180);
+   			cxt.translate(-((nowloc[0]*1/initS-initTX)*standard-changeTX),-((nowloc[1]*1/initS-initTY)*standard-changeTY));
+           	cxt.drawImage(myImage, (nowloc[0]*1/initS-initTX)*standard-changeTX-30, (nowloc[1]*1/initS-initTY)*standard-changeTY-30,60,60); 
+           	cxt.restore();
+           	/* $('.loc').css('display','block');
+               $('.loc').css('top',(nowloc[0]*1/initS-initTX-originx)*scale-$('.top').height());
+               $('.loc').css('left',(nowloc[1]*1/initS-initTY-originy)*scale); */
+           }
+	       	if(floor==lastfloor){
+	          	 /* cxt.beginPath();
+	          	//var test=rota(nowloc[0]*1/initS-initTX,nowloc[1]*1/initS-initTY,w/2,h/2,nowangle);
+		            cxt.arc(nowloc[0]*1/initS-initTX-changeTX,nowloc[1]*1/initS-initTY-changeTY,2,0,2*Math.PI);
+		            cxt.fillStyle="red";
+		            cxt.fill();
+		            cxt.closePath();  */
+		            //cxt.beginPath();  
+				    myImage = new Image();
+				    //if(isShare){
+				    	myImage.src ='__PUBLIC__/mudidi.png';
+				    /* }else{
+		            	myImage.src = '__PUBLIC__/img/new_now_location.png';
+				    } */
+	          	cxt.save(); 
+	          	cxt.translate((selectX3/initS-initTX)*standard-changeTX,(selectY3/initS-initTY)*standard-changeTY);
+	  			cxt.scale(1/scale,1/scale);
+	  			cxt.rotate(nowangle*Math.PI/180);
+	  			cxt.translate(-((selectX3/initS-initTX)*standard-changeTX),-((selectY3/initS-initTY)*standard-changeTY));
+	          	cxt.drawImage(myImage, (selectX3/initS-initTX)*standard-changeTX-30, (selectY3/initS-initTY)*standard-changeTY-30,60,60); 
+	          	cxt.restore();
+	          	/* $('.loc').css('display','block');
+	              $('.loc').css('top',(nowloc[0]*1/initS-initTX-originx)*scale-$('.top').height());
+	              $('.loc').css('left',(nowloc[1]*1/initS-initTY-originy)*scale); */
+	          }
+        	//console.log(allpoints);
+        	/* for(var i=0;i<allroad.length;i++){
+        		if(allroad[i][0]==nowfloor){
+        			cxt.beginPath();
+            		cxt.lineWidth = 3;
+            		cxt.strokeStyle = 'green'; 
+            		cxt.moveTo((allroad[i][1].x*1/initS-initTX)*standard-changeTX, (allroad[i][1].y*1/initS-initTY)*standard-changeTY); 
+            		cxt.lineTo((allroad[i][2].x/initS-initTX)*standard-changeTX, (allroad[i][2].y/initS-initTY)*standard-changeTY);  
+        		    cxt.stroke();
+        		}
+        	} */
+        	/* for(var i=0;i<twopoints.length;i++){
+        		 if(i==0 || i==twopoints.length-1){
+        			cxt.beginPath();
+             		cxt.arc(twopoints[i][2].x*1,twopoints[i][2].y*1,5,0,2*Math.PI);
+             		cxt.fillStyle="red";
+                    cxt.fill();
+                    cxt.closePath(); 
+        		 }
+        	}  */
+        	cxt.restore();
+        }
+		/** 
+		 * @description 绘制线段(主要分为：绘制填充线段和绘制空心线段利用isFill变量来标记） 
+		 * 主要是使用的是canvas原生的API: 
+		 * lineTo(x,y):表示从某点连线到该坐标点 
+		 *moveTo(x,y):表示将路径移动到画布中的该坐标点 
+		 * x:画布中某点的X坐标 
+		 * y:画布中某点的Y坐标 
+		 * 注意：如果开始没有调用moveTo,那么第一个lineTo的功能就相当于一个moveTo 
+		 * 自己封装的API:drawLine(startX,startY,endX,endY,lineWidth,bgcolor) 
+		 *  
+		 * startX:表示线的起点的X坐标 
+		 * startY:表示起点的Y坐标 
+		 * endX:表示线的终点的X坐标 
+		 * endY:表示线的终点的Y坐标 
+		 * lineWidth:表示线段的宽度 
+		 * bgColor:线的颜色 
+		 * */  
+		function drawLine(startX, startY, endX, endY, lineWidth, bgColor) {  
+		    cxt.beginPath();   
+		    cxt.lineWidth = lineWidth;  
+		    cxt.strokeStyle = bgColor;//经过测试不管是fillStyle还是StrokeStyle都是一样的  
+		    cxt.moveTo(startX, startY);  
+		    cxt.lineTo(endX, endY);  
+		    cxt.stroke(); 
+
+		} 
+		/** 
+		 * 绘制矩形(主要分为:绘制填充矩形和绘制边框矩形和清除矩形区域(利用isClear标记是否绘制清除矩形，实际上就是绘制一个与画布背景色一致的矩形区域),利用isFill变量来标记) 
+		 * 主要使用canvas原生的API:FillRect(x,y,width,height),StrokeRect(x,y,width,height),ClearRect(x,y,width,height) 
+		 * 自己封装的参数:drawRect(x,y,width,height,isClear,isFill,bgColor) 
+		 * x:矩形起点的X坐标(注意：相对坐标系是以画布的左上角为原点，向右为X坐标正方向，向下为Y坐标的正方向) 
+		 * y:矩形终点的Y坐标 
+		 * width:矩形的宽度 
+		 * height:矩形的高度 
+		 * isClear:是否绘制清除画布的矩形区域，true则就是绘制一个清除画布矩形区域，false就是绘制其他两种矩形 
+		 * isFill:是否是填充，false为绘制边框，true为绘制填充 
+		 * bgColor:矩形的颜色，若为填充则为整个矩形背景色，边框则为边框色 
+		 * */  
+		 myImage1 = new Image();
+		 myImage1.src = '__PUBLIC__/dianti.png';
+		 myImage2 = new Image();
+		 myImage2.src = '__PUBLIC__/louti.png';
+		 myImage3 = new Image();
+		 myImage3.src = '__PUBLIC__/xishoujian.png';
+		 myImage4 = new Image();
+		 myImage4.src = '__PUBLIC__/huoti.png';
+		 myImage5 = new Image();
+		 myImage5.src = '__PUBLIC__/futi.png';
+		function drawRect(x, y, width, height, isClear, isFill, bgColor,angle,name,type,subtype,des,gate,arr0,arr1) {
+			if(gate){
+				var gater=gate.split(',');
+			}else{
+				var gater=[x+width/2,y+height/2];
+			}
+			if(subtype=='洗手间'){
+				cesuoX=gater[0]*1;
+				cesuoY=gater[1]*1;
+			}
+			if(selectName==name && close==true){
+				 $('.details').css('display','block');
+		    	 bgColor='rgba(236, 13, 98, 0.48)';
+		    	 $('.poiname').text(subtype);
+		    	 $('.addr').text(name);
+		    	 $('.des').text(des);
+		    	 //cxt.translate(originx, originy);
+		    	 //originx=(x+width/2)-w/(2*scale);
+		    	 //originy=(y+height/2)-h/(2*scale);
+		    	 //originx-=(w/2-(x+width/2-originx)*scale)/scale;
+			     //originy-=(h/2-(y+height/2-originy)*scale)/scale;
+		    	 //cxt.translate(-originx, -originy);  
+		    	 //changeTX+=x+width/2-w/(2*scale)-originx;
+				 //changeTY+=y+height/2-h/(2*scale)-originy; 
+				 changeTX+=x+width/2-w/(2*scale)-originx*Math.cos((360-nowangle) * Math.PI / 180)-originy*Math.sin((360-nowangle) * Math.PI / 180);
+				 changeTY+=y+height/2-h/(2*scale)+originx*Math.sin((360-nowangle) * Math.PI / 180)-originy*Math.cos((360-nowangle) * Math.PI / 180);
+				 if(type=='车位'){
+					 selectX=(arr0.split(',')[0]*1+arr1.split(',')[0]*1)/2;
+		             selectY=(arr0.split(',')[1]*1+arr1.split(',')[1]*1)/2; 
+				 }else{ 
+		             selectX=gater[0]*1;
+		             selectY=gater[1]*1;
+				 }
+			 }
+			 /* if(type=='电梯' && name==''){
+				 name=subtype;
+			 } */
+			 if(selectName==name && close==false){
+				 //$('.details').css('display','block');
+		    	 bgColor='rgba(236, 13, 98, 0.48)';
+		    	 //$('.poiname').text(subtype);
+		    	 //$('.addr').text(name);
+		    	 //$('.des').text(des);
+		    	 //cxt.translate(originx, originy);
+		    	 //originx=(x+width/2)-w/(2*scale);
+		    	 //originy=(y+height/2)-h/(2*scale);
+		    	 //originx-=(w/2-(x+width/2-originx)*scale)/scale;
+			     //originy-=(h/2-(y+height/2-originy)*scale)/scale;
+		    	 //cxt.translate(-originx, -originy);  
+		    	 //changeTX+=x+width/2-w/(2*scale)-originx;
+				 //changeTY+=y+height/2-h/(2*scale)-originy; 
+			 }
+			if(type=='车位'){
+				var fontsize="12px Arial";
+			}else if(type=='电梯'){
+				var fontsize="75px Arial";
+			}else{
+				var fontsize="50px Arial";
+			} 
+		    if (isClear) { //为true表示绘制清除画布的矩形区域,那么传入的isFill, bgColor值可以为任意值  
+		        cxt.clearRect(x, y, width, height);  
+		    } else { //false  
+		    	//判断选中的点是否在矩形内
+		    	if(loc){
+	    			var one=rota(x,y,w/2,h/2,360-nowangle);
+			    	var two=rota(x+width,y,w/2,h/2,360-nowangle);
+			    	var three=rota(x,y+height,w/2,h/2,360-nowangle);
+			    	var four=rota(x+width,y+height,w/2,h/2,360-nowangle);
+			    	var center=rota(x+width/2,y+height/2,w/2,h/2,360-nowangle);
+			    	one=rota(one.x,one.y,center.x,center.y,angle);
+			    	two=rota(two.x,two.y,center.x,center.y,angle);
+			    	three=rota(three.x,three.y,center.x,center.y,angle);
+			    	four=rota(four.x,four.y,center.x,center.y,angle);
+			    	var arr=[one,two,three,four];
+			    	var mes=rayCasting(loc, arr);
+			    	if(mes=='in' && type!='出口' && type!='占位块' && close==true){
+			    		if(type!='电梯'){
+			    			$('.details').css('display','block');
+				    		bgColor='rgba(236, 13, 98, 0.48)';
+				    		$('.poiname').text(subtype);
+				    		$('.addr').text(name);
+				    		$('.des').text(des);
+			    		}
+			    		if(type=='车位'){
+							 selectX=(arr0.split(',')[0]*1+arr1.split(',')[0]*1)/2;
+				             selectY=(arr0.split(',')[1]*1+arr1.split(',')[1]*1)/2;     
+						 }else{ 
+				             selectX=gater[0]*1;
+				             selectY=gater[1]*1;
+						}
+			    		if(str.length!=0 && selectfloor!=nowfloor && Math.abs((neardianti[0]*1-gater[0]*1)/neardianti[0]*1)<0.08 && Math.abs((neardianti[1]*1-gater[1]*1)/neardianti[1]*1)<0.08){
+				             //if(selectfloor!=nowfloor && neardianti[0]*1==gater[0]*1 && neardianti[1]*1==gater[1]*1){	
+				            	touchfloor=null;;
+				            	if(floor==nowfloor){
+				            		touchfloor=selectfloor;
+				            		loc=null;
+				            	}
+				            	if(floor==selectfloor){
+				            		touchfloor=nowfloor;
+				            		loc=null;
+				            	}
+				            }
+			            
+			    	}
+			    	if(mes=='in' && type!='出口' && type!='占位块' && close==false){
+			    		//$('.details').css('display','block');
+			    		bgColor='rgba(236, 13, 98, 0.48)';
+			    		//$('.poiname').text(subtype);
+			    		//$('.addr').text(name);
+			    		//$('.des').text(des);
+			    		if(selectfloor!=nowfloor && Math.abs((neardianti[0]*1-gater[0]*1)/neardianti[0]*1)<0.08 && Math.abs((neardianti[1]*1-gater[1]*1)/neardianti[1]*1)<0.08){
+			            	touchfloor=null;
+			            	if(floor==nowfloor){
+			            		touchfloor=selectfloor;
+			            		loc=null;
+			            	}
+			            	if(floor==selectfloor){
+			            		touchfloor=nowfloor;
+			            		loc=null;
+			            	}
+			            }
+			    	}
+		    	}
+		        if (isFill) { //为true，则绘制填充矩形
+		        	if(angle!=0){
+		        		cxt.save(); 
+		        		cxt.translate(x+width/2, y+height/2);
+						cxt.rotate(angle*Math.PI/180);
+						cxt.translate(-(x+width/2), -(y+height/2));
+						cxt.fillStyle =bgColor;
+						cxt.fillRect(x, y, width, height);
+						cxt.restore();
+						if(name && type!='占位块' && type!='电梯'){
+							cxt.save();
+							cxt.translate(x+width/2,y+height/2);
+							if(type=='电梯'){
+								cxt.scale(standard/8,standard/8);
+							}else{
+								cxt.scale(standard/15,standard/15);
+							}
+							//cxt.rotate(angle*Math.PI/180);
+							cxt.rotate(nowangle*Math.PI/180);
+							cxt.translate(-(x+width/2), -(y+height/2));
+							/* cxt.translate(screen.clientWidth/2,screen.clientHeight*0.9/2);
+							cxt.rotate(nowangle*Math.PI/180);
+							cxt.translate(-(screen.clientWidth/2), -(screen.clientHeight*0.9/2)); */
+							/* if(type=='电梯'){
+								 if(subtype=='直梯'){
+									cxt.drawImage(myImage1, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='楼梯'){
+									cxt.drawImage(myImage2, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='洗手间'){
+									cxt.drawImage(myImage3, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='货梯'){
+									cxt.drawImage(myImage4, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='扶梯'){
+									cxt.drawImage(myImage5, x+width/2-50, y+height/2-50,100,100);
+								}else{ 
+									cxt.drawImage(myImage1, x+width/2-50, y+height/2-50,100,100);
+								}
+								 
+							}else{ */
+								cxt.font = fontsize;
+								cxt.textAlign="center";
+								cxt.fillStyle ='black';
+								cxt.fillText(name, x+width/2,y+height/2);	
+								cxt.restore();
+							//}
+						}  
+						if(type=='电梯'){
+							cxt.save(); 
+			        		cxt.translate(x+width/2, y+height/2);
+							cxt.rotate(nowangle*Math.PI/180);
+							cxt.translate(-(x+width/2), -(y+height/2));
+							var self;
+							if(width>height){
+								self=height;
+							}else{
+								self=width;
+							}
+							 if(subtype=='直梯'){
+								cxt.drawImage(myImage1, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='楼梯'){
+								cxt.drawImage(myImage2, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='洗手间'){
+								cxt.drawImage(myImage3, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='货梯'){
+								cxt.drawImage(myImage4, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='扶梯'){
+								cxt.drawImage(myImage5, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else{ 
+								cxt.drawImage(myImage1, x+width/2-self/2, y+height/2-self/2,self,self);
+							}
+							 cxt.restore();
+						}
+		        	}else{
+		        		cxt.fillStyle = bgColor;  
+			            cxt.fillRect(x, y, width, height);
+			            if(name && type!='占位块' && type!='电梯'){
+							cxt.save();
+							cxt.translate(x+width/2,y+height/2);
+							if(type=='电梯'){
+								cxt.scale(standard/8,standard/8);
+							}else{
+								cxt.scale(standard/15,standard/15);
+							}
+							cxt.rotate(nowangle*Math.PI/180);
+							cxt.translate(-(x+width/2), -(y+height/2));
+							/* cxt.translate(screen.clientWidth/2,screen.clientHeight*0.9/2);
+							cxt.rotate(nowangle*Math.PI/180);
+							cxt.translate(-(screen.clientWidth/2), -(screen.clientHeight*0.9/2)); */
+							/* if(type=='电梯'){
+								if(subtype=='直梯'){
+									cxt.drawImage(myImage1, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='楼梯'){
+									cxt.drawImage(myImage2, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='洗手间'){
+									cxt.drawImage(myImage3, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='货梯'){
+									cxt.drawImage(myImage3, x+width/2-50, y+height/2-50,100,100);
+								}else if(subtype=='扶梯'){
+									cxt.drawImage(myImage3, x+width/2-50, y+height/2-50,100,100);
+								}else{ 
+									cxt.drawImage(myImage1, x+width/2-50, y+height/2-50,100,100);
+								}
+								 
+							} */
+							//if(type!='电梯'){
+								cxt.font = fontsize;
+								cxt.textAlign="center";
+								cxt.fillStyle ='black';
+								cxt.fillText(name, x+width/2,y+height/2);
+							//}
+							cxt.restore();
+						} 
+			            if(type=='电梯'){
+			            	cxt.save(); 
+			        		cxt.translate(x+width/2, y+height/2);
+							cxt.rotate(nowangle*Math.PI/180);
+							cxt.translate(-(x+width/2), -(y+height/2));
+			            	var self;
+							if(width>height){
+								self=height;
+							}else{
+								self=width;
+							}
+							if(subtype=='直梯'){
+								cxt.drawImage(myImage1, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='楼梯'){
+								cxt.drawImage(myImage2, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='洗手间'){
+								cxt.drawImage(myImage3, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='货梯'){
+								cxt.drawImage(myImage3, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else if(subtype=='扶梯'){
+								cxt.drawImage(myImage3, x+width/2-self/2, y+height/2-self/2,self,self);
+							}else{ 
+								cxt.drawImage(myImage1, x+width/2-self/2, y+height/2-self/2,self,self);
+							}
+							cxt.restore();
+						} 
+		            }
+		        } else { //为false,则绘制边框矩形  
+		            cxt.strokeStyle = bgColor;  
+		            cxt.strokeRect(x, y, width, height);  
+		        }  
+		    }  
+		  
+		}
+		/*-----------------画商铺----------*/
+		function drawShop(type,gate,name,locations,picurl,subtype,des){
+			var gater=gate.split(',');
+			var color="#abb8ef";
+			var points=locations.split(';');
+			points.pop();
+			var arr=[];
+			var arrX=[];
+			var arrY=[];  
+		    //cxt.strokeStyle = 'red';
+			cxt.beginPath();   
+		    cxt.lineWidth = 0;
+			$.each(points,function(k,v){
+				var point=v.split(',');
+				arr.push(rota((point[0]/initS-initTX)*standard-changeTX,(point[1]/initS-initTY)*standard-changeTY,width/2,height/2,360-nowangle));
+				arrX.push((point[0]/initS-initTX)*standard-changeTX);
+        		arrY.push((point[1]/initS-initTY)*standard-changeTY);
+				if(k==0){ 
+				    cxt.moveTo((point[0]/initS-initTX)*standard-changeTX, (point[1]/initS-initTY)*standard-changeTY);    
+				}else{
+					cxt.lineTo((point[0]/initS-initTX)*standard-changeTX, (point[1]/initS-initTY)*standard-changeTY); 
+				}
+			})
+			var xMax=Math.max.apply(Math, arrX);
+			var xMin=Math.min.apply(Math, arrX);
+			var yMax=Math.max.apply(Math, arrY);
+			var yMin=Math.min.apply(Math, arrY);
+			if(selectName==name && close==true){
+				//var mes=rota(originx,originy,w/(2*scale)+originx,h/(2*scale)+originy,nowangle); 
+				changeTX+=(xMax+xMin)/2-w/(2*scale)-originx*Math.cos((360-nowangle) * Math.PI / 180)-originy*Math.sin((360-nowangle) * Math.PI / 180);
+				changeTY+=(yMax+yMin)/2-h/(2*scale)+originx*Math.sin((360-nowangle) * Math.PI / 180)-originy*Math.cos((360-nowangle) * Math.PI / 180);
+				//cxt.translate(originx, originy);
+	    		/* originx=(xMax+xMin)/2-w/(2*scale);
+		    	originy=(yMax+yMin)/2-h/(2*scale); */
+		    	/* originx-=(w/2-((xMax+xMin)/2-originx)*scale)/scale;
+		    	originy-=(h/2-((yMax+yMin)/2-originy)*scale)/scale;
+		    	cxt.translate(-originx, -originy); */ 
+				$('.details').css('display','block');
+	    		color='rgba(236, 13, 98, 0.48)';
+	    		$('.poiname').text(subtype);
+	    		$('.addr').text(name);
+	    		var dess=des.split('#');
+	    		$('.des').text('');
+	    		for(var i=0;i<dess.length;i++){
+	    			$('.des').append(dess[i]+"<br/>");
+	    		}
+	    		selectX=gater[0]*1;
+	            selectY=gater[1]*1;
+			}
+			if(selectName==name && close==false){
+				//var mes=rota(originx,originy,w/(2*scale)+originx,h/(2*scale)+originy,nowangle); 
+				//changeTX+=(xMax+xMin)/2-w/(2*scale)-originx*Math.cos((360-nowangle) * Math.PI / 180)-originy*Math.sin((360-nowangle) * Math.PI / 180);
+				//changeTY+=(yMax+yMin)/2-h/(2*scale)+originx*Math.sin((360-nowangle) * Math.PI / 180)-originy*Math.cos((360-nowangle) * Math.PI / 180);
+				//cxt.translate(originx, originy);
+	    		/* originx=(xMax+xMin)/2-w/(2*scale);
+		    	originy=(yMax+yMin)/2-h/(2*scale); */
+		    	/* originx-=(w/2-((xMax+xMin)/2-originx)*scale)/scale;
+		    	originy-=(h/2-((yMax+yMin)/2-originy)*scale)/scale;
+		    	cxt.translate(-originx, -originy); */ 
+				//$('.details').css('display','block');
+	    		color='rgba(236, 13, 98, 0.48)';
+	    		//$('.poiname').text(subtype);
+	    		//$('.addr').text(name);
+	    		//$('.des').text(des);
+			}
+			if(loc){
+				var mes=rayCasting(loc, arr);
+		    	if(mes=='in' && close==true){
+		    		$('.details').css('display','block');
+		    		color='rgba(236, 13, 98, 0.48)';
+		    		$('.poiname').text(subtype);
+		    		$('.addr').text(name);
+		    		var desss=des.split('#');
+		    		$('.des').text('');
+		    		for(var i=0;i<desss.length;i++){
+		    			$('.des').append(desss[i]+"<br/>");
+		    		}
+		    		selectX=gater[0]*1;
+		            selectY=gater[1]*1;
+		    	}
+		    	if(mes=='in' && close==false){
+		    		//$('.details').css('display','block');
+		    		color='rgba(236, 13, 98, 0.48)';
+		    		/* $('.poiname').text(subtype);
+		    		$('.addr').text(name);
+		    		des=des.split('#');
+		    		$('.des').text('');
+		    		for(var i=0;i<des.length;i++){
+		    			$('.des').append(des[i]+"<br/>");
+		    		} */
+		    		
+		    	}
+			}
+			cxt.closePath(); 
+			cxt.stroke();
+			cxt.fillStyle=color;    //用于填充色
+            cxt.fill(); 
+            cxt.save();
+			cxt.translate((xMax+xMin)/2,(yMax+yMin)/2);
+			cxt.scale(standard/15,standard/15);
+			cxt.rotate(nowangle*Math.PI/180);
+			cxt.translate(-(xMax+xMin)/2, -(yMax+yMin)/2);
+			/* cxt.translate(screen.clientWidth/2,screen.clientHeight*0.9/2);
+			cxt.rotate(nowangle*Math.PI/180);
+			cxt.translate(-(screen.clientWidth/2), -(screen.clientHeight*0.9/2)); */
+			cxt.font = "60px Arial";
+			cxt.fillStyle ='black';
+			cxt.textAlign="center";
+			if(name.length>5 && name.length<=10){
+				cxt.fillText(name.slice(0,5), (xMax+xMin)/2,yMin-2*(yMax-yMin)/standard);	
+				cxt.fillText(name.slice(5), (xMax+xMin)/2,yMin+(yMax-yMin)*4/standard);
+			}else if(name.length>10){
+				//cxt.fillText(name.slice(0,5),(xMax+xMin)/2,(yMax+yMin)*1/3);	
+				//cxt.fillText(name.slice(5,10), (xMax+xMin)/2,(yMax+yMin)*1.6/3);
+				//cxt.fillText(name.slice(10), (xMax+xMin)/2,(yMax+yMin)*2.2/3);
+				cxt.fillText(name.slice(0,5),(xMax+xMin)/2,yMin-2*(yMax-yMin)/standard);	
+				cxt.fillText(name.slice(5,10), (xMax+xMin)/2,yMin+(yMax-yMin)*2/standard);
+				cxt.fillText(name.slice(10), (xMax+xMin)/2,yMin+(yMax-yMin)*8/standard);
+			}else{
+				cxt.fillText(name, (xMax+xMin)/2,(yMax+yMin)/2);	
+			}
+			cxt.restore();
+			//进出口
+			/*var pass=gate.split(',');
+			cxt.fillStyle ='red';
+			cxt.fillRect(pass[0]/initS-initTX,pass[1]/initS-initTY, 1, 1.5);
+			cxt.save();
+			cxt.translate(pass[0]/initS-initTX,pass[1]/initS-initTY);
+			cxt.scale(1/15,1/15);
+			cxt.translate(-pass[0]/initS+initTX, -pass[1]/initS+initTY);
+			cxt.font = "10px Arial";
+			cxt.fillStyle ='black';
+			cxt.fillText('入口', pass[0]/initS-initTX,pass[1]/initS-initTY+14);
+			cxt.restore();*/
+		}
+		/*---------------------------------*/
+		$(document).ready(function(){
+			w=$('body')[0].clientWidth;
+			h=$('body')[0].clientHeight*0.9;
+			$("#cvs").attr("width",w);
+			$("#cvs").attr("height",h);
+			$('.left').css('width',$('.up').height());
+			$('.left').css('height',$('.up').width());
+			$('.right').css('width',$('.up').height());
+			$('.right').css('height',$('.up').width());
+			$('.body').css('height',$('body')[0].clientHeight);
+			//$('body').height($('body')[0].clientHeight);
+			$.ajax({
+    	        type:"post",
+    	        url:"__CONTROLLER__/getSign",//自己填写请求地址
+    	        data:{},
+    	        success:function(result){
+    	            wx.config({
+    	            // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    	            debug: false,
+    	            // 必填，公众号的唯一标识
+    	            appId: 'wxd75116f337fba084',
+    	            // 必填，生成签名的时间戳
+    	            timestamp:result.data.timestamp,
+    	            // 必填，生成签名的随机串
+    	            nonceStr:result.data.nonceStr,
+    	             // 必填，签名，见附录1
+    	             signature:result.data.signature,
+    	             // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    	             jsApiList : [ 'checkJsApi', 'scanQRCode' ,'onMenuShareAppMessage']
+    	             });
+    	          }
+    	    })
+    	    wx.error(function(res) {
+        		alert("出错了：" + res.errMsg);//这个地方的好处就是wx.config配置错误，会弹出窗口哪里错误，然后根据微信文档查询即可。
+    		});
+			$.ajax({
+			   url: "__CONTROLLER__/getMsg",//json文件位置
+			   //url: "./test.json",//json文件位置
+			   type: "POST",//请求方式为get
+			   dataType: "json", //返回数据格式为json
+			   success: function(data) { 
+			   			mapdata=data;
+			   			datas=mapdata.data.map;
+			   			point=mapdata.data.point;
+			   			isShare=mapdata.data.isShare;
+			   			if(!isShare){
+			   				$('#scanQRCode').css('display','none');
+			   			}
+			   			standardScale=mapdata.data.standardScale;
+			   			standardScale=standardScale>2.5 ? 2.5 :standardScale;
+			   			nowfloor=floor=point.floor;
+			   			$.each(datas.floors, function(i1, item1) {
+			   				floorlist.push(item1.list[0].name);
+				            /* if(item1.list[0].name.split('层')[0]*1==floor){
+				            	nowfloor=floor=i1;
+				            	return false;
+				            } */
+						})
+			   			nowangle=point.rotate;
+			   			nowloc=point.location;
+			   			nowloc=nowloc.split(',');
+			   			document.title = datas.mapinfo.mapname;
+			   			var arrX=[];
+			       		var arrY=[];
+			       		floorNum=datas.floors.length;
+			       		for(var i=0;i<floorNum;i++){
+			       			//changeTX[i]=0;
+			       			//changeTY[i]=0;
+							$("ul").append("<li>"+datas.floors[i].list[0].name+"</li>");
+			       		}
+			       		smallH=parseInt($('li').height());
+			       		lists.style.top=-floor*smallH+'px';
+			       		$.each(datas.floors, function(i1, item1) {
+			       			$.each(item1.list, function(i2, item2) {
+			       				if(item2.type=='通道'){
+			       					$.each(item2.lines,function(i3,item3){
+			       						if(item3.hide!=1){
+			       							var start=item3.start.split(',');
+				       	    				var end=item3.end.split(',');
+				       	    				start={
+				       	    						x:start[0]*1,
+				       	    						y:start[1]*1
+				       	    				};
+				       	    				end={
+				       	    						x:end[0]*1,
+				       	    						y:end[1]*1
+				       	    				};
+											allroad.push([i1,start,end]);
+			       						}
+			       					})
+								}
+			       				if(item2.type=='电梯' && item2.subtype!='洗手间'){
+			       					alldianti.push({'cover':item2.cover,'gate':item2.gate,'locations':item2.locations});
+			       				}
+								if(item2.subtype && item2.picurl){
+									alltype.push([item2.subtype,item2.picurl]);
+									typemes.push([item2.subtype,item2.name,item1.list[0].name,item2.des]);
+								}
+								if(item2.subtype=='洗手间'){
+									xishoujian.push([item2.gate,i1]);
+								}
+								if(item2.type=='车位'){
+									typemes.push([item2.type,item2.name,item1.list[0].name,item2.name]);
+								}
+							})
+						})
+						//nearpoint();
+						//allpoint();
+						var hash = {};    
+			       		for(var i = 0, len = alltype.length; i < len; i++){  
+			       		    if(!hash[alltype[i]]){
+			       		        result.push(alltype[i]);  
+			       		        hash[alltype[i]] = true;  
+			       		    }  
+			       		}  
+			       		$.each(datas.floors[floor].list, function(i1, item1) {
+				            if(item1.type=='线墙'){
+				            	$.each(item1.lines,function(k,v){
+				            		var head=v.start.split(',');
+				            		var tail=v.end.split(',');
+				            		arrX.push(head[0]);
+				            		arrX.push(tail[0]);
+				            		arrY.push(head[1]);
+				            		arrX.push(tail[1]);
+				            	})
+				            }
+						})
+						var xMax=Math.max.apply(Math, arrX);
+						var xMin=Math.min.apply(Math, arrX);
+						var yMax=Math.max.apply(Math, arrY);
+						var yMin=Math.min.apply(Math, arrY);
+						initS=Math.max.apply(Math, [(xMax-xMin)/w,(yMax-yMin)/h]);
+						beishu=initS;       //初始倍数
+						var initCX=(xMax+xMin)/(2*initS);       //初始中心x
+						var initCY=(yMax+yMin)/(2*initS);       //初始中心Y
+						initTX=initCX-w/2;  //初始平移x
+						initTY=initCY-h/2;  //初始平移Y	
+						forlocation();
+			    		xunhuan();
+			    		if(!isShare){
+			    			$('.tishi').css('display','block');
+				    		setTimeout(function(){
+				    			$('.tishi').css('display','none');
+				    			
+				    		},3000);
+			   			}
+			    		wx.ready(function() {
+			      	         wx.onMenuShareAppMessage({
+			      	        	title: '('+window.location.href.split('=')[1].split('')[5]+'号定位点)'+document.title, // 分享标题
+			      	        	desc: window.location.href+'&isShare=1', // 分享描述
+			      	        	link: window.location.href+'&isShare=1', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+			      	        	imgUrl: '', // 分享图标
+			      	        	type: '', // 分享类型,music、video或link，不填默认为link
+			      	        	dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			      	        	success: function () {
+			      	        	// 用户确认分享后执行的回调函数
+			      	        	},
+			      	        	cancel: function () {
+			      	        	// 用户取消分享后执行的回调函数
+			      	        	}
+			      	        });
+			   	    });
+   				}
+			})
+		});   
+    </script>
+</body>
+</html>

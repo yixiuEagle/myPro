@@ -1,0 +1,323 @@
+[ 2018-01-10T17:31:33+08:00 ] ::1 /chewei_zend/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.023587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037495s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined index: nickname D:\SUB\php project\chewei_zend\Uploads\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.552143s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.558148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.093450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.094028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.066173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.066424s ]
+
+[ 2018-01-10T17:31:45+08:00 ] ::1 /chewei_zend/index.php/Admin/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:32:09+08:00 ] ::1 /chewei_zend/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000378s ]
+NOTIC: [8] Undefined index: nickname D:\SUB\php project\chewei_zend\Uploads\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001569s ]
+
+[ 2018-01-10T17:32:14+08:00 ] ::1 /chewei_zend/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001693s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:32:43+08:00 ] ::1 /chewei_zend/index.php/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000821s ]
+
+[ 2018-01-10T17:32:59+08:00 ] ::1 /chewei_zend/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001428s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:33:02+08:00 ] ::1 /chewei_zend/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:33:16+08:00 ] ::1 /chewei_zend/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:33:42+08:00 ] ::1 /chewei_zend/index.php/Admin/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:34:35+08:00 ] ::1 /chewei_zend/index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:35:22+08:00 ] ::1 /chewei_zend/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001942s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000363s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000945s ]
+NOTIC: [8] Undefined index: nickname D:\SUB\php project\chewei_zend\Uploads\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001768s ]
+
+[ 2018-01-10T17:35:32+08:00 ] ::1 /chewei_zend/index.php/Home/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined index: nickname D:\SUB\php project\chewei_zend\Uploads\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076212s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002340s ]
+
+[ 2018-01-10T17:35:33+08:00 ] ::1 /chewei_zend/index.php/Home/index/contacts.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000769s ]
+NOTIC: [8] Undefined index: nickname D:\SUB\php project\chewei_zend\Uploads\Runtime\Cache\Home\400403a280c3b032e280f57382119355.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.155619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.155788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001471s ]
+
+[ 2018-01-10T17:35:33+08:00 ] ::1 /chewei_zend/index.php/Home/index/undefined?1515576933847
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+ERR: 非法操作:undefined
+
+[ 2018-01-10T17:35:47+08:00 ] ::1 /chewei_zend/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:36:29+08:00 ] ::1 /chewei_zend/index.php/admin/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:36:37+08:00 ] ::1 /chewei_zend/index.php/admin/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000934s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:36:43+08:00 ] ::1 /chewei_zend/index.php/admin/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001026s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001322s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:37:21+08:00 ] ::1 /chewei_zend/index.php/admin/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002133s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:37:46+08:00 ] ::1 /chewei_zend/index.php/admin/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002513s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:37:50+08:00 ] ::1 /chewei_zend/index.php/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+NOTIC: [2] mysqli::mysqli(): (HY000/1049): Unknown database 'chewei' D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Db\Driver\Mysqli.class.php 第 44 行.
+ERR: Unknown database 'chewei'
+NOTIC: [2] include(): Filename cannot be empty D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\SUB\php project\chewei_zend\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2018-01-10T17:37:55+08:00 ] ::1 /chewei_zend/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000580s ]
+NOTIC: [8] Undefined index: nickname D:\SUB\php project\chewei_zend\Uploads\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.188294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.188452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002349s ]
+

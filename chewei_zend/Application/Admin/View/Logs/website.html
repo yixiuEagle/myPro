@@ -1,0 +1,74 @@
+<div class="easyui-panel"
+	data-options="fit:true,title:'{$currentpos}',border:false">
+<script type="text/javascript">
+$(function(){
+	$('#websiteSubmit').click(function(){$('#websiteForm').submit()});
+	$.formValidator.initConfig({formID:"websiteForm",theme:'App',onSuccess:debugInfoSave,inIframe:true});
+})
+function debugInfoSave(){
+	$.post('{:U('Logs/website')}', $("#websiteForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			$.messager.alert('提示信息', data.info, 'info');
+		}
+	})
+}
+</script>
+	<form id="websiteForm" style="font-size: 13px">
+		<table cellspacing="10" style="border: 1px solid #ccc; width: 500px;">
+
+				<tr>
+					<td width="80">框架版本：</td>
+					<td width="160">
+						<input type="text" name="info[FRAMEWORK_VERSION]" id="FRAMEWORK_VERSION" value="{$info.FRAMEWORK_VERSION}" /></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td width="80">网站名称：</td>
+					<td width="160">
+						<input type="text" name="info[WEBSITE_NAME]" id="WEBSITE_NAME" value="{$info.WEBSITE_NAME}" /></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td width="80">网站关键词：</td>
+					<td width="160">
+						<input type="text" name="info[WEBSITE_KEYWORD]" id="WEBSITE_KEYWORD" value="{$info.WEBSITE_KEYWORD}" /></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td width="80">LOG请求参数：</td>
+					<td width="160">
+						<input type="text" name="info[LOG_REQUEST_ARGUMENT]" id="LOG_REQUEST_ARGUMENT" value="{$info.LOG_REQUEST_ARGUMENT}" /></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td width="80">LOG输出结果：</td>
+					<td width="160">
+						<input type="text" name="info[LOG_OUTPUT_RESULT]" id="LOG_OUTPUT_RESULT" value="{$info.LOG_OUTPUT_RESULT}" /></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td width="80">URL参数检测（token验证）：</td>
+					<td width="160">
+						<input type="text" name="info[APP_CHECK_URL_SAFE]" id="APP_CHECK_URL_SAFE" value="{$info.APP_CHECK_URL_SAFE}" /></td>
+					<td></td>
+				</tr>
+				
+				
+
+
+			<tr>
+				<td></td>
+				<td colspan="2" align="left">
+					<a id="websiteSubmit" class="easyui-linkbutton" style="width: 50px;">提交</a>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>

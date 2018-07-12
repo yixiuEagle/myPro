@@ -1,0 +1,114 @@
+<table id="verifyList" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Map/verifyList',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#verifyToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'mapname',width:200,align:'center'">地图名称</th>
+		<th data-options="field:'mapurl',width:300,align:'center',formatter:buildFace">地图</th>
+		<th data-options="field:'lng',width:100,align:'center'">经度</th>
+		<th data-options="field:'lat',width:100,align:'center'">纬度</th>
+		<th data-options="field:'author',width:120,align:'center'">作者</th>
+		<th data-options="field:'createtime',width:150,align:'center'">提交时间</th>
+		<th data-options="field:'stat',width:120,align:'center',formatter:mapstat">操作</th>
+	</tr>
+</thead>
+</table>
+
+<div id="verifyToolbar" style="padding:5px;height:auto">
+	<form id="verifyFrom">
+		<a href="javascript:;" onclick="verifyList();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据名称搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="mapSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+	</form>
+</div>
+
+<!-- 编辑 -->
+<div id="verifymapEditBox" class="easyui-dialog" title="编辑"
+	data-options="modal:true,closed:true,iconCls:'icon-add',
+				buttons:[{text:'确定',iconCls:'icon-ok',
+				handler:function(){$('#mapEditForm').submit();}},
+				{text:'取消',iconCls:'icon-cancel',
+				handler:function(){$('#verifymapEditBox').dialog('close');}}]"
+	style="width: 500px; height: 400px;"></div>
+
+<script type="text/javascript">
+//修改
+function verifyedit(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	var url = '{:U('Map/verifyedit')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#verifymapEditBox').dialog({href:url});
+	$('#verifymapEditBox').dialog('open');
+}
+//删除
+function mapdelete(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Map/mapdel')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				verifyList();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+
+}
+//审核地图
+function mapedit(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定将该地图通过审核吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Map/edit')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				verifyList();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+//搜索
+function mapSearch(){
+	var queryParams = $('#verifyList').datagrid('options').queryParams;
+	$.each($("#verifyFrom").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#verifyList').datagrid('load');
+}
+//刷新列表
+function verifyList(){
+	$('#verifyList').datagrid('reload');
+}
+//图像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+//操作
+function mapstat(val, row, index){
+	var btn = [];
+	btn.push('<a href="javascript:void(0);" onclick="mapedit('+row.id+')">审核通过</a>');
+	btn.push('<a href="javascript:void(0);" onclick="verifyedit('+row.id+')">编辑</a>');
+	btn.push('<a href="javascript:void(0);" onclick="mapdelete('+row.id+')">删除</a>');
+	return btn.join(' | ');
+	
+}			
+
+</script>

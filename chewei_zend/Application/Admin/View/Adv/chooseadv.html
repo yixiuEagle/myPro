@@ -1,0 +1,29 @@
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$.ajax({
+		   url: '{:U('Adv/pic')}',//json文件位置
+		   type: "POST",//请求方式为get
+		   dataType: "json", //返回数据格式为json
+		   success: function(data) { 
+			   console.log(data);
+		       		$.each(data,function(k,v){
+		       			$('#box').append('<img width="50%" cursor="pointer" onclick=function(){$('#img').val=1} src="'+v.img+'"/>')
+		       		})
+			}
+		})
+});
+function Editadv(){
+	$.post('{:U('Adv/edit?id='.$data['id'])}', $("#EditadvForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			advList()
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#EditadvBox').dialog('close');
+		}
+	})
+}
+</script>
+<div id='box'></div>

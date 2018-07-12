@@ -1,0 +1,243 @@
+<script type="text/javascript">
+editor =KindEditor.create('textarea[id="content"]', { 
+	 resizeType : 1,
+    allowPreviewEmoticons: false,
+    allowImageUpload:true,//允许上传图片
+    allowFileManager:true, //允许对上传图片进行管理
+    uploadJson:'__PUBLIC__/js/editor/php/upload_json.php', //上传图片
+    fileManagerJson:'__PUBLIC__/js/editor/php/file_manager_json.php',
+    afterUpload: function(){this.sync();}, //图片上传后，将上传内容同步到textarea中
+    afterBlur: function(){this.sync();},   //失去焦点时，将上传内容同步到textarea中
+	 afterCreate : function() { 
+        this.sync(); 
+       }, 
+	});
+//
+$(function(){
+	$('#ed').hide();
+	$('#tx').show();
+})
+$(document).ready(function () {
+$("#type").combobox({
+onChange: function (n,o) {
+	if(n==1){
+		$('#ed').show();
+		$('#tx').hide();
+	}else if(n==0){
+		$('#ed').hide();
+		$('#tx').show();
+	}
+}
+});
+});
+$(document).on('change','#form-field-select-3',function(){
+		document.getElementById("pic").src=$('#form-field-select-3 option:selected').val();
+});
+
+//提交
+function adv_Add(){
+	var form = new FormData(document.getElementById("advForm"));
+	var url='{:U('Adv/add')}';
+/*	var link=$.trim($("#link").val());
+	var type=$("#type").val();
+	if(type==0&&link==""||link==null){
+		$.messager.alert('提示信息', '请输入url地址!', 'error');
+		return;
+	}
+	$.messager.progress();*/
+	$.ajax({  
+	    url :url,
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	//$.messager.progress('close');
+	    	//advList();
+	    	$.messager.alert('提示信息', data.info, 'info'); 
+	    	$('#advForm').form('clear');
+	    	KindEditor.instances[0].html("");
+	    	//$('#add').dialog('close');
+	    },  
+	    error : function(data) {  
+	    	//$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}
+function adv_Add1(){
+	var form = new FormData(document.getElementById("advForm1"));
+	var url='{:U('Adv/add')}';
+/*	var link=$.trim($("#link").val());
+	var type=$("#type").val();
+	if(type==0&&link==""||link==null){
+		$.messager.alert('提示信息', '请输入url地址!', 'error');
+		return;
+	}
+	$.messager.progress();*/
+	$.ajax({  
+	    url :url,
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	//$.messager.progress('close');
+	    	//advList();
+	    	$.messager.alert('提示信息', data.info, 'info'); 
+	    	$('#advForm1').form('clear');
+	    	KindEditor.instances[0].html("");
+	    	//$('#add').dialog('close');
+	    },  
+	    error : function(data) {  
+	    	//$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}
+</script>
+
+<form id="advForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5"style="border: 1px solid #ccc; width: 800px;">
+	<tr>
+		<td>图片：</td>
+		<td><input name="file" type="file"  style="width:180px;height:22px" />
+		</td>
+		<td><div></div></td>
+	</tr>
+	<tr>
+		<td>排序：</td>
+		<td><input class="easyui-numberbox" name="data[sort]"  style="width:160px;height:22px" />
+		</td>
+		<td><div></div></td>
+	</tr>
+	<!-- <tr>
+		<td>pos：</td>
+		<td colspan="2">
+			<input id="pos" class="easyui-combobox" name="data[pos]" value="0"
+					data-options="
+						editable:false,
+						valueField:'id',
+						textField:'text',
+						data: [{'id':'0','text':'附近广告'},{'id':'1','text':'个人中心广告'},{'id':'2','text':'动态广告'}],
+						panelHeight:'auto',
+			">
+		</td>
+	</tr> -->
+	<tr>
+		<td>类型：</td>
+		<td><input class="easyui-numberbox" name="data[type]"  style="width:160px;height:22px" />
+		</td>
+	</tr>
+	<tr>
+		<td>开始时间(秒)：</td>
+		<td><input class="easyui-numberbox" name="data[begintime]"  style="width:160px;height:22px" />
+		</td>
+	</tr>
+	<tr>
+		<td>间隔时间(秒)：</td>
+		<td><input class="easyui-numberbox" name="data[spacetime]"  style="width:160px;height:22px" />
+		</td>
+	</tr>
+	<!-- <tr id="tx">
+		<td>url：</td>
+		<td><input id='link' type="text" name="data[url]"  style="width:180px;height:22px" />
+		</td>
+		<td><div></div></td>
+	</tr> -->
+	<!-- <tr id="ed">
+		<td>内容：</td>
+		<td>
+		<div style="margin:20px 0;"></div>
+		<textarea id="content" name="data[advpage]" style="width:700px;height:300px;"></textarea>
+		</td>
+		<td><div></div></td>
+	</tr> -->
+	<tr>
+		<td></td>
+		<td colspan="3" align="left">
+			<a id="add" class="easyui-linkbutton" onclick="adv_Add();" style="width: 50px;">提交</a>
+		</td>
+	</tr>
+	</table>
+	</form>
+<form id="advForm1" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5"style="border: 1px solid #ccc; width: 800px;">
+	<tr>
+		<td>图片地址：</td>
+		<td>
+		<select name="data[img]" class="chosen-select width-20 sele" id="form-field-select-3" data-placeholder="Choose">
+			<option  name="data[img]" value="">&nbsp;</option>
+			<foreach name='data' item='m'>
+				<option name="data[img]" value={$m[img]}>{$m[img]}</option>
+			</foreach>
+		</select>
+		
+		<!-- <input  class="easyui-numberbox" name="data[img]"  style="width:160px;height:22px" /> -->
+		<!-- <a class="easyui-linkbutton" onclick="chooseAdv();" style="width: 120px;">选择已有图片</a> -->
+		</td>
+		<td><div></div></td>
+	</tr>
+	<tr>
+		<td>排序：</td>
+		<td><input class="easyui-numberbox" name="data[sort]"  style="width:160px;height:22px" />
+		</td>
+		<td><div></div></td>
+	</tr>
+	<!-- <tr>
+		<td>pos：</td>
+		<td colspan="2">
+			<input id="pos" class="easyui-combobox" name="data[pos]" value="0"
+					data-options="
+						editable:false,
+						valueField:'id',
+						textField:'text',
+						data: [{'id':'0','text':'附近广告'},{'id':'1','text':'个人中心广告'},{'id':'2','text':'动态广告'}],
+						panelHeight:'auto',
+			">
+		</td>
+	</tr> -->
+	<tr>
+		<td>类型：</td>
+		<td><input class="easyui-numberbox" name="data[type]"  style="width:160px;height:22px" />
+		</td>
+	</tr>
+	<tr>
+		<td>开始时间(秒)：</td>
+		<td><input class="easyui-numberbox" name="data[begintime]"  style="width:160px;height:22px" />
+		</td>
+	</tr>
+	<tr>
+		<td>间隔时间(秒)：</td>
+		<td><input class="easyui-numberbox" name="data[spacetime]"  style="width:160px;height:22px" />
+		</td>
+	</tr>
+	<!-- <tr id="tx">
+		<td>url：</td>
+		<td><input id='link' type="text" name="data[url]"  style="width:180px;height:22px" />
+		</td>
+		<td><div></div></td>
+	</tr> -->
+	<!-- <tr id="ed">
+		<td>内容：</td>
+		<td>
+		<div style="margin:20px 0;"></div>
+		<textarea id="content" name="data[advpage]" style="width:700px;height:300px;"></textarea>
+		</td>
+		<td><div></div></td>
+	</tr> -->
+	<tr>
+		<td></td>
+		<td colspan="3" align="left">
+			<a id="add" class="easyui-linkbutton" onclick="adv_Add1();" style="width: 50px;">提交</a>
+		</td>
+	</tr>
+	</table>
+	</form>
+	<div><img id='pic' alt="" width='300px' height='300px' style="position:absolute;top:150px;right:40px;" /></div>
+	<!-- <div id="EditadvBox" class="easyui-dialog" title="选择图片"
+	data-options="modal:true,closed:true,iconCls:'icon-edit',
+	buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){add();}},
+	{text:'取消',iconCls:'icon-cancel',handler:function(){$('#EditadvBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div> -->
+

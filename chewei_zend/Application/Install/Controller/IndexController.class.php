@@ -1,0 +1,41 @@
+<?php
+namespace Install\Controller;
+use Think\Controller;
+/**
+ * 安装首页
+ * @author yandong
+ *
+ */
+class IndexController extends Controller {
+	//安装首页
+	public function index(){
+		if(file_exists('./Application/Install/Data/install.lock')){
+			$this->error('已经成功安装了西竹 PHP Web框架，请不要重复安装!如果需要重装，请先删除./Application/Install/Data/install.lock');
+		}
+		session_destroy();
+		session_start();
+		session('step', 0);
+		session('error', false);
+		
+		$this->version = C('FRAMEWORK_VERSION');
+		
+		$this->display();
+	}
+	//安装完成
+	public function complete(){
+		$step = session('step');
+	
+		if(!$step){
+			$this->redirect('index');
+		} elseif($step != 3) {
+			$this->redirect("Install/step{$step}");
+		}
+	
+		file_put_contents('./Application/Install/Data/install.lock', 'lock');//创建锁定文件
+		$this->assign('info',session('config_file'));
+	
+		session('step', null);
+		session('error', null);
+		$this->display();
+	}
+}

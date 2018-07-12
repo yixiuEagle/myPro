@@ -1,0 +1,61 @@
+<script type="text/javascript">
+$(function(){
+	//类型
+	$('#add_mapname').combobox({
+       url:'__URL__/map_idlist',
+       valueField:'id',
+       textField:'mapname',
+       panelHeight:'auto',
+      // editable:false,
+		onLoadSuccess: function (msg) {
+			if (msg) {
+				if('{$data.name}' == "" || '{$data.name}' == undefined || '{$data.name}' == null){
+					$('#mapname').combobox('setText',"——请选择——");
+				}
+			}
+		}
+	});
+})
+//提交
+function device_Add(uid){
+	$.messager.progress();
+	var form = new FormData(document.getElementById("deviceForm"));
+	var url='{:U('Map/add_device')}';
+	$.ajax({  
+	    url :url,
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	$.messager.progress('close');
+	    	deviceList();
+	    	$.messager.alert('提示信息', data.info, 'info'); 
+	    	$('#add_deviceBox').dialog('close');
+	    },  
+	    error : function(data) {  
+	    	$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}
+
+</script>
+<form id="deviceForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>地图：</td>
+		<td>
+		 <input class="easyui-combobox" name="map_id" id="add_mapname"/>
+		</td>
+    	<td><div id="mapnameTip"></div></td>
+    	<td></td>
+	</tr>
+	<tr>
+		<td>设备ID：</td>
+		<td><input type="text" name="device_id" style="width:180px;height:22px"/>
+		</td>
+		<td><div id="device_idTip"></div></td>
+	</tr>
+	</table>
+	</form>

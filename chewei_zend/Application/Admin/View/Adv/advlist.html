@@ -1,0 +1,106 @@
+<!-- 列表 -->
+<table id="advList" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Adv/advlist',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#advToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'img',width:300,align:'center',formatter:buildFace">图片</th>
+		<!-- <th data-options="field:'url',width:400,align:'center'">url</th> -->
+		<th data-options="field:'type',width:120,align:'center',formatter:advtype">类型</th>
+		<th data-options="field:'begintime',width:120,align:'center'">开始时间(秒)</th>
+		<th data-options="field:'spacetime',width:120,align:'center'">间隔时间(秒)</th>
+		<!-- <th data-options="field:'pos',width:120,align:'center',formatter:advpos">pos</th> -->
+		<th data-options="field:'sort',width:50,align:'center'">排序</th>
+		<th data-options="field:'id',width:120,align:'center',formatter:advText">操作管理</th>
+	</tr>
+</thead>
+</table>
+
+<div id="advToolbar" style="padding:5px;height:auto">
+	<form id="advSearchForm">
+		<a href="javascript:;" onclick="advList();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[type]" placeholder="根据类型搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="advSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+	</form>
+</div>
+<!-- 编辑 -->
+<div id="EditadvBox" class="easyui-dialog" title="编辑"
+	data-options="modal:true,closed:true,iconCls:'icon-edit',
+	buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){Editadv();}},
+	{text:'取消',iconCls:'icon-cancel',handler:function(){$('#EditadvBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+
+<script type="text/javascript">
+//编辑
+function editAdv(id){
+	var url = '{:U('Adv/edit')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#EditadvBox').dialog({href:url});
+	$('#EditadvBox').dialog('open');
+}
+//type
+function advtype(value,row,index){
+	/* if(value!=0){
+        return "新闻详情";
+    }else{
+        return "url跳转";
+	} */
+	return value;
+}
+//pos
+/* function advpos(value,row,index){
+	if(value==0){
+        return "附近广告";
+    }else if(value==1){
+        return "个人中心广告";
+	}else if(value==2){
+	        return "动态广告";
+	}
+} */
+//刷新列表
+function advList(){
+	$('#advList').datagrid('reload');
+}
+//图像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+//操作
+function advText(val, row, index){
+	return '<a href="javascript:void(0);" onclick="editAdv('+row.id+')">编辑</a> | <a href="javascript:void(0);" onclick="deleteAdv('+row.id+')">删除</a>';
+}			
+//搜索
+function advSearch(){
+	var queryParams = $('#advList').datagrid('options').queryParams;
+	$.each($("#advSearchForm").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#advList').datagrid('load');
+}
+//删除
+function deleteAdv(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Adv/advdel')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				advList();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+
+}
+
+
+</script>

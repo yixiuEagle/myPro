@@ -1,0 +1,37 @@
+<script type="text/javascript">
+function user_SaveEdit(){
+	$.post('{:U('User/edit?uid='.$info['uid'])}', $("#userEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			userRefreshList_{$rand}()
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#userEditBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="userEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>用户昵称：</td>
+		<td><input type="text" name="info[nickname]" id="user_edit_nickname" value="{$info.nickname}" style="width:180px;height:22px" /></td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	<tr>
+		<td>电话号码：</td>
+		<td><input type="text" name="info[phone]" id="user_edit_phone" value="{$info.phone}" style="width:180px;height:22px" /></td>
+		<td><div id="user_edit_phoneTip"></div></td>
+	</tr>
+	<tr>
+		<td>绑定QQ：</td>
+		<td><input type="text" name="info[band_qq]" id="user_edit_band_qq" value="{$info.band_qq}" style="width:180px;height:22px" /></td>
+		<td><div id="user_edit_band_qqTip"></div></td>
+	</tr>
+	<tr>
+		<td>绑定微信：</td>
+		<td><input type="text" name="info[band_weixin]" id="user_edit_band_weixin" value="{$info.band_weixin}" style="width:180px;height:22px" /></td>
+		<td><div id="user_edit_band_weixinTip"></div></td>
+	</tr>
+	</table>
+	</form>

@@ -1,0 +1,769 @@
+<?php
+/**
+ * 用户模块
+ * @author yangdong
+ *
+ */
+namespace User\Model;
+use Think\Model;
+use Lincense\Controller\Thinkchat;
+use Common\Model\CommonModel;
+class UserModel extends CommonModel {
+	public $tableName 	= 'user';
+	public $pk        	= 'uid';
+	
+	function _initialize(){
+		parent::_initialize();
+	}
+	/**
+	 * 用户数据格式化
+	 * @param array $user
+	 * @param int   $uid
+	 */
+	private function _format($list, $uid=0){
+		$_list = array();
+		if ($list) {
+			foreach ($list as $k=>$v){
+				$tmp['uid'] 	= $v['uid'];
+				$tmp['nickname']	= $v['nickname'];
+				$tmp['phone']  = $v['phone'];
+				$tmp['money']  = $v['money'];
+				$tmp['band_qq']  = $v['band_qq'];
+				$tmp['band_weixin']  = $v['band_weixin'];
+				$_list[] = $tmp;
+			}
+		}
+		return $_list;
+	}
+	/**
+	 * 取得用户的uid,name headsmall
+	 * @param int|string $uid
+	 * @return array
+	 */
+	public function getUserName($uid){
+		return $this->field('uid, name, head')->where(array('uid'=>$uid))->find();
+	}
+	/**
+	 * 系统用户名
+	 */
+	public function systemUserName(){
+		return array('uid'=>'admin', 'name'=>'admin', 'head'=>'');
+	}
+	/**
+	 * 用户列表
+	 * @param unknown $map
+	 * @param unknown $limit
+	 * @param string $order
+	 * @param number $uid
+	 * @return unknown
+	 */
+	function public_list($uid, $map, $limit, $order='uid asc'){
+		$list  = $this->alias('u')->where($map)->order($order)->limit($limit)->select();
+		$_list = $this->_format($list,$uid);
+		if ($limit == 1) {
+			return $_list['0'];
+		}else {
+			return $_list;
+		}
+	}
+	/**
+	 * 根据手机号获取验证码
+	 * @return array
+	 */
+	function getCode(){
+	    $phone = I('phone');
+	    $code  = 123456;//rand(100000, 999999);
+	    $type  = trim(I('type', 0));//0-获取验证码 1-找回密码时获取验证码 
+	    if (!$phone) return showData(new \stdClass(), '请输入手机号码', 1);
+	    $data  = array('code'=>$code, 'createtime'=>NOW_TIME);
+	    $map   = array('phone'=>$phone);
+	
+	    if ($type == 1){
+	        //重置密码
+	        if (M('user')->where($map)->count()){
+	            if (M('user_code')->where($map)->count()) {
+	                M('user_code')->where($map)->save($data);
+	            }else {
+	                $data['phone'] = $phone;
+	                M('user_code')->add($data);
+	            }
+	            if (sendSMS($code, $phone, 1)) {
+	                return showData(new \stdClass(), '发送验证码成功');
+	            }else {
+	                return showData(new \stdClass(), '发送短信验证码失败，请稍后重试', 1);
+	            }
+	        }else {
+	            return showData(new \stdClass(), '该手机号不能注册', 1);
+	        }
+	    }else if($type == 0){
+	        //获取验证码
+	        if (M('user')->where($map)->count()){
+	            //已注册
+	            return showData(new \stdClass(), '手机号已注册', 1);
+	        }else {
+	            $isSuccess = false;
+	            if (M('user_code')->where($map)->count()){
+	                if ( M('user_code')->where($map)->save($data)) $isSuccess = true;
+	            }else {
+	                $data['phone'] = $phone;
+	                if (M('user_code')->add($data)) $isSuccess = true;
+	            }
+	
+	            if ($isSuccess) {
+	                if (sendSMS($code, $phone)) {
+	                    return showData(new \stdClass(), '发送验证码成功');
+	                }
+	            }
+	        }
+	    }
+	    return showData(new \stdClass(), '发送短信验证码失败，请稍后重试', 1);
+	}
+	/**
+	 * 验证验证码
+	 */
+	function checkCode(){
+	    //两小时过期
+	    M('user_code')->where(array('createtime'=>array('lt',NOW_TIME-2*60*60)))->delete();
+	    	
+	    $phone = I('phone');
+	    $code  = I('code');
+	    if (!$phone) return showData(new \stdClass(), '请输入手机号码', 1);
+	    if (!$code) return showData(new \stdClass(), '请输入验证码', 1);
+	    $info = M('user_code')->where(array('phone'=>$phone))->find();
+	    if ($info['code'] == $code) {
+	        M('user_code')->where(array('phone'=>$phone))->delete();//验证成功就删除
+	
+	        return showData(new \stdClass(), '验证成功');
+	    }else {
+	        return showData(new \stdClass(), '验证失败', 1);
+	    }
+	}
+	/**
+	 * 登陆
+	 */
+	function login(){
+	    $phone=I('phone',0);
+	    $password=I('password',0);
+	    
+		if (!$phone) return showData(new \stdClass(), '请输入手机号', 1);
+		if (!$password) return showData(new \stdClass(), '请输入密码', 1);
+		
+		$user=$this->where(array('phone'=>$phone))->find();
+		if($user){
+		    if($user['password'] == md5($password)){
+		        return $this->user($user['uid']);
+		    }else{
+		        return showData(new \stdClass(), '密码错误', 1);
+		    }
+		}else {
+			return showData(new \stdClass(), '该帐号不存在', 1);
+		}
+	}
+	/**
+	 * 获取用户的详细资料
+	 * @param int $uid
+	 * @return array
+	 */
+	function user($uid){
+		if ($uid) {
+		    $data=$this->field('uid,nickname,phone,money,band_qq,band_weixin')->where(array('uid'=>$uid))->find();
+			return showData($data);
+			//return showData($this->public_list($uid, array('uid'=>$uid), 1));
+		}
+	}
+	/**
+	 * 1. 注册用户
+	 * @param string $phone;
+	 * @param string $nickname;
+	 */
+	function regist($data=array()){
+		$data = array(
+			'nickname'		=> trim(I('nickname','匿名')),
+		    'phone'     => trim(I('phone')), 
+			'password'	=> trim(I('password')),
+		);
+		// 验证码
+		$return = self::checkCode();
+		if ($return['code']) return $return;
+		//检测手机号
+		if ($data['phone']){
+		    if (strlen($data['phone']) == 11 && is_numeric($data['phone'])) {
+		
+		        if ($this->where(array('phone'=>$data['phone']))->count() > 0) {
+		            return showData(new \stdClass(), '该手机号已注册', 1);
+		        }
+		    }else {
+		        return showData(new \stdClass(), '手机号格式错误', 1);
+		    }
+		}else {
+		    return showData(new \stdClass(), '请输入手机号', 1);
+		}
+		//md5加密
+		if (!$data['password']) {
+		    return showData(new \stdClass(), '请输入密码', 1);
+		}else {
+		    $password = $data['password'];
+		    $data['password'] = md5($data['password']);
+		    $data['phone'] = I('phone');
+		}
+		$uid = $this->add($data);
+		if ($uid) {
+		    return $this->user($uid);
+		}
+	}
+	/**
+	 * 2. 修改用户
+	 * @param unknown $uid
+	 * @return array
+	 */
+	function editUser($uid){
+		$nickname		= trim(I('nickname'));
+		$password	= trim(I('password'));
+		$data = array();
+		if ($nickname) $data['nickname'] = $nickname;
+		if ($password) $data['password'] = md5($password);
+		if ($data) {
+			$this->startTrans();
+			if ($this->where(array('uid'=>$uid))->save($data) !== false) {
+				if ($password) {	
+					$thinkchat = new Thinkchat();
+					$thinkchat->init(C('OP_SERVER'));
+						
+					$ret = $thinkchat->editPasswd($uid, $password);
+					if($ret['code'] != 0 ){
+						$this->rollback();
+						return showData(new \stdClass(), $ret['msg'], 1);
+					}
+				}
+				$this->commit();
+				return showData(new \stdClass(), '修改成功');
+			}else {
+				$this->rollback();
+				return showData(new \stdClass(), '修改失败', 1);
+			}
+		}else {
+			return showData(new \stdClass(), '修改成功');
+		}
+	}
+	/**
+	 * 3. 删除用户
+	 * @param unknown $uid
+	 * @return array
+	 */
+	function deleteUser($uid){
+		
+		$this->startTrans();
+		if ($this->where(array('uid'=>$uid))->delete()) {
+			$thinkchat = new Thinkchat();
+			$thinkchat->init(C('OP_SERVER'));
+			
+			$ret = $thinkchat->delete($uid);
+			if($ret['code'] != 0 ){
+				$this->rollback();
+				return showData(new \stdClass(), $ret['msg'], 1);
+			}
+			
+			$this->commit();
+			return showData(new \stdClass(), '删除成功');
+		}else {
+			$this->rollback();
+			return showData(new \stdClass(), '删除失败', 1);
+		}
+	}
+	/**
+	 * 4. 自定义通知 (比如:好友关系现在应属于扩展通知,是业务服务器处理好友关系的时候,请求sdk服务器代发一条通知)
+	 * @param unknown $uid
+	 * @param unknown $fid
+	 * @param unknown $type
+	 * @return array
+	 */
+	function sendNotice($uid, $fid){
+		$thinkchat = new Thinkchat();
+		$thinkchat->init(C('OP_SERVER'));
+		
+		$from     = self::getUserName($uid);
+		$to 	  = array('toid'=>$fid, 'touid'=>$fid);
+		$type     = I('type');
+		$content  = I('content');
+		if ($thinkchat->notice($from, $to, $type, $content)) {
+			return showData(new \stdClass(), '发送成功');
+		}else {
+			return showData(new \stdClass(), '发送失败', 1);
+		}
+	}
+	
+	/**
+	 * 获取单人、多人在线状态
+	 * 
+	 */
+	function onlinestatus() {
+		$uids = I('uids', '');
+		
+		if(!$uids)
+			return showData(new \stdClass(), 'uids不能为空', 1);
+		
+		$thinkchat = new Thinkchat();
+		$thinkchat->init(C('OP_SERVER'));
+		
+		return $thinkchat->onlinestatus($uids);
+	}
+	
+	/**
+	 * 搜索用户--使用新分页方案来查询
+	 */
+	function searchuser() {
+		$keyword = I('keyword', '');
+		
+		$table = "user";
+		$where = "name like '%$keyword%'";
+		$field = "*";
+		$order = "uid desc";
+		$result = $this->m_db_getlistpage($table, $where, $field, $order);
+		
+		return $result;
+	}
+	/**
+	 * 消费记录列表
+	 * @return mixed|string|boolean|NULL|object
+	 */
+	function consume_recordList($uid){
+	    if($uid){
+	        $where = array('uid'=>$uid);
+	        $field = "*";
+	        $order = "createtime desc";
+	        
+	        $sublist = $this->m_db_getlistpage('consume', $where, $field, $order);
+	        return $sublist;
+// 	        $rows=10;
+// 	        $limit=($page-1)*$rows.','.$rows;
+// 	        $data=M('consume')->where(arra2y('uid'=>$uid))->order('createtime desc')->limit($limit)->select();
+//  	        return showData($data);
+	    }
+	}
+	/**
+	 * 电话求助
+	 */
+	function help(){
+	    $data=M('service')->field('phone')->find();
+	    return showData($data);
+	}
+	// 绑定或解绑账号
+	public function bindAccount() {
+	    $phone= I('phone',0);
+	    $type = I('type', 0);//1-qq 2-微信
+	    $optype = I('optype', 0);// 0-解绑 1-绑定
+	    $account = I('account', '');
+	
+	    if($phone){
+	        $user=$this->where(array('phone'=>$phone))->find();
+	        $uid=$user['uid'];
+	    }else{
+	        return showData(0,"请输入电话",1);
+	    }
+	    $this->checkArguments(Array('type'=>$type));
+	
+	    if($optype) {// 绑定
+	
+	        // qq
+	        if($type == 1 ) {
+	            if ($user['bind_qq'] != null){
+	                return showData(0,"已绑定，无法再绑定",1);
+	            }else{
+	                $this->checkArguments(Array('account'=>$account));
+	                $result = M('user')->where(Array('uid'=>$uid))->save(Array('bind_qq'=>$account));
+	            }
+	        }
+	        	
+	        // weixin
+	        if($type == 2 ) {
+	            if ($user['bind_weixin'] != null){
+	                return showData(0,"已绑定，无法再绑定",1);
+	            }else{
+	                $this->checkArguments(Array('account'=>$account));
+	                $result = M('user')->where(Array('uid'=>$uid))->save(Array('bind_weixin'=>$account));
+	            }
+	        }
+	        	
+	        	
+	    }else{// 解绑
+	        // qq
+	        if($type == 1 ) {
+	            if ($user['bind_qq'] != null){
+	                $result = M('user')->where(Array('uid'=>$uid))->save(Array('bind_qq'=>''));
+	                	
+	            }else{
+	                return showData(0,"未绑定，无法解绑",1);
+	            }
+	        }
+	        	
+	        // weixin
+	        if($type == 2 ) {
+	            if ($user['bind_weixin'] != null){
+	                $result = M('user')->where(Array('uid'=>$uid))->save(Array('bind_weixin'=>''));
+	
+	            }else{
+	                return showData(0,"未绑定，无法解绑",1);
+	            }
+	        }
+	    }
+	    if($result){
+	        return showData("","设置成功");
+	    }
+	    return showData("","设置失败",1);
+	
+	}
+	/**
+	 * 添加消费记录
+	 */
+	function consume_record($uid,$type,$money){
+	    $consume['uid']=$uid;
+	    $consume['type']=$type;//1-充值 2-消费 3-提现
+	    $consume['money']=$money;
+	    $consume['createtime']=NOW_TIME;
+	    $data=M('consume')->add($consume);
+	    return $data;
+	}
+	/**
+	 * 提现信息查询
+	 */
+	function receive_info($uid){
+	    $data=M('money_record')->field('uid,name,number,type')->where(array('uid'=>$uid))->find();
+	    if($data){
+	        $li['info']=$data;
+	        $li['status']=1;
+	    }else{
+	        $li['status']=0;
+	    }
+	    return showData($li);
+	}
+	/**
+	 * 提现
+	 */
+	function receive($uid){
+	    $money     = trim(I('money', 0));//金额
+	    $payment = trim(I('action', 0));//1-支付宝 2-微信
+	    $account = trim(I('account', 0));//账号
+	    $name    = trim(I('name', 0));//姓名
+	    $phone   = trim(I('phone', 0));//电话
+	    $user=M('user')->where(array('uid'=>$uid))->find();
+	    if ($money<=$user['money']){
+	        $data = array(
+	            'id'		 => date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8),//订单id
+	            'uid' 		 => $uid,
+	            'fee'  	     => $money,
+	            'name'       => $name,
+	            'phone'      => $phone,
+	            'account'    => $account,
+	            'type'       => $payment,
+	            'createtime' => NOW_TIME
+	        );
+	        $mone['money']=$user['money']-$money;
+	        $r=M('user')->where(array('uid'=>$uid))->save($mone);
+	        if($r){
+	            M('receive')->add($data);
+	            //记录提现信息
+	            $reco=array('name'=>$name,'number'=>$account,'type'=>$payment,'uid'=>$uid);
+	            if(M('money_record')->where(array('uid'=>$uid))->count()){
+	                M('money_record')->where(array('uid'=>$uid))->save($reco);
+	            }else{
+	                M('money_record')->add($reco);
+	            }
+	            return showData(new \stdClass(), '提交成功,请等待管理员审核');
+	        }else{
+	            return showData(new \stdClass(), '提现失败', 1);
+	        }
+	    }else{
+	        return showData(new \stdClass(), '余额不足', 1);
+	    }
+	}
+	/**
+	 *  支付   购买
+	 *  用户id、金额、支付方式（ 0-支付宝支付 1-微信支付 2-余额）
+	 * @param number $uid
+	 */
+	function recharege($uid=0) {
+	    $payment = trim(I('action', 0));//0-支付宝 1-微信 2-余额
+	    $type    = trim(I('type', 0));//1-充值 2-购买
+	    if($type==2){
+	        $mapid= trim(I('mapid', 0));//地图id
+	        $buytype= trim(I('buytype', 0));//1-临时 2-永久
+	    }
+	    $fee     = trim(I('money', 0));//金额
+	    if ($fee>0){
+	        $data = array(
+	            'id'		 => date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8),//订单id
+	            'uid' 		 => $uid,
+	            'fee'  	     => $fee,
+	            'type'       => $type,
+	            'mapid'      => $mapid,
+	            'buytype'    => $buytype,
+	            'createtime' => NOW_TIME
+	        );
+	        if (M('user_recharge')->add($data)){
+	            $pay = new \Common\Pay\Pay();
+	            $subject = '地图购买';
+	            $body    = '购买';
+	            switch ($payment) {
+	                case 0:
+	                    //支付宝 SDK
+	                    $url = SITE_PROTOCOL.SITE_URL.'/index.php/user/api/notifyurl';
+	                    return $pay->alipay($data['id'], $fee, $subject. $body, $url);
+	                    break;
+	                case 1:
+	                    //微信
+	                    $url = SITE_PROTOCOL.SITE_URL.'/index.php/user/api/wxnotifyurl';
+	                    return $pay->weixin($data['id'], $fee, $subject. $body, $url);
+	                    break;
+                    case 2:
+                        //余额
+                        $user = M('user')->where(Array('uid'=>$uid))->find();
+                        if(!$user)
+                            return showData(new \stdClass(), '查询用户失败', 1);
+                    
+                            $user_money = $user['money'];
+                            if($user_money<$fee)
+                                return showData(new \stdClass(), '余额不足', 1);
+                                $new_money = $user_money - $fee;
+                                $result = M('user')->where(Array('uid'=>$uid))->save(Array('money'=>$new_money));
+                                if(!$result)
+                                    return showData(new \stdClass(), '余额购买失败', 1);
+                    
+                                    M('user_recharge')->where(Array('id'=>$data['id']))->setField("status", 1);
+                                    
+                                    $this->record($uid, $buytype, $fee, $mapid);
+                                    /*//消费记录
+                                    $this->consume_record($uid,2, $fee);//2购买
+                                    //通知
+                                    $mapdata=M('map')->where(array('id'=>$mapid))->find();
+                                    $content="购买了【".$mapdata['mapname']."】地图，您已消费￥$fee";
+                                    $this->remsg($uid, $content,1);//1通知消息
+                                    $mapmd=new MapModel();
+                                    //添加到购买列表
+                                    $mapmd->purchase($uid, $mapid, $buytype);
+                                    //统计金额
+                                    $fe['moneycount']=$mapdata['money']+$fee;
+                                    M('map')->where(array('id'=>$mapid))->save($fe);
+                                    //地图金额记录
+                                    $mapmd->map_record($mapid, $buytype, $fee);//$buytype 1-临时购买金额记录 2-永久购买金额记录
+                                    */
+                                    return showData(new \stdClass(), '购买成功');
+                                    
+                                    break;
+	            }
+	          
+	        }
+	        return showData(new \stdClass(), '购买失败', 1);
+	    }else {
+	        return showData(new \stdClass(), '请输入充值金额', 1);
+	    }
+	}
+	/**
+	 * 充值--更新余额
+	 */
+	function update_money($uid,$money){
+	    $user=$this->where(array('uid'=>$uid))->find();
+	    if($user){
+	        $fee['money']=$user['money']+$money;
+	        $this->where(array('uid'=>$uid))->save($fee);
+	        //消费记录
+	        $this->consume_record($uid,1, $fee);//1充值
+	        //通知
+	        $mone=$fee['money'];
+	        $content="您充值了【".$fee."】地图，您余额为￥$mone";
+	        $this->remsg($uid, $content,1);//1通知消息
+	    }
+	   
+	}
+	/**
+	 * 购买
+	 * uid buytype 1-临时 2-永久 $fee金额 $mapid
+	 */
+	function record($uid,$buytype,$fee,$mapid){
+	    //消费记录
+	    $this->consume_record($uid,2, $fee);//2购买
+	    //通知
+	    $mapdata=M('map')->where(array('id'=>$mapid))->find();
+	    $content="购买了【".$mapdata['mapname']."】地图，您已消费￥$fee";
+	    $this->remsg($uid, $content,1);//1通知消息
+	    $mapmd=new MapModel();
+	    //添加到地图购买列表
+	    $mapmd->purchase($uid, $mapid, $buytype);
+	    //统计地图金额
+	    $fe['moneycount']=$mapdata['money']+$fee;
+	    M('map')->where(array('id'=>$mapid))->save($fe);
+	    //地图金额记录
+	    $mapmd->map_record($mapid, $buytype, $fee);//$buytype 1-临时购买金额记录 2-永久购买金额记录
+	}
+	/**
+	 * 写入消费通知
+	 * type=1消费通知 2推送地图
+	 */
+	function remsg($uid,$content,$type,$mapid){
+	    $msg['uid']=$uid;
+	    $msg['content']=$content;
+	    $msg['type']=$type;
+	    $msg['createtime']=NOW_TIME;
+	    if($type==2&&$mapid){
+	        $msg['mapid']=$mapid;
+	    }
+	    $data=M('msg')->add($msg);
+	    return $data;
+	}
+	/**
+	 * 获取消费通知
+	 */
+	function wrmsg($uid){
+	    $msg=M('msg');
+	    $list=$msg->field('id,content,type,mapid,createtime,status')->where(array('uid'=>$uid))->select();
+	    $data=showData($list);
+	    $coun=$msg->where(array('uid'=>$uid,'status'=>0))->count();
+	    $li['list']=$list;
+	    $li['count']=$coun?$coun:0;
+	    return showData($li);
+	}
+	/**
+	 * 读消息
+	 */
+	function read_msg(){
+	    $id=I('id',0);
+	    if($id){
+	        $re=M('msg')->where(array('id'=>$id))->getField('status');
+	        if($re['status']==1){
+	            return showData(new \stdClass(), '已经读过了', 1);
+	        }
+    	    $data=M('msg')->where(array('id'=>$id))->setField('status',1);
+    	    if($data===false){
+    	        return showData(new \stdClass(), '失败', 1);
+	        }
+	    }
+	}
+	/**
+	 * 广告列表
+	 */
+	function advlist(){
+	    $data=M('adv')->select();
+	    return showData($data);
+	}
+	/**
+	 * 地图信息
+	 */
+	function mapmsg(){
+	    $id=I('device_id');
+	    $msg=M('map_msg')->where(array('device_id'=>$id))->find();
+	    return showData($msg);
+	}
+	/**
+	 * 上传信息
+	 */
+	function upload(){
+	    $data['device_id']=I('device_id');
+	    $data['floor']=I('floor');
+	    $data['rotate']=I('rotate');
+	    $data['location']=I('location');
+	    $flag=M('map_msg')->where(array('device_id'=>$data['device_id']))->find();
+	    if($flag){
+	        $flag=M('map_msg')->where(array('device_id'=>$data['device_id']))->save($data);
+            return showData(new \stdClass(), '上传成功',0);
+	    }
+	    $re=M('map_msg')->add($data);
+	    if($re){
+	        return showData(new \stdClass(), '添加成功', 0);
+	    }else{
+	        return showData(new \stdClass(), '添加失败', 1);
+	    }
+	}
+	/**
+	 * 更新地图
+	 */
+	function update_map(){
+	    $device_id = I("device_id",0);
+	    $time   = I("time",0);
+	    if($device_id>10000){
+	        $device_id=floor($device_id/10000);
+	    }
+	    if($device_id&&$time){
+	        //$data = M("device")->where(array("device_id"=>$device_id))->find();
+	        $map = M("map")->where(array("id"=>$device_id))->find();
+	        if(!$map){
+	            return showData(new \stdClass(), '没有该地图', 1);
+	        }
+	        if($map['updatetime']==null && $map['createtime']<$time){
+	            return showData(new \stdClass(), '已是最新地图', 1);
+// 	            return;
+	        }
+	        if($map['updatetime']!=null && $map['updatetime']<$time){
+	            return showData(new \stdClass(), '已是最新地图', 1);
+	            // 	            return;
+	        }
+	        //if($data){
+	           $data=file_get_contents(".".$map['mapurl']);
+// 	           $data=file_get_contents(makeHttpHead($map['mapurl']));
+	           $encoding = mb_detect_encoding($data, array('GB2312','GBK','UTF-16','UCS-2','UTF-8','BIG5','ASCII'));
+	           $str = iconv($encoding, 'UTF-8', $data);
+	           return $str;
+	        /*} else{
+	            return showData(new \stdClass(), '该设备没有绑定地图', 1);
+// 	            return;
+	        }  */
+	    }else{
+	        return showData(new \stdClass(), '参数错误', 1);
+// 	        return;
+	    }
+	}
+	/**
+	 * 扫描二维码
+	 */
+	function codeMsg(){
+	    $device_id = I("device_id",0);
+	    $type=I('type',0);
+	    $mapid=floor($device_id/10000);
+	    $map = M("map")->where(array("id"=>$mapid))->find();
+	    $data=file_get_contents(".".$map['mapurl']);
+	    // 	           $data=file_get_contents(makeHttpHead($map['mapurl']));
+	    $encoding = mb_detect_encoding($data, array('GB2312','GBK','UTF-16','UCS-2','UTF-8','BIG5','ASCII'));
+	    $str = iconv($encoding, 'UTF-8', $data);
+	    $point=M('map_msg')->field('floor,rotate,location')->where(array('device_id'=>$device_id))->find();
+	    $str=json_decode($str,true);
+	    $mes['map']=$str;
+	    $mes['point']=$point;
+	    $mes['standardScale']=$map['standardScale'];
+	    if($type){
+	        return showData($mes);
+	    }else{
+	        S('data','');
+	        S('data',$mes);
+	        var_dump(S('data'));
+	        die();
+	        //$this->display('');
+	    }
+	    
+	}
+	/**
+	 * 统计
+	 */
+	function statistics(){
+	    $data['device_id']     =I("device_id",'');
+	    $data['scress']        =I("scress",0);
+	    $data['parking_path']  =I("parking_path",0);
+	    $data['parking_spaces']=I("parking_spaces",0);
+	    $data['adv']           =I("adv",0);
+	    $data['business']      =I("business",0);
+	    if($data['device_id']){
+	        $id = M("statistics")->where(array("device_id"=>$data['device_id']))->find();
+	        if($id){
+	            $result = M("statistics")->where(array("device_id"=>$data['device_id']))->save($data);
+	        }else{
+	            $data['wxtimes']=0;
+	            $result = M("statistics")->add($data);
+	        } 
+            if($result !== false){
+                return showData(new \stdClass(), '成功', 0);
+            }else{
+                return showData(new \stdClass(), '失败', 1);
+            }
+	    }else{
+	        return showData(new \stdClass(), '未获取到设备ID', 1);
+	    }	    
+	    
+	}
+}

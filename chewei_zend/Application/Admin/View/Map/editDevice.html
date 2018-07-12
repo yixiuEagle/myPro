@@ -1,0 +1,46 @@
+<script type="text/javascript">
+$(function(){
+	//类型
+	$('#mapname').combobox({
+       url:'__URL__/map_idlist',
+       valueField:'id',
+       textField:'mapname',
+       panelHeight:'auto',
+      // editable:false,
+		onLoadSuccess: function (msg) {
+			if (msg) {
+				if('{$data.name}' == "" || '{$data.name}' == undefined || '{$data.name}' == null){
+					$('#mapname').combobox('setText',"{$map.mapname}");
+				}
+			}
+		}
+	});
+})
+function Editdevice(){
+	$.post('{:U('Map/device_edit?id='.$data['id'])}', $("#EditdeviceForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			deviceList()
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#EditdeviceBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="EditdeviceForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>地图ID：</td>
+		<td><input id="mapname" type="easyui-combobox" name="info[map_id]" value="{$data.map_id}" style="width:180px;height:22px" />
+		</td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	<tr>
+		<td>设备ID：</td>
+		<td><input type="text" name="info[device_id]" value="{$data.device_id}" style="width:180px;height:22px"/>
+		</td>
+		<td><div id="user_editTip"></div></td>
+	</tr>
+	</table>
+	</form>

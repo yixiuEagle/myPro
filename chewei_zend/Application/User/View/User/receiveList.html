@@ -1,0 +1,67 @@
+<table id="receiveList" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('User/receiveList')}',idField:'id',border:false,
+	toolbar:'#verifyToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'uid',width:100,align:'center'">uid</th>
+		<th data-options="field:'name',width:100,align:'center'">姓名</th>
+		<th data-options="field:'phone',width:200,align:'center'">电话</th>
+		<th data-options="field:'account',width:300,align:'center'">账号</th>
+		<th data-options="field:'type',width:120,align:'center',formatter:receivetype">提现方式</th>
+		<th data-options="field:'fee',width:120,align:'center'">金额</th>
+		<th data-options="field:'createtime',width:150,align:'center'">提交时间</th>
+		<th data-options="field:'status',width:80,align:'center',formatter:receivestat">状态</th>
+	</tr>
+</thead>
+</table>
+
+<div id="verifyToolbar" style="padding:5px;height:auto">
+	<form id="receiveFrom">
+		<a href="javascript:;" onclick="receiveList();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据uid搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="receiveSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+	</form>
+</div>
+
+<script type="text/javascript">
+//状态
+function receivestat(val,row,index){
+	if(val==1){
+		return '成功';
+	}else if(val==2){
+		return '失败';
+	}else if(val==0){
+		return '未处理';
+	}
+}
+//搜索
+function receiveSearch(){
+	var queryParams = $('#receiveList').datagrid('options').queryParams;
+	$.each($("#receiveFrom").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#receiveList').datagrid('load');
+}
+//刷新列表
+function receiveList(){
+	$('#receiveList').datagrid('reload');
+}
+//图像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+//格式化
+function receivetype(val, row, index){
+	if(val==1){
+		return '支付宝';
+	}else if(val==2){
+		return '微信';
+	}
+} 
+
+</script>

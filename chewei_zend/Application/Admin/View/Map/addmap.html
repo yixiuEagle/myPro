@@ -1,0 +1,131 @@
+<script type="text/javascript">
+$(function(){
+	$('#add').click(function(){$('#mapForm').submit()});
+	$.formValidator.initConfig({formID:"mapForm",validatorGroup:"1",theme:'App',onSuccess:map_Add,inIframe:true});
+	$("#mapname").formValidator({onShow:"请输入地图名称",onFocus:"请输入地图名称"}).inputValidator({min:2,max:20,empty:{leftEmpty:false,rightEmpty:false,emptyError:"名称两边不能有空格"},onError:"名称应该为2-20位之间"}).ajaxValidator({
+		type : "post",
+		url : "{:U('Map/public_checkMapname')}",
+		data : {mapname: function(){return $("#mapname").val()}},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? false : true;
+		},
+		onError : "该地图名称已经存在",
+		onWait : "请稍候..."
+	});
+	$("#user").formValidator({onShow:"请输入创建者uid",onFocus:"只能输入数字"}).ajaxValidator({
+		type : "post",
+		url : "{:U('Map/public_checkUserid')}",
+		data : {uid: function(){return $("#user").val()}},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? true : false;
+		},
+		onError : "用户不存在",
+		onWait : "请稍候..."
+	});
+	$("#file").formValidator({onShow:"请选择地图文件",onFocus:"请选择地图文件"}).inputValidator({ min: 1, onError: "没有选择文件!" });
+	$("#lng").formValidator({onShow:"请输入经度",onFocus:"请输入数字"}).inputValidator({ min: 1, onError: "输入错误" }).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" });  
+	$("#lat").formValidator({onShow:"请输入纬度",onFocus:"请输入数字"}).inputValidator({ min: 1, onError: "输入错误" }).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+	$("#offhand").formValidator({onShow:"请输入临时价格",onFocus:"请输入数字"}).inputValidator({ min: 1, onError: "输入错误" }).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+	$("#forever").formValidator({onShow:"请输入永久价格",onFocus:"请输入数字"}).inputValidator({ min: 1, onError: "输入错误" }).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" });
+	$("#address").formValidator({onShow:"请输入地址",onFocus:"请输入详细地址"}).inputValidator({ min: 1, onError: "输入错误" });
+})
+
+
+//提交
+function map_Add(){
+	var form = new FormData(document.getElementById("mapForm"));
+	var url='{:U('Map/add')}';
+	$.messager.progress();
+	$.ajax({  
+	    url :url,
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'info'); 
+	    	//$('#mapForm').form('clear');
+	    	$('#mapForm')[0].reset();
+	    	$.formValidator.resetTipState("1");
+	    	
+	    },  
+	    error : function(data) {  
+	    	$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}		
+</script>
+<div class="easyui-panel" data-options="fit:true,title:'{$currentpos}',border:false">
+<form id="mapForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5" style="border: 1px solid #ccc; width: 600px;">
+	<tr>
+		<td width="100">地图：</td>
+		<td width="187"><input id='file' name="file" type="file"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="fileTip"></div></td>
+	</tr>
+	<tr>
+		<td>地图名称：</td>
+		<td width="187"><input type="text" id="mapname" name="data[mapname]"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="mapnameTip"></div></td>
+	</tr>
+	<tr>
+		<td>标准比例：</td>
+		<td width="187"><input type="text" id="standardScale" name="data[standardScale]"  style="width:180px;height:22px" value='1' />
+		</td>
+		<td><div id="standardScaleTip"></div></td>
+	</tr>
+	<!--<tr>
+		<td>uid：</td>
+		<td width="187"><input id='user' type="text" name="data[uid]"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="userTip"></div></td>
+	</tr>
+	  <tr>
+		<td>临时下载价格：</td>
+		<td width="187"><input id='offhand' type="text" name="data[offhand]"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="offhandTip"></div></td>
+	</tr>
+	<tr>
+		<td>永久下载价格：</td>
+		<td width="187"><input id='forever' type="text" name="data[forever]"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="foreverTip"></div></td>
+	</tr>
+	 <tr>
+		<td> 地址：</td>
+		<td width="187"><input id="address" type="text" name="data[address]" style="width:180px;height:22px" />
+		</td>
+		<td><div id="addressTip"></div></td>
+	</tr> 
+	 <tr>
+		<td>位置：</td>
+		<td width="187"> 经度：<input id="lng" type="text" name="data[lng]" style="width:140px;height:22px" />
+		</td>
+		<td><div id="lngTip"></div></td>
+	</tr> 
+	 <tr>
+		<td></td>
+		<td width="187">纬度：<input id="lat" type="text" name="data[lat]" style="width:140px;height:22px" />
+		</td>
+		<td><div id="latTip"></div></td>
+	</tr> -->
+	<tr>
+		<td></td>
+		<td colspan="3" align="left">
+			<a id="add" class="easyui-linkbutton" style="width: 50px;">提交</a>
+		</td>
+	</tr>
+</table>
+</form>
+</div>

@@ -1,0 +1,109 @@
+<table id="verify_receive" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('User/verify_receiveList')}',idField:'id',border:false,
+	toolbar:'#verify_receiveToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'uid',width:100,align:'center'">uid</th>
+		<th data-options="field:'name',width:100,align:'center'">姓名</th>
+		<th data-options="field:'phone',width:200,align:'center'">电话</th>
+		<th data-options="field:'account',width:300,align:'center'">账号</th>
+		<th data-options="field:'type',width:120,align:'center',formatter:receivetype">提现方式</th>
+		<th data-options="field:'fee',width:120,align:'center'">金额</th>
+		<th data-options="field:'createtime',width:150,align:'center'">提交时间</th>
+		<th data-options="field:'status',width:120,align:'center',formatter:receivestatus">操作</th>
+	</tr>
+</thead>
+</table>
+
+<div id="verify_receiveToolbar" style="padding:5px;height:auto">
+	<form id="verify_receiveFrom">
+		<a href="javascript:;" onclick="verify_receive();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据uid搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="verify_receiveSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+	</form>
+</div>
+
+
+<!-- 失败页面 -->
+<div id="receive_failBox" class="easyui-dialog" title="失败原因"
+	data-options="modal:true,closed:true,iconCls:'icon-add',
+				buttons:[{text:'确定',iconCls:'icon-ok',
+				handler:function(){$('#receive_failForm').submit();}},
+				{text:'取消',iconCls:'icon-cancel',
+				handler:function(){$('#receive_failBox').dialog('close');}}]"
+	style="width: 500px; height: 400px;"></div>
+
+<style>
+.datagrid-row {height: 32px;}
+</style>
+
+<script type="text/javascript">
+
+//失败
+function fail(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	var url = '{:U('User/receive_fail')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#receive_failBox').dialog({href:url});
+	$('#receive_failBox').dialog('open');
+}
+//成功
+function success(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定已经提现成功了？', function(result){
+		if(!result) return false;
+		$.post('{:U('User/receiveEdit')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				receiveList();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+//搜索
+function verify_receiveSearch(){
+	var queryParams = $('#verify_receive').datagrid('options').queryParams;
+	$.each($("#verify_receiveFrom").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#verify_receive').datagrid('load');
+}
+//刷新列表
+function verify_receive(){
+	$('#verify_receive').datagrid('reload');
+}
+//图像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+//格式化
+function receivetype(val, row, index){
+	if(val==1){
+		return '支付宝';
+	}else if(val==2){
+		return '微信';
+	}
+} 
+//操作
+function receivestatus(val, row, index){
+	var btn = [];
+	btn.push('<a href="javascript:void(0);" onclick="success('+row.id+')">提现成功</a>');
+	btn.push('<a href="javascript:void(0);" onclick="fail('+row.id+')">提现失败</a>');
+	return btn.join(' | ');
+	
+}			
+
+</script>

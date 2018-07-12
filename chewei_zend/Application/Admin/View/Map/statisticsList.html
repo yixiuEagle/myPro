@@ -1,0 +1,65 @@
+<table id="statList" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Map/statisticsList',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#statToolbar',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'mapname',width:200,align:'center'">地图名称</th>
+		<th data-options="field:'money',width:120,align:'center'">金额</th>
+		<th data-options="field:'view',width:120,align:'center'">访问量</th>
+		<th data-options="field:'download',width:120,align:'center'">下载量</th>
+		<th data-options="field:'createtime',width:150,align:'center'">发布时间</th>
+	</tr>
+</thead>
+</table>
+
+<div id="statToolbar" style="padding:5px;height:auto">
+	<form id="statFrom">
+		<a href="javascript:;" onclick="statList();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<span>|</span>
+		<!-- <a href="javascript:;" onclick="mapList();" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true">统计</a> -->
+		开始时间：<input class="easyui-datetimebox" name="search[starttime]"
+    data-options="required:true,showSeconds:false" style="width:150px">
+    	结束时间：<input class="easyui-datetimebox" name="search[endtime]"
+    data-options="required:true,showSeconds:false" style="width:150px">
+		<a href="javascript:;" onclick="statSearch();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+		<span>|</span>
+		<a href="javascript:;" onclick="statistics();" class="easyui-linkbutton" iconCls="icon-edit">查看总量统计</a>
+	</form>
+</div>
+
+<!-- 统计 -->
+<div id="statEditBox" class="easyui-dialog" title="统计"
+	data-options="modal:true,closed:true,iconCls:'icon-edit',
+				buttons:[{text:'取消',iconCls:'icon-cancel',
+				handler:function(){$('#statEditBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+<script type="text/javascript">
+//统计
+function statistics(){
+	var url = '{:U('Map/statist')}';
+	$('#statEditBox').dialog({href:url});
+	$('#statEditBox').dialog('open');
+}
+//搜索
+function statSearch(){
+	var queryParams = $('#statList').datagrid('options').queryParams;
+	$.each($("#statFrom").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#statList').datagrid('load');
+}
+//刷新列表
+function statList(){
+	$('#statList').datagrid('reload');
+}
+//图像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+
+</script>

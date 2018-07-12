@@ -1,0 +1,91 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"mapEditForm",theme:'App',onError:function(msg){},onSuccess:map_SaveEdit,inIframe:true});
+	/*$("#map_lng").formValidator({onShow:"请输入经度",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" });  
+	$("#map_lat").formValidator({onShow:"请输入纬度",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+	$("#editmap_offhand").formValidator({onShow:"请输入临时价格",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+	$("#editmap_forever").formValidator({onShow:"请输入永久价格",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); */
+	/*$("#editmapname").formValidator({onShow:"请输入地图名称",onFocus:"请输入地图名称"}).inputValidator({min:2,max:20,empty:{leftEmpty:false,rightEmpty:false,emptyError:"名称两边不能有空格"},onError:"名称应该为2-20位之间"}).ajaxValidator({
+		type : "post",
+		url : "{:U('Map/public_checkMapname')}",
+		data : {mapname: function(){return $("#editmapname").val()}},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? false : true;
+		},
+		onError : "该地图名称已经存在",
+		onWait : "请稍候..."
+	});*/
+	/*$("#editmap_user").formValidator({onShow:"请输入创建者uid",onFocus:"只能输入数字"}).ajaxValidator({
+		type : "post",
+		url : "{:U('Map/public_checkUserid')}",
+		data : {uid: function(){return $("#editmap_user").val()}},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? true : false;
+		},
+		onError : "用户不存在",
+		onWait : "请稍候..."
+	});*/
+   
+})
+
+function map_SaveEdit(){
+	var form = new FormData(document.getElementById("mapEditForm"));
+	var url='{:U('Map/editmsg?id='.$info['id'])}';
+	$.ajax({  
+	    url :url,
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	msg();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#mapEditBox').dialog('close');
+	    	
+	    },  
+	    error : function(data) {  
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}
+</script>
+<form id="mapEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td width="100">设备ID：</td>
+		<td width="187"><input type="text" id="device_id" name="info[device_id]" value="{$info.device_id}"  style="width:180px;height:22px" />
+		</td>
+		<!-- <td><div id="fileTip"></div></td> -->
+	</tr>
+	<tr>
+		<td>楼层：</td>
+		<td width="187"><input type="text" id="floor" name="info[floor]" value="{$info.floor}"  style="width:180px;height:22px" />
+		</td>
+		<!-- <td><div id="mapnameTip"></div></td> -->
+	</tr>
+	<tr>
+		<td>旋转角度：</td>
+		<td width="187"><input type="text" id="rotate" name="info[rotate]" value="{$info.rotate}"  style="width:180px;height:22px" />
+		</td>
+		<!-- <td><div id="mapnameTip"></div></td> -->
+	</tr>
+	<tr>
+		<td>当前位置(x,y)：</td>
+		<td width="187"><input type="text" id="location" name="info[location]" value="{$info.location}" style="width:180px;height:22px" />
+		</td>
+		<!-- <td><div id="mapnameTip"></div></td> -->
+	</tr>
+	<tr>
+		<td>点位名：</td>
+		<td width="187"><input type="text" id="location" name="info[name]" value="{$info.name}" style="width:180px;height:22px" />
+		</td>
+		<!-- <td><div id="mapnameTip"></div></td> -->
+	</tr>
+</table>
+</form>

@@ -1,0 +1,47 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"pushForm",theme:'App',onError:function(msg){},onSuccess:push,inIframe:true});
+	$("#push_user").formValidator({onShow:"请输入uid",onFocus:"只能输入数字"}).ajaxValidator({
+		type : "post",
+		url : "{:U('Map/public_checkUserid')}",
+		data : {uid: function(){return $("#push_user").val()}},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? true : false;
+		},
+		onError : "用户不存在",
+		onWait : "请稍候..."
+	});
+   
+})
+
+function push(){
+	$.post('{:U('Map/push_map?id='.$info['id'])}', $("#pushForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			mapList();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#push_mapBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="pushForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>推送地图名:</td>
+		<td>{$info.mapname}
+		</td>
+		<td><div id=""></div></td>
+	</tr>
+	<tr>
+		<td>接收者uid：</td>
+		<td><input type="text" id="push_user" name="uid" style="width:130px;height:22px" />
+		</td>
+		<td><div id="push_userTip"></div></td>
+	</tr>
+</table>
+</form>

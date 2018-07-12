@@ -1,0 +1,87 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"verifyEditForm",theme:'App',onError:function(msg){},onSuccess:verifymap_SaveEdit,inIframe:true});
+	$("#verifymap_lng").formValidator({onShow:"请输入经度",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" });  
+	$("#verifymap_lat").formValidator({onShow:"请输入纬度",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+	$("#verifyeditmap_offhand").formValidator({onShow:"请输入临时价格",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+	$("#verifyeditmap_forever").formValidator({onShow:"请输入永久价格",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+	$("#verifyeditmapname").formValidator({onShow:"请输入地图名称",onFocus:"请输入地图名称"}).inputValidator({min:2,max:20,empty:{leftEmpty:false,rightEmpty:false,emptyError:"名称两边不能有空格"},onError:"名称应该为2-20位之间"}).ajaxValidator({
+		type : "post",
+		url : "{:U('Map/public_checkMapname')}",
+		data : {mapname: function(){return $("#verifyeditmapname").val()}},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? false : true;
+		},
+		onError : "该地图名称已经存在",
+		onWait : "请稍候..."
+	});
+	$("#verifyeditmap_user").formValidator({onShow:"请输入创建者uid",onFocus:"只能输入数字"}).ajaxValidator({
+		type : "post",
+		url : "{:U('Map/public_checkUserid')}",
+		data : {uid: function(){return $("#editmap_user").val()}},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? true : false;
+		},
+		onError : "用户不存在",
+		onWait : "请稍候..."
+	});
+   
+})
+
+function verifymap_SaveEdit(){
+	$.post('{:U('Map/verifyedit?id='.$info['id'])}', $("#verifyEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			verifyList();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#verifymapEditBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="verifyEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>地图名称：</td>
+		<td><input id="verifyeditmapname" type="text" name="info[mapname]" value="{$info.mapname}" style="width:180px;height:22px" /></td>
+		<td><div id="verifyeditmapnameTip"></div></td>
+	</tr>
+	<tr>
+		<td>uid：</td>
+		<td><input type="text" id="verifyeditmap_user" name="info[uid]" value="{$info.uid}"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="verifyeditmap_userTip"></div></td>
+	</tr>
+	<tr>
+		<td>临时下载价格：</td>
+		<td><input type="text" id="verifyeditmap_offhand" name="info[offhand]" value="{$info.offhand}"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="verifyeditmap_offhandTip"></div></td>
+	</tr>
+	<tr>
+		<td>永久下载价格：</td>
+		<td><input type="text" id="verifyeditmap_forever" name="info[forever]" value="{$info.forever}"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="verifyeditmap_foreverTip"></div></td>
+	</tr>
+	<tr>
+		<td>位置：</td>
+		<td> 经度：<input id="verifymap_lng" name="info[lng]" value="{$info.lng}" type="text" style="width:140px;height:22px" />
+		</td>
+		<td><div id="verifymap_lngTip"></div></td>
+	</tr> 
+	<tr>
+		<td></td>
+		<td>纬度：<input id="verifymap_lat" name="info[lat]" value="{$info.lat}" type="text" style="width:140px;height:22px" />
+		</td>
+		<td><div id="verifymap_latTip"></div></td>
+	</tr> 
+</table>
+</form>

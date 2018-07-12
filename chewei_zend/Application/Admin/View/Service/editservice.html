@@ -1,0 +1,47 @@
+<script type="text/javascript">
+
+$(function(){
+	$.formValidator.initConfig({formID:"serEditForm",theme:'App',onSuccess:service_SaveEdit,inIframe:true});
+    $("#phone1").formValidator({onShow: "请输入电话号码",onFocus: "只能输入数字"}).regexValidator({
+        regExp: "^(\\d{3,4}-?\\d{7,8}|(13|15|18)\\d{9})$",
+        onError: "电话号码格式不正确，请检查"
+    });
+    $("#lng2").formValidator({onShow:"请输入经度",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" });  
+	$("#lat2").formValidator({onShow:"请输入纬度",onFocus:"只能输入数字"}).regexValidator({ regExp: "num1", dataType: "enum", onError: "格式不正确" }); 
+
+})
+
+function service_SaveEdit(){
+	$.post('{:U('Service/editservice?id='.$info['id'])}', $("#serEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			Refresh();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#serEditBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="serEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	 <tr>
+		<td>电话号码：</td>
+		<td><input id="phone1" type="text" name="info[phone]" value="{$info.phone}"  style="width:180px;height:22px" />
+		</td>
+		<td><div id="phone1Tip"></div></td>
+	</tr>
+	<tr>
+		<td>位置：</td>
+		<td> 经度：<input id="lng2" name="info[lng]" value="{$info.lng}" type="text" style="width:140px;height:22px" />
+		</td>
+		<td><div id="lng2Tip"></div></td>
+	</tr> 
+	<tr>
+		<td></td>
+		<td>纬度：<input id="lat2" name="info[lat]" value="{$info.lat}" type="text" style="width:140px;height:22px" />
+		</td>
+		<td><div id="lat2Tip"></div></td>
+	</tr> 
+</table>
+</form>

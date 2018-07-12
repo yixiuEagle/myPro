@@ -1,0 +1,19 @@
+====================普通分页查询=====================
+1. 在需要使用的地方，派生于commonModel类。
+class UserModel extends CommonModel
+2. 在函数中实现分页查询。
+function searchuser() {
+		$keyword = I('keyword', '');
+		
+		$table = "user";
+		$where = "name like '%$keyword%'";
+		$field = "*";
+		$order = "uid desc";
+		$result = $this->m_db_getlistpage($table, $where, $field, $order);
+		
+		return $result;
+	}
+	
+====================多表联合分页查询=====================
+$table = "user u,tc_test t";
+$where = "u.name like '%$keyword%' and u.uid=t.uid";

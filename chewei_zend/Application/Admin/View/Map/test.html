@@ -1,0 +1,39 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"userEditForm",theme:'App',onError:function(msg){},onSuccess:user_SaveEdit,inIframe:true});
+	$("#user_edit_sign").formValidator({onShow:"请输入用户签名",onFocus:"用户签名应该为10-140位之间"}).inputValidator({min:10,max:140,empty:{leftEmpty:false,rightEmpty:false,emptyError:"用户签名两边不能有空格"},onError:"用户签名应该为10-140位之间"});
+		   
+})
+//提交
+function user_SaveEdit(){
+	$.post('{:U('User/editrobt?uid='.$data['uid'])}', $("#userEditForm").serialize(), function(msg){
+		if(!msg.status){
+			$.messager.alert('提示信息', msg.info, 'error');
+		}else{
+			$.messager.alert('提示信息', msg.info, 'info');
+			$('#userEditBox').dialog('close');
+			List();
+		}
+	})
+}
+</script>
+<form id="userEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>用户昵称：</td>
+		<td><input type="text" name="data[nickname]" id="user_edit_nickname" value="{$data.nickname}" style="width:280px;height:22px" /></td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	<tr>
+		<td>用户签名：</td>
+		<td><textarea name="data[sign]" id="user_edit_sign" style="width: 280px; height: 88px;">{$data.sign}</textarea></td>
+		<td><div id="user_edit_signTip"></div></td>
+	</tr>
+	 <tr>
+		<td>位置：</td>
+		<td> 经度：<input name="data[lng]" id="lng" type="text" value="{$data.lng}" style="width:100px;height:22px" />纬度：<input name="data[lat]" id="lat" value="{$data.lat}" type="text" style="width:100px;height:22px" />
+		</td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr> 
+	</table>
+	</form>
