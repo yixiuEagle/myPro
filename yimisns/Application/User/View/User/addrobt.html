@@ -1,0 +1,45 @@
+<script type="text/javascript">
+//提交
+function robt_Add(){
+	$.messager.progress();
+	$.post('{:U('User/addRobt')}', $("#robtForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.progress('close');
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			$.messager.progress('close');
+			List();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#addRobtBox').dialog('close');
+		}
+	})
+}
+function userRefresh(){
+	$('#userList_{$rand}').datagrid('reload');
+}
+
+</script>
+<form id="robtForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>数量：</td>
+		<td><input class="easyui-numberbox" type="text" name="num" id="user_edit_nickname" data-options="min:1,max:9999,required:true" style="width:180px;height:22px" />
+		</td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	 <tr>
+		<td>位置：</td>
+		<td> 经度：<input id="add_menu_name" name="lng" type="text" style="width:100px;height:22px" />纬度：<input id="add_menu_name" class="easyui-textbox" name="lat" type="text" style="width:100px;height:22px" />
+		</td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr> 
+	<tr>
+		<td>性别：</td>
+		<td colspan="2">
+			<label><input name="gender" value="1" type="radio" />女</label>
+			<label><input name="gender" value="0" type="radio" />男</label>
+		</td>
+	</tr>
+	
+	</table>
+	</form>

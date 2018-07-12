@@ -1,0 +1,398 @@
+[ 2017-11-21T12:24:01+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=1185
+INFO: api result={"data":{},"msg":"\u5feb\u62cd\u4e0d\u5b58\u5728","debugMsg":"","code":1,"page":""}
+[ 2017-11-21T12:24:01+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=1185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.035627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035892s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.271346s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002858s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002134s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.065341s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.044544s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 1185 ) LIMIT 1   [ RunTime:0.000763s ]
+
+[ 2017-11-21T12:24:15+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=1191
+INFO: api result={"data":{},"msg":"\u5feb\u62cd\u4e0d\u5b58\u5728","debugMsg":"","code":1,"page":""}
+[ 2017-11-21T12:24:15+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=1191
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051352s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002633s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000994s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001944s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 1191 ) LIMIT 1   [ RunTime:0.000423s ]
+
+[ 2017-11-21T12:25:04+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=87
+INFO: api result={"data":{"id":"87","uid":"200043","title":"\u89c6\u9891\u5feb\u62cd","img":"\/Uploads\/Picture\/20160908\/9f4afd9ec797f423bf4e4ce9e7957c72.jpg","width":"480","height":"320","video":"\/Uploads\/Picture\/20160908\/9f4afd9ec797f423bf4e4ce9e7957c72.mp4","lat":"31.349326","lng":"107.737087","zancount":"0","commentcount":"0","playcount":"0","cancomment":"1","createtime":"1473330501","robt_look":"0","userinfo":{"uid":"200043","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200043\/s_ddeaabb9754c952096aee7851a1faec9.png","nickname":"\u5443\u5443\u5443","isfollow":"0"}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-21T12:25:04+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=87
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002465s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001257s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000965s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001969s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 87 ) LIMIT 1   [ RunTime:0.061412s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200043 [ RunTime:0.180809s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.034812s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 87 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.001768s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_statistics` [ RunTime:0.044830s ]
+SQL: SELECT * FROM `tc_kuaipai_statistics` WHERE ( linkid=87 ) LIMIT 1   [ RunTime:0.001638s ]
+
+[ 2017-11-21T12:25:37+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004623s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002834s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000841s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.003161s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 88 ) LIMIT 1   [ RunTime:0.000328s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200045 [ RunTime:0.001945s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001791s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 88 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000483s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200313,88,1) [ RunTime:0.255176s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=88 ) LIMIT 1   [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002494s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200045 ) LIMIT 1   [ RunTime:0.000539s ]
+NOTIC: [2] Division by zero D:\SUB\php project\yimisns\Application\Common\Common\function.php 第 555 行.
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4547 行.
+
+[ 2017-11-21T12:26:33+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=88
+INFO: api result={"data":{"id":"88","uid":"200045","title":"\u54c8\u54c8","img":"\/Uploads\/Picture\/20160910\/s_5d7ea86974554c0c5c2638575520259d.png","width":"426","height":"320","video":"","lat":"30.735554","lng":"103.985430","zancount":"0","commentcount":"0","playcount":"0","cancomment":"1","createtime":"1473502371","robt_look":"0","userinfo":{"uid":"200045","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200045\/s_07f2976e9f41ed669622f16b67c2718e.png","nickname":"\u6731\u5b9a\u541b\u897f\u7af9","isfollow":"0"}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-21T12:26:33+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003387s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001411s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001127s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.001487s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.002040s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 88 ) LIMIT 1   [ RunTime:0.000398s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200045 [ RunTime:0.001750s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001925s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 88 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_statistics` [ RunTime:0.003313s ]
+SQL: SELECT * FROM `tc_kuaipai_statistics` WHERE ( linkid=88 ) LIMIT 1   [ RunTime:0.001018s ]
+
+[ 2017-11-21T12:26:39+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=89
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000139s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002289s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000848s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001931s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 89 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200045 [ RunTime:0.001659s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.002585s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 89 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.001446s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200313,89,1) [ RunTime:0.039389s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=89 ) LIMIT 1   [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000926s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200045 ) LIMIT 1   [ RunTime:0.000560s ]
+NOTIC: [2] Division by zero D:\SUB\php project\yimisns\Application\Common\Common\function.php 第 555 行.
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4547 行.
+
+[ 2017-11-21T12:28:19+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=90
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002336s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000948s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001869s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 90 ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200045 [ RunTime:0.001981s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001716s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 90 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000474s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200313,90,1) [ RunTime:0.063566s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=90 ) LIMIT 1   [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001942s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200045 ) LIMIT 1   [ RunTime:0.000731s ]
+NOTIC: [2] Division by zero D:\SUB\php project\yimisns\Application\Common\Common\function.php 第 555 行.
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4547 行.
+
+[ 2017-11-21T12:28:47+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=91
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003988s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000842s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001996s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 91 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200045 [ RunTime:0.001587s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001725s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 91 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000468s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200313,91,1) [ RunTime:0.048396s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=91 ) LIMIT 1   [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001893s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200045 ) LIMIT 1   [ RunTime:0.000631s ]
+NOTIC: [2] Division by zero D:\SUB\php project\yimisns\Application\Common\Common\function.php 第 556 行.
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4547 行.
+
+[ 2017-11-21T12:30:19+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=92
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002610s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001680s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000982s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001863s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 92 ) LIMIT 1   [ RunTime:0.000362s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200045 [ RunTime:0.001669s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001762s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 92 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000476s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200313,92,1) [ RunTime:0.066313s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=92 ) LIMIT 1   [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001940s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200045 ) LIMIT 1   [ RunTime:0.000846s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4547 行.
+
+[ 2017-11-21T12:32:27+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=92
+INFO: api result={"data":{"id":"92","uid":"200045","title":"\u9ed1\u80e1\u6912","img":"\/Uploads\/Picture\/20160910\/9905a62a0607f676f0b86d0b4922d746.jpg","width":"480","height":"320","video":"\/Uploads\/Picture\/20160910\/9905a62a0607f676f0b86d0b4922d746.mp4","lat":"30.735415","lng":"103.985335","zancount":"0","commentcount":"0","playcount":"0","cancomment":"1","createtime":"1473502847","robt_look":"0","userinfo":{"uid":"200045","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200045\/s_07f2976e9f41ed669622f16b67c2718e.png","nickname":"\u6731\u5b9a\u541b\u897f\u7af9","isfollow":"0"}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-21T12:32:27+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=92
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001196s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005314s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000859s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001887s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 92 ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200045 [ RunTime:0.001975s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001974s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 92 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000513s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_statistics` [ RunTime:0.003482s ]
+SQL: SELECT * FROM `tc_kuaipai_statistics` WHERE ( linkid=92 ) LIMIT 1   [ RunTime:0.000632s ]
+
+[ 2017-11-21T12:32:35+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200313&id=93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002514s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000921s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001936s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200313) as isfollow from tc_user u where u.uid=200043 [ RunTime:0.001713s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001925s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200313 ) AND ( `linkid` = 93 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000648s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200313,93,1) [ RunTime:0.049794s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=93 ) LIMIT 1   [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002779s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200043 ) LIMIT 1   [ RunTime:0.000637s ]
+
+[ 2017-11-21T12:34:00+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001205s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002431s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000838s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.002462s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200043 [ RunTime:0.035338s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001905s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 93 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000583s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200039,93,1) [ RunTime:0.095914s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=93 ) LIMIT 1   [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001897s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200043 ) LIMIT 1   [ RunTime:0.000680s ]
+
+[ 2017-11-21T12:36:04+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=93
+INFO: api result={"data":{"id":"93","uid":"200043","title":"","img":"\/Uploads\/Picture\/20160911\/s_b9d9dc77d098a61c50394e598822bd0c.png","width":"426","height":"320","video":"","lat":"31.349530","lng":"107.736850","zancount":"0","commentcount":"0","playcount":"0","cancomment":"1","createtime":"1473594443","robt_look":"0","userinfo":{"uid":"200043","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200043\/s_ddeaabb9754c952096aee7851a1faec9.png","nickname":"\u5443\u5443\u5443","isfollow":"1"}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-21T12:36:04+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004994s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000832s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001900s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000424s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200043 [ RunTime:0.001907s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.002792s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 93 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_statistics` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `tc_kuaipai_statistics` WHERE ( linkid=93 ) LIMIT 1   [ RunTime:0.000439s ]
+
+[ 2017-11-21T12:36:07+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=94
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002254s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000853s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.001983s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 94 ) LIMIT 1   [ RunTime:0.000469s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200043 [ RunTime:0.004191s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.002508s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 94 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000594s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200039,94,1) [ RunTime:0.112280s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=94 ) LIMIT 1   [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003165s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200043 ) LIMIT 1   [ RunTime:0.000508s ]
+
+[ 2017-11-21T12:38:03+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001405s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002706s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000834s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.002021s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200043 [ RunTime:0.001655s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001776s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 95 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000492s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200039,95,1) [ RunTime:0.078209s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=95 ) LIMIT 1   [ RunTime:0.000607s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001978s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200043 ) LIMIT 1   [ RunTime:0.000570s ]
+
+[ 2017-11-21T12:39:44+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=96
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002423s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000853s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.002092s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 96 ) LIMIT 1   [ RunTime:0.000600s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200043 [ RunTime:0.002519s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001808s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 96 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000484s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200039,96,1) [ RunTime:0.043983s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=96 ) LIMIT 1   [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001940s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200043 ) LIMIT 1   [ RunTime:0.000534s ]
+
+[ 2017-11-21T12:40:31+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002031s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.000587s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 97 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200042 [ RunTime:0.001688s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.001720s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 97 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000479s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200039,97,1) [ RunTime:0.074888s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=97 ) LIMIT 1   [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002040s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200042 ) LIMIT 1   [ RunTime:0.000646s ]
+
+[ 2017-11-21T12:45:00+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001371s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001728s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000846s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.000514s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 98 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200040 [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.000442s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 98 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000448s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200039,98,1) [ RunTime:0.682916s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=98 ) LIMIT 1   [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001951s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200040 ) LIMIT 1   [ RunTime:0.000515s ]
+
+[ 2017-11-21T12:45:40+08:00 ] ::1 /yimisns/index.php/user/api/kuaipai_detail?uid=200039&id=99
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001179s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003584s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001084s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000987s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000371s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.000612s ]
+SQL: SELECT * FROM `tc_kuaipai` WHERE ( `id` = 99 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: select u.uid, u.headsmall,u.nickname, (select count(*) from tc_user_friend f where f.fid=u.uid and f.uid=200039) as isfollow from tc_user u where u.uid=200042 [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai_visit` [ RunTime:0.000489s ]
+SQL: SELECT * FROM `tc_kuaipai_visit` WHERE ( `uid` = 200039 ) AND ( `linkid` = 99 ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000516s ]
+SQL: INSERT INTO `tc_kuaipai_visit` (`uid`,`linkid`,`type`) VALUES (200039,99,1) [ RunTime:0.078560s ]
+SQL: SELECT `uid` FROM `tc_kuaipai` WHERE ( id=99 ) LIMIT 1   [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002094s ]
+SQL: SELECT `worth_user` FROM `tc_user` WHERE ( `uid` = 200042 ) LIMIT 1   [ RunTime:0.000622s ]
+

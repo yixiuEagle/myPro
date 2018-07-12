@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<meta charset="UTF-8">
+<title>网页分享</title>
+<style>
+.wrap {
+ position:fixed;right:0px;bottom:0px;
+  margin:-200px 0 0 -200px;
+ 
+ 
+  width:100%;
+  height:10%; 
+  overflow:hidden;    
+   
+}
+.bg{
+  
+  height:100%;
+  background:#000000;
+  opacity: 0.5;
+}
+ 
+.inner {
+  position:relative;
+  top:-100%;  
+	width:95%; 
+  height:100%;
+  display:table;  
+ 
+}
+</style>
+</head>
+<body>
+<volist name="data" id="v" >
+	 <iframe src="{$v.url}" width="100%" height="1400px" scrolling="no" frameborder="0"> </iframe>
+</volist>	
+<div class="wrap">
+<div class="bg">
+</div>
+<div class="inner">
+	<div style="height:50px;width:50px;float: left;margin-top: 3%;">
+		<img style="height:50px;width:50px;" src="__PUBLIC__/home/images/Icon-Small-50.png" />
+	</div>
+	<div style="float: left;width: 60%; height: 100px; margin-top: 6% "><span style="font-size: 1.1em">一米，连接虚拟与现实</span>
+	</div>
+	<div style="float: right; width: 20%;height:100%;" >
+		<div style="width: 100%;height:100%;margin-top: 25%;" >
+		<input class="btn" style=" width: 100%; height:25%;background:green;font-size: 0.7em;" type="button" value="下载 APP"
+		onclick="javascrtpt:window.location.href='{$v.home}'">
+		</div>
+	</div>
+
+</div>
+</div>
+</volist>
+</body>
+</html>

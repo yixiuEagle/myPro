@@ -1,0 +1,32 @@
+<script type="text/javascript">
+$(function(){
+	var menu_parent_url = '{:U('Other/public_selectTree')}';
+	$('#add_menu_parentid').combotree({url:menu_parent_url}); 
+
+})
+function savejobAdd(){
+	$.post('{:U('Other/add')}', $("#addForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			jobRefreshList();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#addjobBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="addForm" style="font-size:13px">
+<table id="addBox">
+	<tr>
+		<td width="100">上级菜单：</td>
+		<td><input id="add_menu_parentid" name="info[parentId]" class="easyui-combotree" value="{$Think.get.parentId|default=0}" style="width:180px;height:26px" /></td>
+		<td><div id="add_menu_parentidTip"></div></td>
+	</tr>
+	<tr>
+		<td>名称：</td>
+		<td><input id="add_menu_name" name="info[name]" type="text" style="width:178px;height:22px" /></td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr>
+</table>
+</form>

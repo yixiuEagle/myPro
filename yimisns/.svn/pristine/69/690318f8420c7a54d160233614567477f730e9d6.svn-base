@@ -1,0 +1,12 @@
+<?php
+return array (
+    'youjiangdaka' => '0.2',//单位(元)
+    'guanzhu'=>'0.02',
+    'beiganzhu'=>'0.02',
+    'jubao'=>'0.2',
+    'beijubao'=>'-0.2',
+    'liulan'=>'0.01',
+    'appwaifx'=>'0.2',
+    'appneifx'=>'0.02',
+    'zan_dyanmic'=>'0.02',
+);

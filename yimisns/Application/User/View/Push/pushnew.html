@@ -1,0 +1,72 @@
+<script type="text/javascript">
+editor =KindEditor.create('textarea[id="edit_content"]', { 
+	 resizeType : 1,
+    allowPreviewEmoticons: false,
+    allowImageUpload:true,//允许上传图片
+    allowFileManager:true, //允许对上传图片进行管理
+    uploadJson:'__PUBLIC__/js/editor/php/upload_json.php', //上传图片
+    fileManagerJson:'__PUBLIC__/js/editor/php/file_manager_json.php',
+    afterUpload: function(){this.sync();}, //图片上传后，将上传内容同步到textarea中
+    afterBlur: function(){this.sync();},   //失去焦点时，将上传内容同步到textarea中
+	afterCreate : function(){this.sync(); }, 
+	
+	});
+	
+	function aa(){
+	    	KindEditor.remove('#content');
+	    	console.log('off');
+	    }
+
+//提交
+function push_new(){
+	$.messager.progress();
+	$.post('{:U('Push/pushnew')}', $("#newForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.progress('close');
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			$.messager.progress('close');
+			pushRefresh();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#sendnewMsgBox').dialog('close');
+		}
+	})
+}
+
+
+</script>
+<form id="newForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	
+	<tr>
+		<td>内容：</td>
+		<td>
+		<div style="margin:20px 0;"></div>
+		<textarea id="edit_content" name="data[webpage]" style="width:700px;height:300px;"></textarea>
+		</td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+		<tr>
+		<td>标题:</td>
+		<td>
+		<input name='data[msg]' class="easyui-textbox" data-options="multiline:true" id="url"  type="text"  required="true"   style="width:300px;height:20px" />
+		</td>
+		<td><div id="user_edit_np"></div></td>
+	</tr>
+
+	<tr>
+		<td>uid:</td>
+		<td>
+		<input name='data[uid]' class="easyui-textbox" data-options="multiline:true" id="url"  type="text"  required="true"   style="width:159px;height:20px" />
+		</td>
+		<td><div id="user_edit_np"></div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		*不填写uid则向所有用户推送信息  <br> *填写则以该uid用户向所有用户发送私信
+		</td>
+		
+	</tr>
+	</table>
+	</form>

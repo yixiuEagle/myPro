@@ -1,0 +1,26 @@
+<script type="text/javascript">
+//提交
+	function savetypeEdit(){
+		$.post('{:U('Other/updatetype?id='.$data['id'])}', $("#editForm").serialize(), function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				Re();
+				$.messager.alert('提示信息', data.info, 'info');
+				$('#updateBox').dialog('close');
+			}
+		})
+	}
+
+
+</script>
+<form id="editForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>名称：</td>
+		<td><input id="add_menu_name" name="data[name]" value='{$data.name}' type="text" style="width:100px;height:22px" />
+		</td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	</table>
+	</form>

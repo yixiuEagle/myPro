@@ -1,0 +1,1188 @@
+[ 2017-12-07T14:53:16+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.029145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037315s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.617614s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002088s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002584s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.164473s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.060317s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120798991029',200333,'0.01',1,1,1512629591) [ RunTime:0.220559s ]
+
+[ 2017-12-07T14:56:13+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001816s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003719s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001522s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001651s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002159s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120799102505',200333,'0.01',1,1,1512629772) [ RunTime:0.044677s ]
+
+[ 2017-12-07T14:56:14+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001857s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002918s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001114s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001490s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.003940s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710153484',200333,'0.01',1,1,1512629774) [ RunTime:0.075149s ]
+
+[ 2017-12-07T14:56:15+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002532s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001962s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710110152',200333,'0.01',1,1,1512629774) [ RunTime:0.060169s ]
+
+[ 2017-12-07T14:56:15+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001535s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002442s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001088s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001095s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.004159s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710210099',200333,'0.01',1,1,1512629775) [ RunTime:0.066672s ]
+
+[ 2017-12-07T14:56:16+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002416s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003144s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002056s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120748569750',200333,'0.01',1,1,1512629776) [ RunTime:0.084288s ]
+
+[ 2017-12-07T14:56:17+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002354s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001032s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000858s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001836s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120749549856',200333,'0.01',1,1,1512629777) [ RunTime:0.102430s ]
+
+[ 2017-12-07T14:56:18+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001719s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002519s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000840s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001913s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750509756',200333,'0.01',1,1,1512629778) [ RunTime:0.086520s ]
+
+[ 2017-12-07T14:56:53+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005081s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000842s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001914s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120753575110',200333,'0.01',1,1,1512629813) [ RunTime:0.033571s ]
+
+[ 2017-12-07T14:56:54+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000981s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002364s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001177s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000950s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001880s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120754554950',200333,'0.01',1,1,1512629814) [ RunTime:0.031099s ]
+
+[ 2017-12-07T14:56:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002137s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003637s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001544s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002629s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120754102495',200333,'0.01',1,1,1512629814) [ RunTime:0.138587s ]
+
+[ 2017-12-07T14:56:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002270s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001093s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000919s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001897s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120755545349',200333,'0.01',1,1,1512629815) [ RunTime:0.058310s ]
+
+[ 2017-12-07T14:56:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000965s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002341s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001009s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001151s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001903s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120755991004',200333,'0.01',1,1,1512629815) [ RunTime:0.031644s ]
+
+[ 2017-12-07T14:56:56+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002329s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000836s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.003364s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120756525649',200333,'0.01',1,1,1512629816) [ RunTime:0.058709s ]
+
+[ 2017-12-07T14:56:56+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001232s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004093s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000946s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001859s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120756985753',200333,'0.01',1,1,1512629816) [ RunTime:0.045957s ]
+
+[ 2017-12-07T14:56:57+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001389s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000982s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000575s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120757515299',200333,'0.01',1,1,1512629817) [ RunTime:0.056966s ]
+
+[ 2017-12-07T14:56:57+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002329s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000993s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001907s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120757575753',200333,'0.01',1,1,1512629817) [ RunTime:0.043252s ]
+
+[ 2017-12-07T14:56:57+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002272s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000478s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120757101574',200333,'0.01',1,1,1512629817) [ RunTime:0.030142s ]
+
+[ 2017-12-07T14:56:58+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000905s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000531s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120797544848',200333,'0.01',1,1,1512629818) [ RunTime:0.113052s ]
+
+[ 2017-12-07T14:56:58+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001424s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000928s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001534s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000635s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120797979851',200333,'0.01',1,1,1512629818) [ RunTime:0.049818s ]
+
+[ 2017-12-07T14:56:59+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000596s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120798489749',200333,'0.01',1,1,1512629818) [ RunTime:0.031607s ]
+
+[ 2017-12-07T14:56:59+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000847s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001128s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000514s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120798521015',200333,'0.01',1,1,1512629819) [ RunTime:0.051918s ]
+
+[ 2017-12-07T14:56:59+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001677s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001144s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000947s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000923s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000555s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120798569855',200333,'0.01',1,1,1512629819) [ RunTime:0.035415s ]
+
+[ 2017-12-07T14:56:59+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002749s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000588s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120798999750',200333,'0.01',1,1,1512629819) [ RunTime:0.033329s ]
+
+[ 2017-12-07T14:57:00+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001675s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001157s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001997s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001717s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000365s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000531s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120799481025',200333,'0.01',1,1,1512629819) [ RunTime:0.176116s ]
+
+[ 2017-12-07T14:57:00+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001598s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001517s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.001885s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000960s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120799564949',200333,'0.01',1,1,1512629820) [ RunTime:0.064980s ]
+
+[ 2017-12-07T14:57:00+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001486s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000969s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000469s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120799985310',200333,'0.01',1,1,1512629820) [ RunTime:0.029256s ]
+
+[ 2017-12-07T14:57:01+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000964s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000486s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120799101545',200333,'0.01',1,1,1512629820) [ RunTime:0.051993s ]
+
+[ 2017-12-07T14:57:01+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000946s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000628s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710050545',200333,'0.01',1,1,1512629821) [ RunTime:0.050173s ]
+
+[ 2017-12-07T14:57:01+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004071s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001549s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000952s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000896s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000585s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710053579',200333,'0.01',1,1,1512629821) [ RunTime:0.027388s ]
+
+[ 2017-12-07T15:21:43+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001729s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000926s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001052s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000948s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002868s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120755495654',200333,'0.01',1,1,1512631303) [ RunTime:0.064441s ]
+
+[ 2017-12-07T15:21:44+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.080571s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001804s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000563s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120756555556',200333,'0.01',1,1,1512631304) [ RunTime:0.028047s ]
+
+[ 2017-12-07T15:21:45+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000105s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001959s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001391s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001169s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001415s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000871s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120757545510',200333,'0.01',1,1,1512631305) [ RunTime:0.034319s ]
+
+[ 2017-12-07T15:21:46+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001781s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001549s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000976s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000599s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120797539749',200333,'0.01',1,1,1512631306) [ RunTime:0.026343s ]
+
+[ 2017-12-07T15:21:47+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001728s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001364s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000973s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000590s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120798481024',200333,'0.01',1,1,1512631306) [ RunTime:0.134350s ]
+
+[ 2017-12-07T15:25:22+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001865s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001065s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000968s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.001437s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000894s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750494950',200333,'0.01',1,1,1512631521) [ RunTime:0.033280s ]
+
+[ 2017-12-07T15:31:21+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000974s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001478s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000627s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120757984899',200333,'0.01',1,1,1512631881) [ RunTime:0.030822s ]
+
+[ 2017-12-07T15:32:00+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001760s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000993s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000537s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120748481005',200333,'0.01',1,1,1512631919) [ RunTime:0.033500s ]
+
+[ 2017-12-07T15:32:01+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004274s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000974s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000604s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120748100100',200333,'0.01',1,1,1512631920) [ RunTime:0.107911s ]
+
+[ 2017-12-07T15:32:01+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001240s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000895s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000909s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002275s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000557s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120749979756',200333,'0.01',1,1,1512631921) [ RunTime:0.057248s ]
+
+[ 2017-12-07T15:32:01+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001311s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001243s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000510s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120749101505',200333,'0.01',1,1,1512631921) [ RunTime:0.028290s ]
+
+[ 2017-12-07T15:32:02+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001555s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001540s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001289s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001483s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.001345s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000664s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750505799',200333,'0.01',1,1,1512631922) [ RunTime:0.039984s ]
+
+[ 2017-12-07T15:32:02+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000882s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000837s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000941s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000492s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750535751',200333,'0.01',1,1,1512631922) [ RunTime:0.033698s ]
+
+[ 2017-12-07T15:32:02+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001624s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000903s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000547s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750575151',200333,'0.01',1,1,1512631922) [ RunTime:0.030572s ]
+
+[ 2017-12-07T15:32:02+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001442s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000869s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000602s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750100551',200333,'0.01',1,1,1512631922) [ RunTime:0.026586s ]
+
+[ 2017-12-07T15:32:03+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000870s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000529s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120751515198',200333,'0.01',1,1,1512631923) [ RunTime:0.033489s ]
+
+[ 2017-12-07T15:32:03+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001241s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001457s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001557s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001693s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001930s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120751555049',200333,'0.01',1,1,1512631923) [ RunTime:0.030349s ]
+
+[ 2017-12-07T15:32:52+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004019s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000872s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000840s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000870s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120752574954',200333,'0.01',1,1,1512631972) [ RunTime:0.073606s ]
+
+[ 2017-12-07T16:00:28+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001530s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001091s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000527s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120799974910',200333,'0.01',1,1,1512633628) [ RunTime:0.051162s ]
+
+[ 2017-12-07T16:00:29+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000936s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001166s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000787s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710057505',200333,'0.01',1,1,1512633629) [ RunTime:0.125152s ]
+
+[ 2017-12-07T16:00:30+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001263s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000606s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710148521',200333,'0.01',1,1,1512633629) [ RunTime:0.060615s ]
+
+[ 2017-12-07T16:00:30+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001567s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000878s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.001269s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000640s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710153975',200333,'0.01',1,1,1512633630) [ RunTime:0.055006s ]
+
+[ 2017-12-07T16:00:31+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001003s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001081s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001289s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000588s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710254554',200333,'0.01',1,1,1512633631) [ RunTime:0.151124s ]
+
+[ 2017-12-07T16:00:31+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000975s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001472s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000525s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710210149',200333,'0.01',1,1,1512633631) [ RunTime:0.036262s ]
+
+[ 2017-12-07T16:00:32+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000802s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000478s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120748565254',200333,'0.01',1,1,1512633632) [ RunTime:0.060415s ]
+
+[ 2017-12-07T16:03:45+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000909s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001284s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000658s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120749494898',200333,'0.01',1,1,1512633824) [ RunTime:0.043730s ]
+
+[ 2017-12-07T16:04:03+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000955s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000872s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000465s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120751101535',200333,'0.01',1,1,1512633843) [ RunTime:0.038951s ]
+
+[ 2017-12-07T17:34:43+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"partner=\\\"2088221257643345\\\"&seller_id=\\\"172230902@qq.com\\\"&out_trade_no=\\\"2017120749545755\\\"&subject=\\\"\u4e00\u7c73\u5145\u503c\u5145\u503c\\\"&body=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&total_fee=\\\"0.01\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&service=\\\"mobile.securitypay.pay\\\"&payment_type=\\\"1\\\"&_input_charset=\\\"utf-8\\\"&it_b_pay=\\\"30m\\\"&show_url=\\\"m.alipay.com\\\"&sign=\\\"ILp4PRWWcrqRND9pJIAMclY6r%2FCtwzzGgZSKOK%2BxYsmJWk2fGxLT4EsuLc1p%2FscHstGE7eQMl2zN1BiPuCjSBmEp9HETrPkuy7ohYmD%2F1r03NQp3QG40RIl9c3Oln9q4ASVWAouohvgc%2B8X7aJ9ipYlEkVsb7YiCUbHQVMbcZJM%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T17:34:43+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001597s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001769s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000823s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000526s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120749545755',200333,'0.01',1,1,1512639281) [ RunTime:0.077205s ]
+
+[ 2017-12-07T17:34:58+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"partner=\\\"2088221257643345\\\"&seller_id=\\\"172230902@qq.com\\\"&out_trade_no=\\\"2017120750485355\\\"&subject=\\\"\u4e00\u7c73\u5145\u503c\u5145\u503c\\\"&body=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&total_fee=\\\"0.01\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&service=\\\"mobile.securitypay.pay\\\"&payment_type=\\\"1\\\"&_input_charset=\\\"utf-8\\\"&it_b_pay=\\\"30m\\\"&show_url=\\\"m.alipay.com\\\"&sign=\\\"oUQq3dSnk5yGA62aFYCXrtH39DJbWasFIyUR2icce0U%2Bqy0vGNHrGlp7KoWd4WUHM42XiXErA8CY8k1AoFIwrZDkDW0CkfybUr9uTVwNWkj5pyN%2B4tcONKh%2BRY9m0SiLSMG7QXNi4M3cli7%2BXQc%2BPuZOkSfSj9WAnkJUVn0664Y%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T17:34:58+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002528s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002453s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001061s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000954s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000591s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750485355',200333,'0.01',1,1,1512639297) [ RunTime:0.064076s ]
+
+[ 2017-12-07T20:42:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 08:42:54\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"Array\\\"&sign=\\\"Hf2C7P%2BJdPzBw%2BlTDvrzEXDvV9L6Bv3Jbmg6Di4%2BM6eBoQuIKu75hnDv4TuYB%2BEZRiqavlIJHQY9zQZwFfIVmvgoRl1qM%2BpqgcuNsjNao%2FH2MbRZyDrNVNil00OaSwn8kMxVkEq2Bcb%2BQVNWj6GxYHG6%2B7AX8IT72s0xF%2FAGV9U%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T20:42:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.044724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.024897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025136s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.171831s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001438s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:1.231796s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.038039s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710149531',200333,'0.01',1,1,1512650569) [ RunTime:0.258964s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 79 行.
+
+[ 2017-12-07T22:58:40+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 10:58:39\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"Array\\\"&sign=\\\"hMBAtD13aEbhyPNP%2Bc4yHbsvnLHxMIilFXH6%2BZ%2FMCadciMcXWNZU33lRyP1gTdNJcMgZo516D8iz7GmeG8Fj%2BxLs3cjrqL5ALPTUvNnc%2BUhqcDhJqiZh1WcFE7PRJkGmre29EBJf2rETQJojgffiKZXiG8nINRJQ9LKU%2Fj6Beqg%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T22:58:40+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.032609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032810s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.022244s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003206s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002314s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.001323s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001612s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710298505',200333,'0.01',1,1,1512658717) [ RunTime:0.050248s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 79 行.
+
+[ 2017-12-07T22:59:29+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 10:59:29\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"Array\\\"&sign=\\\"HLdoKCSuedclvGD7dRQvqXuJ0mhWO9AyDXt6tTPgqEv5R61%2FrHSvPp3aVNC%2FyrHheMtzGp5q0b2uJ21KQBWlppfw591CtVb4R%2BXi9vp6PcoRjURSGpANMVCjmcxM1An1l2C3shK7q4xod%2BOZmTIkDXtXEXEfCp8Ue8RYTgn8ZS8%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T22:59:30+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001396s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001002s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001128s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000617s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120749971015',200333,'0.01',1,1,1512658768) [ RunTime:0.194413s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 79 行.
+
+[ 2017-12-07T23:03:10+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 11:03:10\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"{\"body\":\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\",\"subject\":\"\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c\",\"out_trade_no\":\"2017120710150524\",\"timeout_express\":\"30m\",\"total_amount\":\"0.01\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"payment_type\":\"1\"}\\\"&sign=\\\"sfUSJpuS1TdVGVhrMgEb9%2FHQxMVVB9yWNpAZg3TXJJzGT%2FJJvLi8Uq7D1PGnwO3U8f7G4ACfOCtyJUT94nOUV50ScF5nfLGW8OJVXfwVtuN8Pa4Y25HgvBc6huFGqYgl2VIPBebjsrQgA6CJ8BXpz9uScYr7D1Ro1qSyKyy5KKU%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:03:10+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001199s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001592s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000960s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000629s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710150524',200333,'0.01',1,1,1512658990) [ RunTime:0.031958s ]
+
+[ 2017-12-07T23:04:18+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 11:04:18\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"{\"body\":\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\",\"subject\":\"\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c\",\"out_trade_no\":\"2017120750991029\",\"timeout_express\":\"30m\",\"total_amount\":\"0.01\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"payment_type\":\"1\"}\\\"&sign=\\\"CQbsEkOh9bMxJzDhehyjRzSMqUh3CrRuhu7%2FpIKlsnKzbd07YS%2Fr0GFjr6%2B043Bq13M3treQNZAJIisi9dD%2FFMUICRBvuzEbn48HmVGfrkhaYMtNOorRPPNajgezFoxTZZA%2B%2FUA5%2FhJxdQIWXLC9k%2BE4WrjD5O5rqNQJJfBwfsM%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:04:18+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.022480s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000969s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000643s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750991029',200333,'0.01',1,1,1512659058) [ RunTime:0.049995s ]
+
+[ 2017-12-07T23:04:52+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 11:04:52\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"Array\\\"&sign=\\\"RiRcZyayiZ4InUiQH0NKNQx5WpXEhPJmJ%2FoyRsiGGQ78asXd5F7GDr2DtoP7Wavqk4WaVFfPEsmdywT2%2BiOgo6G12SVaPvQzZ9wNLs22dnelF5bK%2BC%2B5pf4FUgedpjDVCXRZKlnM5mABKCqfA5AiSZSHa1g8YuJP2JQsi2uMuBE%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:04:52+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001589s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001494s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000838s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.008882s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.008353s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120752524898',200333,'0.01',1,1,1512659092) [ RunTime:0.027308s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 80 行.
+
+[ 2017-12-07T23:08:05+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 11:08:05\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"{\"body\":\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\",\"subject\":\"\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c\",\"out_trade_no\":\"2017120753535657\",\"timeout_express\":\"30m\",\"total_amount\":\"0.01\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"payment_type\":\"1\"}\\\"&sign=\\\"U0jOgWqTTGIniQWCQpEq5frFaa0aTfyXwLZ6T%2FK2WXtqhXrq9bXjOe6y2wWJV6snH8%2FOReF88TsOGk2lmB7h7UCs4fJPyHC2gcJwmXx43%2BqL211nE%2FYQ4l57WFFnSU8yPIKUhmK4Cfe7L%2BGAFDJEBqhzrmHKbhvAeMhUjZrwmjM%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:08:05+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001771s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000578s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120753535657',200333,'0.01',1,1,1512659285) [ RunTime:0.080708s ]
+
+[ 2017-12-07T23:10:31+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"\"app_id=\\\\\\\"2016040801279307\\\\\\\"&method=\\\\\\\"alipay.trade.app.pay\\\\\\\"&charset=\\\\\\\"utf-8\\\\\\\"&timestamp=\\\\\\\"17-12-07 11:10:31\\\\\\\"&version=\\\\\\\"1.0\\\\\\\"&notify_url=\\\\\\\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\\\\\\\"&timeout_express=\\\\\\\"30m\\\\\\\"&biz_content=\\\\\\\"{\\\"body\\\":\\\"http:\\\\\\\/\\\\\\\/localhost\\\\\\\/yimisns\\\\\\\/index.php\\\\\\\/user\\\\\\\/api\\\\\\\/notifyurl\\\",\\\"subject\\\":\\\"\\\\u4e00\\\\u7c73\\\\u5145\\\\u503c\\\\u5145\\\\u503c\\\",\\\"out_trade_no\\\":\\\"2017120755995751\\\",\\\"timeout_express\\\":\\\"30m\\\",\\\"total_amount\\\":\\\"0.01\\\",\\\"product_code\\\":\\\"QUICK_MSECURITY_PAY\\\",\\\"payment_type\\\":\\\"1\\\"}\\\\\\\"&sign=\\\\\\\"IuO8sqfUA5O0nUc81SZhK4gRMCa5m4tPs5q7GPBHoos5hgnIRDir6CNf6K3ctVUsa28mXieHvyynIAC1O3b%2F5prUPaGxVSDHPUjMIByGdEsScHdGtqzToJypVJy24uvkYlDDT1zS52okZNMOM04afmcb7Z%2BgKLeCsB4IyXHJbWw%3D\\\\\\\"&sign_type=\\\\\\\"RSA\\\\\\\"\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:10:32+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002610s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003404s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002296s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001886s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120755995751',200333,'0.01',1,1,1512659431) [ RunTime:0.068225s ]
+
+[ 2017-12-07T23:11:27+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"\"app_id=\\\\\\\"2016040801279307\\\\\\\"&method=\\\\\\\"alipay.trade.app.pay\\\\\\\"&charset=\\\\\\\"utf-8\\\\\\\"&timestamp=\\\\\\\"17-12-07 11:11:27\\\\\\\"&version=\\\\\\\"1.0\\\\\\\"&notify_url=\\\\\\\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\\\\\\\"&timeout_express=\\\\\\\"30m\\\\\\\"&biz_content=\\\\\\\"{\\\"body\\\":\\\"http:\\\\\\\/\\\\\\\/localhost\\\\\\\/yimisns\\\\\\\/index.php\\\\\\\/user\\\\\\\/api\\\\\\\/notifyurl\\\",\\\"subject\\\":\\\"\\\\u4e00\\\\u7c73\\\\u5145\\\\u503c\\\\u5145\\\\u503c\\\",\\\"out_trade_no\\\":\\\"2017120710252569\\\",\\\"timeout_express\\\":\\\"30m\\\",\\\"total_amount\\\":\\\"0.01\\\",\\\"product_code\\\":\\\"QUICK_MSECURITY_PAY\\\",\\\"payment_type\\\":\\\"1\\\"}\\\\\\\"&sign=\\\\\\\"Bk8Yzn%2BXzr2aSmwFDLCVEx1mgz2ziEGj50xKpEi4Za8I2SIO4RNir5QacH8DZ2827vpIfpWPhzZQ8R307yAUzS0o53yJO2YA%2B8d5Qds%2BkeqpD1BfCQgN8rl0BYO7nndKEd82VLS1Eyr0fSOydhSj9yeJjCu6NxJSDfkCG5emunI%3D\\\\\\\"&sign_type=\\\\\\\"RSA\\\\\\\"\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:11:27+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002383s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000935s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000837s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000671s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710252569',200333,'0.01',1,1,1512659487) [ RunTime:0.032037s ]
+
+[ 2017-12-07T23:12:13+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&method=\\\"alipay.trade.app.pay\\\"&charset=\\\"utf-8\\\"&timestamp=\\\"17-12-07 11:12:13\\\"&version=\\\"1.0\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&biz_content=\\\"{\"body\":\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\",\"subject\":\"\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c\",\"out_trade_no\":\"2017120710053102\",\"timeout_express\":\"30m\",\"total_amount\":\"0.01\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"payment_type\":\"1\"}\\\"&sign=\\\"fdkP%2BHsFYg4W0N7bc%2Bi6C0XZMS4dbGGuAkBWgUPtkj0cXg9EhcaYmtWXV%2FYhdHEXpKd1JrMpvNZqvwpS640oJw%2F93uXU4pVu%2FWyW3TgKrhnHbcX5mmnZKYDQTgJCVtPa5VJF1g2CN%2BiC0kx2f9c8FRt%2FTp3Ho2Gb3BgO0CPpRew%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:12:13+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000996s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.034155s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001029s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000986s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000680s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710053102',200333,'0.01',1,1,1512659533) [ RunTime:0.098436s ]
+
+[ 2017-12-07T23:12:24+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002217s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000823s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000499s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120756529710',200333,'0.01',1,1,1512659544) [ RunTime:0.033699s ]
+
+[ 2017-12-07T23:20:04+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"{\"body\":\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\",\"subject\":\"\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c\",\"out_trade_no\":\"2017120752484856\",\"timeout_express\":\"30m\",\"total_amount\":\"0.01\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"payment_type\":\"1\"}\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:20:04\\\"&version=\\\"1.0\\\"&sign=\\\"k7GpDoINz1mVfJlTy7J%2BzgRgA5HRkAeuCYllG4xchwxmuxvbKl1tvKIHMn0E%2BoS7LZpoacfF1Za77vcF7nTR8zVaFRY3L7lSKV78gdZPDR1%2BKBrQIfcqe%2F5LkGd9xefPth86BsbQqZvIuNU8%2FCCHowWCfL%2FJlpperd%2BwrSO0Lw4%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:20:04+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001093s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002528s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000665s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120752484856',200333,'0.01',1,1,1512660003) [ RunTime:0.049995s ]
+
+[ 2017-12-07T23:20:30+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"Array\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:20:30\\\"&version=\\\"1.0\\\"&sign=\\\"jiF3lQEo141GadOIl3JEX%2F1JHSq6j4niup7a%2FEacpwZZsfLmy4IaY5uLmnR9PYiwdPfTvXKyKZcYht1YHkfhflBBw4BUdf2P7YM1WMcrRxwEQCkyvOh8j3YYUOrf5pJRSONIi69xYG0aZb26O1JGIXBI4wW5TY6gZAhvAGdOIkA%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:20:30+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003986s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001678s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000903s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710199525',200333,'0.01',1,1,1512660030) [ RunTime:0.030190s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 80 行.
+
+[ 2017-12-07T23:21:57+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001554s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003458s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000887s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000573s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120753979798',200333,'0.01',1,1,1512660117) [ RunTime:0.023451s ]
+
+[ 2017-12-07T23:22:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"{\"body\":\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\",\"subject\":\"\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c\",\"out_trade_no\":\"2017120710299541\",\"timeout_express\":\"30m\",\"total_amount\":\"0.01\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"payment_type\":\"1\"}\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:22:55\\\"&version=\\\"1.0\\\"&sign=\\\"tC%2FBKJe4HscUJi14LcIRSgDP%2BTxVLZtSXkf5S9em3MaA%2BPt%2FDYBmS77aXmJX8vBHxyOTmlgnV7HwVSACvMjLBrbu5%2FxAjL0V1EDWqzzjYc8chtiyRBRuPGjoOyYvoey%2FjR8jJUaG2mmivZ3%2FtdYlW5s0xREdnMNqAzRhkajXRYQ%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:22:56+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001813s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001980s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001403s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000812s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120710299541',200333,'0.01',1,1,1512660175) [ RunTime:0.073087s ]
+
+[ 2017-12-07T23:26:18+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"Array\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:26:18\\\"&version=\\\"1.0\\\"&sign=\\\"nFSZx2z%2B1KZOt5mfpI%2FBL6LAIGYfzH1x5jitKV2UAo1VCKSF%2B6EgX14iDzYwF%2FVaVznuxW7ZZWJD31NW18x6wf43nHVJUPNqA4kUpsF9D7oCGAsFI%2FSHEMcVLe4bKOhu%2Fnz%2BH9vV8XyybOOsXyVKjhjsWPBzSDgFmMl6Vg7l1hI%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:26:18+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001207s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003382s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000669s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120797555357',200333,'0.01',1,1,1512660378) [ RunTime:0.026973s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 80 行.
+
+[ 2017-12-07T23:28:43+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"\"pp_id=\\\"2016040801279307\\\"&biz_content=\\\"Array\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:28:43\\\"&version=\\\"1.0\\\"&sign=\\\"ZxNlquiD4AvAX4bY%2BJA0qaW9cZr2VR4m841LtY5MMDPbhkyGqUKlPDYoIrZvqgT%2FwD4o%2F9roJMMrWUKoArCNzLYHwt5Rufu5Vkio70IuOdZOYTVfr1pfR4zmTt6Hsn8u8SAQASBp8dleb34hW9kbN9oJxJXTJlTPnk9DQAq1Sh8%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:28:43+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001232s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003390s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001377s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001761s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120798994855',200333,'0.01',1,1,1512660523) [ RunTime:0.060682s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 80 行.
+NOTIC: [2] Illegal string offset 'biz_content' D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 95 行.
+NOTIC: [2] Illegal string offset 'biz_content' D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 95 行.
+
+[ 2017-12-07T23:29:23+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"Array\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:29:23\\\"&version=\\\"1.0\\\"&sign=\\\"B4D9zs0Q5pLgN32QhEUYNWLUVnk8QnSweUnTu3AOnPknhdRVhyKYlcPx71gQDpcY7EPeQKQRs%2FApZAbhXuI7n%2BjG42cqyZPb50yNOpBUIbjZ7cfHJwtp7%2BPWMcu6TMQthKaP%2BwyPsYzmGMyXtiNibAklLqlNaPhRVPCGihcDURg%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:29:23+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002016s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000647s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120751511005',200333,'0.01',1,1,1512660563) [ RunTime:0.043502s ]
+NOTIC: [8] Array to string conversion D:\SUB\php project\yimisns\Application\Common\Pay\Pay.class.php 第 80 行.
+
+[ 2017-12-07T23:43:14+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120750539899%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:43:14\\\"&version=\\\"1.0\\\"&sign=\\\"wpVV63C1bfm2b2jb2WiyD2tE2T78roevU3oBPpntLkEV8kbSJUmP9%2BVU7rvD2vTIhGV77NLQYW5TN0hlP6tCvmXPG9FtUprnrVeizYWIqaig3MLOcqyoVb4ker8FZdw0kZzxY94uoK9W9TyxWDlRjKk%2FbGFNsUhmP5AoK4TRG1s%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:43:14+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001551s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000820s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000498s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120750539899',200333,'0.01',1,1,1512661394) [ RunTime:0.055314s ]
+
+[ 2017-12-07T23:43:38+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"{\"body\":\"http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl\",\"subject\":\"\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c\",\"out_trade_no\":\"2017120797525052\",\"timeout_express\":\"30m\",\"total_amount\":\"0.01\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"payment_type\":\"1\"}\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:43:38\\\"&version=\\\"1.0\\\"&sign=\\\"N%2FkNdC51oL6aDT4K9VIXb6z%2FYVevVLhCJOaHLEUS4fA8rpe%2F5pwt5GIvfwIhJzA14ZHI8jkJPAq2V3nEntHzbG7Skk69YE6%2FjKnL%2FHtH5QTxAzZpRQg5y%2Bw%2B7EfoFj5jZIjD70pVv3f6O7V4yY1C2VE7h6D%2F2ULrjfeKak3NOZo%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:43:38+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005934s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000955s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000539s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120797525052',200333,'0.01',1,1,1512661418) [ RunTime:0.048167s ]
+
+[ 2017-12-07T23:44:07+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120755971025%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/localhost\/yimisns\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:44:07\\\"&version=\\\"1.0\\\"&sign=\\\"fv8WK2kYSXB7IHHlvOrVDJtiaV%2BzrTTVP8dJfzqZdmusklZ8Npq2D9aD4e73k0kG5lKYFggHsPpY8CpV%2FmGmRk%2FiMPLEUiHiCT%2BztFRNvo%2BWoXAYbgujPhQ%2B7ORx4zpNhRvvtwOO6o7Hu2nas%2FBEy6FykoIVbuIS0%2BzRbOqBGS8%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:44:07+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003637s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002640s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000924s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000510s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120755971025',200333,'0.01',1,1,1512661447) [ RunTime:0.099932s ]
+
+[ 2017-12-07T23:59:04+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120756545048%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-07 11:59:04\\\"&version=\\\"1.0\\\"&sign=\\\"Vj0k%2BOeJg5FLYKuxE3ZVzae0Eqdd0wgUaglWsLoY5EhynaZj%2BwUZAZHNpKhdDav5Yz9BzPy5cE4IzgKWZerHBXnu0dnv9QnawodXV7p9xk0UO%2BcX%2FH%2FAXrpSWVA9L87ohqZksjpfi1fnWu8StgqYsnouBc9sdJKT68K2wDcqpRo%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-07T23:59:04+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000941s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002223s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120756545048',200333,'0.01',1,1,1512662344) [ RunTime:0.060285s ]
+

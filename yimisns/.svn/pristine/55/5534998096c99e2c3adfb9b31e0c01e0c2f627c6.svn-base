@@ -1,0 +1,189 @@
+<script type="text/javascript">
+$(function(){
+
+	$('#edit_user_upload').uploadify({
+		'swf'      : '__PUBLIC__/js/uploadify/uploadify.swf',
+		'uploader' : '{:U('User/public_uploadHead?uid='.$info["uid"])}',
+		'buttonText': '选择图片',
+		'width'	: 70,
+		'height': 28,
+		'buttonClass': 'upload_button',
+		'auto'	: true,
+		'removeTimeout' : 0,//文件队列上传完成1秒后删除
+		'fileTypeDesc' : 'Image Files',//只允许上传图像
+		'fileTypeExts' : '*.gif; *.jpg; *.png',//限制允许上传的图片后缀
+		'onUploadSuccess' : function(file, data, response){
+			var data = $.parseJSON(data);
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				$('#edit_user_image').attr('src',data.url);
+				$('#edit_user_head').attr('value',data.url);
+			}
+		}
+	});
+	$.formValidator.initConfig({formID:"userEditForm",theme:'App',onError:function(msg){},onSuccess:user_SaveEdit,inIframe:true});
+	$("#user_edit_nickname").formValidator({onShow:"请输入用户昵称",onFocus:"请输入用户昵称"}).inputValidator({min:2,max:20,empty:{leftEmpty:false,rightEmpty:false,emptyError:"昵称两边不能有空格"},onError:"昵称应该为2-20位之间"}).ajaxValidator({
+		type : "post",
+		url : "{:U('User/public_checkNickname')}",
+		data : {nickname: function(){return $("#user_edit_nickname").val()}, default: '{$info.nickname}'},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? false : true;
+		},
+		onError : "该昵称已经存在",
+		onWait : "请稍候..."
+	});
+	$("#user_edit_sign").formValidator({onShow:"请输入用户签名",onFocus:"用户签名应该为10-140位之间"}).inputValidator({min:10,max:140,empty:{leftEmpty:false,rightEmpty:false,emptyError:"用户签名两边不能有空格"},onError:"用户签名应该为10-140位之间"});
+	//职业
+	$('#cc').combobox({
+        url:'__URL__/box',
+       valueField:'name',
+       textField:'name',
+       panelHeight:'auto',
+       editable:false,
+		onLoadSuccess: function (msg) {
+			if (msg) {
+				if('{$data.job}' == "" || '{$data.job}' == undefined || '{$data.job}' == null){
+				$('#cc').combobox('setText',"——请选择职业——");
+			}else{
+				$('#cc').combobox('setValue',"{$data.job}");
+				}
+			}
+		}
+	});
+	//星座
+	$('#xingzuo').combobox({
+        url:'__URL__/xingzuo',
+       valueField:'name',
+       textField:'name',
+       panelHeight:'auto',
+       editable:false,
+		onLoadSuccess: function (msg) {
+			if (msg) {
+				if('{$data.xingzuo}' == "" || '{$data.xingzuo}' == undefined || '{$data.xingzuo}' == null){
+					$('#xingzuo').combobox('setText',"——请选择星座——");
+				}else{
+				    $('#xingzuo').combobox('setValue',"{$data.xingzuo}");
+					
+				}
+			}
+		}
+	});
+	//家乡
+	$('#city').combobox({
+        url:'__URL__/citylist',
+       valueField:'name',
+       textField:'name',
+       panelHeight:'auto',
+       editable:false,
+		onLoadSuccess: function (msg) {
+			if (msg) {
+				if('{$data.hometown}' == "" || '{$data.hometown}' == undefined || '{$data.hometown}' == null){	
+					$('#city').combobox('setText',"——请选择家乡——");
+				}else{
+					$('#city').combobox('setValue',"{$data.hometown}");
+				}
+			}
+		}
+	});
+		
+		   
+})
+//提交
+function user_SaveEdit(){
+	$.post('{:U('User/editrobt?uid='.$data['uid'])}', $("#userEditForm").serialize(), function(msg){
+		if(!msg.status){
+			$.messager.alert('提示信息', msg.info, 'error');
+			console.log('error');
+		}else{
+			console.log('success');
+			$.messager.alert('提示信息', msg.info, 'info');
+			$('#userEditBox').dialog('close');
+			List();
+		}
+	})
+}
+
+
+
+
+
+</script>
+<form id="userEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td></td>
+		<td colspan="2" align="center">
+			<div style="float: left; width:auto;">
+				<div style="float: left; width:auto; padding: 2px;">
+					<img id="edit_user_image" src="{$data.headsmall}" height="80px;" style="min-width: 80px;padding: 3px; border: 1px solid #ccc;">
+				</div>
+			</div>
+			<div style="margin-left: 5px; float: left; width:240px; height:80px; padding:5px;">
+				<div style="width: 100%; height: 30px;"></div>
+				<input id="edit_user_upload" name="edit_user_upload" type="file">
+			</div>
+			<input id="edit_user_head" name="data[headsmall]" value="" type="hidden">
+		</td>
+	</tr>
+<!-- 	<tr>
+		<td width="80">手&nbsp;机&nbsp;号：</td>
+		<td>{$data.phone}</td>
+		<td></td>
+	</tr> -->
+	<tr>
+		<td>用户昵称：</td>
+		<td><input type="text" name="data[nickname]" id="user_edit_nickname" value="{$data.nickname}" style="width:280px;height:22px" /></td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	<tr>
+		<td>真实性别：</td>
+		<td>
+			<input id="user_edit_realname" class="easyui-combobox" name="data[gender]" value="{$data.gender}"
+					data-options="
+						valueField:'id',
+						textField:'text',
+						data: [{'id':'0','text':'男'},{'id':'1','text':'女'},{'id':'2','text':'未填写'}],
+						panelHeight:'auto',
+			">
+			</td>
+		<td><div id="user_edit_genderTip"></div></td>
+	</tr>
+	<tr>
+		<td>家乡：</td>
+		<td><!--  <input type="text" name="data[hometown]" id="user_edit_hometown" value="{$data.hometown}" style="width:280px;height:22px" />
+		-->
+		 <input class="easyui-combobox" name="data[hometown]" id="city"/>
+		</td>
+		<td><div id="user_edit_hometownTip"></div></td>
+	</tr>
+	<tr>
+		<td>职业：</td>
+		<td>
+		 <input class="easyui-combobox" name="data[job]" id="cc"/>
+		</td>
+    	<td><div id="user_edit_jobTip"></div></td>
+	</tr>
+	<tr>
+		<td>星座：</td>
+		<td>
+		 <input class="easyui-combobox" name="data[xingzuo]" id="xingzuo"/>
+		</td>
+    	<td><div id="user_edit_jobTip"></div></td>
+	</tr>
+	<tr>
+		<td>用户签名：</td>
+		<td><textarea name="data[sign]" id="user_edit_sign" style="width: 280px; height: 88px;">{$data.sign}</textarea></td>
+		<td><div id="user_edit_signTip"></div></td>
+	</tr>
+	 <tr>
+		<td>位置：</td>
+		<td> 经度：<input name="data[lng]" id="lng" type="text" value="{$data.lng}" style="width:100px;height:22px" />纬度：<input name="data[lat]" class="easyui-textbox" id="lat" value="{$data.lat}" type="text" style="width:100px;height:22px" />
+		</td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr> 
+	</table>
+	</form>

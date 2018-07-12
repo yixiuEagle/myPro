@@ -1,0 +1,36 @@
+<script type="text/javascript">
+function Editadv(){
+	$.post('{:U('Adv/edit?id='.$data['id'])}', $("#EditadvForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			advList()
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#EditadvBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="EditadvForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>pos：</td>
+		<td>
+			<input id="manage_edit" class="easyui-combobox" name="data[pos]" value="{$data.pos}"
+					data-options="
+						valueField:'id',
+						textField:'text',
+						editable:false,
+						data: [{'id':'0','text':'附近广告'},{'id':'1','text':'个人中心广告'},{'id':'2','text':'动态广告'}],
+						panelHeight:'auto',
+			">
+			</td>
+		<td><div></div></td>
+	</tr>
+	<tr>
+		<td>排序：</td>
+		<td><input class="easyui-numberbox" type="text" name="data[sort]" value="{$data.sort}" style="width:158px;height:25px" /></td>
+		<td><div id="edit"></div></td>
+	</tr>
+	</table>
+	</form>

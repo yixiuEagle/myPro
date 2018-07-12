@@ -1,0 +1,311 @@
+[ 2017-11-15T15:34:40+08:00 ] ::1 /yimisns/index.php/User/api/dynamic_detail?id=68
+INFO: api result={"data":{},"msg":"\u7528\u6237\u4e0d\u5b58\u5728","debugMsg":"\u7528\u6237uid\u4e0d\u5b58\u5728\u6216uid\u4e3a\u7a7a","code":1,"page":""}
+[ 2017-11-15T15:34:40+08:00 ] ::1 /yimisns/index.php/User/api/dynamic_detail?id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000090s ]
+INFO: [ app_init ] --END-- [ RunTime:0.073402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.048875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049196s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.212526s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.011719s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002369s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 0 ) LIMIT 1   [ RunTime:0.061985s ]
+
+[ 2017-11-15T15:35:08+08:00 ] ::1 /yimisns/index.php/User/api/dynamic_detail?id=68&uid=200039
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003507s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001391s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.013096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.043280s ]
+SQL: SHOW COLUMNS FROM `tc_dynamic` [ RunTime:0.014041s ]
+SQL: SELECT u.uid,u.nickname,u.headsmall,u.gender,u.logintime,u.age,u.job,u.memberlevel,d.*,getDistance('0','0','d.lat','d.lng') as distance FROM tc_dynamic d,tc_user u WHERE ( u.uid=d.uid and d.id=68 ) LIMIT 1   [ RunTime:1.081890s ]
+
+[ 2017-11-15T15:35:42+08:00 ] ::1 /yimisns/index.php/User/api/dynamic_detail?id=90&uid=200039
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003657s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001055s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200039 ) LIMIT 1   [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `tc_dynamic` [ RunTime:0.003741s ]
+SQL: SELECT u.uid,u.nickname,u.headsmall,u.gender,u.logintime,u.age,u.job,u.memberlevel,d.*,getDistance('0','0','d.lat','d.lng') as distance FROM tc_dynamic d,tc_user u WHERE ( u.uid=d.uid and d.id=90 ) LIMIT 1   [ RunTime:0.001237s ]
+
+[ 2017-11-15T18:31:44+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T18:31:44+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: api result={"data":[{"headsmall":"\/Uploads\/Picture\/avatar\/200326\/s_833373ce1a73d1dac281db8dcb345ee0.png"},{"headsmall":""}],"msg":"","debugMsg":"","code":0,"page":{"total":946,"count":2,"pageCount":473,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":2}}
+[ 2017-11-15T18:31:44+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: api result={"data":{"advlist":[{"id":"45","type":"1","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/11.jpg","url":"http:\/\/120.26.217.172\/yimisns.com\/index.php\/Admin\/Adv\/advpage?id=45"},{"id":"43","type":"0","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-17\/s_28f120258a9264acacfe3b00b7dbc7be.jpg","url":"http:\/\/www.sogou.com"},{"id":"31","type":"0","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-10\/s_766c0bf41c4cec4c5733ff1078430e0c.jpg","url":"http:\/\/www.hao123.com"},{"id":"44","type":"1","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-17\/s_4e03accf0f00ad690d754f9e047cf82c.jpg","url":"http:\/\/120.26.217.172\/yimisns.com\/index.php\/Admin\/Adv\/advpage?id=44"}],"xianchanglist":{"num":2,"headlist":["http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200326\/s_833373ce1a73d1dac281db8dcb345ee0.png",""]},"personlist":[]},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-15T18:31:44+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004672s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001028s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000836s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200313 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200313)) >1,1=1,1=0)  ) )  and u.uid <> 200313 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482704  ) LIMIT 1   [ RunTime:0.241610s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002282s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200313 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200313)) >1,1=1,1=0)  ) )  and u.uid <> 200313 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482704  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.029240s ]
+SQL: SHOW COLUMNS FROM `tc_adv` [ RunTime:0.087848s ]
+SQL: SELECT `id`,`type`,`img`,`url` FROM `tc_adv` WHERE ( `pos` = 0 ) ORDER BY sort desc  [ RunTime:0.018895s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002506s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u,tc_kuaipai k WHERE ( k.uid=u.uid ) LIMIT 1   [ RunTime:0.016900s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.016717s ]
+SQL: SELECT distinct u.headsmall FROM tc_user u,tc_kuaipai k WHERE ( k.uid=u.uid ) ORDER BY k.id desc LIMIT 0,2   [ RunTime:0.020405s ]
+SQL: SHOW COLUMNS FROM `tc_zan` [ RunTime:0.082419s ]
+
+[ 2017-11-15T18:31:48+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T18:31:48+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: api result={"data":[{"headsmall":"\/Uploads\/Picture\/avatar\/200326\/s_833373ce1a73d1dac281db8dcb345ee0.png"},{"headsmall":""}],"msg":"","debugMsg":"","code":0,"page":{"total":946,"count":2,"pageCount":473,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":2}}
+[ 2017-11-15T18:31:48+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: api result={"data":{"advlist":[{"id":"45","type":"1","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/11.jpg","url":"http:\/\/120.26.217.172\/yimisns.com\/index.php\/Admin\/Adv\/advpage?id=45"},{"id":"43","type":"0","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-17\/s_28f120258a9264acacfe3b00b7dbc7be.jpg","url":"http:\/\/www.sogou.com"},{"id":"31","type":"0","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-10\/s_766c0bf41c4cec4c5733ff1078430e0c.jpg","url":"http:\/\/www.hao123.com"},{"id":"44","type":"1","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-17\/s_4e03accf0f00ad690d754f9e047cf82c.jpg","url":"http:\/\/120.26.217.172\/yimisns.com\/index.php\/Admin\/Adv\/advpage?id=44"}],"xianchanglist":{"num":2,"headlist":["http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200326\/s_833373ce1a73d1dac281db8dcb345ee0.png",""]},"personlist":[]},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-15T18:31:48+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002406s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004090s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001106s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000859s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001485s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200313 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200313)) >1,1=1,1=0)  ) )  and u.uid <> 200313 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482708  ) LIMIT 1   [ RunTime:0.007103s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001033s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200313 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200313)) >1,1=1,1=0)  ) )  and u.uid <> 200313 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482708  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.005086s ]
+SQL: SHOW COLUMNS FROM `tc_adv` [ RunTime:0.004243s ]
+SQL: SELECT `id`,`type`,`img`,`url` FROM `tc_adv` WHERE ( `pos` = 0 ) ORDER BY sort desc  [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001788s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u,tc_kuaipai k WHERE ( k.uid=u.uid ) LIMIT 1   [ RunTime:0.002976s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000925s ]
+SQL: SELECT distinct u.headsmall FROM tc_user u,tc_kuaipai k WHERE ( k.uid=u.uid ) ORDER BY k.id desc LIMIT 0,2   [ RunTime:0.007574s ]
+SQL: SHOW COLUMNS FROM `tc_zan` [ RunTime:0.019591s ]
+
+[ 2017-11-15T18:32:00+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200312
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T18:32:00+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200312
+INFO: api result={"data":[{"headsmall":"\/Uploads\/Picture\/avatar\/200326\/s_833373ce1a73d1dac281db8dcb345ee0.png"},{"headsmall":""}],"msg":"","debugMsg":"","code":0,"page":{"total":946,"count":2,"pageCount":473,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":2}}
+[ 2017-11-15T18:32:00+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200312
+INFO: api result={"data":{"advlist":[{"id":"45","type":"1","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/11.jpg","url":"http:\/\/120.26.217.172\/yimisns.com\/index.php\/Admin\/Adv\/advpage?id=45"},{"id":"43","type":"0","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-17\/s_28f120258a9264acacfe3b00b7dbc7be.jpg","url":"http:\/\/www.sogou.com"},{"id":"31","type":"0","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-10\/s_766c0bf41c4cec4c5733ff1078430e0c.jpg","url":"http:\/\/www.hao123.com"},{"id":"44","type":"1","img":"http:\/\/120.26.217.172\/yimisns.com\/Uploads\/Picture\/adv\/2017-04-17\/s_4e03accf0f00ad690d754f9e047cf82c.jpg","url":"http:\/\/120.26.217.172\/yimisns.com\/index.php\/Admin\/Adv\/advpage?id=44"}],"xianchanglist":{"num":2,"headlist":["http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200326\/s_833373ce1a73d1dac281db8dcb345ee0.png",""]},"personlist":[]},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-15T18:32:00+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200312
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001443s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003391s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001311s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001401s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200312 ) LIMIT 1   [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001387s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200312 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200312)) >1,1=1,1=0)  ) )  and u.uid <> 200312 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482719  ) LIMIT 1   [ RunTime:0.008840s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001358s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200312 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200312)) >1,1=1,1=0)  ) )  and u.uid <> 200312 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482719  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.007348s ]
+SQL: SHOW COLUMNS FROM `tc_adv` [ RunTime:0.001996s ]
+SQL: SELECT `id`,`type`,`img`,`url` FROM `tc_adv` WHERE ( `pos` = 0 ) ORDER BY sort desc  [ RunTime:0.000407s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000870s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u,tc_kuaipai k WHERE ( k.uid=u.uid ) LIMIT 1   [ RunTime:0.003455s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000996s ]
+SQL: SELECT distinct u.headsmall FROM tc_user u,tc_kuaipai k WHERE ( k.uid=u.uid ) ORDER BY k.id desc LIMIT 0,2   [ RunTime:0.007189s ]
+SQL: SHOW COLUMNS FROM `tc_zan` [ RunTime:0.002000s ]
+
+[ 2017-11-15T18:32:38+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200312
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T18:32:38+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200312
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001453s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001391s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003280s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000982s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200312 ) LIMIT 1   [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000814s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200312 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200312)) >1,1=1,1=0)  ) )  and u.uid <> 200312 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482758  ) LIMIT 1   [ RunTime:0.021384s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001062s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200312 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200312)) >1,1=1,1=0)  ) )  and u.uid <> 200312 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482758  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.005276s ]
+
+[ 2017-11-15T18:34:15+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200326
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T18:34:15+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001764s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001344s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000952s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000864s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482855  ) LIMIT 1   [ RunTime:0.005729s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000993s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.gender =1 and u.logintime >= 1510482855  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.005660s ]
+
+[ 2017-11-15T18:34:42+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T18:34:42+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001473s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003817s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000885s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000780s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.logintime >= 1510742082  ) LIMIT 1   [ RunTime:0.010973s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001118s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.logintime >= 1510742082  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.009241s ]
+
+[ 2017-11-15T18:34:46+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T18:34:46+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003844s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000969s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000834s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.logintime >= 1510742086  ) LIMIT 1   [ RunTime:0.013037s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000875s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.logintime >= 1510742086  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.009046s ]
+
+[ 2017-11-15T21:06:48+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T21:06:48+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006752s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007480s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001877s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001303s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.002114s ]
+NOTIC: [8] Undefined variable: where D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 600 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001311s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 1510751208  ) LIMIT 1   [ RunTime:0.037522s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 1510751208  ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 1510751208  ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001248s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 1510751208  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.000280s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 1510751208  ) ORDER BY distance asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 1510751208  ) ORDER BY distance asc LIMIT 0,20  
+
+[ 2017-11-15T21:06:51+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T21:06:51+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001425s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002680s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001049s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000981s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.000489s ]
+NOTIC: [8] Undefined variable: where D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 600 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 1510751211  ) LIMIT 1   [ RunTime:0.000238s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 1510751211  ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 1510751211  ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001110s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 1510751211  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.000946s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 1510751211  ) ORDER BY distance asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 1510751211  ) ORDER BY distance asc LIMIT 0,20  
+
+[ 2017-11-15T21:08:55+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T21:08:55+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002586s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001065s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000941s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.000448s ]
+NOTIC: [8] Undefined variable: where D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 600 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000946s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 1510751334  ) LIMIT 1   [ RunTime:0.000194s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 1510751334  ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 1510751334  ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000809s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 1510751334  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.000210s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 1510751334  ) ORDER BY distance asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 1510751334  ) ORDER BY distance asc LIMIT 0,20  
+
+[ 2017-11-15T21:11:47+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: api result={"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":0,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T21:11:47+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001210s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002730s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000981s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000983s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.000429s ]
+NOTIC: [8] Undefined variable: where D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 600 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 0  ) LIMIT 1   [ RunTime:0.000195s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 0  ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  and u.logintime >= 0  ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001010s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 0  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.000912s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and u.logintime >= 0  ) ORDER BY distance asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  and u.logintime >= 0  ) ORDER BY distance asc LIMIT 0,20  
+
+[ 2017-11-15T21:12:03+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: api result={"data":[{"uid":"200324","sort":"","extend":"","phone":"15982282665","headsmall":"","nickname":"\u718amother","sign":"\u8bf7\u8f93\u5165\u7b7e\u540d","openfire":"153267","password":"e10adc3949ba59abbe56e057f20f883e","gender":"1","logintime":"0","isdelete":"0","createtime":"1505457477","age":"732124800","hometown":"","job":"\u8bf7\u9009\u62e9","xingzuo":"","money":"0.08","worth_user":"8","memberenddate":"0","memberlevel":"0","lat":"30.676793","lng":"104.051149","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"15982282665","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"B4124255-B3DB-4779-8EE0-CB55DA1BB017","wifi_ssid":"","wifi_updatetime":"","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"4.273616869311009"},{"uid":"200040","sort":"","extend":"","phone":"13500000002","headsmall":"\/Uploads\/Picture\/avatar\/200040\/s_ee5d35e98df29144a8887bceef4d5b97.png","nickname":"\u6d4b\u8bd5\u4e8c","sign":"\u91cd\u65b0\u51fa\u53d1\u53cd\u53cd\u590d\u590d\u5927\u5bb6\u597d","openfire":"491236","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1498454823","isdelete":"0","createtime":"1470800356","age":"1361289600","hometown":"2","job":"\u519c\u4e1a","xingzuo":"","money":"37.5","worth_user":"51","memberenddate":"1477005676","memberlevel":"1","lat":"30.676780","lng":"104.051233","auto_buy_member":"0","alipay_account":"nyeboy@sina.com","alipay_name":"\u6731","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"EC23EFD68050DBB3C41998D24525F56F","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13500000002","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"9CD980C5-C65E-4D76-8B53-F95D87038759","wifi_ssid":"&quot;MQYF&quot;","wifi_updatetime":"1502435861","wifi_lat":"30.744729","wifi_lng":"103.978137","usertype":"0","distance":"4.954449307336012"},{"uid":"200320","sort":"","extend":"","phone":"18381695572","headsmall":"","nickname":"\u718a","sign":"\u8bf7\u8f93\u5165\u7b7e\u540d","openfire":"131954","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1505990063","isdelete":"0","createtime":"1503646331","age":"714672000","hometown":"","job":"\u8bf7\u9009\u62e9","xingzuo":"","money":"0.13","worth_user":"13","memberenddate":"0","memberlevel":"0","lat":"30.676855","lng":"104.05116","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"18381695572","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"416BBAEB-24F7-4D8A-99AA-19D7BEF72D1A","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1505990061","wifi_lat":"30.676791","wifi_lng":"104.051171","usertype":"0","distance":"6.209847302456373"},{"uid":"200039","sort":"","extend":"","phone":"13500000001","headsmall":"\/Uploads\/Picture\/avatar\/200039\/s_62d8388f0c761aacaf6fdeba2830b49e.jpg","nickname":"\u6d4b\u8bd5\u4e00","sign":"\u5149\u534e123","openfire":"637628","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1508749214","isdelete":"0","createtime":"1470799496","age":"1455033600","hometown":"\u6210\u90fd","job":"PC","xingzuo":"","money":"0.8","worth_user":"80","memberenddate":"2147483647","memberlevel":"1","lat":"30.676864","lng":"104.051177","auto_buy_member":"0","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"4342CA5ADB6E080D702EB92B11684FE5","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"18:00","wurao_end":"21:00","safe_phone":"13500000001","msg_setting":"1111","tixing_comment":"1","tixing_zan":"1","tixing_frienddynamic":"1","tixing_notfriendmsg":"1","tixing_group":"1","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"63582B9F03AA454D75072BE49886DD6D","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508749214","wifi_lat":"30.744329","wifi_lng":"103.979564","usertype":"0","distance":"6.594197434521715"},{"uid":"200056","sort":"","extend":"","phone":"13600000001","headsmall":"\/Uploads\/Picture\/avatar\/200056\/s_67336a05dc255555369347152815c71f.jpg","nickname":"TT01","sign":"","openfire":"130111","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1508749253","isdelete":"0","createtime":"1474366326","age":"1411142400","hometown":"\u7ef5\u9633","job":"PC","xingzuo":"","money":"0.02","worth_user":"2","memberenddate":"0","memberlevel":"0","lat":"30.676864","lng":"104.051177","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13600000001","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"63582B9F03AA454D75072BE49886DD6D","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508749252","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"6.594197434521715"},{"uid":"200059","sort":"","extend":"","phone":"13700000001","headsmall":"\/Uploads\/Picture\/avatar\/200059\/s_8bbb9fcac3bad8129fb8eadca84d337e.jpg","nickname":"cdgjjk","sign":"","openfire":"372971","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1508749192","isdelete":"0","createtime":"1474964941","age":"2147483647","hometown":"\u6210\u90fd","job":"PC","xingzuo":"","money":"0.04","worth_user":"4","memberenddate":"0","memberlevel":"0","lat":"30.676864","lng":"104.051177","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13700000001","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"63582B9F03AA454D75072BE49886DD6D","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508749192","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"6.594197434521715"},{"uid":"200061","sort":"","extend":"","phone":"13800000001","headsmall":"\/Uploads\/Picture\/avatar\/200061\/s_b903122b1889eb2e1d5c5accd227c9f3.jpg","nickname":"\u4f60\u731c","sign":"","openfire":"808951","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1508749152","isdelete":"0","createtime":"1476779945","age":"2147483647","hometown":"","job":"","xingzuo":"","money":"0.02","worth_user":"2","memberenddate":"0","memberlevel":"0","lat":"30.676864","lng":"104.051177","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13800000001","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"63582B9F03AA454D75072BE49886DD6D","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508749150","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"6.594197434521715"},{"uid":"200329","sort":"","extend":"","phone":"13200000001","headsmall":"","nickname":"\u5566\u5566\u5566","sign":"\u770b\u89c1\u4e86\u5417","openfire":"592789","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1508751588","isdelete":"0","createtime":"1508749033","age":"2147483647","hometown":"","job":"","xingzuo":"","money":"0","worth_user":"0","memberenddate":"0","memberlevel":"0","lat":"30.676864","lng":"104.051177","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13200000001","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"63582B9F03AA454D75072BE49886DD6D","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508751587","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"6.594197434521715"},{"uid":"200318","sort":"","extend":"","phone":"","headsmall":"http:\/\/q.qlogo.cn\/qqapp\/1105572854\/E7AD7BDE4ED4F4BD3F4A9D363CA433FD\/100","nickname":"Jfz\u4e36","sign":"","openfire":"483122","password":"","gender":"2","logintime":"0","isdelete":"0","createtime":"1503471590","age":"0","hometown":"","job":"","xingzuo":"","money":"0.02","worth_user":"2","memberenddate":"0","memberlevel":"0","lat":"30.676726","lng":"104.051182","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"8CC0FC5FAA24198EE46D8BD519FA91D9","type":"1","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"","wifi_ssid":"","wifi_updatetime":"","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"8.947152624398726"},{"uid":"200328","sort":"","extend":"","phone":"13888888888","headsmall":"\/Uploads\/Picture\/avatar\/200328\/s_926d491dee88593fe004b1b94ca51bf8.jpg","nickname":"\u59ae\u59ae","sign":"\u6210\u90fd\u7684\u4eca\u5929\u597d\u84dd","openfire":"462461","password":"e10adc3949ba59abbe56e057f20f883e","gender":"1","logintime":"1508749120","isdelete":"0","createtime":"1508471133","age":"1413993600","hometown":"\u6210\u90fd","job":"\u91d1\u878d","xingzuo":"","money":"1.22","worth_user":"22","memberenddate":"0","memberlevel":"0","lat":"30.676887","lng":"104.051211","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13888888888","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"C4B241A94DDBFC141E080BF60354FA58","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508749119","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"9.217957429024402"},{"uid":"200330","sort":"","extend":"","phone":"13999999999","headsmall":"","nickname":"","sign":"","openfire":"744102","password":"e10adc3949ba59abbe56e057f20f883e","gender":"2","logintime":"1508751419","isdelete":"0","createtime":"1508749514","age":"0","hometown":"","job":"","xingzuo":"","money":"0","worth_user":"0","memberenddate":"0","memberlevel":"0","lat":"30.676887","lng":"104.051211","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13999999999","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"C4B241A94DDBFC141E080BF60354FA58","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508751419","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"9.217957429024402"},{"uid":"200046","sort":"","extend":"","phone":"18583858938","headsmall":"\/Uploads\/Picture\/avatar\/200046\/s_9b5829dbb01a70a377cf90312aa517f1.png","nickname":"Jfz","sign":"\u6700\u591a\u8f93\u5165300\u4e2a\u5b57","openfire":"787262","password":"26533539f86c6391c99a540618162dba","gender":"0","logintime":"1503559863","isdelete":"0","createtime":"1471424687","age":"734976000","hometown":"2","job":"\u79fb\u52a8\u4e92\u8054\u7f51","xingzuo":"","money":"0.25","worth_user":"25","memberenddate":"0","memberlevel":"0","lat":"30.676904","lng":"104.051188","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"18583858938","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"A2425A707B93FE8823F7CBD8B00FB36B","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1503559858","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"10.913095635956285"},{"uid":"200333","sort":"","extend":"","phone":"18148410038","headsmall":"","nickname":"\u4e00\u4f11","sign":"\u989d","openfire":"452671","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1508915756","isdelete":"0","createtime":"1508915604","age":"1508860800","hometown":"","job":"","xingzuo":"","money":"0","worth_user":"0","memberenddate":"0","memberlevel":"0","lat":"30.676872","lng":"104.051096","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"18148410038","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"0EC1B8F738201B82DEC95198C32F890C","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508915754","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"11.692155782018641"},{"uid":"200315","sort":"","extend":"","phone":"15982292548","headsmall":"","nickname":"\u718a\u5b8f\u4f1f","sign":"\u8bf7\u8f93\u5165\u7b7e\u540d","openfire":"940817","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1505804556","isdelete":"0","createtime":"1502179660","age":"997200000","hometown":"","job":"\u8bf7\u9009\u62e9","xingzuo":"","money":"10000","worth_user":"0","memberenddate":"0","memberlevel":"0","lat":"30.676894","lng":"104.05111","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"15982292548","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"EE8DDE9CB26FB3B2F87D4C8E7F06FFEE","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1505804554","wifi_lat":"30.732949","wifi_lng":"103.972283","usertype":"0","distance":"12.494187152143677"},{"uid":"200041","sort":"","extend":"","phone":"13500000003","headsmall":"\/Uploads\/Picture\/avatar\/200041\/s_4847da01d24ef70b2e6ace3c70c9f78a.jpg","nickname":"\u6d4b\u8bd5\u4e09\u4e09","sign":"hhu","openfire":"832263","password":"e10adc3949ba59abbe56e057f20f883e","gender":"1","logintime":"1508726865","isdelete":"0","createtime":"1470800426","age":"2147443200","hometown":"\u6210\u90fd","job":"\u519c\u4e1a","xingzuo":"","money":"0.56","worth_user":"70","memberenddate":"0","memberlevel":"0","lat":"30.676853","lng":"104.051325","auto_buy_member":"1","alipay_account":"\u5566\u5566\u5566\u5566","alipay_name":"\u7af9","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13500000003","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"BB9D4389-1621-4D96-9EB2-BD13D3A4ABEB","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508726895","wifi_lat":"30.548861","wifi_lng":"104.071856","usertype":"0","distance":"13.855178225689532"},{"uid":"200313","sort":"","extend":"","phone":"18381695571","headsmall":"\/Uploads\/Picture\/avatar\/200313\/s_d478b93a8dcd203d095bb0f036636605.png","nickname":"\u718a","sign":"\u8bf7\u8f93\u5165\u7b7e\u540d","openfire":"219375","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1508987658","isdelete":"0","createtime":"1500459056","age":"1500393600","hometown":"","job":"\u8bf7\u9009\u62e9","xingzuo":"","money":"0.38","worth_user":"39","memberenddate":"1505988317","memberlevel":"1","lat":"30.676886","lng":"104.051052","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"18381695571","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4BBD8134-35F2-4865-B291-2BC2876191D1","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508987656","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"16.012903759242764"},{"uid":"200068","sort":"","extend":"","phone":"13500000004","headsmall":"\/Uploads\/Picture\/avatar\/200068\/s_d51cc546311fb1d2bcc78be1a8250ca5.png","nickname":"\u6d4b\u8bd54","sign":"\u5927\u5bb6\u597d\u624d\u662f\u771f\u7684\u597d","openfire":"721581","password":"e10adc3949ba59abbe56e057f20f883e","gender":"0","logintime":"1505385084","isdelete":"0","createtime":"1479110689","age":"1415894400","hometown":"2","job":"PC","xingzuo":"","money":"1.5899999999999999","worth_user":"60","memberenddate":"0","memberlevel":"0","lat":"30.676899","lng":"104.051052","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13500000004","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4DFB2417A05CBB29AFE7A564BD26CEF7","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1505385083","wifi_lat":"30.685888","wifi_lng":"104.019455","usertype":"0","distance":"16.860686892012758"},{"uid":"200097","sort":"","extend":"","phone":"13008106618","headsmall":"\/Uploads\/Picture\/avatar\/200097\/s_db6ca126d6cbbbc61c64eaefcf66e5a8.png","nickname":"\u6211\u662f\u5973\u738b","sign":"\u5927\u5bb6\u597d\u624d\u662f\u771f\u7684\u597d","openfire":"687572","password":"87e461fcd5d74b7f5ce3bb7681de844a","gender":"0","logintime":"1505383997","isdelete":"0","createtime":"1488423083","age":"1490371200","hometown":"2","job":"PC","xingzuo":"","money":"2.8","worth_user":"43","memberenddate":"0","memberlevel":"0","lat":"30.676958821614583","lng":"104.05137668185763","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13008106618","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"A67C74DD4F5D8D87C35720E370A0FF4C","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1505383996","wifi_lat":"30.677379","wifi_lng":"104.053624","usertype":"0","distance":"24.605810187898296"},{"uid":"200047","sort":"","extend":"","phone":"13880688371","headsmall":"\/Uploads\/Picture\/avatar\/200047\/s_f66d4891e4187311f550afa964b32cbb.png","nickname":"\u6700\u65b0\u7535\u5f71","sign":"\u5927\u5bb6\u597d\u624d\u662f\u771f\u7684\u597d","openfire":"947504","password":"87e461fcd5d74b7f5ce3bb7681de844a","gender":"1","logintime":"1508389059","isdelete":"0","createtime":"1471424752","age":"762710400","hometown":"2","job":"\u8ba1\u7b97\u673a","xingzuo":"","money":"0.27","worth_user":"28","memberenddate":"0","memberlevel":"0","lat":"30.676992","lng":"104.049788","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13880688371","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"A67C74DD4F5D8D87C35720E370A0FF4C","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508140703","wifi_lat":"","wifi_lng":"","usertype":"0","distance":"135.91144437596486"},{"uid":"200085","sort":"","extend":"","phone":"","headsmall":"\/Uploads\/Picture\/avatar\/200085\/s_aeb298baadc3a9a33211bb48c1c997fc.png","nickname":"\u3010\u6e44\u516c\u6cb3\u884c\u52a8\u3011","sign":"\u63a8\u8350\u4f18\u79c0\u56fd\u4ea7\u6700\u65b0\u7535\u5f71","openfire":"712100","password":"","gender":"0","logintime":"0","isdelete":"0","createtime":"1484903639","age":"917020800","hometown":"5","job":"\u8ba1\u7b97\u673a","xingzuo":"","money":"0.06","worth_user":"6","memberenddate":"0","memberlevel":"0","lat":"30.677359","lng":"104.053644","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"64E0F57B5F9DDFF59CAA93096E35985A","type":"1","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"","wifi_ssid":"Meizu MX4 Pro","wifi_updatetime":"1485255011","wifi_lat":"30.677419","wifi_lng":"104.053686","usertype":"0","distance":"242.78689365047055"}],"msg":"","debugMsg":"","code":0,"page":{"total":237,"count":20,"pageCount":12,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-11-15T21:12:03+08:00 ] ::1 /yimisns/index.php/User/api/nearby?lng=104.051191&lat=30.676806&uid=200326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001639s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002468s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001126s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200326 ) LIMIT 1   [ RunTime:0.011390s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001435s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.logintime >= 0  ) LIMIT 1   [ RunTime:0.010868s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001153s ]
+SQL: SELECT *,getDistance('104.051191','30.676806',u.lng,u.lat) as distance FROM tc_user u WHERE (  (u.yinsi_type=0 or (u.yinsi_type=1 and if( (select count(*) as count from tc_user_friend f where (f.uid=200326 and f.fid=u.uid) or (f.uid=u.uid and f.fid=200326)) >1,1=1,1=0)  ) )  and u.uid <> 200326 and getDistance('104.051191', '30.676806', u.lng, u.lat) <= 500000000  and u.logintime >= 0  ) ORDER BY distance asc LIMIT 0,20   [ RunTime:0.100828s ]
+

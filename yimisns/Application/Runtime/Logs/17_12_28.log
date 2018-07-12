@@ -1,0 +1,58 @@
+[ 2017-12-28T12:02:46+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=25
+INFO: api result={"data":{},"msg":"\u8be5\u5730\u5740\u4e0d\u5b58\u5728","debugMsg":"","code":404,"page":""}
+[ 2017-12-28T12:02:46+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.051557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.065986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.066411s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.282128s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001221s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001038s ]
+
+[ 2017-12-28T12:03:17+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=25
+INFO: api result={"data":null,"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-12-28T12:03:17+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002302s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000974s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001097s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.050904s ]
+SQL: SELECT `zancount` FROM `tc_kuaipai` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.127169s ]
+
+[ 2017-12-28T12:03:27+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=111
+INFO: api result={"data":{"zancount":"0"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-12-28T12:03:27+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003759s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001175s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001495s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.002071s ]
+SQL: SELECT `zancount` FROM `tc_kuaipai` WHERE ( `id` = 111 ) LIMIT 1   [ RunTime:0.025754s ]
+
+[ 2017-12-28T12:03:39+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=111
+INFO: api result={"data":{"zancount":"0"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-12-28T12:03:39+08:00 ] ::1 /yimisns/index.php/User/api/kuaipai_zancount?lng=104.051191&lat=30.676806&gender=1&logintime=259200&page=1&id=111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002396s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `tc_kuaipai` [ RunTime:0.002972s ]
+SQL: SELECT `zancount` FROM `tc_kuaipai` WHERE ( `id` = 111 ) LIMIT 1   [ RunTime:0.000347s ]
+

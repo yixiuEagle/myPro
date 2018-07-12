@@ -1,0 +1,28 @@
+<extend name="Public/base"/>
+<block name="header">
+    <li class="active"><a href="javascript:;">安装协议</a></li>
+    <li><a href="javascript:;">环境检测</a></li>
+    <li><a href="javascript:;">创建数据库</a></li>
+    <li><a href="javascript:;">安装</a></li>
+    <li><a href="javascript:;">完成</a></li>
+</block>
+
+<block name="body">
+    <h1>欢迎使用 ThinkChat V1.0</h1>
+    <br/><br/>
+    <p>
+    	ThinkChat是国内领先的IM解决方案，通过ThinkChat，可以完成消息推送、整合IM功能（单聊、群聊、通知）到自己
+    	的APP、基于现有代码进行全新社交类系统开发。更多信息见官网：
+    	<a target="_bank" href="http://www.thinkchat.com.cn">http://www.thinkchat.com.cn</a>
+    </p>
+    <p>目前支持：Android系统、ios系统</p>
+    <p>即将推出：web系统和pc系统、视频聊天和视频会议</p>
+    <p>开发小组：西竹科技</p>
+    <p>开发人员：yandong keen lily chony monarchzhu</p>
+    <p>小组口号：Thinkchat，想聊就聊。</p>
+</block>
+
+<block name="footer" >
+    <a class="btn btn-primary btn-large" href="{:U('Install/step1')}">同意安装</a>
+    <a class="btn btn-large" href="javascript:void(0);" title="亲,您必须同意">不同意</a>
+</block>

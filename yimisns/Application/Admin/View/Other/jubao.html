@@ -1,0 +1,77 @@
+<!-- 用户列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="userList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Other/jubao',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#userToolbar_{$rand}',pagination:true,singleSelect:true,pageSize:30">
+<thead>
+	<tr>
+		<th data-options="field:'fid',width:100,align:'center'">被举报人uid</th>
+		<th data-options="field:'uid',width:100,align:'center'">举报人uid</th>
+		<th data-options="field:'btype',width:100,align:'center',formatter:typeText">被举报类型</th>
+		<th data-options="field:'type',width:100,align:'center'">举报类型</th>
+		<th data-options="field:'content',width:300,align:'center'">内容</th>
+		<th data-options="field:'createtime',width:150,align:'center'">时间</th>
+		<!--<th data-options="field:'id',width:100,align:'center',formatter:userOperateText">操作</th>-->
+	</tr>
+</thead>
+</table>
+
+<div id="userToolbar_{$rand}" style="padding:5px;height:auto">
+	<form id="userSearchForm_{$rand}">
+		<a href="javascript:;" onclick="Refresh();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据被举报人uid搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="userSearch_{$rand}();" class="easyui-linkbutton" iconCls="icon-search">搜索</a>		
+	</form>
+</div>
+
+
+<script type="text/javascript">
+//刷新
+function Refresh(){
+	$('#userList_{$rand}').datagrid('reload');
+}
+//操作
+function userOperateText(val, row, index){
+		return '<a href="javascript:void(0);" onclick="userManage('+row.id+')">编辑</a>';
+}
+//搜索
+function userSearch_{$rand}(){
+	var queryParams = $('#userList_{$rand}').datagrid('options').queryParams;
+	$.each($("#userSearchForm_{$rand}").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#userList_{$rand}').datagrid('load');
+}
+function typeText(val, row, index){
+	if(val==1){
+		return '用户';
+	}
+	if(val==2){
+		return '网址';
+	}
+	if(val==3){
+		return '快拍';
+	}
+
+}
+
+//删除 
+function userDelete(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('User/delete')}', {uid: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				Refresh();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+</script>

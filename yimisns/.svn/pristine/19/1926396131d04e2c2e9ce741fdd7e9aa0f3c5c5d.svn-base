@@ -1,0 +1,550 @@
+<?php
+use Org\Util\String;
+use Think\Image;
+use Think\Upload;
+use Think\Log;
+
+/**
+ * 删除文件目录
+ * 
+ * @param unknown $dir        	
+ * @return boolean
+ */
+function deldir($dir) {
+	if (file_exists ( $dir )) {
+		// 先删除目录下的文件：
+		$dh = opendir ( $dir );
+		while ( $file = readdir ( $dh ) ) {
+			if ($file != "." && $file != "..") {
+				$fullpath = $dir . "/" . $file;
+				if (! is_dir ( $fullpath )) {
+					unlink ( $fullpath );
+				} else {
+					deldir ( $fullpath );
+				}
+			}
+		}
+		closedir ( $dh );
+		// 删除当前文件夹：
+		if (rmdir ( $dir )) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+/**
+ * 编辑排序
+ * @param unknown $a
+ * @param unknown $b
+ * @return number
+ */
+function cmp_func($a, $b) {
+	global $order;
+	if ($a['is_dir'] && !$b['is_dir']) {
+		return -1;
+	} else if (!$a['is_dir'] && $b['is_dir']) {
+		return 1;
+	} else {
+		if ($order == 'size') {
+			if ($a['filesize'] > $b['filesize']) {
+				return 1;
+			} else if ($a['filesize'] < $b['filesize']) {
+				return -1;
+			} else {
+				return 0;
+			}
+		} else if ($order == 'type') {
+			return strcmp($a['filetype'], $b['filetype']);
+		} else {
+			return strcmp($a['filename'], $b['filename']);
+		}
+	}
+}
+/**
+ * 对用户的密码进行加密
+ * @param $password
+ * @param $encrypt //传入加密串，在修改密码时做认证
+ * @return array/password
+ */
+function password($password, $encrypt='') {
+	//import('ORG.Util.String');
+	$pwd = array();
+	$pwd['encrypt'] =  $encrypt ? $encrypt : String::randString(6);
+	$pwd['password'] = md5(md5(trim($password)).$pwd['encrypt']);
+	return $encrypt ? $pwd['password'] : $pwd;
+}
+/**
+ * 取得文件扩展
+ * @param $filename 文件名
+ * @return 扩展名
+ */
+function fileext($filename) {
+	return strtolower(trim(substr(strrchr($filename, '.'), 1, 10)));
+}
+/**
+ * 解析多行sql语句转换成数组
+ * @param string $sql
+ * @return string;
+ */
+function sql_split($sql) {
+	$sql = str_replace("\r", "\n", $sql);
+	$ret = array();
+	$num = 0;
+	$queriesarray = explode(";\n", trim($sql));
+	unset($sql);
+	foreach($queriesarray as $query) {
+		$ret[$num] = '';
+		$queries = explode("\n", trim($query));
+		$queries = array_filter($queries);
+		foreach($queries as $query) {
+			$str1 = substr($query, 0, 1);
+			if($str1 != '#' && $str1 != '-') $ret[$num] .= $query;
+		}
+		$num++;
+	}
+	return($ret);
+}
+
+/**
+ * 文件扫描
+ * @param $filepath     目录
+ * @param $subdir       是否搜索子目录
+ * @param $ex           搜索扩展
+ * @param $isdir        是否只搜索目录
+ * @param $md5			是否生成MD5验证码
+ * @param $enforcement  强制更新缓存
+ */
+function scan_file_lists($filepath, $subdir = 1, $ex = '', $isdir = 0, $md5 = 0, $enforcement = 0) {
+	static $file_list = array();
+	if ($enforcement) $file_list = array();
+	$flags = $isdir ? GLOB_ONLYDIR : 0;
+	$list = glob($filepath.'*'.(!empty($ex) && empty($subdir) ? '.'.$ex : ''), $flags);
+	if (!empty($ex)) $ex_num = strlen($ex);
+	foreach ($list as $k=>$v) {
+		$v1 = str_replace(SITE_DIR, '', $v);
+		if ($subdir && is_dir($v)) {
+			scan_file_lists($v.DIRECTORY_SEPARATOR, $subdir, $ex, $isdir, $md5);
+			continue;
+		}
+		if (!empty($ex) && strtolower(substr($v, -$ex_num, $ex_num)) == $ex) {
+			if ($md5) {
+				$file_list[$v1] = md5_file($v);
+			} else {
+				$file_list[] = $v1;
+			}
+			continue;
+		} elseif (!empty($ex) && strtolower(substr($v, -$ex_num, $ex_num)) != $ex) {
+			unset($list[$k]);
+			continue;
+		}
+	}
+	return $file_list;
+}
+/**
+ * 生成CNZZ统计代码
+ */
+function tjcode($type='1') {
+	if(!S('cnzz')) return false;
+	$config = S('cnzz');
+	if (empty($config)) {
+		return false;
+	} else {
+		if(!$type) $type=1;
+		return '<script src=\'http://pw.cnzz.com/c.php?id='.$config['siteid'].'&l='.$type.'\' language=\'JavaScript\' charset=\'gb2312\'></script>';
+	}
+}
+/**
+ * 打印函数
+ * @param array $array
+ */
+function p($array) {
+	dump($array,1,'<pre>',0);
+}
+/**
+ * 返回毫秒
+ * @return number
+ */
+function getMillisecond()
+{
+	list($t1, $t2) = explode(' ', microtime());
+	return (float)sprintf('%.0f',(floatval($t1) + floatval($t2)) * 1000);
+}
+/**
+ * curl post 方法
+ * @param unknown $post_url
+ * @param unknown $string
+ * @return mixed
+ */
+function curl_post($url, $string){
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_POST, 1);
+
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $string);
+	$output = curl_exec($ch);
+	curl_close($ch);
+	return $output;
+}
+/**
+ * unicode 转中文
+ * @param string $str
+ * @param string $encoding
+ * @return mixed
+ */
+function unicodeString($str, $encoding=null) {
+	return preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/u', create_function('$match', 'return mb_convert_encoding(pack("H*", $match[1]), "utf-8", "UTF-16BE");'), $str);
+}
+/**
+ * 返回数据
+ * @param unknown $data
+ * @param string $msg
+ * @param number $code
+ * @param string $page
+ * @param string $debugMsg
+ * @return array
+ */
+function showData($data, $msg='', $code=0, $page='', $debugMsg = '' ){
+	
+	$result = array(
+			'data'		 	=> $data,
+			'msg'  			=> $msg,
+			'debugMsg'  	=> $debugMsg,
+			'code' 			=> $code,
+			'page' 			=> $page
+	);
+	
+	Log::write("api result=" . json_encode($result), Log::INFO);
+	return $result;
+}
+/**
+ * 分页函数
+ * @param int $total
+ * @return array
+ */
+function page($total, $currPage = 0, $pageSize = 0) {
+	$return 		= array ();
+	if ($pageSize) {
+		$count = $pageSize;
+	}else
+		$count 			= I('pageSize','0','intval') ? I('pageSize','0','intval') : 20;
+	
+	$page_count 	= max ( 1, ceil ( $total / $count ) );
+	
+	if($currPage)
+		$page = $currPage;
+	else
+		$page 			= I('page','0','intval') ? I('page','0','intval') :1;
+	$page_next 		= min ( $page + 1, $page_count );
+	$page_previous 	= max ( 1, $page - 1 );
+	$offset 		= max ( 0, ( int ) (($page - 1) * $count) );
+
+	$return = array (
+			'total' 		=> (int) $total,
+			'count' 		=> $count,
+			'pageCount' 	=> $page_count,
+			'page' 			=> $page,
+			'page_next' 	=> $page_next,
+			'page_previous' => $page_previous,
+			'offset' 		=> $offset,
+			'limit' 		=> $count
+	);
+	return $return;
+}
+/**
+ * 上传文件命令规则
+ * @param string $str
+ * @return string
+ */
+function fileSaveName($str=''){
+	return md5(microtime(true).'_'.String::uuid());
+}
+
+/**
+ * 如果图片图片前面没有添加网站前缀路径，则加上。否则，直接返回。
+ * @param unknown $url
+ */
+function makeHttpHead($url) {
+	if(strpos($url, "http://") !== false || !$url) {
+		return $url;
+	}
+	$newurl =  SITE_PROTOCOL.SITE_URL . $url;
+	return $newurl;
+}
+function upload_multiple($savePath='', $uid='', $type=''){
+
+	$ROOT_PATH  = SITE_DIR.UPLOADS;
+
+	$upload = new \Think\Upload();
+	$upload->exts   = array('jpg','png','gif','jpeg','mp4','mp3');// 设置附件上传类型
+	$upload->maxSize   = 0;//10*1024*1024; //上传的文件大小限制 (0-不做限制)
+	$upload->rootPath  = $ROOT_PATH;
+	$upload->replace   = true;
+	$upload->savePath  = 'Picture/'; // 设置附件上传目录
+	$upload->saveName  = array('fileSaveName','');
+	$upload->subName   = array('date','Ymd');
+
+	//设置缩略图
+	$thumbWith   = 480;
+	$thumbHeight = 320;
+
+	$info   =   $upload->upload();
+	if(!$info) {
+		return $upload->getError();// 上传错误提示错误信息
+	}else{
+		// 上传成功
+		$image = new \Think\Image();
+		$data  = array();
+		foreach($info as $file){
+			$originUrl =  $file['savepath'].$file['savename'];	//原图
+			$smallUrl  =  $file['savepath'].'s_'.$file['savename'];	//小图
+			//切小图
+			$ext = pathinfo($ROOT_PATH.$originUrl, PATHINFO_EXTENSION);
+			$ext = strtolower($ext);
+			Log::write("ext=". $ext);
+			if ( $ext=='mp4' || $ext=='mp3'){
+				
+				$videopath = $ROOT_PATH.$originUrl;
+				$imgurl = $videopath;
+				$imgurl = substr($imgurl, 0, strlen($imgurl) - 4) . ".jpg";
+				// 视频截图
+				//$cmd = "/usr/local/ffmpeg/bin/ffmpeg -i ". $videopath . " -y -f image2 -ss 3 -t 1 -s ".$thumbWith."x".$thumbHeight." ".$imgurl;
+				 //$cmd = "/usr/local/ffmpeg/bin/ffmpeg -i ". $videopath . " -y -f image2 -ss 3 -t 1".$imgurl;
+				$cmd = "/usr/local/ffmpeg/bin/ffmpeg -ss 1 -i ". $videopath . " -y  -f image2  ".$imgurl;
+				  
+				Log::write("imgurl=" . $imgurl);
+				Log::write("cmd=" . $cmd);
+				$ret = exec($cmd);
+				
+				list($width, $height, $type, $attr) = getimagesize($imgurl);
+				if($width == null)
+					$width = 0;
+				if($height == null)
+					$height = 0;
+				
+				//视频音视不处理
+				$data[] = array(
+						'originUrl'	=> UPLOADS.ltrim($originUrl,'/'),
+						'smallUrl'	=> UPLOADS.ltrim($originUrl,'/'),
+						'imgurl'	=> UPLOADS.ltrim(substr($originUrl, 0, strlen($originUrl) - 4) . ".jpg",'/'),
+						'width'		=> $width,
+						'height'	=> $height,
+						'id'        => String::keyGen(),
+						'key'	    => $file['key'],
+				);
+			}else {
+				Log::write("start to handle picture");
+				$image->open($ROOT_PATH.$originUrl);//打开图片
+				$image->thumb($thumbWith, $thumbHeight)->save($ROOT_PATH.$smallUrl);//切小图
+				
+				list($width, $height, $type, $attr) = getimagesize($ROOT_PATH.$smallUrl);
+				if($width == null)
+					$width = 0;
+				if($height == null)
+					$height = 0;
+				
+				$data[] = array(
+						'key'	    => $file['key'],
+						'originUrl'	=> UPLOADS.ltrim($originUrl,'/'),
+						'smallUrl'	=> UPLOADS.ltrim($smallUrl,'/'),
+						'imgurl'	=> '',
+						'id'        => String::keyGen(),
+						'width'		=> $width,
+						'height'	=> $height
+				);
+				
+				Log::write("upload picture=" . json_encode($data));
+			}
+		}
+		return $data;
+	}
+}
+/**
+ * 上传文件
+ */
+function upload($savePath, $uid, $type){
+	//头像 100  聊天小图 200 分享图片 160
+	$URL_PATH 	= UPLOADS;//物理根目录
+	$upload 	= new Upload();
+	$upload->exts 	   = array('jpg','png','gif');// 设置附件上传类型
+	$upload->rootPath  = SITE_DIR.UPLOADS;
+	$upload->replace   = true;
+	$upload->savePath  = $savePath; 		// 设置附件上传目录
+	$upload->saveName  = array('fileSaveName','');
+	//设置缩略图
+	$thumbWith 		   = 300;
+	$thumbHeight 	   = 300;
+	switch ($type) {
+		case 'user':
+			$thumbWith = 600;
+			$thumbHeight = 600;
+			$upload->subName   = $uid;
+			if (!$uid) $upload->savePath  = $savePath.'0/'; // 设置附件上传目录
+			break;
+		case 'group':
+			$upload->subName   = array('date','Ymd');
+			break;
+		case 'share':
+			$upload->subName   = array('date','Ymd');
+			$thumbWith		= 640;
+			$thumbHeight	= 640;
+			break;
+		case 'dynamic':
+				$upload->subName   = array('date','Ymd');
+				$thumbWith		= 640;
+				$thumbHeight	= 640;
+				break;
+	}
+	$info   =   $upload->upload();
+	if(!$info) {
+		return $upload->getError();// 上传错误提示错误信息
+	}else{// 上传成功
+		$SAVE_PATH_HEAD = SITE_DIR.UPLOADS;//保存物理地址
+		$image = new Image();
+		$data  = array();
+		foreach($info as $file){
+			$originUrl =  $file['savepath'].$file['savename'];		//原图
+			$smallUrl  =  $file['savepath'].'s_'.$file['savename'];	//小图
+			
+			$image->open($SAVE_PATH_HEAD.$originUrl);//打开图片
+			$image->thumb($thumbWith, $thumbHeight)->save($SAVE_PATH_HEAD.$smallUrl);//切小图
+			//user
+			$data[] = array(
+					'originUrl'	=> $URL_PATH.ltrim($originUrl,'/'),
+					'smallUrl'	=> $URL_PATH.ltrim($smallUrl,'/'),
+					'key'		=> $file['key']
+			);
+		}
+		return $data;
+	}
+}
+
+/**
+ * 修改CONF_PATH配置文件  如果$config_file为空，则修改config.php
+ * @param unknown $new_config
+ * @param string $config_file
+ * @return boolean
+ */
+function update_config($new_config, $config_file = '') {
+	!is_file($config_file) && $config_file = CONF_PATH . '/config.php';
+	if (is_writable($config_file)) {
+		$config = require $config_file;
+		$config = array_merge($config, $new_config);
+
+		file_put_contents($config_file, "<?php \nreturn " . stripslashes(var_export($config, true)) . ";", LOCK_EX);
+		@unlink(RUNTIME_FILE);
+		return true;
+	} else {
+		return false;
+	}
+}
+/**
+ * 验证手机号
+ * @param unknown $mobile
+ */
+function availablePhone($mobile){
+	if (preg_match("/^1[3578]{1}[0-9]{9}$/", $mobile)) {
+		return true;
+	}
+	return false;
+}
+
+/**
+ * 把数组中的value编码 urlencode
+ * @param unknown $arr
+ * @return string
+ */
+function utf8_to_urlencode(&$arr) {
+    foreach ( ( array ) $arr as $key => $item ) {
+        if (is_array ( $item )) {
+            $arr [$key] = utf8_to_urlencode ( $item );
+        } else {
+            if (is_string($item)){
+                $arr [$key] = urlencode ( $item );
+            }
+        }
+    }
+    return $arr;
+}
+
+/**
+ * 格式化字节大小
+ * @param  number $size      字节数
+ * @param  string $delimiter 数字和单位分隔符
+ * @return string            格式化后的带单位的大小
+ * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ */
+function format_bytes($size, $delimiter = '') {
+    $units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');
+    for ($i = 0; $size >= 1024 && $i < 5; $i++) $size /= 1024;
+    return round($size, 2) . $delimiter . $units[$i];
+}
+//================================= 数组相关操作 =============================
+/**
+ * 移除数组$arr中值为$element的元素，比如
+ * {'test', 'show'}移除'test'，则返回{'show'}
+ * @param unknown $arr
+ * @param unknown $value
+ */
+function deleteArrayEelement($arr, $element) {
+	$returnarr = array();
+	
+	foreach ($arr as $key=>$value ) {
+		if($value != $element)
+			$returnarr[$key] = $value;
+	}
+	
+	return $returnarr;
+}
+
+
+/***
+ * 清空表数据
+* */
+
+function clear_tables($db, $path){
+	//读取sql文件
+	Log::write("into clear_tables");
+	$sql = file_get_contents($path);
+	if (!$sql) {
+		return false;
+	}
+	$sql = str_replace("\r", "\n", $sql);
+	$sql = explode(";\n", $sql);
+
+
+	foreach ($sql as $value) {
+		$value = trim($value);
+		if(empty($value))	continue;
+		$db->execute($value);
+		Log::write($value);
+	}
+
+	return true;
+}
+
+/**
+ * 发送短信
+ */
+function sendSMS($code=0, $phone=0, $type=0, $content=''){
+
+	return  true;
+
+
+}
+
+/**
+ * 检测字符串长度，如果低于$maxlen,返回true，如果小于$minlen，返回false
+ * @param unknown $str
+ * @param unknown $len
+ */
+function checkStringLen($str, $maxlen, $minlen=0) {
+	$ret = false;
+	
+	$len = strlen($str)/3;
+	if($len <= $maxlen && $len >= $minlen)
+		$ret = true;
+	
+	return $ret;
+}

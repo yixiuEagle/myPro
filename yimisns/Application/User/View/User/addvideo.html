@@ -1,0 +1,52 @@
+<script type="text/javascript">
+
+function kuaipai_Add(){
+	$.messager.progress();
+	var form = new FormData(document.getElementById("kuaipaiForm"));
+	$.ajax({  
+	    url : '{:U('User/addvideo')}',  
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	$.messager.progress('close');
+	    	kuaipaiList();
+	    	$.messager.alert('提示信息', data.info, 'info'); 
+	    	$('#addkuaipaiBox').dialog('close');
+	    },  
+	    error : function(data) {  
+		$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}
+</script>
+<form id="kuaipaiForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	 <tr>
+		<td>uid：</td>
+		<td><input id="uid" name="uid" type="text" style="width:200px;height:22px" />
+		</td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr> 
+	 <tr>
+		<td>内容：</td>
+		<td><input id="content" name="title" type="text" style="width:200px;height:22px" />
+		</td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr>
+		 <tr>
+		<td>位置：</td>
+		<td> 经度：<input id="lng" name="lng" type="text" style="width:100px;height:22px" />纬度：<input id="lat" class="easyui-textbox" name="lat" type="text" style="width:100px;height:22px" />
+		</td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr>  
+	<tr>
+		<td>文件：</td>
+		<td><input id="file" name="file" type="file" style="width:200px;height:22px" />
+		</td>
+		<td><div id="add_menu_nameTip"></div></td>
+	</tr> 
+	</table>
+	</form>

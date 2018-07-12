@@ -1,0 +1,31 @@
+<div class="easyui-panel"
+	data-options="fit:true,title:'{$currentpos}',border:false">
+<script type="text/javascript">
+$(function(){
+	$('#Subbtn').click(function(){$('#submitForm').submit()});
+	$.formValidator.initConfig({formID:"submitForm",theme:'App',onSuccess:save,inIframe:true});
+})
+
+function save(){
+	$.post('{:U('Index/setLincense')}', $("#submitForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			$.messager.alert('提示信息', data.info, 'info');
+		}
+	})
+}
+</script>
+	<form id="submitForm" style="font-size: 13px">
+		<table cellspacing="10" style="border: 1px solid #ccc; width: 100%;">
+			<tr>
+				<td width="200" align="center">请输入Lincense：</td>
+				<td><textarea rows="5" cols="50" id="lincense" name="lincense"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><a id="Subbtn"
+					class="easyui-linkbutton" style="width: 50px;">提交</a></td>
+			</tr>
+		</table>
+	</form>
+</div>

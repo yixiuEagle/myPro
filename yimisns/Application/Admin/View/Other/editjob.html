@@ -1,0 +1,55 @@
+<script type="text/javascript">
+$(function(){
+	var edit_menu_parent_url = '{:U('Other/public_selectTree')}';
+	$('#edit_menu_parentid').combotree({url:edit_menu_parent_url}); 
+})
+function savejobEdit(){
+	/* $.post('{:U('Other/edit?id='.$data['id'])}', $("#editForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			MenuRefreshList();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#editMenuBox').dialog('close');
+		}
+	}) */
+	var form = new FormData(document.getElementById("editForm"));
+	var url='{:U('Other/edit?id='.$data['id'])}';
+	$.ajax({  
+	    url :url,
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	jobRefreshList();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#editMenuBox').dialog('close');
+	    },  
+	    error : function(data) {  
+	    	$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}
+</script>
+<form id="editForm" style="font-size:13px">
+<table id="editBox">
+	<tr>
+		<td width="100">上级菜单：</td>
+		<td><input id="edit_menu_parentid" name="info[parentId]" class="easyui-combotree" value="{$data.parentId}" style="width:180px;height:26px" /></td>
+		<td><div id="edit_menu_parentidTip"></div></td>
+	</tr>
+	<tr>
+		<td>菜单名称：</td>
+		<td><input id="edit_menu_name" name="info[name]" type="text" value="{$data.name}" style="width:178px;height:22px" /></td>
+		<td><div id="edit_menu_nameTip"></div></td>
+	</tr>
+	<tr>
+		<td>图标：</td>
+		<td><input id="file" name="file" type="file"  style="width:180px;height:22px" />
+		</td>
+		<td><div></div></td>
+	</tr>
+</table>
+</form>

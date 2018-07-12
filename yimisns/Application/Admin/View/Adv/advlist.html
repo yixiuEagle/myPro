@@ -1,0 +1,117 @@
+<!-- 列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="userList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Adv/advlist',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#userToolbar_{$rand}',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'img',width:400,align:'center',formatter:buildFace">图片</th>
+		<th data-options="field:'url',width:400,align:'center'">url</th>
+		<th data-options="field:'type',width:120,align:'center',formatter:advtype">type</th>
+		<th data-options="field:'pos',width:120,align:'center',formatter:advpos">pos</th>
+		<th data-options="field:'sort',width:50,align:'center'">排序</th>
+		<th data-options="field:'id',width:120,align:'center',formatter:userOperateText">操作管理</th>
+	</tr>
+</thead>
+</table>
+
+<div id="userToolbar_{$rand}" style="padding:5px;height:auto">
+	<form id="userSearchForm_{$rand}">
+		<a href="javascript:;" onclick="advList();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<a href="javascript:;" id="addadv" onclick="javascript:addadv();" class="easyui-linkbutton" iconCls="icon-add">添加</a>		
+	</form>
+</div>
+<!-- 编辑 -->
+<div id="EditadvBox" class="easyui-dialog" title="编辑"
+	data-options="modal:true,closed:true,iconCls:'icon-edit',
+	buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){Editadv();}},
+	{text:'取消',iconCls:'icon-cancel',handler:function(){$('#EditadvBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+	<div id="dlg-buttons">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="addRobt()">Ok</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dd').dialog('close')">Cancel</a>
+	</div>
+	<div id="add" class="easyui-dialog" title="添加"
+	data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){adv_Add();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#add').dialog('close');}}]"
+	style="width: 800px; height: 600px;"></div>
+
+
+<script type="text/javascript">
+//编辑
+function editAdv(id){
+	var url = '{:U('Adv/edit')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#EditadvBox').dialog({href:url});
+	$('#EditadvBox').dialog('open');
+}
+//
+function addadv(){
+	var url = '{:U('Adv/add')}';
+	$('#add').dialog({href:url});
+	$('#add').dialog('open');
+}
+//type
+function advtype(value,row,index){
+	if(value!=0){
+        return "新闻详情";
+    }else{
+        return "url跳转";
+	}
+}
+//pos
+function advpos(value,row,index){
+	if(value==0){
+        return "附近广告";
+    }else if(value==1){
+        return "个人中心广告";
+	}else if(value==2){
+	        return "动态广告";
+	}
+}
+//刷新列表
+function advList(){
+	$('#userList_{$rand}').datagrid('reload');
+}
+//图像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+//操作
+function userOperateText(val, row, index){
+	return '<a href="javascript:void(0);" onclick="editAdv('+row.id+')">编辑</a> | <a href="javascript:void(0);" onclick="deleteAdv('+row.id+')">删除</a>';
+}			
+//搜索
+function userSearch_{$rand}(){
+	var queryParams = $('#userList_{$rand}').datagrid('options').queryParams;
+	$.each($("#userSearchForm_{$rand}").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#userList_{$rand}').datagrid('load');
+}
+//删除
+function deleteAdv(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Adv/advdel')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				advList();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+
+}
+
+
+</script>

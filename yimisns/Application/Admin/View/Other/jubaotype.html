@@ -1,0 +1,90 @@
+<!-- 用户列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="userList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Other/jubaotype',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#Toolbar_{$rand}',pagination:true,singleSelect:true,pageSize:30">
+<thead>
+	<tr>
+		<th data-options="field:'name',width:300,align:'center'">名称</th>
+		<th data-options="field:'id',width:300,align:'center',formatter:userOperateText">操作</th>
+	</tr>
+</thead>
+</table>
+<div id="Toolbar_{$rand}" style="padding:5px;height:auto">
+	<form id="userSearchForm_{$rand}">
+		<a href="javascript:;" onclick="Re();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+	   	<a href="javascript:;" onclick="add_type();" class="easyui-linkbutton" iconCls="icon-add">添加</a>
+	</form>
+</div>
+<div id="addRobtBox" class="easyui-dialog" title="添加类型"
+	data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){robt_Add();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#addRobtBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+<div id="updateBox" class="easyui-dialog" title="修改类型"
+	data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){savetypeEdit();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#updateBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+<script type="text/javascript">
+//刷新
+function Re(){
+	$('#userList_{$rand}').datagrid('reload');
+}
+//操作
+function userOperateText(val, row, index){
+		return '<a href="javascript:void(0);" onclick="updatetype('+row.id+')">修改</a> | <a href="javascript:void(0);" onclick="deletetype('+row.id+')">删除</a>';
+}
+//搜索用户
+function userSearch_{$rand}(){
+	var queryParams = $('#userList_{$rand}').datagrid('options').queryParams;
+	$.each($("#userSearchForm_{$rand}").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#userList_{$rand}').datagrid('load');
+}
+function typeText(val, row, index){
+	if(val==1){
+		return '用户';
+	}
+	if(val==2){
+		return '网址';
+	}
+	if(val==3){
+		return '快拍';
+	}
+
+}
+
+//删除 
+function deletetype(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Other/deletetype')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				Re();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+function add_type(){
+	var url = '{:U('Other/addtype')}';
+	$('#addRobtBox').dialog({href:url});
+	$('#addRobtBox').dialog('open');
+}
+function updatetype(id){
+		if(typeof(id) !== 'number'){
+			$.messager.alert('提示信息', '未选择', 'error');
+			return false;
+		}
+		var url = '{:U('Other/updatetype')}';
+		url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+		url += '&rand={$rand}';
+		$('#updateBox').dialog({href:url});
+		$('#updateBox').dialog('open');
+}
+</script>

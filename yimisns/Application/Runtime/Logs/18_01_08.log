@@ -1,0 +1,547 @@
+[ 2018-01-08T15:37:12+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:37:12+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+ERR: Thinkchat message into
+[ 2018-01-08T15:37:12+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+ERR: thinkchat url=127.0.0.1:9090/plugins/thinkchat/thinkchat,params="data=action%40007%3Bfrom%40beautyas%3Bto%40200138%3Bbody%40%257B%2522user%2522%253A%257B%2522uid%2522%253A%2522200038%2522%252C%2522nickname%2522%253A%2522%255Cu738b%255Cu603b%2522%252C%2522headsmall%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fs_c12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522headlarge%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fc12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522isfriend%2522%253A0%252C%2522isvisible%2522%253A1%252C%2522is_setting%2522%253A1%252C%2522remarkname%2522%253A%2522%2522%252C%2522isbindphone%2522%253A0%252C%2522completion%2522%253A37.5%252C%2522follownum%2522%253A%25220%2522%252C%2522fansnum%2522%253A%25228%2522%257D%252C%2522content%2522%253A%2522%255Cu4e3a%255Cu4e86%255Cu4fbf%255Cu4e8e%255Cu793e%255Cu4ea4%255Cu5efa%255Cu8bae%255Cu60a8%255Cu5b8c%255Cu5584%255Cu4e2a%255Cu4eba%255Cu4fe1%255Cu606f%255Cuff0c%255Cu5b8c%255Cu5584%255Cu540e%255Cu5c06%255Cu5956%255Cu52b11%255Cu5143%2522%252C%2522type%2522%253A1015%252C%2522room%2522%253A%257B%257D%252C%2522time%2522%253A1515397032465%257D%3Btype%40batchusers%3Bcheck_time%401515397032%3Bcheck_sum%40d07934dd1e86dd837696ed010cc5d070%3B&md5=bc760a290177588242a2e8c2424fb98e"
+[ 2018-01-08T15:37:13+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+ERR: thinkchat result=
+[ 2018-01-08T15:37:13+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+INFO: api result={"data":null,"msg":"\u83b7\u53d6\u6570\u636e\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:37:14+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:37:14+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.058714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.059158s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.359952s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001350s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001763s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.065604s ]
+SQL: UPDATE `tc_user` SET `nickname`='hahha',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.199321s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.079423s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003159s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000742s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 771 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3985 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.032061s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.017886s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.035884s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200038 ) AND ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.010409s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200038 ) LIMIT 1   [ RunTime:0.000796s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.007027s ]
+NOTIC: [8] Undefined variable: type D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4001 行.
+SQL: SHOW COLUMNS FROM `tc_notice` [ RunTime:0.085014s ]
+SQL: INSERT INTO `tc_notice` (`type`,`uid`,`toUid`,`content`,`createtime`,`status`) VALUES (1015,'200038','200138','为了便于社交建议您完善个人信息，完善后将奖励1元',1515397029,1) [ RunTime:0.090455s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000814s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000680s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000644s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000798s ]
+
+[ 2018-01-08T15:41:58+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+INFO: api result={"data":{},"msg":"\u4fee\u6539\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:41:58+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahha
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003929s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001266s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001157s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: UPDATE `tc_user` SET `nickname`='hahha',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.056300s ]
+
+[ 2018-01-08T15:42:15+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahh
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:42:15+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002376s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001109s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000888s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000351s ]
+SQL: UPDATE `tc_user` SET `nickname`='hahh',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.114589s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.004664s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002481s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000755s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 773 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3987 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.004910s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000754s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000795s ]
+
+[ 2018-01-08T15:42:55+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahh
+INFO: api result={"data":{},"msg":"\u4fee\u6539\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:42:55+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hahh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003684s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001173s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: UPDATE `tc_user` SET `nickname`='hahh',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.064808s ]
+
+[ 2018-01-08T15:42:59+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hah
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:42:59+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hah
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002594s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001065s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000432s ]
+SQL: UPDATE `tc_user` SET `nickname`='hah',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.123026s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.004542s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002309s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000818s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 774 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3988 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.004995s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000725s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000964s ]
+
+[ 2018-01-08T15:44:54+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hah
+INFO: api result={"data":{},"msg":"\u4fee\u6539\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:44:54+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=hah
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002493s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000890s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: UPDATE `tc_user` SET `nickname`='hah',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.076814s ]
+
+[ 2018-01-08T15:44:58+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=ha
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:44:58+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=ha
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003363s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001481s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001694s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000576s ]
+SQL: UPDATE `tc_user` SET `nickname`='ha',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.079462s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.003103s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001454s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000471s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 774 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3988 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.002392s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000421s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000463s ]
+
+[ 2018-01-08T15:47:33+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:47:33+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: Thinkchat message into
+[ 2018-01-08T15:47:33+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: thinkchat url=127.0.0.1:9090/plugins/thinkchat/thinkchat,params="data=action%40007%3Bfrom%40beautyas%3Bto%40200138%3Bbody%40%257B%2522user%2522%253A%257B%2522uid%2522%253A%2522200038%2522%252C%2522nickname%2522%253A%2522%255Cu738b%255Cu603b%2522%252C%2522headsmall%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fs_c12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522headlarge%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fc12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522isfriend%2522%253A0%252C%2522isvisible%2522%253A1%252C%2522is_setting%2522%253A1%252C%2522remarkname%2522%253A%2522%2522%252C%2522isbindphone%2522%253A0%252C%2522completion%2522%253A37.5%252C%2522follownum%2522%253A%25220%2522%252C%2522fansnum%2522%253A%25228%2522%257D%252C%2522content%2522%253A%2522%255Cu4e3a%255Cu4e86%255Cu4fbf%255Cu4e8e%255Cu793e%255Cu4ea4%255Cu5efa%255Cu8bae%255Cu60a8%255Cu5b8c%255Cu5584%255Cu4e2a%255Cu4eba%255Cu4fe1%255Cu606f%255Cuff0c%255Cu5b8c%255Cu5584%255Cu540e%255Cu5c06%255Cu5956%255Cu52b11%255Cu5143%2522%252C%2522type%2522%253A1015%252C%2522room%2522%253A%257B%257D%252C%2522time%2522%253A1515397653955%257D%3Btype%40batchusers%3Bcheck_time%401515397653%3Bcheck_sum%40de5942c0973373bf33bac3b3266f14f8%3B&md5=ad437d53437956ab720483fe100a0385"
+[ 2018-01-08T15:47:35+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: thinkchat result=
+[ 2018-01-08T15:47:35+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+INFO: api result={"data":null,"msg":"\u83b7\u53d6\u6570\u636e\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:47:35+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:47:35+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002472s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001305s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: UPDATE `tc_user` SET `nickname`='h',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.166241s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.004628s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001956s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000945s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 772 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3986 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.005271s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000714s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000819s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.004765s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200038 ) AND ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000754s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200038 ) LIMIT 1   [ RunTime:0.000622s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000785s ]
+NOTIC: [8] Undefined variable: type D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4002 行.
+SQL: SHOW COLUMNS FROM `tc_notice` [ RunTime:0.080251s ]
+SQL: INSERT INTO `tc_notice` (`type`,`uid`,`toUid`,`content`,`createtime`,`status`) VALUES (1015,'200038','200138','为了便于社交建议您完善个人信息，完善后将奖励1元',1515397653,1) [ RunTime:0.037620s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000778s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000670s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000641s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000793s ]
+NOTIC: [8] Undefined variable: field D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 381 行.
+
+[ 2018-01-08T15:48:18+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h1
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:48:18+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h1
+ERR: Thinkchat message into
+[ 2018-01-08T15:48:18+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h1
+ERR: thinkchat url=127.0.0.1:9090/plugins/thinkchat/thinkchat,params="data=action%40007%3Bfrom%40beautyas%3Bto%40200138%3Bbody%40%257B%2522user%2522%253A%257B%2522uid%2522%253A%2522200038%2522%252C%2522nickname%2522%253A%2522%255Cu738b%255Cu603b%2522%252C%2522headsmall%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fs_c12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522headlarge%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fc12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522isfriend%2522%253A0%252C%2522isvisible%2522%253A1%252C%2522is_setting%2522%253A1%252C%2522remarkname%2522%253A%2522%2522%252C%2522isbindphone%2522%253A0%252C%2522completion%2522%253A37.5%252C%2522follownum%2522%253A%25220%2522%252C%2522fansnum%2522%253A%25228%2522%257D%252C%2522content%2522%253A%2522%255Cu4e3a%255Cu4e86%255Cu4fbf%255Cu4e8e%255Cu793e%255Cu4ea4%255Cu5efa%255Cu8bae%255Cu60a8%255Cu5b8c%255Cu5584%255Cu4e2a%255Cu4eba%255Cu4fe1%255Cu606f%255Cuff0c%255Cu5b8c%255Cu5584%255Cu540e%255Cu5c06%255Cu5956%255Cu52b11%255Cu5143%2522%252C%2522type%2522%253A1015%252C%2522room%2522%253A%257B%257D%252C%2522time%2522%253A1515397698864%257D%3Btype%40batchusers%3Bcheck_time%401515397698%3Bcheck_sum%40bdc89bd07c77c191e38d830f2ce8b006%3B&md5=7988de29e3060824a146616d704c5ec8"
+[ 2018-01-08T15:48:20+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h1
+ERR: thinkchat result=
+[ 2018-01-08T15:48:20+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h1
+INFO: api result={"data":null,"msg":"\u83b7\u53d6\u6570\u636e\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:48:20+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h1
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:48:20+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002351s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000975s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000943s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000370s ]
+SQL: UPDATE `tc_user` SET `nickname`='h1',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.076354s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.004696s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002061s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000785s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 772 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3986 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.004581s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000698s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.004734s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200038 ) AND ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000828s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200038 ) LIMIT 1   [ RunTime:0.000434s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000509s ]
+NOTIC: [8] Undefined variable: type D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4002 行.
+SQL: SHOW COLUMNS FROM `tc_notice` [ RunTime:0.002823s ]
+SQL: INSERT INTO `tc_notice` (`type`,`uid`,`toUid`,`content`,`createtime`,`status`) VALUES (1015,'200038','200138','为了便于社交建议您完善个人信息，完善后将奖励1元',1515397698,1) [ RunTime:0.079256s ]
+NOTIC: [8] Undefined variable: field D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 380 行.
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000721s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000817s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000475s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000504s ]
+
+[ 2018-01-08T15:49:51+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:49:51+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+ERR: Thinkchat message into
+[ 2018-01-08T15:49:51+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+ERR: thinkchat url=127.0.0.1:9090/plugins/thinkchat/thinkchat,params="data=action%40007%3Bfrom%40beautyas%3Bto%40200138%3Bbody%40%257B%2522user%2522%253A%257B%2522uid%2522%253A%2522200038%2522%252C%2522nickname%2522%253A%2522%255Cu738b%255Cu603b%2522%252C%2522headsmall%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fs_c12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522headlarge%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fc12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522isfriend%2522%253A0%252C%2522isvisible%2522%253A1%252C%2522is_setting%2522%253A1%252C%2522remarkname%2522%253A%2522%2522%252C%2522isbindphone%2522%253A0%252C%2522completion%2522%253A37.5%252C%2522follownum%2522%253A%25220%2522%252C%2522fansnum%2522%253A%25228%2522%257D%252C%2522content%2522%253A%2522%255Cu4e3a%255Cu4e86%255Cu4fbf%255Cu4e8e%255Cu793e%255Cu4ea4%255Cu5efa%255Cu8bae%255Cu60a8%255Cu5b8c%255Cu5584%255Cu4e2a%255Cu4eba%255Cu4fe1%255Cu606f%255Cuff0c%255Cu5b8c%255Cu5584%255Cu540e%255Cu5c06%255Cu5956%255Cu52b11%255Cu5143%2522%252C%2522type%2522%253A1015%252C%2522room%2522%253A%257B%257D%252C%2522time%2522%253A1515397791688%257D%3Btype%40batchusers%3Bcheck_time%401515397791%3Bcheck_sum%40c4eccc57e7c2d8b55bfd222415bcbe3d%3B&md5=822cf0bf5e12b7a9dd4d1b0aa9a00c8f"
+[ 2018-01-08T15:49:52+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+ERR: thinkchat result=
+[ 2018-01-08T15:49:52+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+INFO: api result={"data":null,"msg":"\u83b7\u53d6\u6570\u636e\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:49:53+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:49:53+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002824s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001475s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000370s ]
+SQL: UPDATE `tc_user` SET `nickname`='h2',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.107763s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.004938s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002073s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000692s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 772 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3986 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.004610s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000676s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.004669s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200038 ) AND ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000756s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200038 ) LIMIT 1   [ RunTime:0.000619s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000776s ]
+NOTIC: [8] Undefined variable: type D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4002 行.
+SQL: SHOW COLUMNS FROM `tc_notice` [ RunTime:0.003983s ]
+SQL: INSERT INTO `tc_notice` (`type`,`uid`,`toUid`,`content`,`createtime`,`status`) VALUES (1015,'200038','200138','为了便于社交建议您完善个人信息，完善后将奖励1元',1515397791,1) [ RunTime:0.095328s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000742s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000600s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000587s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000836s ]
+
+[ 2018-01-08T15:53:16+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+INFO: api result={"data":{},"msg":"\u4fee\u6539\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:53:16+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002502s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001392s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001254s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000465s ]
+SQL: UPDATE `tc_user` SET `nickname`='h2',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.067692s ]
+
+[ 2018-01-08T15:53:22+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:53:22+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: Thinkchat message into
+[ 2018-01-08T15:53:22+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: thinkchat url=127.0.0.1:9090/plugins/thinkchat/thinkchat,params="data=action%40007%3Bfrom%40beautyas%3Bto%40200138%3Bbody%40%257B%2522user%2522%253A%257B%2522uid%2522%253A%2522200038%2522%252C%2522sort%2522%253A%2522%2522%252C%2522extend%2522%253A%2522%2522%252C%2522phone%2522%253A%252217713543451%2522%252C%2522headsmall%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fs_c12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522nickname%2522%253A%2522%255Cu738b%255Cu603b%2522%252C%2522sign%2522%253A%2522%2522%252C%2522openfire%2522%253A%2522292306%2522%252C%2522gender%2522%253A%25220%2522%252C%2522logintime%2522%253A%25221487549756%2522%252C%2522isdelete%2522%253A%25220%2522%252C%2522createtime%2522%253A%25221470722550%2522%252C%2522age%2522%253A%25221123516800%2522%252C%2522hometown%2522%253A%2522%255Cu6210%255Cu90fd%2522%252C%2522job%2522%253A%2522%255Cu79fb%255Cu52a8%255Cu4e92%255Cu8054%255Cu7f51%2522%252C%2522xingzuo%2522%253A%2522%2522%252C%2522money%2522%253A%25220.02%2522%252C%2522worth_user%2522%253A%25222%2522%252C%2522memberenddate%2522%253A%25220%2522%252C%2522memberlevel%2522%253A%25220%2522%252C%2522lat%2522%253A%252230.699093%2522%252C%2522lng%2522%253A%2522104.169924%2522%252C%2522auto_buy_member%2522%253A%25221%2522%252C%2522alipay_account%2522%253A%2522%2522%252C%2522alipay_name%2522%253A%2522%2522%252C%2522openid%2522%253A%2522%2522%252C%2522type%2522%253A%25220%2522%252C%2522yinsi_type%2522%253A%25220%2522%252C%2522safe_level%2522%253A%25221%2522%252C%2522bind_qq%2522%253A%2522%2522%252C%2522bind_weixin%2522%253A%2522%2522%252C%2522bind_sina%2522%253A%2522%2522%252C%2522bind_renren%2522%253A%2522%2522%252C%2522wurao_start%2522%253A%2522%2522%252C%2522wurao_end%2522%253A%2522%2522%252C%2522safe_phone%2522%253A%252217713543451%2522%252C%2522msg_setting%2522%253A%25221111%2522%252C%2522tixing_comment%2522%253A%25221%2522%252C%2522tixing_zan%2522%253A%25220%2522%252C%2522tixing_frienddynamic%2522%253A%25221%2522%252C%2522tixing_notfriendmsg%2522%253A%25220%2522%252C%2522tixing_group%2522%253A%25220%2522%252C%2522kuaipai_sendnearbyperson%2522%253A%25221%2522%252C%2522kuaipai_videoshow%2522%253A%25221%2522%252C%2522deviceid%2522%253A%2522BC7724BB546F6F108C13F3FDE45C037E%2522%252C%2522wifi_ssid%2522%253A%2522%2526quot%253BTP-LINK_C622%2526quot%253B%2522%252C%2522wifi_updatetime%2522%253A%25221487551261%2522%252C%2522wifi_lat%2522%253A%2522%2522%252C%2522wifi_lng%2522%253A%2522%2522%252C%2522usertype%2522%253A%25220%2522%252C%2522headlarge%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fc12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522isfriend%2522%253A0%252C%2522isvisible%2522%253A1%252C%2522is_setting%2522%253A1%252C%2522remarkname%2522%253A%2522%2522%252C%2522isbindphone%2522%253A1%252C%2522completion%2522%253A75%252C%2522follownum%2522%253A%25220%2522%252C%2522fansnum%2522%253A%25228%2522%257D%252C%2522content%2522%253A%2522%255Cu4e3a%255Cu4e86%255Cu4fbf%255Cu4e8e%255Cu793e%255Cu4ea4%255Cu5efa%255Cu8bae%255Cu60a8%255Cu5b8c%255Cu5584%255Cu4e2a%255Cu4eba%255Cu4fe1%255Cu606f%255Cuff0c%255Cu5b8c%255Cu5584%255Cu540e%255Cu5c06%255Cu5956%255Cu52b11%255Cu5143%2522%252C%2522type%2522%253A1015%252C%2522room%2522%253A%257B%257D%252C%2522time%2522%253A1515398002899%257D%3Btype%40batchusers%3Bcheck_time%401515398002%3Bcheck_sum%4009a6527a13e8726bf7c671ebd19fd1f0%3B&md5=d8c4c3ecf27b1c8a2eb0ea4829888421"
+[ 2018-01-08T15:53:24+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: thinkchat result=
+[ 2018-01-08T15:53:24+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+INFO: api result={"data":null,"msg":"\u83b7\u53d6\u6570\u636e\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2018-01-08T15:53:24+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+ERR: field=uid, nickname, headsmall
+[ 2018-01-08T15:53:24+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200138&gender=0&age=1389110400&hometown=11&nickname=h
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002386s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000990s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000399s ]
+SQL: UPDATE `tc_user` SET `nickname`='h',`gender`=0,`age`=1389110400,`xingzuo`='摩羯座',`hometown`='11',`sign`='' WHERE ( `uid` = 200138 ) [ RunTime:0.109351s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.006616s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003390s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200138 ) LIMIT 1   [ RunTime:0.000501s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 771 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3985 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.002450s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000395s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.023146s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.002306s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200038 ) AND ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200038 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000321s ]
+NOTIC: [8] Undefined variable: type D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4001 行.
+SQL: SHOW COLUMNS FROM `tc_notice` [ RunTime:0.001931s ]
+SQL: INSERT INTO `tc_notice` (`type`,`uid`,`toUid`,`content`,`createtime`,`status`) VALUES (1015,'200038','200138','为了便于社交建议您完善个人信息，完善后将奖励1元',1515398002,1) [ RunTime:0.088822s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.001199s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000992s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000987s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.001207s ]
+
+[ 2018-01-08T17:32:50+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+ERR: field=u.*
+[ 2018-01-08T17:32:50+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: api result={"data":{"uid":"200138","sort":"","extend":"","phone":"13456148150","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/s_f97804835c072eba2b479b8b61f549ac.jpg","nickname":"h","sign":"","openfire":"288276","gender":"0","logintime":"1493389148","isdelete":"0","createtime":"1489133130","age":"1389110400","hometown":null,"job":"","xingzuo":"\u6469\u7faf\u5ea7","money":0.86,"worth_user":"87","memberenddate":"1495002092","memberlevel":"1","lat":"30.732955","lng":"103.972507","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13456148150","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4CF45DBF14EA400C9A9D8EA9FD734AFE","wifi_ssid":"&quot;xizue&quot;","wifi_updatetime":"1493389146","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/f97804835c072eba2b479b8b61f549ac.jpg","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":71.5,"follownum":"4","fansnum":"3"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2018-01-08T17:32:50+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003965s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000598s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.002098s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000412s ]
+NOTIC: [8] Undefined variable: data D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 174 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000492s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `tc_hometown` [ RunTime:0.047619s ]
+SQL: SELECT `name` FROM `tc_hometown` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000643s ]
+
+[ 2018-01-08T17:32:56+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+ERR: field=u.*
+[ 2018-01-08T17:32:56+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: api result={"data":{"uid":"200138","sort":"","extend":"","phone":"13456148150","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/s_f97804835c072eba2b479b8b61f549ac.jpg","nickname":"h","sign":"","openfire":"288276","gender":"0","logintime":"1493389148","isdelete":"0","createtime":"1489133130","age":"1389110400","hometown":null,"job":"","xingzuo":"\u6469\u7faf\u5ea7","money":0.86,"worth_user":"87","memberenddate":"1495002092","memberlevel":"1","lat":"30.732955","lng":"103.972507","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13456148150","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4CF45DBF14EA400C9A9D8EA9FD734AFE","wifi_ssid":"&quot;xizue&quot;","wifi_updatetime":"1493389146","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/f97804835c072eba2b479b8b61f549ac.jpg","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":71.5,"follownum":"4","fansnum":"3"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2018-01-08T17:32:56+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002289s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.001407s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.001993s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000337s ]
+NOTIC: [8] Undefined variable: data D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 174 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `tc_hometown` [ RunTime:0.001985s ]
+SQL: SELECT `name` FROM `tc_hometown` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000282s ]
+
+[ 2018-01-08T17:34:16+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+ERR: field=u.*
+[ 2018-01-08T17:34:16+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: api result={"data":{"uid":"200138","sort":"","extend":"","phone":"13456148150","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/s_f97804835c072eba2b479b8b61f549ac.jpg","nickname":"h","sign":"","openfire":"288276","gender":"0","logintime":"1493389148","isdelete":"0","createtime":"1489133130","age":"1389110400","hometown":null,"job":"","xingzuo":"\u6469\u7faf\u5ea7","money":"'0.86'","worth_user":"87","memberenddate":"1495002092","memberlevel":"1","lat":"30.732955","lng":"103.972507","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13456148150","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4CF45DBF14EA400C9A9D8EA9FD734AFE","wifi_ssid":"&quot;xizue&quot;","wifi_updatetime":"1493389146","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/f97804835c072eba2b479b8b61f549ac.jpg","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":71.5,"follownum":"4","fansnum":"3"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2018-01-08T17:34:16+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004298s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001475s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000440s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.002017s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `tc_hometown` [ RunTime:0.001862s ]
+SQL: SELECT `name` FROM `tc_hometown` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000226s ]
+
+[ 2018-01-08T17:34:47+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+ERR: field=u.*
+[ 2018-01-08T17:34:47+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: api result={"data":{"uid":"200138","sort":"","extend":"","phone":"13456148150","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/s_f97804835c072eba2b479b8b61f549ac.jpg","nickname":"h","sign":"","openfire":"288276","gender":"0","logintime":"1493389148","isdelete":"0","createtime":"1489133130","age":"1389110400","hometown":null,"job":"","xingzuo":"\u6469\u7faf\u5ea7","money":0.86,"worth_user":"87","memberenddate":"1495002092","memberlevel":"1","lat":"30.732955","lng":"103.972507","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13456148150","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4CF45DBF14EA400C9A9D8EA9FD734AFE","wifi_ssid":"&quot;xizue&quot;","wifi_updatetime":"1493389146","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/f97804835c072eba2b479b8b61f549ac.jpg","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":71.5,"follownum":"4","fansnum":"3"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2018-01-08T17:34:47+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001212s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002441s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003143s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001589s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.004470s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000415s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `tc_hometown` [ RunTime:0.001829s ]
+SQL: SELECT `name` FROM `tc_hometown` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000193s ]
+
+[ 2018-01-08T17:35:21+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+ERR: field=u.*
+[ 2018-01-08T17:35:21+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: api result={"data":{"uid":"200138","sort":"","extend":"","phone":"13456148150","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/s_f97804835c072eba2b479b8b61f549ac.jpg","nickname":"h","sign":"","openfire":"288276","gender":"0","logintime":"1493389148","isdelete":"0","createtime":"1489133130","age":"1389110400","hometown":null,"job":"","xingzuo":"\u6469\u7faf\u5ea7","money":"0.86","worth_user":"87","memberenddate":"1495002092","memberlevel":"1","lat":"30.732955","lng":"103.972507","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13456148150","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4CF45DBF14EA400C9A9D8EA9FD734AFE","wifi_ssid":"&quot;xizue&quot;","wifi_updatetime":"1493389146","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/f97804835c072eba2b479b8b61f549ac.jpg","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":71.5,"follownum":"4","fansnum":"3"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2018-01-08T17:35:21+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001309s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000999s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.000716s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: SHOW COLUMNS FROM `tc_hometown` [ RunTime:0.001769s ]
+SQL: SELECT `name` FROM `tc_hometown` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000189s ]
+
+[ 2018-01-08T17:36:21+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+ERR: field=u.*
+[ 2018-01-08T17:36:21+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: api result={"data":{"uid":"200138","sort":"","extend":"","phone":"13456148150","headsmall":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/s_f97804835c072eba2b479b8b61f549ac.jpg","nickname":"h","sign":"","openfire":"288276","gender":"0","logintime":"1493389148","isdelete":"0","createtime":"1489133130","age":"1389110400","hometown":null,"job":"","xingzuo":"\u6469\u7faf\u5ea7","money":"0.86","worth_user":"87","memberenddate":"1495002092","memberlevel":"1","lat":"30.732955","lng":"103.972507","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"13456148150","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"4CF45DBF14EA400C9A9D8EA9FD734AFE","wifi_ssid":"&quot;xizue&quot;","wifi_updatetime":"1493389146","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"http:\/\/localhost\/yimisns\/Uploads\/Picture\/avatar\/200138\/f97804835c072eba2b479b8b61f549ac.jpg","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":71.5,"follownum":"4","fansnum":"3"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2018-01-08T17:36:21+08:00 ] ::1 /yimisns/index.php/user/api/detail?uid=200138&fid=138
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001698s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002494s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001278s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000400s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200138 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.004610s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200138 ) AND ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200138 ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200138 ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `tc_hometown` [ RunTime:0.001854s ]
+SQL: SELECT `name` FROM `tc_hometown` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000202s ]
+

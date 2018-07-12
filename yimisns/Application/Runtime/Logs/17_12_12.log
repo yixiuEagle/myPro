@@ -1,0 +1,283 @@
+[ 2017-12-12T11:25:48+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.094438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.152981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.153429s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.271282s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002545s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001916s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.065359s ]
+
+[ 2017-12-12T11:28:04+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002467s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000962s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000324s ]
+
+[ 2017-12-12T16:20:15+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003488s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.038961s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.014708s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.029919s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.082713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.083276s ]
+
+[ 2017-12-12T16:21:25+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002814s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003201s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002325s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-12-12T16:22:02+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003781s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002233s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001550s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002474s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2017-12-12T16:22:35+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005103s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001681s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001822s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002939s ]
+
+[ 2017-12-12T16:23:36+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003800s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002458s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001817s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000259s ]
+
+[ 2017-12-12T16:26:36+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002382s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.004169s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000429s ]
+
+[ 2017-12-12T16:26:53+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002928s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001757s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001552s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002002s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.080079s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001045s ]
+SQL: SHOW COLUMNS FROM `tc_member_fee` [ RunTime:0.064646s ]
+SQL: SELECT * FROM `tc_member_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.017929s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.026578s ]
+SQL: INSERT INTO `tc_user_member` (`uid`,`time`,`memberid`) VALUES (200333,1515659213,1) [ RunTime:0.032275s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002269s ]
+SQL: UPDATE `tc_user` SET `memberenddate`=1515659213,`memberlevel`=1 WHERE ( `uid` = 200333 ) [ RunTime:0.039003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002194s ]
+
+[ 2017-12-12T16:28:42+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001708s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002242s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002266s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.059756s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `tc_member_fee` [ RunTime:0.001853s ]
+SQL: SELECT * FROM `tc_member_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.002127s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000920s ]
+SQL: DELETE FROM `tc_user_member` WHERE ( `uid` = 200333 ) [ RunTime:0.067581s ]
+SQL: INSERT INTO `tc_user_member` (`uid`,`time`,`memberid`) VALUES (200333,1515659322,1) [ RunTime:0.055026s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.083562s ]
+SQL: UPDATE `tc_user` SET `memberenddate`=1515659322,`memberlevel`=1 WHERE ( `uid` = 200333 ) [ RunTime:0.023788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001389s ]
+
+[ 2017-12-12T16:29:37+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005150s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001459s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002062s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.066377s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000999s ]
+SQL: SHOW COLUMNS FROM `tc_member_fee` [ RunTime:0.003571s ]
+SQL: SELECT * FROM `tc_member_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.004353s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000650s ]
+SQL: DELETE FROM `tc_user_member` WHERE ( `uid` = 200333 ) [ RunTime:0.040262s ]
+SQL: INSERT INTO `tc_user_member` (`uid`,`time`,`memberid`) VALUES (200333,1515659377,1) [ RunTime:0.053934s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.084908s ]
+SQL: UPDATE `tc_user` SET `memberenddate`=1515659377,`memberlevel`=1 WHERE ( `uid` = 200333 ) [ RunTime:0.021769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002215s ]
+
+[ 2017-12-12T16:31:00+08:00 ] ::1 /yimisns/index.php/user/api/notifyurl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001460s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004588s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001649s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.003282s ]
+SQL: SELECT * FROM `tc_user_recharge` WHERE ( `id` = '2017121299100559' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: UPDATE `tc_user_recharge` SET `status`=1 WHERE ( `id` = '2017121299100559' ) [ RunTime:0.064762s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003014s ]
+SQL: SHOW COLUMNS FROM `tc_member_fee` [ RunTime:0.004506s ]
+SQL: SELECT * FROM `tc_member_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.004410s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000595s ]
+SQL: DELETE FROM `tc_user_member` WHERE ( `uid` = 200333 ) [ RunTime:0.056711s ]
+SQL: INSERT INTO `tc_user_member` (`uid`,`time`,`memberid`) VALUES (200333,1515659460,1) [ RunTime:0.075451s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002131s ]
+SQL: UPDATE `tc_user` SET `memberenddate`=1515659460,`memberlevel`=1 WHERE ( `uid` = 200333 ) [ RunTime:0.083474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002313s ]
+
+[ 2017-12-12T22:12:10+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+ERR: field=uid, nickname, headsmall
+[ 2017-12-12T22:12:10+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+ERR: Thinkchat message into
+[ 2017-12-12T22:12:10+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+ERR: thinkchat url=127.0.0.1:9090/plugins/thinkchat/thinkchat,params="data=action%40007%3Bfrom%40beautyas%3Bto%40200313%3Bbody%40%257B%2522user%2522%253A%257B%2522uid%2522%253A%2522200038%2522%252C%2522nickname%2522%253A%2522%255Cu738b%255Cu603b%2522%252C%2522headsmall%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fs_c12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522headlarge%2522%253A%2522http%253A%255C%252F%255C%252Flocalhost%255C%252Fyimisns%255C%252FUploads%255C%252FPicture%255C%252Favatar%255C%252F200038%255C%252Fc12052deeeeb5f7f993d0defee7ce33d.jpg%2522%252C%2522isfriend%2522%253A0%252C%2522isvisible%2522%253A1%252C%2522is_setting%2522%253A1%252C%2522remarkname%2522%253A%2522%2522%252C%2522isbindphone%2522%253A0%252C%2522completion%2522%253A37.5%252C%2522follownum%2522%253A%25220%2522%252C%2522fansnum%2522%253A%25228%2522%257D%252C%2522content%2522%253A%2522%255Cu4e3a%255Cu4e86%255Cu4fbf%255Cu4e8e%255Cu793e%255Cu4ea4%255Cu5efa%255Cu8bae%255Cu60a8%255Cu5b8c%255Cu5584%255Cu4e2a%255Cu4eba%255Cu4fe1%255Cu606f%255Cuff0c%255Cu5b8c%255Cu5584%255Cu540e%255Cu5c06%255Cu5956%255Cu52b11%255Cu5143%2522%252C%2522type%2522%253A1015%252C%2522room%2522%253A%257B%257D%252C%2522time%2522%253A1513087930394%257D%3Btype%40batchusers%3Bcheck_time%401513087930%3Bcheck_sum%40a77cc7b3b45a1845be4244bcff6cbebd%3B&md5=c7afd40304b4afbac2edf3d47e75b913"
+[ 2017-12-12T22:12:11+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+ERR: thinkchat result=
+[ 2017-12-12T22:12:11+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+INFO: api result={"data":null,"msg":"\u83b7\u53d6\u6570\u636e\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2017-12-12T22:12:12+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+ERR: field=uid, nickname, headsmall
+[ 2017-12-12T22:12:12+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+INFO: api result={"data":{"uid":"200313","nickname":"lalala","headsmall":"","headlarge":"","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":0,"completion":25,"follownum":"3","fansnum":"6"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-12-12T22:12:12+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=lalala&gender=0&age=1218643200
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.082848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.083206s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002998s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001356s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001075s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.001042s ]
+SQL: UPDATE `tc_user` SET `nickname`='lalala',`gender`=0,`age`=1218643200,`xingzuo`='狮子座',`sign`='' WHERE ( `uid` = 200313 ) [ RunTime:0.062820s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.048908s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200313 ) LIMIT 1   [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002207s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200313 ) LIMIT 1   [ RunTime:0.000693s ]
+NOTIC: [2] Missing argument 3 for User\Model\UserModel::sendSysNotice(), called in D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php on line 753 and defined D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3952 行.
+SQL: SHOW COLUMNS FROM `tc_system_config` [ RunTime:0.031492s ]
+SQL: SELECT * FROM `tc_system_config` WHERE ( `keyword` = 'sendmsgadminid' ) LIMIT 1   [ RunTime:0.000448s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( u.uid = '200038' ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.016058s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.081127s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200038 ) AND ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.066609s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200038 ) LIMIT 1   [ RunTime:0.000459s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200038 ) LIMIT 1   [ RunTime:0.000376s ]
+NOTIC: [8] Undefined variable: type D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3968 行.
+SQL: SHOW COLUMNS FROM `tc_notice` [ RunTime:0.152407s ]
+SQL: INSERT INTO `tc_notice` (`type`,`uid`,`toUid`,`content`,`createtime`,`status`) VALUES (1015,'200038','200313','为了便于社交建议您完善个人信息，完善后将奖励1元',1513087928,1) [ RunTime:0.065655s ]
+SQL: SELECT `uid`,`nickname`,`headsmall` FROM tc_user u WHERE ( `uid` = 200313 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000857s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200313 ) AND ( `fid` = 200313 ) LIMIT 1   [ RunTime:0.000768s ]
+NOTIC: [8] Undefined index: phone D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 144 行.
+NOTIC: [8] Undefined index: gender D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 158 行.
+NOTIC: [8] Undefined index: age D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 160 行.
+NOTIC: [8] Undefined index: xingzuo D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 162 行.
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 164 行.
+NOTIC: [8] Undefined index: job D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 166 行.
+NOTIC: [8] Undefined index: sign D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 168 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.001008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200313 ) LIMIT 1   [ RunTime:0.001297s ]
+NOTIC: [8] Undefined index: hometown D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 381 行.
+

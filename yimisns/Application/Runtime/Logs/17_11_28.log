@@ -1,0 +1,49 @@
+[ 2017-11-28T18:19:54+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=121&gender=nan&age=2112
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.060096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060404s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006320s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.013632s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002319s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000539s ]
+SQL: UPDATE `tc_user` SET `nickname`='121',`gender`=0,`age`=2112,`sign`='' WHERE ( `uid` = 200313 ) [ RunTime:0.045593s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.004871s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200313 ) LIMIT 1   [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002226s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200313 ) LIMIT 1   [ RunTime:0.000763s ]
+
+[ 2017-11-28T18:20:17+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=121&gender=nan&age=2112
+INFO: api result={"data":{},"msg":"\u4fee\u6539\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2017-11-28T18:20:17+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=121&gender=nan&age=2112
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001697s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.020373s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001066s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002744s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000491s ]
+SQL: UPDATE `tc_user` SET `nickname`='121',`gender`=0,`age`=2112,`sign`='' WHERE ( `uid` = 200313 ) [ RunTime:0.051347s ]
+
+[ 2017-11-28T18:20:25+08:00 ] ::1 /yimisns/index.php/User/api/completeInfo?uid=200313&nickname=121&gender=nan&age=2113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002521s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000972s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200313 ) LIMIT 1   [ RunTime:0.000382s ]
+SQL: UPDATE `tc_user` SET `nickname`='121',`gender`=0,`age`=2113,`sign`='' WHERE ( `uid` = 200313 ) [ RunTime:0.052386s ]
+SQL: SHOW COLUMNS FROM `tc_reward` [ RunTime:0.004543s ]
+SQL: SELECT * FROM `tc_reward` WHERE ( uid=200313 ) LIMIT 1   [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001961s ]
+SQL: SELECT `headsmall`,`hometown`,`job`,`sign` FROM `tc_user` WHERE ( uid=200313 ) LIMIT 1   [ RunTime:0.000856s ]
+

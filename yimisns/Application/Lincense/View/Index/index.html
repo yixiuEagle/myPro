@@ -1,0 +1,51 @@
+<div class="easyui-panel"
+	data-options="fit:true,title:'{$currentpos}',border:false">
+		<table cellspacing="10" style="border: 1px solid #ccc; width: 680px;">
+			<tr>
+				<td width="180"></td>
+				<td><a href="http://www.thinkchat.com.cn" target="_blank">我要续费</a>
+			</tr>
+			<tr>
+				<td width="180">状态：</td>
+				<td>{$info.status}</td>
+			</tr>
+			<tr>
+				<td width="180">订单ID：</td>
+				<td>{$info.orderid}</td>
+			</tr>
+			<tr>
+				<td width="180">账号ID：</td>
+				<td>{$info.acount}</td>
+			</tr>
+			<tr>
+				<td width="180">支付方式：</td>
+				<td>{$info.paymethod}</td>
+			</tr>
+			
+			<tr>
+				<td width="180">购买时间：</td>
+				<td>{$info.buytime}</td>
+			</tr>
+			<tr>
+				<td width="180">过期时间：</td>
+				<td>{$info.expiretime}</td>
+			</tr>
+			
+			<tr>
+				<td width="180">支持最大在线用户数：</td>
+				<td>{$info.chat_maxonlineuser}人</td>
+			</tr>
+			
+		</table>
+</div>
+<script type="text/javascript">
+function setLincense(){	
+	var url = '{:U('Index/setLincense')}';
+	$('#pagetabs').tabs('add',{
+		title: '设置Lincense',
+		href: url,
+		closable: true,
+		cache: false
+	});
+}
+</script>

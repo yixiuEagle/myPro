@@ -1,0 +1,96 @@
+<!-- 用户列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="userList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('User/worth',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#userToolbar_{$rand}',pagination:true,singleSelect:true,pageSize:30">
+<thead>
+	<tr>
+		<th data-options="field:'uid',width:100,align:'center'">uid</th>
+		<th data-options="field:'type',width:100,align:'center',formatter:typeText">类型</th>
+		<th data-options="field:'value',width:300,align:'center'">金额/元</th>
+		<th data-options="field:'createtime',width:150,align:'center'">时间</th>
+		<!--  <th data-options="field:'id',width:100,align:'center',formatter:userOperateText">操作</th>-->
+	</tr>
+</thead>
+</table>
+
+<div id="userToolbar_{$rand}" style="padding:5px;height:auto">
+	<form id="userSearchForm_{$rand}">
+		<a href="javascript:;" onclick="Refresh();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		开始时间：<input class="easyui-datetimebox" name="search[starttime]"
+    data-options="required:true,showSeconds:false" value="3/4/2010 0:0" style="width:150px">
+    	结束时间：<input class="easyui-datetimebox" name="search[endtime]"
+    data-options="required:true,showSeconds:false" value="3/4/2010 23:59" style="width:150px">
+		<!--  <input type="text" name="search[name]" placeholder="根据昵称搜索" style="height: 20px; width: 120px;padding-left: 3px;">-->
+		<a href="javascript:;" onclick="userSearch_{$rand}();" class="easyui-linkbutton" iconCls="icon-search">搜索</a>		
+	</form>
+</div>
+
+
+<script type="text/javascript">
+//刷新
+function Refresh(){
+	$('#userList_{$rand}').datagrid('reload');
+}
+//操作
+function userOperateText(val, row, index){
+		return '<a href="javascript:void(0);" onclick="userManage('+row.id+')">删除记录</a>';
+}
+//搜索用户
+function userSearch_{$rand}(){
+	var queryParams = $('#userList_{$rand}').datagrid('options').queryParams;
+	$.each($("#userSearchForm_{$rand}").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#userList_{$rand}').datagrid('load');
+}
+function typeText(val, row, index){
+	if(val==1){
+		return '被关注';
+	}
+	if(val==2){
+		return '被举报';
+	}
+	if(val==3){
+		return '举报别人';
+	}
+	if(val==4){
+		return '快拍被浏览';
+	}
+	if(val==5){
+		return '动态被赞';
+	}
+	if(val==6){
+		return '打卡';
+	}
+	if(val==7){
+		return 'app外分享';
+	}
+	if(val==8){
+		return 'app内分享';
+	}
+	if(val==9){
+		return '动态被浏览';
+	}
+}
+
+//删除 
+function userDelete(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('User/delete')}', {uid: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				Refresh();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+</script>

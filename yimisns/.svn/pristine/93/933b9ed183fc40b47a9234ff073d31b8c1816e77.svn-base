@@ -1,0 +1,112 @@
+<!-- 列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="userList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Other/dakalist',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#userToolbar_{$rand}',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'uid',width:100,align:'center'">用户uid</th>
+		<th data-options="field:'headsmall',width:100,align:'center',formatter:buildFace">头像</th>
+		<th data-options="field:'name',width:120,align:'center'">名称</th>
+		<th data-options="field:'content',width:300,align:'center',formatter:contentText">内容</th>
+		<th data-options="field:'type',width:120,align:'center',formatter:dakatype">类型</th>
+		<th data-options="field:'sharecount',width:120,align:'center'">分享次数</th>
+		<th data-options="field:'createtime',width:120,align:'center'">时间</th>
+		<th data-options="field:'id',width:100,align:'center',formatter:userOperateText">操作</th>
+	</tr>
+</thead>
+</table>
+
+<div id="userToolbar_{$rand}" style="padding:5px;height:auto">
+	<form id="userSearchForm_{$rand}">
+		<a href="javascript:;" onclick="Refresh();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据名称搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="userSearch_{$rand}();" class="easyui-linkbutton" iconCls="icon-search">确定</a>
+		<a href="javascript:;" id="adddaka" onclick="add();" class="easyui-linkbutton" iconCls="icon-add">添加</a>		
+	</form>
+</div>
+
+<div id="addBox" class="easyui-dialog" title="添加"
+	data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){daka_Add();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#addBox').dialog('close');}}]"
+	style="width: 400px; height: 300px;"></div>
+<script type="text/javascript">
+//刷新
+function Refresh(){
+	$('#userList_{$rand}').datagrid('reload');
+}
+function dakatype(value,row,index){
+	if(value==0){
+        return "文字";
+    }else if(value==1){
+        return "图片";
+	}else if(value==2){
+        return "语音";
+	}else if(value==3){
+        return "视频";
+	}
+}
+function contentText(val,row,index){
+	if(row.type==1||row.type==3){
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';
+	}else if(row.type==2){
+		return '语音';
+	}else{
+		return val;
+	}
+	
+	
+	
+	/*if(row.type==1){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}*/
+}
+//图片显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<div style="padding:3px;"><img src="'+val+'" height="60" style="padding:1px;border:1px solid #ccc;"></div>';	
+	}
+}
+//操作
+function userOperateText(val, row, index){
+	var btn = [];
+		btn.push('<a href="javascript:void(0);" onclick="del('+row.id+')">删除</a>');
+		return btn.join(' | ');
+}
+//搜索
+function userSearch_{$rand}(){
+	var queryParams = $('#userList_{$rand}').datagrid('options').queryParams;
+	$.each($("#userSearchForm_{$rand}").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#userList_{$rand}').datagrid('load');
+}
+//添加
+function add(){
+	var url = '{:U('Other/adddaka')}';
+	$('#addBox').dialog({href:url});
+	$('#addBox').dialog('open');
+} 
+//删除 
+function del(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Other/del')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				Refresh();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+</script>

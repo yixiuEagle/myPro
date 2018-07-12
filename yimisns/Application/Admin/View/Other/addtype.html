@@ -1,0 +1,29 @@
+<script type="text/javascript">
+//提交
+function robt_Add(){
+	$.messager.progress();
+	$.post('{:U('Other/addtype')}', $("#robtForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.progress('close');
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			$.messager.progress('close');
+			Re();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#addRobtBox').dialog('close');
+		}
+	})
+}
+
+
+</script>
+<form id="robtForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>名称：</td>
+		<td><input id="add_menu_name" name="name" type="text" style="width:100px;height:22px" />
+		</td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	</table>
+	</form>

@@ -1,0 +1,96 @@
+<!-- 列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="pushList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('Push/pushlist',array('uid'=>I('uid',0)))}',idField:'id',border:false,
+	toolbar:'#pushToolbar_{$rand}',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'type',width:100,align:'center',formatter:typeText">类型</th>
+		<th data-options="field:'content',width:500,align:'center'">文字内容</th>
+		<th data-options="field:'url',width:450,align:'center'">新闻url</th>
+		<th data-options="field:'uid',width:100,align:'center',formatter:uidText">uid</th>
+		<th data-options="field:'createtime',width:150,align:'center'">时间</th>
+		<!--  <th data-options="field:'id',width:100,align:'center',formatter:userOperateText">操作</th>-->
+	</tr>
+</thead>
+</table>
+
+<div id="pushToolbar_{$rand}" style="padding:5px;height:auto">
+	<form id="pushSearchForm_{$rand}">
+		<a href="javascript:;" onclick="pushRefresh();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<a href="javascript:;" onclick="pushtext();" class="easyui-linkbutton" iconCls="icon-edit">推送文字消息</a>	
+		<a href="javascript:;" onclick="pushnew();" class="easyui-linkbutton" iconCls="icon-add">推送新闻消息</a>
+	</form>
+</div>
+
+<!-- 向用户发送消息 -->
+<div id="sendnewMsgBox" class="easyui-dialog" title="向用户推送新闻消息"
+	data-options="modal:true,closed:true,iconCls:'icon-add',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){push_new();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#sendnewMsgBox').dialog('close');}}]"
+	style="width: 800px; height: 600px;"></div>
+<div id="sendtextBox" class="easyui-dialog" title="向用户推送文字消息"
+data-options="modal:true,closed:true,iconCls:'icon-edit',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){push_text();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#sendtextBox').dialog('close');}}]"
+style="width: 600px; height: 400px;"></div>
+<script type="text/javascript">
+//刷新
+function pushRefresh(){
+	$('#pushList_{$rand}').datagrid('reload');
+}
+//操作
+function userOperateText(val, row, index){
+		return '<a href="javascript:void(0);" onclick="msgDelete('+row.id+')">删除记录</a>';
+}
+//搜索
+function pushSearch_{$rand}(){
+	var queryParams = $('#pushList_{$rand}').datagrid('options').queryParams;
+	$.each($("#pushSearchForm_{$rand}").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#pushList_{$rand}').datagrid('load');
+}
+function typeText(val, row, index){
+	if(val==1){
+		return '文字';
+	}else if(val==2){
+		return '新闻';
+	}
+}
+function uidText(val, row, index){
+	if(val==0){
+		return '无';
+	}else{
+		return val;
+	}
+}
+//删除 
+function msgDelete(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Push/msgdelete')}', {id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				Refresh();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+
+//推送消息
+function pushtext(){
+	var url = '{:U('Push/pushtext')}';
+	$('#sendtextBox').dialog({href:url});
+	$('#sendtextBox').dialog('open');
+}
+//推送新闻消息
+function pushnew(){
+	var url = '{:U('Push/pushnew')}';
+	$('#sendnewMsgBox').dialog({href:url});
+	$('#sendnewMsgBox').dialog('open');
+}
+</script>

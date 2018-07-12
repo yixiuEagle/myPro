@@ -1,0 +1,25 @@
+<!-- 数据库列表 -->
+<table id="tableList" class="easyui-datagrid" title="{$currentpos}"
+	data-options="border:false,fit:true,fitColumns:true,rownumbers:true,singleSelect:true,
+	url:'{:U('Database/index')}',nowrap:false">
+	<thead>
+		<tr>
+			<th data-options="field:'name',width:15,align:'lefe'">表名</th>
+			<th data-options="field:'rows',width:15">数据量</th>
+			<th data-options="field:'data_length',width:15,formatter:format_bytes">数据大小</th>
+			<th data-options="field:'comment',width:25">说明</th>
+			<th data-options="field:'create_time',width:25">创建时间</th>
+		</tr>
+	</thead>
+</table>
+
+<script type="text/javascript">
+//格式化字节数
+function format_bytes(bytes){
+ 	if (bytes === '0') return '0 B';
+    var k = 1024, // or 1024
+       sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+       i = Math.floor(Math.log(bytes) / Math.log(k));
+   	return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];
+}
+</script>

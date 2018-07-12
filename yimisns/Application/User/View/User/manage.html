@@ -1,0 +1,46 @@
+<script type="text/javascript">
+//提交
+function manage_SaveEdit(){
+	$.post('{:U('User/robtmanage')}', $("#manageEditForm").serialize(), function(msg){
+		if(!msg.status){
+			$.messager.alert('提示信息', msg.info, 'error');
+		}else{
+			$.messager.alert('提示信息', msg.info, 'info');
+			$('#manageRobt').dialog('close');
+		}
+	})
+}
+
+</script>
+<form id="manageEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>自动浏览动态：</td>
+		<td>
+			<input id="manage_edit" class="easyui-combobox" name="data[dtype]" value="{$data.dtype}"
+					data-options="
+						valueField:'id',
+						textField:'text',
+						editable:false,
+						data: [{'id':'0','text':'关闭'},{'id':'1','text':'开启'}],
+						panelHeight:'auto',
+			">
+			</td>
+		<td><div id="manageTip"></div></td>
+	</tr>
+	<tr>
+		<td>自动浏览快拍：</td>
+		<td>
+			<input id="manage_edit" class="easyui-combobox" name="data[ktype]" value="{$data.ktype}"
+					data-options="
+						valueField:'id',
+						textField:'text',
+						editable:false,
+						data: [{'id':'0','text':'关闭'},{'id':'1','text':'开启'}],
+						panelHeight:'auto',
+			">
+			</td>
+		<td><div></div></td>
+	</tr>
+	</table>
+	</form>

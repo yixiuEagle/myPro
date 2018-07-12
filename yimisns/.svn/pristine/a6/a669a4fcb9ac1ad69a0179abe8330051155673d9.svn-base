@@ -1,0 +1,80 @@
+<script type="text/javascript">
+
+$(function(){
+	$('#wj').hide();
+	$('#wz').show();
+})
+$(document).ready(function () {
+$("#type").combobox({
+onChange: function (n,o) {
+	if(n==1||n==2||n==3){
+		$('#wj').show();
+		$('#wz').hide();
+	}else if(n==0){
+		$('#wj').hide();
+		$('#wz').show();
+	}
+}
+});
+});
+//提交
+function daka_Add(uid){
+	$.messager.progress();
+	var form = new FormData(document.getElementById("dakaForm"));
+	var url='{:U('Other/adddaka')}';
+	url +='?uid='+uid;
+	$.ajax({  
+	    url :url,
+	    type : "POST",  
+	    data: form,
+        contentType: false,
+        processData: false,
+	    success : function(data) { 
+	    	$.messager.progress('close');
+	    	Refresh();
+	    	$.messager.alert('提示信息', data.info, 'info'); 
+	    	$('#addBox').dialog('close');
+	    },  
+	    error : function(data) {  
+	    	$.messager.progress('close');
+	    	$.messager.alert('提示信息', data.info, 'error');  
+	    }  
+	});  
+}
+
+</script>
+<form id="dakaForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>uid：</td>
+		<td><input type="text" name="data[uid]" style="width:180px;height:22px" />
+		</td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	<tr>
+		<td>类型：</td>
+		<td colspan="2">
+			<input id="type" class="easyui-combobox" name="data[type]" value="0"
+					data-options="
+						editable:false,
+						valueField:'id',
+						textField:'text',
+						data: [{'id':'0','text':'文字'},{'id':'1','text':'图片'},{'id':'2','text':'语音'},{'id':'3','text':'视频'}],
+						panelHeight:'auto',
+			">
+		</td>
+	</tr>
+	<tr id="wz">
+		<td>内容：</td>
+		<td><textarea name="data[content]" style="height:100px;width:250px"></textarea>
+		</td>
+		<td><div id="user_edit_nicknameTip"></div></td>
+	</tr>
+	<tr id='wj'>
+		<td>文件：</td>
+		<td><input id="file" name="file" type="file" style="width:200px;height:22px;" />
+		</td>
+		<td><div id="addeTip"></div></td>
+	</tr>
+	</table>
+	</form>

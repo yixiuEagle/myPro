@@ -1,0 +1,31 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"groupAuditForm",theme:'App',onError:function(msg){},onSuccess:saveGroupAudit,inIframe:true});
+	$("#audit_group_content").formValidator({onShow:"请输入内容",onFocus:"内容不能为空"}).inputValidator({min:2,max:999,empty:{leftEmpty:false,rightEmpty:false,emptyError:"两边不能有空格"},onError:"内容不能为空"});
+})
+function saveGroupAudit(){
+	$.post('{:U('Group/auditNoPass')}', $("#groupAuditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			 groupRefreshList_{$rand}();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#groupAuditBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="groupAuditForm" style="font-size:13px; padding-top: 20px; padding-left: 10px;">
+<table id="addBox">
+	<tr>
+		<td>理由：</td>
+		<td><textarea id="audit_group_content" name="info[content]" style="width: 350px; height: 88px; padding: 10px;"></textarea></td>
+		<td><div id="audit_group_contentTip"></div></td>
+	</tr>
+	<tr>
+		<td>
+		<input type="hidden" name="info[id]" value="{$id}">
+		</td>
+	</tr>
+</table>
+</form>

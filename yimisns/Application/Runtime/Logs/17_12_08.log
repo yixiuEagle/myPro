@@ -1,0 +1,188 @@
+[ 2017-12-08T00:12:01+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004433s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001781s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001464s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001536s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.001050s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001127s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120849495199',200333,'0.01',1,1,1512663120) [ RunTime:0.047960s ]
+
+[ 2017-12-08T00:13:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\2016040801279307\\&biz_content=\\%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120851549757%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\&charset=\\utf-8\\&method=\\alipay.trade.app.pay\\&notify_url=\\http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\&timeout_express=\\30m\\&timestamp=\\17-12-08 12:13:55\\&version=\\1.0\\&sign=\\\"Gu42%2BzIS1ahOh7L3P3n%2B%2Fz1qZwFKNwgfHloTQWqsCluOgJ194%2B2UFNwnZwvXxZjwfSezt8BVvM21nmlMCxhGi8foSeNClV3dNB7r5cDxVTY%2BogZIeQXlfg5W0ZgJgVisjiyH8SmkrKVenQ2eXxKpghOPomzyVMeqqCbqXjcPamI%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T00:13:55+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001596s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001171s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000867s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000522s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120851549757',200333,'0.01',1,1,1512663235) [ RunTime:0.036682s ]
+
+[ 2017-12-08T00:14:09+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\2016040801279307\\&biz_content=\\{body:http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl,subject:\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c,out_trade_no:2017120848102505,timeout_express:30m,total_amount:0.01,product_code:QUICK_MSECURITY_PAY,payment_type:1}\\&charset=\\utf-8\\&method=\\alipay.trade.app.pay\\&notify_url=\\http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\&timeout_express=\\30m\\&timestamp=\\17-12-08 12:14:09\\&version=\\1.0\\&sign=\\\"Q6463Bordl0V1PWmUDVksA%2B0CwB4jcBmU11gsRQfaECCP3X66j%2F%2Fi8glTw%2BUfN7BvnfMxqO4NxREIyJfCF0KDcDwZVoTde%2BdRbfomH5AJ4qCFMTlQX3tffLvyPWIf8BiA5s8qsb7UxgrW5Wwuh6uOT11ivnpKBIhQFuZqCppk1E%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T00:14:09+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001097s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000905s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000871s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000955s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120848102505',200333,'0.01',1,1,1512663248) [ RunTime:0.034826s ]
+
+[ 2017-12-08T00:14:52+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\2016040801279307\\&biz_content=\\{body:http:\\\/\\\/localhost\\\/yimisns\\\/index.php\\\/user\\\/api\\\/notifyurl,subject:\\u4e00\\u7c73\\u5145\\u503c\\u5145\\u503c,out_trade_no:2017120899579810,timeout_express:30m,total_amount:0.01,product_code:QUICK_MSECURITY_PAY,payment_type:1}\\&charset=\\utf-8\\&method=\\alipay.trade.app.pay\\&notify_url=\\http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\&timeout_express=\\30m\\&timestamp=\\17-12-08 12:14:52\\&version=\\1.0\\&sign=\\\"bob%2FDb07xMtpKyiM4HwJ%2FDM6xfYJCCrbsItHBh8dgd5iurRxlfZpaXVvvWLKiFsWePbIbGKfIocIX%2FtsRDBXp68X8NLZP9VQ7Vg1GDGGuK1EpcO78HPCvf%2FsSJV7BlarzJdjerOrvbuk7L1dx5QkUVN053I%2BSJUPCvCK1vyhnyI%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T00:14:52+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001799s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001581s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000885s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000526s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120899579810',200333,'0.01',1,1,1512663292) [ RunTime:0.056108s ]
+
+[ 2017-12-08T00:15:04+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\2016040801279307\\&biz_content=\\%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120856995257%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\&charset=\\utf-8\\&method=\\alipay.trade.app.pay\\&notify_url=\\http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\&timeout_express=\\30m\\&timestamp=\\17-12-08 12:15:04\\&version=\\1.0\\&sign=\\\"l6g7kP7T0%2BvFpjGVHNvpoTIFGn1v7tvcbujOFlEf%2BGjX0f8IG30G%2FBuXdMdIUfoabPANbcRnaBR37cTmdiqNn1EFUR5Ga7DD%2FBULgudyq9El8zBOUllvEn8iMFftbQ22nYo4TjcKFkRQhGJ1nw9ILmp5JW%2FTInehVKsTi0q3%2B%2Bg%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T00:15:04+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001699s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001256s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000867s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000611s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120856995257',200333,'0.01',1,1,1512663304) [ RunTime:0.034327s ]
+
+[ 2017-12-08T00:15:34+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120854515655%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-08 12:15:34\\\"&version=\\\"1.0\\\"&sign=\\\"Wg7gJZWc%2F05XKO0dSpzRUT3mp2N6h6DKhwvVrqwUrNKxQt78dCwj%2F19TMSM9ZxW51g26L1rNMyloa045H%2F6mBtUtvpBGwkb%2BP17lVusiKQnkUlIZa0WkO1yv4mmz4%2BTrps%2Bt3%2Faih0r5GauxrZ9v7V%2BPu6CokCp5KDRAyO3izfY%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T00:15:34+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001281s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001908s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000852s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000532s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120854515655',200333,'0.01',1,1,1512663334) [ RunTime:0.096488s ]
+
+[ 2017-12-08T00:32:16+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120848984955%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-08 12:32:16\\\"&version=\\\"1.0\\\"&sign=\\\"QlVB0E%2FmyUtCW97FVgtzCTTtOmSnjumHHTZpB3zpNmFegL1Vw2LkV85sx5L1K%2FTuu79JAN%2BVhof51PlCHo6gAzCZ4D3Airokn%2Fvc5AxB10q%2B9Luh77OrxLXygb%2FO%2BoC4ehBLwSnjvM2I49bQAAhXq7ysn%2FK3NqARaxn8TjCH%2FxE%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T00:32:16+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001593s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001281s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000863s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000746s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120848984955',200333,'0.01',1,1,1512664336) [ RunTime:0.129257s ]
+
+[ 2017-12-08T00:34:12+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002012s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001190s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001279s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.000643s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120852971015',200333,'0.01',1,1,1512664452) [ RunTime:0.044824s ]
+
+[ 2017-12-08T10:43:46+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120810155101%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-08 10:43:43\\\"&version=\\\"1.0\\\"&sign=\\\"Uk6OxQuTFauE%2FlRtNqRSlza6i2PdMg1XHtI2C3Hy%2BpvUrcZkv5ir9O96XSSf02i5%2FY0yavGuyZ1F8c%2FbSupHHuPFmnbB2yZmzfH%2BRuUJCxZRjBXYoAs14n8O%2BdoyYZklMvQigiQ7XKfkMPh97%2BiO7746RLPU%2FScHWsq7%2Fuo8lqI%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T10:43:46+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.433587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.114428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.114929s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.509614s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001418s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.473599s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.106659s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120810155101',200333,'0.01',1,1,1512701012) [ RunTime:0.257335s ]
+
+[ 2017-12-08T10:45:23+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120851981004%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17-12-08 10:45:23\\\"&version=\\\"1.0\\\"&sign=\\\"ife5Ij9W%2FLHrQfrlqhgzfEuo9qUS5bNnxcnxnUdwRMGOzd2zIrWNWLTA4l2FC%2FyCTbZvHDAcmgYM7QwskQFnEj2Lqa%2BxGnNO6mVEy6zGAJtJLniZWms7S8KUpjPmGHoRbKkgIBZ5vS9eY4%2Bi%2FesfmWYoa7C12zRplz0JDALEF9Y%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T10:45:23+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002272s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.001985s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120851981004',200333,'0.01',1,1,1512701123) [ RunTime:0.061842s ]
+
+[ 2017-12-08T11:14:30+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120853102495%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"17171717-DecDec-0808 1111:1212:3030\\\"&version=\\\"1.0\\\"&sign=\\\"lCcNLITkgxv%2Bd0v97UAHgnYkAgVhv%2BcPLe8gpCdlJEJS%2BwHgx9Y6V7ulMt6mgPdk5KOQSNEIB9bpfzO978dp%2By6IHSDCLPAeuSseKNAZTFnLH5e%2BTc61K3rSPVQ7wVVgE7uA03XkrzcHUdotxgg47L9ajYd2L4aH6Sl4jewTquU%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T11:14:30+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031015s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002591s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002065s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002104s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120853102495',200333,'0.01',1,1,1512702869) [ RunTime:0.103974s ]
+
+[ 2017-12-08T11:16:25+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: api result={"data":{"data":"app_id=\\\"2016040801279307\\\"&biz_content=\\\"%7B%22body%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fyimisns%5C%2Findex.php%5C%2Fuser%5C%2Fapi%5C%2Fnotifyurl%22%2C%22subject%22%3A%22%5Cu4e00%5Cu7c73%5Cu5145%5Cu503c%5Cu5145%5Cu503c%22%2C%22out_trade_no%22%3A%222017120857575549%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.01%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22payment_type%22%3A%221%22%7D\\\"&charset=\\\"utf-8\\\"&method=\\\"alipay.trade.app.pay\\\"&notify_url=\\\"http:\/\/www.yimisns.com\/yimisns.com\/index.php\/user\/api\/notifyurl\\\"&timeout_express=\\\"30m\\\"&timestamp=\\\"2017-12-08 11:16:25\\\"&version=\\\"1.0\\\"&sign=\\\"FLdNGznw%2BbC07WFB8rndRFYyWtoQ8axDImGZ0ObJLkTaHMu9oaxXnFZ4FIDcfyELvUHhfrJAqQZxYzLwA9tWMVP1pO1UAHxf0zE4sphwDnLKiyMIixhKURZGtUbblXIx1qYeeLDtZQbto6LvSBYLgqaeJb8kblhMA%2FgObG5NoCw%3D\\\"&sign_type=\\\"RSA\\\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-12-08T11:16:25+08:00 ] ::1 /yimisns/index.php/User/Api/recharege?memberid=1&chongzhi_type=2&action=0&uid=200333&fee=0.01
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003816s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001315s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001085s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `tc_user_recharge` [ RunTime:0.002313s ]
+SQL: INSERT INTO `tc_user_recharge` (`id`,`uid`,`fee`,`memberid`,`chongzhi_type`,`createtime`) VALUES ('2017120857575549',200333,'0.01',1,1,1512702985) [ RunTime:0.035220s ]
+

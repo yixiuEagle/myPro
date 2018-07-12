@@ -1,0 +1,289 @@
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: user={"uid":"200333","phone":"18148410038","deviceid":"0EC1B8F738201B82DEC95198C32F890C","password":"e10adc3949ba59abbe56e057f20f883e","nickname":"\u4e00\u4f11","headsmall":"","yinsi_type":"0","safe_level":"1","msg_setting":"1111","safe_phone":"18148410038","bind_qq":"","bind_weixin":"","bind_renren":"","bind_sina":"","wurao_start":"","wurao_end":"","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1"}
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: mydeviceid=0EC1B8F738201B82DEC95198C32F890C
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: into null2
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: safe_phone=18148410038
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: deviceid=0EC1B8F738201B82DEC95198C32F890C,user_deviceid=0EC1B8F738201B82DEC95198C32F890C
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: field=u.*
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+INFO: api result={"data":{"uid":"200333","sort":"","extend":"","phone":"18148410038","headsmall":"","nickname":"\u4e00\u4f11","sign":"\u989d","openfire":"452671","gender":"0","logintime":"1508915756","isdelete":"0","createtime":"1508915604","age":"1508860800","hometown":"","job":"","xingzuo":"","money":"0","worth_user":"0","memberenddate":"0","memberlevel":"0","lat":"30.676872","lng":"104.051096","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"18148410038","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"0EC1B8F738201B82DEC95198C32F890C","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508915754","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":50,"follownum":"0","fansnum":"0"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-07T16:07:40+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.050636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.050885s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.016529s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000925s ]
+SQL: SELECT `uid`,`phone`,`deviceid`,`password`,`nickname`,`headsmall`,`yinsi_type`,`safe_level`,`msg_setting`,`safe_phone`,`bind_qq`,`bind_weixin`,`bind_renren`,`bind_sina`,`wurao_start`,`wurao_end`,`tixing_comment`,`tixing_zan`,`tixing_frienddynamic`,`tixing_notfriendmsg`,`tixing_group`,`kuaipai_sendnearbyperson`,`kuaipai_videoshow` FROM `tc_user` WHERE ( `phone` = '18148410038' ) LIMIT 1   [ RunTime:0.003165s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200333 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.050925s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200333 ) AND ( `fid` = 200333 ) LIMIT 1   [ RunTime:0.013947s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200333 ) LIMIT 1   [ RunTime:0.009193s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.006066s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `tc_member_fee` [ RunTime:0.004851s ]
+
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: user={"uid":"200333","phone":"18148410038","deviceid":"0EC1B8F738201B82DEC95198C32F890C","password":"e10adc3949ba59abbe56e057f20f883e","nickname":"\u4e00\u4f11","headsmall":"","yinsi_type":"0","safe_level":"1","msg_setting":"1111","safe_phone":"18148410038","bind_qq":"","bind_weixin":"","bind_renren":"","bind_sina":"","wurao_start":"","wurao_end":"","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1"}
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: mydeviceid=0EC1B8F738201B82DEC95198C32F890C
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: into null2
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: safe_phone=18148410038
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: deviceid=0EC1B8F738201B82DEC95198C32F890C,user_deviceid=0EC1B8F738201B82DEC95198C32F890C
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: field=u.*
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+INFO: api result={"data":{"uid":"200333","sort":"","extend":"","phone":"18148410038","headsmall":"","nickname":"\u4e00\u4f11","sign":"\u989d","openfire":"452671","gender":"0","logintime":"1508915756","isdelete":"0","createtime":"1508915604","age":"1508860800","hometown":"","job":"","xingzuo":"","money":"0","worth_user":"0","memberenddate":"0","memberlevel":"0","lat":"30.676872","lng":"104.051096","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"18148410038","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"0EC1B8F738201B82DEC95198C32F890C","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508915754","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":50,"follownum":"0","fansnum":"0"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-07T16:09:14+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001240s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003774s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001027s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000957s ]
+SQL: SELECT `uid`,`phone`,`deviceid`,`password`,`nickname`,`headsmall`,`yinsi_type`,`safe_level`,`msg_setting`,`safe_phone`,`bind_qq`,`bind_weixin`,`bind_renren`,`bind_sina`,`wurao_start`,`wurao_end`,`tixing_comment`,`tixing_zan`,`tixing_frienddynamic`,`tixing_notfriendmsg`,`tixing_group`,`kuaipai_sendnearbyperson`,`kuaipai_videoshow` FROM `tc_user` WHERE ( `phone` = '18148410038' ) LIMIT 1   [ RunTime:0.001224s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200333 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000776s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.002436s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200333 ) AND ( `fid` = 200333 ) LIMIT 1   [ RunTime:0.000444s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200333 ) LIMIT 1   [ RunTime:0.000352s ]
+
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: user={"uid":"200333","phone":"18148410038","deviceid":"0EC1B8F738201B82DEC95198C32F890C","password":"e10adc3949ba59abbe56e057f20f883e","nickname":"\u4e00\u4f11","headsmall":"","yinsi_type":"0","safe_level":"1","msg_setting":"1111","safe_phone":"18148410038","bind_qq":"","bind_weixin":"","bind_renren":"","bind_sina":"","wurao_start":"","wurao_end":"","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1"}
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: mydeviceid=0EC1B8F738201B82DEC95198C32F890C
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: into null2
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: safe_phone=18148410038
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: deviceid=0EC1B8F738201B82DEC95198C32F890C,user_deviceid=0EC1B8F738201B82DEC95198C32F890C
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+ERR: field=u.*
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+INFO: api result={"data":{"uid":"200333","sort":"","extend":"","phone":"18148410038","headsmall":"","nickname":"\u4e00\u4f11","sign":"\u989d","openfire":"452671","gender":"0","logintime":"1508915756","isdelete":"0","createtime":"1508915604","age":"1508860800","hometown":"","job":"","xingzuo":"","money":"0","worth_user":"0","memberenddate":"0","memberlevel":"0","lat":"30.676872","lng":"104.051096","auto_buy_member":"1","alipay_account":"","alipay_name":"","openid":"","type":"0","yinsi_type":"0","safe_level":"1","bind_qq":"","bind_weixin":"","bind_sina":"","bind_renren":"","wurao_start":"","wurao_end":"","safe_phone":"18148410038","msg_setting":"1111","tixing_comment":"1","tixing_zan":"0","tixing_frienddynamic":"1","tixing_notfriendmsg":"0","tixing_group":"0","kuaipai_sendnearbyperson":"1","kuaipai_videoshow":"1","deviceid":"0EC1B8F738201B82DEC95198C32F890C","wifi_ssid":"&quot;yimi&quot;","wifi_updatetime":"1508915754","wifi_lat":"","wifi_lng":"","usertype":"0","headlarge":"","isfriend":0,"isvisible":1,"is_setting":1,"remarkname":"","isbindphone":1,"completion":50,"follownum":"0","fansnum":"0"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-11-07T16:10:08+08:00 ] ::1 /yimisns/index.php/user/api/login?phone=18148410038&password=123456&deviceid=0EC1B8F738201B82DEC95198C32F890C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.047450s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001084s ]
+SQL: SELECT `uid`,`phone`,`deviceid`,`password`,`nickname`,`headsmall`,`yinsi_type`,`safe_level`,`msg_setting`,`safe_phone`,`bind_qq`,`bind_weixin`,`bind_renren`,`bind_sina`,`wurao_start`,`wurao_end`,`tixing_comment`,`tixing_zan`,`tixing_frienddynamic`,`tixing_notfriendmsg`,`tixing_group`,`kuaipai_sendnearbyperson`,`kuaipai_videoshow` FROM `tc_user` WHERE ( `phone` = '18148410038' ) LIMIT 1   [ RunTime:0.000811s ]
+SQL: SELECT u.* FROM tc_user u WHERE ( `uid` = 200333 ) ORDER BY u.uid asc LIMIT 1   [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `tc_user_friend` [ RunTime:0.002224s ]
+SQL: SELECT `remark` FROM `tc_user_friend` WHERE ( `uid` = 200333 ) AND ( `fid` = 200333 ) LIMIT 1   [ RunTime:0.000397s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user_friend` WHERE ( `fid` = 200333 ) LIMIT 1   [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.001945s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `uid` = 200333 ) LIMIT 1   [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `tc_member_fee` [ RunTime:0.001814s ]
+
+[ 2017-11-07T17:15:41+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:15:41+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001734s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003072s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001276s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.002455s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000632s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.126851s ]
+
+[ 2017-11-07T17:30:30+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:30:30+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003129s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002518s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001193s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.003195s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000863s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000697s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3999 行.
+SQL: SELECT * FROM `tc_service_search` WHERE ( `uid` = 200049 ) AND ( `id` <> '52' ) GROUP BY keyword ORDER BY count("keyword")  [ RunTime:0.017211s ]
+
+[ 2017-11-07T17:32:29+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:32:29+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002116s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001987s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002727s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.044247s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000740s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000717s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3999 行.
+SQL: SELECT * FROM `tc_service_search` WHERE ( `uid` = 200049 ) AND ( `id` <> '52' ) GROUP BY keyword ORDER BY count("keyword") desc  [ RunTime:0.001086s ]
+
+[ 2017-11-07T17:34:39+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:34:39+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001205s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000844s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.001987s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000418s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000636s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3999 行.
+SQL: SELECT `id`,`uid`,`keyword`,`createtime`,count("keyword") FROM `tc_service_search` WHERE ( `uid` = 200049 ) AND ( `id` <> '52' ) GROUP BY keyword ORDER BY count("keyword") desc  [ RunTime:0.038150s ]
+
+[ 2017-11-07T17:35:06+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:35:06+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001955s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001934s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001366s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.002018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000655s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.000417s ]
+
+[ 2017-11-07T17:39:25+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:39:25+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002030s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004055s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003939s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001186s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.002872s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000616s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.001546s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3999 行.
+SQL: SELECT `id`,`uid`,`keyword`,`createtime`,count("keyword") FROM `tc_service_search` WHERE ( `uid` = 200049 ) AND ( `id` <> '52' ) GROUP BY keyword ORDER BY count("keyword") desc  [ RunTime:0.001115s ]
+NOTIC: [2] array_unshift() expects parameter 1 to be array, null given D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4000 行.
+NOTIC: [8] Undefined index: code D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4001 行.
+NOTIC: [8] Undefined index: code D:\SUB\php project\yimisns\Application\Common\Api\Api.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg D:\SUB\php project\yimisns\Application\Common\Api\Api.class.php 第 72 行.
+NOTIC: [8] Undefined index: debugMsg D:\SUB\php project\yimisns\Application\Common\Api\Api.class.php 第 74 行.
+NOTIC: [8] Undefined index: page D:\SUB\php project\yimisns\Application\Common\Api\Api.class.php 第 81 行.
+
+[ 2017-11-07T17:40:10+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:40:10+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001865s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002054s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000979s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000517s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000237s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000428s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.000281s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000648s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3999 行.
+SQL: SELECT `id`,`uid`,`keyword`,`createtime`,count("keyword") FROM `tc_service_search` WHERE ( `uid` = 200049 ) AND ( `id` <> '52' ) GROUP BY keyword ORDER BY count("keyword") desc  [ RunTime:0.002230s ]
+NOTIC: [2] array_unshift() expects parameter 1 to be array, null given D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4000 行.
+
+[ 2017-11-07T17:41:01+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:41:01+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001308s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001056s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000850s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000824s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.001820s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000423s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.001442s ]
+
+[ 2017-11-07T17:42:53+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"52","uid":"200049","keyword":"\u54af\u966a\u60a8","createtime":"1477574451"},{"id":"51","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477570850"},{"id":"50","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274416"},{"id":"49","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477274413"},{"id":"48","uid":"200049","keyword":"??","createtime":"1477274390"},{"id":"47","uid":"200049","keyword":"??","createtime":"1477274387"},{"id":"46","uid":"200049","keyword":"??","createtime":"1477274385"},{"id":"45","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477274382"},{"id":"44","uid":"200049","keyword":"??","createtime":"1477274378"},{"id":"43","uid":"200049","keyword":"??","createtime":"1477274375"}],"msg":"","debugMsg":"","code":0,"page":{"total":50,"count":10,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":10}}
+[ 2017-11-07T17:42:53+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: api result={"data":[{"id":"13","uid":"200049","keyword":"??","createtime":"1477187968","count(\"keyword\")":"23"},{"id":"9","uid":"200049","keyword":"\u94f6\u884ci4010699i","createtime":"1477187953","count(\"keyword\")":"11"},{"id":"3","uid":"200049","keyword":"\u94f6\u884c","createtime":"1477126698","count(\"keyword\")":"8"},{"id":"22","uid":"200049","keyword":"??'&quot;&gt;&lt;svg onload=prompt()&gt;","createtime":"1477187996","count(\"keyword\")":"2"},{"id":"12","uid":"200049","keyword":"??'&quot;&gt;&lt;iframe onload=alert()&gt;","createtime":"1477187959","count(\"keyword\")":"2"},{"id":"17","uid":"200049","keyword":"??'&quot;&gt;&lt;img src=x onerror=prompt()&gt;","createtime":"1477187976","count(\"keyword\")":"2"},{"id":"5","uid":"200049","keyword":"\u8d85\u5e02","createtime":"1477127649","count(\"keyword\")":"1"}],"msg":"","debugMsg":"","code":0,"page":null}
+[ 2017-11-07T17:42:53+08:00 ] ::1 /yimisns/index.php/user/api/service_search_list?uid=200049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001242s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000946s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` WHERE ( `uid` = 200049 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.003496s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_service_search` WHERE ( uid=200049 ) LIMIT 1   [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000538s ]
+SQL: SELECT * FROM `tc_service_search` WHERE ( uid=200049 ) ORDER BY createtime desc LIMIT 0,10   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `tc_service_search` [ RunTime:0.000646s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 3999 行.
+SQL: SELECT `id`,`uid`,`keyword`,`createtime`,count("keyword") FROM `tc_service_search` WHERE ( `uid` = 200049 ) AND ( `id` <> '52' ) GROUP BY keyword ORDER BY count("keyword") desc  [ RunTime:0.000551s ]
+NOTIC: [8] Undefined variable: page D:\SUB\php project\yimisns\Application\User\Model\UserModel.class.php 第 4000 行.
+

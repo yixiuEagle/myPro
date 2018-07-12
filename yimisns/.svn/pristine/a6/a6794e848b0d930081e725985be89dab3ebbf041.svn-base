@@ -1,0 +1,36 @@
+<script type="text/javascript">
+//提交
+function usermanage(){
+	$.messager.progress();
+	$.post('{:U('User/userManage?uid='.$data['uid'])}', $("#manageForm").serialize(), function(msg){
+		if(!msg.status){
+			$.messager.progress('close');
+			$.messager.alert('提示信息', msg.info, 'error');
+		}else{
+			$.messager.progress('close');
+			$.messager.alert('提示信息', msg.info, 'info');
+			Refresh();
+			$('#userBox').dialog('close');
+		}
+	})
+}
+
+</script>
+<form id="manageForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td>会员状态：</td>
+		<td>
+			<input id="manage_edit" class="easyui-combobox" name="data[memberlevel]" value="{$data.memberlevel}"
+					data-options="
+						editable:false,
+						valueField:'id',
+						textField:'text',
+						data: [{'id':'0','text':'关闭'},{'id':'1','text':'开启(1个月)'},{'id':'2','text':'开启(3个月)'},{'id':'3','text':'开启(6个月)'},{'id':'4','text':'开启(12个月)'}],
+						panelHeight:'auto',
+			">
+			</td>
+		<td><div id="manageTip"></div></td>
+	</tr>
+	</table>
+	</form>
