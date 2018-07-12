@@ -1,0 +1,1 @@
+a:5:{i:0;s:6:"roleid";i:1;s:1:"m";i:2;s:1:"a";i:3;s:4:"data";s:5:"_type";a:4:{s:6:"roleid";s:19:"tinyint(3) unsigned";s:1:"m";s:8:"char(20)";s:1:"a";s:8:"char(20)";s:4:"data";s:8:"char(30)";}}

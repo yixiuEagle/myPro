@@ -1,0 +1,102 @@
+[ 2016-12-08T21:57:07+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-08T21:57:07+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002221s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011816s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.056462s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.053017s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.053814s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.053639s ]
+NOTIC: [8] Undefined index: lng E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 348 行.
+NOTIC: [8] Undefined index: lat E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 348 行.
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.053328s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY (POWER(MOD(ABS(s.lng - ),360),2) + POWER(ABS(s.lat - ),2)) asc LIMIT 0,20   [ RunTime:0.051468s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '),360),2) + POWER(ABS(s.lat - ),2)) asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY (POWER(MOD(ABS(s.lng - ),360),2) + POWER(ABS(s.lat - ),2)) asc LIMIT 0,20  
+
+[ 2016-12-08T21:57:12+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[{"sid":"26","suid":"20000026","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160505\/s_06a4ce61f46f1103.jpg","name":"\u6211\u7684\u7a7a\u95f4","lng":"117.142505","lat":"36.678467","address":"\u5c71\u4e1c\u7701\u6d4e\u5357\u5e02\u5386\u57ce\u533a\u821c\u534e\u4e1c\u8def","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"},{"sid":"6","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"6465","lng":"103.978431","lat":"30.738019","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"}],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-08T21:57:12+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000527s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006053s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.071953s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.053297s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.055806s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.063684s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.058263s ]
+SQL: SELECT s.*,((select sum(buy_count)*0.3 from tc_order_goods where goods_id in (select id from tc_goods where sid=s.id)) + (select sum(click_count)*0.4 from tc_goods where sid=s.id) + score*100*0.3) renqi,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY renqi desc LIMIT 0,20   [ RunTime:0.072987s ]
+
+[ 2016-12-08T21:57:27+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-08T21:57:27+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000568s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005422s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.050701s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.051568s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.051134s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.053207s ]
+NOTIC: [8] Undefined index: lng E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 348 行.
+NOTIC: [8] Undefined index: lat E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 348 行.
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.050027s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY (POWER(MOD(ABS(s.lng - ),360),2) + POWER(ABS(s.lat - ),2)) asc LIMIT 0,20   [ RunTime:0.050848s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '),360),2) + POWER(ABS(s.lat - ),2)) asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY (POWER(MOD(ABS(s.lng - ),360),2) + POWER(ABS(s.lat - ),2)) asc LIMIT 0,20  
+
+[ 2016-12-08T21:58:10+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[{"sid":"6","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"6465","lng":"103.978431","lat":"30.738019","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"},{"sid":"26","suid":"20000026","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160505\/s_06a4ce61f46f1103.jpg","name":"\u6211\u7684\u7a7a\u95f4","lng":"117.142505","lat":"36.678467","address":"\u5c71\u4e1c\u7701\u6d4e\u5357\u5e02\u5386\u57ce\u533a\u821c\u534e\u4e1c\u8def","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"}],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-08T21:58:10+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000536s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005744s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.053238s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.055638s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.085560s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.051098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.056471s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY (POWER(MOD(ABS(s.lng - 0),360),2) + POWER(ABS(s.lat - 0),2)) asc LIMIT 0,20   [ RunTime:0.057621s ]
+
+[ 2016-12-08T22:01:57+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":{},"msg":"\u7ecf\u7eac\u5ea6\u4e0d\u53ef\u4ee5\u4e3a\u7a7a","debugMsg":"","code":1,"page":""}
+[ 2016-12-08T22:01:57+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000546s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005328s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.053725s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.051679s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.054219s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.054795s ]
+
+[ 2016-12-08T22:03:04+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[{"sid":"26","suid":"20000026","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160505\/s_06a4ce61f46f1103.jpg","name":"\u6211\u7684\u7a7a\u95f4","lng":"117.142505","lat":"36.678467","address":"\u5c71\u4e1c\u7701\u6d4e\u5357\u5e02\u5386\u57ce\u533a\u821c\u534e\u4e1c\u8def","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"},{"sid":"6","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"6465","lng":"103.978431","lat":"30.738019","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"}],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-08T22:03:04+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000532s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005496s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.056107s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.053629s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.067518s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.093988s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.053036s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY (POWER(MOD(ABS(s.lng - 117),360),2) + POWER(ABS(s.lat - 36),2)) asc LIMIT 0,20   [ RunTime:0.052776s ]
+

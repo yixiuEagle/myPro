@@ -1,0 +1,56 @@
+<!-- 类别列表 -->
+<table id="categoryList" class="easyui-datagrid"
+	title="{$currentpos}"
+	data-options="border:false,fit:true,fitColumns:false,rownumbers:true,singleSelect:true,animate:true,
+				url:'{:U('activity/index')}',idField:'id',pagination:true,
+				toolbar:categoryToolbar">
+	<thead>
+		<tr>
+			<th data-options="field:'title',width:300,align:'center'">标题</th>
+			<th data-options="field:'start_time',width:300,align:'center',formatter:genderDate">开始时间</th>
+			<th data-options="field:'end_time',width:300,align:'center',formatter:genderDate">结束时间</th>
+			<th data-options="field:'address',width:300,align:'center'">地点</th>
+			<th data-options="field:'id',width:200,align:'center',formatter:categoryOperateText">操作</th>
+		</tr>
+	</thead>
+</table>
+	
+<script type="text/javascript">
+var categoryToolbar = [
+	{ text: '刷新', iconCls: 'icon-reload', handler: categoryRefreshList },
+];
+//格式化操作内容
+function categoryOperateText(id){
+	var btn = [];
+		btn.push('<a href="javascript:void(0);" onclick="categoryDelete('+id+')">删除</a>');
+	return btn.join(' | ');
+}
+//创建时间内容格式化
+function genderDate(val){
+	var date = new Date(parseInt(val)*1000);
+
+	return date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+}
+//刷新
+function categoryRefreshList(){
+	$('#categoryList').datagrid('reload');
+}
+//删除
+function categoryDelete(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '删除错误', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('Activity/delete')}', { id: id}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				categoryRefreshList();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+</script>

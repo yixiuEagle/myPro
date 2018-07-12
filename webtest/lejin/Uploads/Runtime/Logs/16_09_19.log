@@ -1,0 +1,72 @@
+[ 2016-09-19T12:39:46+08:00 ] 127.0.0.1 /index.php/share/api/groupsList
+ERR: {"data":{},"msg":"\u7528\u6237\u4e0d\u5b58\u5728","debugMsg":"\u7528\u6237uid\u4e0d\u5b58\u5728\u6216uid\u4e3a\u7a7a","code":1,"page":""}
+[ 2016-09-19T12:39:46+08:00 ] 127.0.0.1 /index.php/share/api/groupsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020721s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.010869s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.125777s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.009389s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 0 ) LIMIT 1   [ RunTime:0.001378s ]
+
+[ 2016-09-19T12:40:00+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/0
+ERR: {"data":{},"msg":"\u7528\u6237\u4e0d\u5b58\u5728","debugMsg":"\u7528\u6237uid\u4e0d\u5b58\u5728\u6216uid\u4e3a\u7a7a","code":1,"page":""}
+[ 2016-09-19T12:40:00+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000583s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005004s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006585s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.005593s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006357s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 0 ) LIMIT 1   [ RunTime:0.001167s ]
+
+[ 2016-09-19T12:41:49+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/2/uid/20000002
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-19T12:41:50+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/2/uid/20000002
+ERR: {"data":[{"id":"9","name":"\u4f4e\u70e737.5'","sign":"","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160516\/s_c6f955a19df3027a.jpg","isdefault":"0","logo":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160516\/s_003797420a5c77b0.jpg","isfollow":"0","categoryname":"\u5a31\u4e50\u2022\u5f71\u97f3","followcount":"1","isblack":"0","is_shop":"0","sid":null,"backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160516\/c6f955a19df3027a.jpg"},{"id":"1","name":"\u7b2c\u4e09\u773c","sign":"abc","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160510\/s_682ea8f7739223a0.jpg","isdefault":"1","logo":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160520\/s_3e010b097cf206e8.jpg","isfollow":"0","categoryname":"\u95f2\u8c08\u8da3\u95fb","followcount":"2","isblack":"0","is_shop":"1","sid":"1","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160510\/682ea8f7739223a0.jpg"}],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-19T12:41:50+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/2/uid/20000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000455s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005745s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.029456s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.005921s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006008s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001216s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.088951s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_groups u WHERE ( u.uid = '20000002' ) LIMIT 1   [ RunTime:0.001766s ]
+SQL: SELECT u.id,u.name,u.sign,u.background,u.isdefault,ifnull((select `smallUrl` from `tc_groups_head` where id=u.logo),'') as logo,(select count(*) from `tc_groups_follow` where uid=20000002 and groupsid=u.id) as isfollow,(select `name` from `tc_share_category` where id=u.cateid) as categoryname,(select count(*) from `tc_groups_follow` where groupsid=u.id) as followcount,(select count(*) from `tc_groups_black` where uid=20000002 and groupsid=u.id) as isblack,(select count(*) from `tc_supplier` where groups_id=u.id) as is_shop,s.id as sid FROM tc_groups u  left join tc_supplier s on u.id=s.groups_id  WHERE ( u.uid = '20000002' ) ORDER BY u.sort asc LIMIT 0,20   [ RunTime:0.197551s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.071140s ]
+SQL: SELECT `background_group` FROM `tc_background` LIMIT 1   [ RunTime:0.001555s ]
+SQL: SELECT `background_group` FROM `tc_background` LIMIT 1   [ RunTime:0.001569s ]
+
+[ 2016-09-19T12:44:52+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/2/uid/20000002
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-19T12:44:52+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/2/uid/20000002
+ERR: {"data":[{"id":"9","name":"\u4f4e\u70e737.5'","sign":"","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160516\/s_c6f955a19df3027a.jpg","isdefault":"0","logo":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160516\/s_003797420a5c77b0.jpg","isfollow":"0","categoryname":"\u5a31\u4e50\u2022\u5f71\u97f3","followcount":"1","isblack":"0","is_shop":"0","sid":0,"backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160516\/c6f955a19df3027a.jpg"},{"id":"1","name":"\u7b2c\u4e09\u773c","sign":"abc","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160510\/s_682ea8f7739223a0.jpg","isdefault":"1","logo":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160520\/s_3e010b097cf206e8.jpg","isfollow":"0","categoryname":"\u95f2\u8c08\u8da3\u95fb","followcount":"2","isblack":"0","is_shop":"1","sid":"1","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160510\/682ea8f7739223a0.jpg"}],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-19T12:44:52+08:00 ] 127.0.0.1 /index.php/share/api/groupsList/action/2/uid/20000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000525s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005565s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008615s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006982s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.088398s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001226s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.006375s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_groups u WHERE ( u.uid = '20000002' ) LIMIT 1   [ RunTime:0.001129s ]
+SQL: SELECT u.id,u.name,u.sign,u.background,u.isdefault,ifnull((select `smallUrl` from `tc_groups_head` where id=u.logo),'') as logo,(select count(*) from `tc_groups_follow` where uid=20000002 and groupsid=u.id) as isfollow,(select `name` from `tc_share_category` where id=u.cateid) as categoryname,(select count(*) from `tc_groups_follow` where groupsid=u.id) as followcount,(select count(*) from `tc_groups_black` where uid=20000002 and groupsid=u.id) as isblack,(select count(*) from `tc_supplier` where groups_id=u.id) as is_shop,s.id as sid FROM tc_groups u  left join tc_supplier s on u.id=s.groups_id  WHERE ( u.uid = '20000002' ) ORDER BY u.sort asc LIMIT 0,20   [ RunTime:0.002317s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.006297s ]
+SQL: SELECT `background_group` FROM `tc_background` LIMIT 1   [ RunTime:0.001206s ]
+SQL: SELECT `background_group` FROM `tc_background` LIMIT 1   [ RunTime:0.001012s ]
+

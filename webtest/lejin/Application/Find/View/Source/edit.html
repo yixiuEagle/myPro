@@ -1,0 +1,29 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"categoryEditForm",theme:'App',onError:function(msg){/*$.messager.alert('错误提示', msg, 'error');*/},onSuccess:categorySaveEdit,inIframe:true});
+	$("#edit_category_name").formValidator({onShow:"请输入类别名称",onFocus:"类别名称不能为空",onCorrect:"输入正确"}).inputValidator({min:1,empty:{leftEmpty:false,rightEmpty:false,emptyError:'类别名称不能有空格'},onError:"类别名称不能为空"});
+})
+function categorySaveEdit(){
+	$.post('{:U('category/edit')}', $("#categoryEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			categoryRefreshList();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#categoryEditBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="categoryEditForm" style="font-size:13px; padding: 20px;">
+<table id="addBox">
+	<tr>
+		<td>名称：</td>
+		<td><input id="edit_category_name" name="name" value="{$info.name}" type="text" style="width:178px;height:22px" /></td>
+		<td><div id="edit_category_nameTip"></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="hidden" name="id" value="{$info.id}" /></td>
+	</tr>
+</table>
+</form>

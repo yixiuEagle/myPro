@@ -1,0 +1,432 @@
+[ 2016-08-25T00:08:08+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-08-25T00:08:08+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020699s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006248s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.006425s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006017s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001273s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_group` WHERE ( `cat_id` = 1 ) LIMIT 1   [ RunTime:0.001021s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.022008s ]
+ERR: 1054:Unknown column 'create_time' in 'order clause'
+ [ SQL语句 ] : SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  ORDER BY create_time desc LIMIT 0,20  
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Group\Model\GroupModel.class.php 第 18 行.
+
+[ 2016-08-25T00:08:30+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-08-25T00:08:30+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000532s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005068s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008154s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.005852s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006051s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001654s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_group` WHERE ( `cat_id` = 1 ) LIMIT 1   [ RunTime:0.002178s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.003262s ]
+ERR: 1054:Unknown column 'create_time' in 'order clause'
+ [ SQL语句 ] : SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  ORDER BY create_time desc LIMIT 0,20  
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Group\Model\GroupModel.class.php 第 18 行.
+
+[ 2016-08-25T00:09:00+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-08-25T00:09:00+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005285s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006455s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.008172s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006788s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001545s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_group` WHERE ( `cat_id` = 1 ) LIMIT 1   [ RunTime:0.001743s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.001943s ]
+ERR: 1054:Unknown column 'create_time' in 'order clause'
+ [ SQL语句 ] : SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  ORDER BY create_time desc LIMIT 0,20  
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Group\Model\GroupModel.class.php 第 18 行.
+
+[ 2016-08-25T00:09:35+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+ERR: {"data":[{"id":"2","uid":"20000026","creator":"test","name":"\u6d4b\u8bd5\u7fa4\u7ec4","logosmall":"","logolarge":"","extend":"{\"rule\":\"\\u7fa4\\u89c4\",\"cat_id\":\"1\",\"address\":\"\\u5730\\u70b9\"}","description":"\u7fa4\u7ec4\u7b80\u4ecb","count":null,"isjoin":0,"role":-1,"getmsg":-1,"createtime":"1471878065"},{"id":"1","uid":"20000026","creator":"test","name":"\u6d4b\u8bd5\u7fa4\u7ec4","logosmall":"","logolarge":"","extend":"{\"rule\":\"\\u7fa4\\u89c4\",\"cat_id\":\"1\",\"address\":\"\\u5730\\u70b9\"}","description":"\u7fa4\u7ec4\u7b80\u4ecb","count":null,"isjoin":0,"role":-1,"getmsg":-1,"createtime":"1471877903"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-08-25T00:09:35+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000491s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005575s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005807s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.005989s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006245s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001286s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_group` WHERE ( `cat_id` = 1 ) LIMIT 1   [ RunTime:0.001227s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  ORDER BY createtime desc LIMIT 0,20   [ RunTime:0.006401s ]
+NOTIC: [8] Undefined index: count E:\WorkerSpace\PHP\lejin\Application\Group\Model\GroupModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: count E:\WorkerSpace\PHP\lejin\Application\Group\Model\GroupModel.class.php 第 27 行.
+
+[ 2016-08-25T00:10:13+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+ERR: {"data":[{"id":"1","uid":"20000026","creator":"test","name":"\u6d4b\u8bd5\u7fa4\u7ec4","logosmall":"","logolarge":"","extend":"{\"rule\":\"\\u7fa4\\u89c4\",\"cat_id\":\"1\",\"address\":\"\\u5730\\u70b9\"}","description":"\u7fa4\u7ec4\u7b80\u4ecb","count":null,"isjoin":0,"role":-1,"getmsg":-1,"createtime":"1471877903"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-08-25T00:10:13+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000639s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005262s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.034594s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.005622s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005406s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001195s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_group` WHERE ( `cat_id` = 1 ) LIMIT 1   [ RunTime:0.001115s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  WHERE ( `cat_id` = '1' ) ORDER BY createtime desc LIMIT 0,20   [ RunTime:0.005599s ]
+NOTIC: [8] Undefined index: count E:\WorkerSpace\PHP\lejin\Application\Group\Model\GroupModel.class.php 第 27 行.
+
+[ 2016-08-25T20:24:55+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+ERR: {"data":[{"id":"1","uid":"20000026","creator":"test","name":"\u6d4b\u8bd5\u7fa4\u7ec4","logosmall":"","logolarge":"","extend":"","description":"\u7fa4\u7ec4\u7b80\u4ecb","count":null,"isjoin":0,"role":-1,"getmsg":-1,"createtime":"1471877903"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-08-25T20:24:55+08:00 ] 127.0.0.1 /index.php/Group/Api/catGroupList/uid/20000002/cat_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001249s ]
+INFO: [ app_init ] --END-- [ RunTime:0.074188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.033530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037867s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.252240s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.321055s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004057s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:1.627396s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_group` WHERE ( `cat_id` = 1 ) LIMIT 1   [ RunTime:0.731949s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000002  WHERE ( `cat_id` = '1' ) ORDER BY createtime desc LIMIT 0,20   [ RunTime:0.459740s ]
+NOTIC: [8] Undefined index: count E:\WorkerSpace\PHP\lejin\Application\Group\Model\GroupModel.class.php 第 27 行.
+
+[ 2016-08-25T22:25:05+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier/uid/20000002/groups_id/1/name/%E5%BC%A0%E4%B8%89/phone/1827266/lng/12/lat/2222
+ERR: {"data":{},"msg":"\u8bf7\u4e0a\u4f20\u56fe\u7247","debugMsg":"","code":1,"page":""}
+[ 2016-08-25T22:25:05+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier/uid/20000002/groups_id/1/name/%E5%BC%A0%E4%B8%89/phone/1827266/lng/12/lat/2222
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000438s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005102s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005602s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006351s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001257s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.011183s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001483s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1   [ RunTime:0.001178s ]
+ERR: 1146:Table 'lejin.tc_' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005216s ]
+SQL: SELECT `name`,`address`,`cateid` FROM `tc_groups` WHERE ( `id` = 1 )  [ RunTime:0.001049s ]
+
+[ 2016-08-25T22:28:30+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":791,"height":454,"type":"png","mime":"image\/png"}
+[ 2016-08-25T22:28:30+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000471s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004728s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005325s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005295s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.004795s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001425s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1   [ RunTime:0.001181s ]
+ERR: 1146:Table 'lejin.tc_' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005169s ]
+SQL: SELECT `name`,`address`,`cateid` FROM `tc_groups` WHERE ( `id` = 1 )  [ RunTime:0.001103s ]
+
+[ 2016-08-25T22:29:18+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":791,"height":454,"type":"png","mime":"image\/png"}
+[ 2016-08-25T22:29:18+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000801s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004884s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005146s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004947s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001252s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005095s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001425s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1   [ RunTime:0.001175s ]
+ERR: 1146:Table 'lejin.tc_' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.004763s ]
+SQL: SELECT `name`,`address`,`cateid` FROM `tc_groups` WHERE ( `id` = 1 )  [ RunTime:0.001090s ]
+
+[ 2016-08-25T22:31:18+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":791,"height":454,"type":"png","mime":"image\/png"}
+[ 2016-08-25T22:31:18+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":165,"height":181,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-25T22:31:18+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"data":{},"msg":"\u7533\u8bf7\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2016-08-25T22:31:18+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000953s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004775s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005967s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005318s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001221s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005457s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001164s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1   [ RunTime:0.001203s ]
+ERR: 1146:Table 'lejin.tc_' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.006038s ]
+SQL: SELECT `name`,`address`,`cateid` FROM `tc_groups` WHERE ( `id` = 1 )  [ RunTime:0.001361s ]
+NOTIC: [8] Undefined index: name E:\WorkerSpace\PHP\lejin\Application\User\Model\UserModel.class.php 第 918 行.
+NOTIC: [8] Undefined index: address E:\WorkerSpace\PHP\lejin\Application\User\Model\UserModel.class.php 第 919 行.
+NOTIC: [8] Undefined index: cateid E:\WorkerSpace\PHP\lejin\Application\User\Model\UserModel.class.php 第 920 行.
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006857s ]
+SQL: INSERT INTO `tc_supplier` (`uid`,`name`,`phone`,`groups_id`,`lng`,`lat`,`shop_name`,`address`,`cat_id`,`create_time`) VALUES (20000002,'张三','1827266',1,'2001231202','23332',null,null,null,1472135473) [ RunTime:0.001095s ]
+ERR: 1048:Column 'cat_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `tc_supplier` (`uid`,`name`,`phone`,`groups_id`,`lng`,`lat`,`shop_name`,`address`,`cat_id`,`create_time`) VALUES (20000002,'张三','1827266',1,'2001231202','23332',null,null,null,1472135473)
+
+[ 2016-08-25T22:32:14+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":791,"height":454,"type":"png","mime":"image\/png"}
+[ 2016-08-25T22:32:14+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":165,"height":181,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-25T22:33:01+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000579s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005561s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005860s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005243s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005346s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001166s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1   [ RunTime:0.001244s ]
+ERR: 1146:Table 'lejin.tc_' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005863s ]
+SQL: SELECT `name`,`address`,`cateid` FROM `tc_groups` WHERE ( `id` = 1 )  [ RunTime:0.001152s ]
+NOTIC: [8] Undefined index: name E:\WorkerSpace\PHP\lejin\Application\User\Model\UserModel.class.php 第 918 行.
+NOTIC: [8] Undefined index: address E:\WorkerSpace\PHP\lejin\Application\User\Model\UserModel.class.php 第 919 行.
+NOTIC: [8] Undefined index: cateid E:\WorkerSpace\PHP\lejin\Application\User\Model\UserModel.class.php 第 920 行.
+
+[ 2016-08-25T22:34:22+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":791,"height":454,"type":"png","mime":"image\/png"}
+[ 2016-08-25T22:34:22+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"width":165,"height":181,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-25T22:34:33+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+ERR: {"data":{},"msg":"\u7533\u8bf7\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-25T22:34:33+08:00 ] 127.0.0.1 /index.php/User/Api/regSupplier
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000599s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005896s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.025895s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005051s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001264s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005407s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1   [ RunTime:0.001234s ]
+ERR: 1146:Table 'lejin.tc_' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `tc_` WHERE ( `groups_id` = '1' ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005386s ]
+SQL: SELECT `name`,`address`,`cateid` FROM `tc_groups` WHERE ( `id` = 1 )  [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.008414s ]
+SQL: INSERT INTO `tc_supplier` (`uid`,`name`,`phone`,`groups_id`,`lng`,`lat`,`shop_name`,`address`,`cat_id`,`create_time`) VALUES (20000002,'张三','1827266',1,'2001231202','23332','第三眼','云南省昆明市盘龙区G56(杭瑞高速公路)',2,1472135662) [ RunTime:0.033934s ]
+SQL: SHOW COLUMNS FROM `tc_supplier_gallery` [ RunTime:0.005988s ]
+SQL: INSERT INTO `tc_supplier_gallery` (`smallUrl`,`originUrl`,`create_time`,`sid`) VALUES ('/Uploads/Picture/20160825/s_48499fe0c89f1a9d.PNG','/Uploads/Picture/20160825/48499fe0c89f1a9d.PNG',1472135662,1),('/Uploads/Picture/20160825/s_ffdf0676c8f56559.JPG','/Uploads/Picture/20160825/ffdf0676c8f56559.JPG',1472135662,1) [ RunTime:0.036436s ]
+
+[ 2016-08-25T22:40:21+08:00 ] 127.0.0.1 /index.php/User/Api/nearby/uid/20000002/lng/1/lat/12
+ERR: {"data":[{"uid":"20000000","phone":"18084839200","name":"\u67312","head":"","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"\u70ed\u5f97\u5f8822","ismember":1,"lng":null,"lat":null,"extend":"","balance":"856.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"1","isblack":"0","headid":"98057bdef256507ff0f819573d8ef840","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png"},{"uid":"20000001","phone":"18069266759","name":"\u6731","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160714\/s_e341709f41aadecd.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"1","isblack":"0","headid":"448da7519ad1d978d5b3fdc863e300dd","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000002","phone":"13888375633","name":"A.L","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160318\/s_808ca7e029c6fd11.jpg","sign":"\u95f2\u4eba\u4e00\u4e2a","ismember":1,"lng":null,"lat":null,"extend":"","balance":"1136.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"1579bc65e26b87986572f6dd8d7d66d6","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160318\/808ca7e029c6fd11.jpg","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png"},{"uid":"20000003","phone":"13128978113","name":"\u963f\u6b66","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160318\/s_48a3976e5306f1ca.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"1","isblack":"0","headid":"6a1434cdabd0307ded8413fa47e9541a","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000004","phone":"13559107544","name":"233","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160319\/s_7b5b33e43c76b4c3.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"1","isblack":"0","headid":"a69bccb2f8cc906ddd8c051d97aa5208","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000005","phone":"15953691319","name":"\u4e1c\u90aa\u897f\u6bd2","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160321\/s_5c869f411e0f0db4.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"1","isblack":"0","headid":"04fd639081216e5e9dc9e0841a817c7c","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000006","phone":"18124238713","name":"\u5931\u53bb\u518d\u591a\u53c8\u6709\u4f55\u59a8","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160321\/s_59a3a11582f029a9.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"1","isblack":"0","headid":"5e419f01d14ae9aebba8386079ec4550","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000007","phone":"13547875489","name":"hi","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160322\/s_5b9f5cc8905315a3.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"039355624d4f9a5e760c32bf7c491fa7","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000008","phone":"15014141037","name":"\u5d06\u6d41","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160323\/s_5e2125d365a7f817.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"773d0ff475d9e5e62f2fecd9312e7f18","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000009","phone":"17096689955","name":"\u670b\u54e5","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160323\/s_71898872ad51af4e.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"\u7ed3\u4ea4\u670b\u53cb","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"07436261626b47228d470b9f7f7fdaf3","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000010","phone":"18581898815","name":"\u51ef\u5b50","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160523\/s_48aa3831356c7368.png","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"cfb675ca8aa8debe8462300abcf8099f","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000017","phone":"18702843514","name":"nye","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160428\/s_0b18450ac870edb7.png","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"\u5a1f\u5a1f\u5988\u5988","ismember":1,"lng":null,"lat":null,"extend":"","balance":"1104.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"1","isblack":"0","headid":"913a7d86eefd732fc4a9f0662bc96cc8","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png"},{"uid":"20000018","phone":"13075836662","name":"Dddd","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160331\/s_267a1b5a98fa1032.png","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"f22e384ea69645799c996d169bf67a15","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000019","phone":"18046104156","name":"\u54c8\u54c8","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160401\/s_ad4b15bb081f6316.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"af365ac06f579766eead987791120019","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000020","phone":"13051581958","name":"ocean123","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160401\/s_6394288ad32794bc.png","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"69d38e3671311c4e2e8b761cadbd6609","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000021","phone":"18688004691","name":"agfe","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160404\/s_040222f193e87726.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"bfc592ecb594e6469e47ab478ab35a36","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000022","phone":"15734718360","name":"\u597d\u5e78\u8fd0","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160415\/s_890027f700e809be.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"8985e15a49c52b8f6a44e1ba41ddb6b0","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000023","phone":"18334794054","name":"\u554a\u4e86\u5c31\u5462\u4e0e","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160425\/s_d61a47c9a8ab5937.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"f1c1f71fd677e1134676959a10614c26","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000024","phone":"13518127517","name":"\u54c8\u54c8","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160428\/s_e39aa9163cbe9bb0.png","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"0afa9c3a60f5a0b97ed6ab80e870e787","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":""},{"uid":"20000025","phone":"18388161128","name":"\u5c0f\u523a\u732c","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160429\/s_2d16ed2a55304289.png","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160805\/s_e4ddfb7cf33a67ef.jpg","sign":"","ismember":1,"lng":null,"lat":null,"extend":"","balance":"252.00","is_supplier":"0","isshield":"0","distance":null,"isfollow":"0","isblack":"0","headid":"dc0feedf1cd49c6bd6de14a7fb330763","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160805\/e4ddfb7cf33a67ef.jpg","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv1.png"}],"msg":"","debugMsg":"","code":0,"page":{"total":96,"count":20,"pageCount":5,"page":1,"page_next":2,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-08-25T22:40:21+08:00 ] 127.0.0.1 /index.php/User/Api/nearby/uid/20000002/lng/1/lat/12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000477s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005113s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005209s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005157s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001233s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_user` LIMIT 1   [ RunTime:0.001146s ]
+SQL: SELECT u.*,(POWER(MOD(ABS(lng - 1),360),2) + POWER(ABS(lat - 12),2)) AS distance,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid=20000002 and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid=20000002 and fuid=u.uid) as isblack FROM tc_user u ORDER BY distance asc LIMIT 0,20   [ RunTime:0.091595s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.065834s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001117s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.038157s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000000 and time>1472136020 ) LIMIT 1   [ RunTime:0.042687s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.002364s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000001 and time>1472136020 ) LIMIT 1   [ RunTime:0.001489s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001384s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000002 and time>1472136020 ) LIMIT 1   [ RunTime:0.001773s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001427s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000003 and time>1472136020 ) LIMIT 1   [ RunTime:0.001289s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001173s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000004 and time>1472136020 ) LIMIT 1   [ RunTime:0.001172s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001040s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000005 and time>1472136020 ) LIMIT 1   [ RunTime:0.001318s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001128s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000006 and time>1472136020 ) LIMIT 1   [ RunTime:0.001219s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001062s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000007 and time>1472136020 ) LIMIT 1   [ RunTime:0.001178s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001074s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000008 and time>1472136020 ) LIMIT 1   [ RunTime:0.001206s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001036s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000009 and time>1472136020 ) LIMIT 1   [ RunTime:0.001168s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001191s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000010 and time>1472136020 ) LIMIT 1   [ RunTime:0.001096s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001051s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000017 and time>1472136020 ) LIMIT 1   [ RunTime:0.001136s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000996s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000018 and time>1472136020 ) LIMIT 1   [ RunTime:0.001152s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001060s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000019 and time>1472136020 ) LIMIT 1   [ RunTime:0.001027s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001047s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000020 and time>1472136020 ) LIMIT 1   [ RunTime:0.001155s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001039s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000021 and time>1472136020 ) LIMIT 1   [ RunTime:0.001025s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001084s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000022 and time>1472136020 ) LIMIT 1   [ RunTime:0.001243s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.001141s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000023 and time>1472136020 ) LIMIT 1   [ RunTime:0.001138s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000944s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000024 and time>1472136020 ) LIMIT 1   [ RunTime:0.001119s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000977s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000025 and time>1472136020 ) LIMIT 1   [ RunTime:0.001216s ]
+
+[ 2016-08-25T22:54:37+08:00 ] 127.0.0.1 /index.php/User/Api/collect/uid/20000002/sid/1/type/0
+ERR: {"data":{},"msg":"\u6ca1\u6709\u6536\u85cf\u8fc7\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-08-25T22:54:37+08:00 ] 127.0.0.1 /index.php/User/Api/collect/uid/20000002/sid/1/type/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000507s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003942s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005387s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004834s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004986s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001238s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.004533s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001148s ]
+SQL: SHOW COLUMNS FROM `tc_collect_supplier` [ RunTime:0.004384s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_collect_supplier` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.017351s ]
+
+[ 2016-08-25T22:54:45+08:00 ] 127.0.0.1 /index.php/User/Api/collect/uid/20000002/sid/1/type/1
+ERR: {"data":{},"msg":"\u6536\u85cf\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-25T22:54:45+08:00 ] 127.0.0.1 /index.php/User/Api/collect/uid/20000002/sid/1/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000481s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003937s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005159s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005509s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004967s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001102s ]
+SQL: SHOW COLUMNS FROM `tc_collect_supplier` [ RunTime:0.004398s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_collect_supplier` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001116s ]
+SQL: INSERT INTO `tc_collect_supplier` (`uid`,`sid`,`create_time`) VALUES (20000002,1,1472136885) [ RunTime:0.047625s ]
+
+[ 2016-08-25T23:03:23+08:00 ] 127.0.0.1 /index.php/Shop/Api/regSupplier
+ERR: {"data":{},"msg":"\u8be5\u53f7\u5df2\u7533\u8bf7\u8fc7\u5f00\u5e97","debugMsg":"","code":1,"page":""}
+[ 2016-08-25T23:03:23+08:00 ] 127.0.0.1 /index.php/Shop/Api/regSupplier
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000508s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005079s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005565s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005050s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001301s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.005514s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001157s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005572s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `groups_id` = 1 ) LIMIT 1   [ RunTime:0.001432s ]
+
+[ 2016-08-25T23:03:55+08:00 ] 127.0.0.1 /index.php/Shop/Api/collect/uid/20000002/sid/1/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000473s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005290s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005679s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005263s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001208s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.004733s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001200s ]
+ERR: Think\Model:collectSupplier方法不存在！
+
+[ 2016-08-25T23:05:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/collect/uid/20000002/sid/1/type/1
+ERR: {"data":{},"msg":"\u5df2\u6536\u85cf\u8fc7\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-08-25T23:05:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/collect/uid/20000002/sid/1/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000504s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005002s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004738s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.004776s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005015s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001307s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.004723s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `tc_collect_supplier` [ RunTime:0.004543s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_collect_supplier` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001192s ]
+
+[ 2016-08-25T23:05:53+08:00 ] 127.0.0.1 /index.php/Shop/Api/collect/uid/20000002/sid/1/type/0
+ERR: {"data":{},"msg":"\u53d6\u6d88\u6536\u85cf\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-25T23:05:53+08:00 ] 127.0.0.1 /index.php/Shop/Api/collect/uid/20000002/sid/1/type/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000561s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005354s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005826s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009387s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.021416s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.044542s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001184s ]
+SQL: SHOW COLUMNS FROM `tc_collect_supplier` [ RunTime:0.004295s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_collect_supplier` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001107s ]
+SQL: DELETE FROM `tc_collect_supplier` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) [ RunTime:0.046584s ]
+
+[ 2016-08-25T23:06:02+08:00 ] 127.0.0.1 /index.php/Shop/Api/collect/uid/20000002/sid/1/type/1
+ERR: {"data":{},"msg":"\u6536\u85cf\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-25T23:06:02+08:00 ] 127.0.0.1 /index.php/Shop/Api/collect/uid/20000002/sid/1/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000513s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005036s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005126s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.004798s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005121s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001229s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.004976s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001145s ]
+SQL: SHOW COLUMNS FROM `tc_collect_supplier` [ RunTime:0.004154s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_collect_supplier` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001151s ]
+SQL: INSERT INTO `tc_collect_supplier` (`uid`,`sid`,`create_time`) VALUES (20000002,1,1472137561) [ RunTime:0.037487s ]
+

@@ -1,0 +1,355 @@
+[ 2016-08-28T22:57:26+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000688s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022440s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.010803s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009103s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008183s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001445s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009763s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001882s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001993s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.020691s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001339s ]
+ERR: 错误的查询条件:[goods_id=>1]
+
+[ 2016-08-28T22:57:51+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+ERR: {"data":{},"msg":"\u5220\u9664\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T22:57:51+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000479s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011308s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007641s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.013168s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008950s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002445s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010956s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001486s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001094s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.010295s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001334s ]
+SQL: DELETE FROM `tc_goods` WHERE ( `sid` = 1 ) AND ( `id` = 1 ) [ RunTime:0.057461s ]
+
+[ 2016-08-28T23:01:41+08:00 ] 127.0.0.1 /Shop/Api/addGoods
+ERR: {"width":319,"height":253,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:01:41+08:00 ] 127.0.0.1 /Shop/Api/addGoods
+ERR: {"width":323,"height":275,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:01:42+08:00 ] 127.0.0.1 /Shop/Api/addGoods
+ERR: {"data":{},"msg":"\u6dfb\u52a0\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T23:01:42+08:00 ] 127.0.0.1 /Shop/Api/addGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000754s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013309s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.010350s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009021s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.036731s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001556s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009615s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001874s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001588s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008670s ]
+SQL: INSERT INTO `tc_goods` (`sid`,`type`,`name`,`profile`,`sale_price`,`original_price`,`cheap_price`,`is_cheap`,`deducted_price`,`star_time`,`end_time`,`transport_method`,`transport_price`,`create_time`,`smallUrl`,`originUrl`) VALUES (1,1,'测试商品','商品简介','10','12','8',1,0,'','',2,'2',1472396501,'/Uploads/Picture/20160828/s_50d756a78cf385f3.JPG','/Uploads/Picture/20160828/50d756a78cf385f3.JPG') [ RunTime:0.044778s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.008805s ]
+SQL: INSERT INTO `tc_goods_gallery` (`smallUrl`,`originUrl`,`create_time`,`goods_id`) VALUES ('/Uploads/Picture/20160828/s_50d756a78cf385f3.JPG','/Uploads/Picture/20160828/50d756a78cf385f3.JPG',1472396501,2),('/Uploads/Picture/20160828/s_10f12be30fd5755c.JPG','/Uploads/Picture/20160828/10f12be30fd5755c.JPG',1472396501,2) [ RunTime:0.043938s ]
+
+[ 2016-08-28T23:01:52+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+ERR: {"data":{},"msg":"\u8be5\u5546\u54c1\u4e0d\u5c5e\u4e8e\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-08-28T23:01:52+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+ERR: {"data":{},"msg":"\u5220\u9664\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2016-08-28T23:01:52+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001170s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018569s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.030102s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009343s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.068172s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001891s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010498s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001508s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008358s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.002209s ]
+SQL: DELETE FROM `tc_goods` WHERE ( `sid` = 1 ) AND ( `id` = 1 ) [ RunTime:0.001959s ]
+
+[ 2016-08-28T23:02:52+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+ERR: {"data":{},"msg":"\u8be5\u5546\u54c1\u4e0d\u5c5e\u4e8e\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-08-28T23:02:52+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+ERR: {"data":{},"msg":"\u5220\u9664\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2016-08-28T23:02:52+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000632s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006883s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008493s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009313s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007417s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001455s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010620s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002673s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001449s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.011114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001669s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001656s ]
+SQL: DELETE FROM `tc_goods` WHERE ( `sid` = 1 ) AND ( `id` = 1 ) [ RunTime:0.001785s ]
+
+[ 2016-08-28T23:03:41+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+ERR: {"data":{},"msg":"\u8be5\u5546\u54c1\u4e0d\u5c5e\u4e8e\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-08-28T23:03:41+08:00 ] 127.0.0.1 /Shop/Api/deleteGoods/uid/20000002/sid/1/goods_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000917s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006575s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007879s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010348s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008808s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002510s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010822s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001671s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001380s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.009792s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001233s ]
+
+[ 2016-08-28T23:24:23+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000880s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017860s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.010284s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007997s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.009883s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002314s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.008964s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001466s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008782s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.003496s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品222',`profile`='商品简介22',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2' WHERE ( `id` = 2 ) [ RunTime:0.180677s ]
+
+[ 2016-08-28T23:26:49+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000563s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013865s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.011822s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.012678s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.009316s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001965s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009981s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001799s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001724s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.011319s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001968s ]
+
+[ 2016-08-28T23:30:08+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2016-08-28T23:30:08+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000891s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008652s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008203s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010876s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.009940s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002177s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009938s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001284s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001917s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.011358s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001960s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品222',`profile`='商品简介22',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2' WHERE ( `id` = 2 ) [ RunTime:0.044873s ]
+
+[ 2016-08-28T23:30:21+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T23:30:21+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001458s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012830s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.049811s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006834s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008684s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002020s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009521s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002337s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002011s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.010198s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.002046s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品2221',`profile`='商品简介22',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2' WHERE ( `id` = 2 ) [ RunTime:0.315739s ]
+
+[ 2016-08-28T23:30:49+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T23:30:49+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000784s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007783s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046959s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010345s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008633s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001948s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.011368s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.003443s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.011326s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.002032s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品2221',`profile`='商品简介22',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2' WHERE ( `id` = 2 ) [ RunTime:0.071365s ]
+
+[ 2016-08-28T23:44:29+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":319,"height":253,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:44:29+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":323,"height":275,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:44:29+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":647,"height":487,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:45:04+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T23:45:04+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000532s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006848s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009083s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.011053s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009120s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.010970s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002570s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.010823s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002726s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002260s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.039888s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.002019s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品123',`profile`='商品简介',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2',`smallUrl`='/Uploads/Picture/20160828/s_75985a77de994bca.JPG',`originUrl`='/Uploads/Picture/20160828/75985a77de994bca.JPG' WHERE ( `id` = 2 ) [ RunTime:0.035428s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.008126s ]
+SQL: DELETE FROM `tc_goods_gallery` WHERE ( `goods_id` = 2 ) [ RunTime:0.059779s ]
+SQL: INSERT INTO `tc_goods_gallery` (`goods_id`,`smallUrl`,`originUrl`,`create_time`) VALUES (2,'/Uploads/Picture/20160828/s_75985a77de994bca.JPG','/Uploads/Picture/20160828/75985a77de994bca.JPG',1472399068),(2,'/Uploads/Picture/20160828/s_5e5815fabfe71cfa.JPG','/Uploads/Picture/20160828/5e5815fabfe71cfa.JPG',1472399068),(2,'/Uploads/Picture/20160828/s_9309ea65914a04bc.JPG','/Uploads/Picture/20160828/9309ea65914a04bc.JPG',1472399068) [ RunTime:0.041514s ]
+
+[ 2016-08-28T23:46:39+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":319,"height":253,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:46:39+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":323,"height":275,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:46:39+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":647,"height":487,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:47:46+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T23:47:46+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010689s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.009217s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007473s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.010570s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001974s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009920s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002106s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.011558s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.003298s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品123',`profile`='商品简介',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2',`smallUrl`='/Uploads/Picture/20160828/s_7f2e406a4dbce28b.JPG',`originUrl`='/Uploads/Picture/20160828/7f2e406a4dbce28b.JPG' WHERE ( `id` = 2 ) [ RunTime:0.039553s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.029325s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 2 )  [ RunTime:0.001976s ]
+SQL: DELETE FROM `tc_goods_gallery` WHERE ( `goods_id` = 2 ) [ RunTime:0.059263s ]
+NOTIC: [2] unlink(/Uploads/Picture/20160828/s_75985a77de994bca.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 304 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/75985a77de994bca.JPG): No such file or directory xdebug://debug-eval 第 1 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/75985a77de994bca.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 305 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/s_5e5815fabfe71cfa.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 304 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/5e5815fabfe71cfa.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 305 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/s_9309ea65914a04bc.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 304 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/9309ea65914a04bc.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 305 行.
+SQL: INSERT INTO `tc_goods_gallery` (`goods_id`,`smallUrl`,`originUrl`,`create_time`) VALUES (2,'/Uploads/Picture/20160828/s_7f2e406a4dbce28b.JPG','/Uploads/Picture/20160828/7f2e406a4dbce28b.JPG',1472399198),(2,'/Uploads/Picture/20160828/s_a8fb081cb0cf5cfd.JPG','/Uploads/Picture/20160828/a8fb081cb0cf5cfd.JPG',1472399198),(2,'/Uploads/Picture/20160828/s_bfc8247756d8fd91.JPG','/Uploads/Picture/20160828/bfc8247756d8fd91.JPG',1472399198) [ RunTime:0.027778s ]
+
+[ 2016-08-28T23:50:01+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":319,"height":253,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:50:01+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":323,"height":275,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:50:01+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":647,"height":487,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:50:16+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T23:50:16+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000932s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009634s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046353s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.008415s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.011112s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001770s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007802s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001221s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001772s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008889s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.002816s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品123',`profile`='商品简介',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2',`smallUrl`='/Uploads/Picture/20160828/s_31941a6ed4fc620d.JPG',`originUrl`='/Uploads/Picture/20160828/31941a6ed4fc620d.JPG' WHERE ( `id` = 2 ) [ RunTime:0.031213s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.010691s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 2 )  [ RunTime:0.003799s ]
+SQL: DELETE FROM `tc_goods_gallery` WHERE ( `goods_id` = 2 ) [ RunTime:0.054443s ]
+NOTIC: [2] unlink(/Uploads/Picture/20160828/s_7f2e406a4dbce28b.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 304 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/7f2e406a4dbce28b.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 305 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/s_a8fb081cb0cf5cfd.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 304 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/a8fb081cb0cf5cfd.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 305 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/s_bfc8247756d8fd91.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 304 行.
+NOTIC: [2] unlink(/Uploads/Picture/20160828/bfc8247756d8fd91.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 305 行.
+SQL: INSERT INTO `tc_goods_gallery` (`goods_id`,`smallUrl`,`originUrl`,`create_time`) VALUES (2,'/Uploads/Picture/20160828/s_31941a6ed4fc620d.JPG','/Uploads/Picture/20160828/31941a6ed4fc620d.JPG',1472399377),(2,'/Uploads/Picture/20160828/s_d55261042c879587.JPG','/Uploads/Picture/20160828/d55261042c879587.JPG',1472399377),(2,'/Uploads/Picture/20160828/s_71ff1e98b13b617f.JPG','/Uploads/Picture/20160828/71ff1e98b13b617f.JPG',1472399377) [ RunTime:0.031575s ]
+
+[ 2016-08-28T23:54:39+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":319,"height":253,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:54:39+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":323,"height":275,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:54:39+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"width":647,"height":487,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-08-28T23:55:25+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-08-28T23:55:25+08:00 ] 127.0.0.1 /Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001248s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007995s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009121s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.009436s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.008442s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008123s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001828s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.008464s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001386s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002492s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.011032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 2 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001936s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品123',`profile`='商品简介',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`star_time`='',`end_time`='',`transport_method`=2,`transport_price`='2',`smallUrl`='/Uploads/Picture/20160828/s_ea213fc0c5b549b3.JPG',`originUrl`='/Uploads/Picture/20160828/ea213fc0c5b549b3.JPG' WHERE ( `id` = 2 ) [ RunTime:0.060076s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.016065s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 2 )  [ RunTime:0.003815s ]
+SQL: DELETE FROM `tc_goods_gallery` WHERE ( `goods_id` = 2 ) [ RunTime:0.073235s ]
+NOTIC: [2] unlink(.//Uploads/Picture/20160828/31941a6ed4fc620d.JPG): No such file or directory E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 305 行.
+SQL: INSERT INTO `tc_goods_gallery` (`goods_id`,`smallUrl`,`originUrl`,`create_time`) VALUES (2,'/Uploads/Picture/20160828/s_ea213fc0c5b549b3.JPG','/Uploads/Picture/20160828/ea213fc0c5b549b3.JPG',1472399678),(2,'/Uploads/Picture/20160828/s_881b351e88e7c8bc.JPG','/Uploads/Picture/20160828/881b351e88e7c8bc.JPG',1472399678),(2,'/Uploads/Picture/20160828/s_e7e0d80da30d0281.JPG','/Uploads/Picture/20160828/e7e0d80da30d0281.JPG',1472399678) [ RunTime:0.028110s ]
+

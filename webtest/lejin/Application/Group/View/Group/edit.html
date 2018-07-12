@@ -1,0 +1,88 @@
+<script type="text/javascript">
+$(function(){
+	$('#edit_group_upload').uploadify({
+		'swf'      : '__PUBLIC__/js/uploadify/uploadify.swf',
+		'uploader' : '{:U('Group/public_uploadGroupPicture')}',
+		'buttonText': '选择图片',
+		'removeTimeout':0,
+		'width'	: 60,
+		'height': 25,
+		'buttonClass': 'upload_button',
+		'auto'	: true,
+		'fileTypeDesc' : 'Image Files',//只允许上传图像
+		'fileTypeExts' : '*.gif; *.jpg; *.png',//限制允许上传的图片后缀
+		'onUploadSuccess' : function(file, data, response){
+			var data = $.parseJSON(data);
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				$('#edit_group_image').attr('src','__ROOT__'+data.show);
+				$('#edit_group_logo').attr('value',data.url);
+			}
+		}
+	});
+	
+	$.formValidator.initConfig({formID:"groupEditForm",theme:'App',onError:function(msg){},onSuccess:saveGroupEdit,inIframe:true});
+})
+function saveGroupEdit(){
+	$.post('{:U('Group/edit')}', $("#groupEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			groupRefreshList_{$rand}();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#groupEditBox').dialog('close');
+		}
+	})
+}
+</script>
+<style type="text/css">
+#groupEditForm input{padding: 2px; padding-left: 4px;width:300px;height:22px;}
+</style>
+<form id="groupEditForm" style="font-size:13px; padding: 5px 0px 5px 5px;">
+<table id="editBox" cellspacing="5">
+	<tr>
+		<td align="right">logo：</td>
+		<td colspan="2">
+			<div style="float: left; width:auto;">
+				<div style="float: left; width:auto; padding: 2px;">
+					<img id="edit_group_image" src="{$info.logosmall}" height="80px;" style="min-width: 80px;padding: 3px; border: 1px solid #ccc;">
+				</div>
+			</div>
+			<div style="margin-left: 5px; float: left; width:240px; height:80px; padding:5px;">
+				<div style="width: 100%; height: 30px;"></div>
+				<input id="edit_group_upload" name="edit_group_upload" type="file">
+			</div>
+			<input id="edit_group_logo" name="logosmall" value="" type="hidden">
+		</td>
+	</tr>
+	<tr>
+		<td width="80" align="right">创建者：</td>
+		<td>{$info.creator}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">名称：</td>
+		<td><input id="edit_group_name" name="name" type="text"  value="{$info.name}"/></td>
+		<td><div id="edit_group_nameTip"></div></td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">群组说明：</td>
+		<td>
+			<textarea id="edit_trie_description" name="description" style="height: 66px; width: 300px; padding: 2px;">{$info.description}</textarea>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">创建时间：</td>
+		<td>{:date('Y-m-d H:i',$info['createtime'])}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<input type="hidden" name="info[id]" value="{$info.id}" />
+			<input type="hidden" name="info[uid]" value="{$info.uid}" />
+		</td>
+	</tr>
+</table>
+</form>

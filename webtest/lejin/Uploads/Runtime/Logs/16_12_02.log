@@ -1,0 +1,16 @@
+[ 2016-12-02T23:22:13+08:00 ] 127.0.0.1 /index.php/Find/Api/sourceCommentList?uid=20000090&source_id=83&page=1&pageSize=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001333s ]
+INFO: [ app_init ] --END-- [ RunTime:0.047727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014933s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.119495s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with that of Think\Model::create() E:\WorkerSpace\PHP\lejin\Application\Find\Model\FindModel.class.php 第 442 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.055997s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.054033s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000090 ) LIMIT 1   [ RunTime:0.050823s ]
+SQL: SHOW COLUMNS FROM `tc_activity_source_comment` [ RunTime:0.055663s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_activity_source_comment a WHERE ( a.activity_id = '83' ) LIMIT 1   [ RunTime:0.053485s ]
+SQL: SELECT a.*,c.smallUrl,c.originUrl,b.uid,b.name FROM tc_activity_source_comment a left join tc_user b on a.uid = b.uid left join tc_user_head c on b.head = c.id  WHERE ( a.activity_id = '83' ) ORDER BY a.id asc LIMIT 0,20   [ RunTime:0.051729s ]
+

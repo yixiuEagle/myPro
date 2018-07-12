@@ -1,0 +1,268 @@
+[ 2016-11-20T10:22:26+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+ERR: {"data":{},"msg":"\u8d85\u51fa\u4e86\u5f53\u524d\u4f1a\u5458\u7b49\u7ea7\u6dfb\u52a0\u5546\u54c1\u7684\u6570\u91cf","debugMsg":"","code":1,"page":""}
+[ 2016-11-20T10:22:26+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001299s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017569s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.015787s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.095382s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007118s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001873s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007285s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001790s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001511s ]
+SQL: SELECT `ismember` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001206s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.006935s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.001353s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.039291s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( sid in (select id from tc_supplier where uid=20000002) ) LIMIT 1   [ RunTime:0.001382s ]
+
+[ 2016-11-20T10:23:16+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:23:17+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+ERR: {"data":{},"msg":"\u6dfb\u52a0\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:23:17+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001306s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011881s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005121s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006349s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006516s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006717s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001294s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007333s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001193s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001215s ]
+SQL: SELECT `ismember` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001143s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.006796s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.001280s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006358s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( sid in (select id from tc_supplier where uid=20000002) ) LIMIT 1   [ RunTime:0.001605s ]
+SQL: INSERT INTO `tc_goods` (`sid`,`type`,`name`,`profile`,`sale_price`,`original_price`,`cheap_price`,`is_cheap`,`deducted_price`,`start_time`,`end_time`,`transport_method`,`transport_price`,`create_time`,`smallUrl`,`originUrl`) VALUES (1,1,'测试商品','商品简介','10','12','8',1,0,'','',2,'2',1479608596,'/Uploads/Picture/20161120/s_e5bef58fd16d2eba.jpg','/Uploads/Picture/20161120/e5bef58fd16d2eba.jpg') [ RunTime:0.020443s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.035197s ]
+SQL: INSERT INTO `tc_goods_gallery` (`smallUrl`,`originUrl`,`create_time`,`goods_id`) VALUES ('/Uploads/Picture/20161120/s_e5bef58fd16d2eba.jpg','/Uploads/Picture/20161120/e5bef58fd16d2eba.jpg',1479608596,2) [ RunTime:0.028690s ]
+
+[ 2016-11-20T10:24:24+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:24:24+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+ERR: {"data":{},"msg":"\u6dfb\u52a0\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:24:24+08:00 ] 127.0.0.1 /index.php/Shop/Api/addGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000552s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004943s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006540s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006861s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006689s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001481s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006342s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001777s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001184s ]
+SQL: SELECT `ismember` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.006492s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.007303s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( sid in (select id from tc_supplier where uid=20000002) ) LIMIT 1   [ RunTime:0.001928s ]
+SQL: INSERT INTO `tc_goods` (`sid`,`type`,`name`,`profile`,`sale_price`,`original_price`,`cheap_price`,`is_cheap`,`deducted_price`,`start_time`,`end_time`,`transport_method`,`transport_price`,`create_time`,`smallUrl`,`originUrl`) VALUES (1,1,'测试商品','商品简介','10','12','8',1,0,'','',2,'2',1479608664,'/Uploads/Picture/20161120/s_16515545020eca94.jpg','/Uploads/Picture/20161120/16515545020eca94.jpg') [ RunTime:0.024413s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.006905s ]
+SQL: INSERT INTO `tc_goods_gallery` (`smallUrl`,`originUrl`,`create_time`,`goods_id`) VALUES ('/Uploads/Picture/20161120/s_16515545020eca94.jpg','/Uploads/Picture/20161120/16515545020eca94.jpg',1479608664,3) [ RunTime:0.032921s ]
+
+[ 2016-11-20T10:26:53+08:00 ] 127.0.0.1 /index.php/Shop/Api/editGoods
+ERR: {"width":650,"height":975,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:29:38+08:00 ] 127.0.0.1 /index.php/Shop/Api/editGoods
+ERR: {"data":{},"msg":"\u7f16\u8f91\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:29:38+08:00 ] 127.0.0.1 /index.php/Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000525s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005168s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.016725s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006947s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006178s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001276s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006345s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001122s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005657s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 3 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001265s ]
+SQL: SELECT `ismember` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.002270s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.048827s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.003185s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品111',`profile`='商品简介',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`start_time`='',`end_time`='',`transport_method`=2,`transport_price`='2',`smallUrl`='/Uploads/Picture/20161120/s_16515545020eca94.jpg',`originUrl`='/Uploads/Picture/20161120/s_16515545020eca94.jpg' WHERE ( `id` = 3 ) [ RunTime:0.035111s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.014506s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 3 )  [ RunTime:0.001826s ]
+SQL: DELETE FROM `tc_goods_gallery` WHERE ( `goods_id` = 3 ) [ RunTime:0.036901s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 3 )  [ RunTime:0.001626s ]
+SQL: INSERT INTO `tc_goods_gallery` (`goods_id`,`smallUrl`,`originUrl`,`create_time`) VALUES (3,'/Uploads/Picture/20161120/s_16515545020eca94.jpg','/Uploads/Picture/20161120/16515545020eca94.jpg',1479608711),(3,'/Uploads/Picture/20161120/s_b401c740b4aca457.jpg','/Uploads/Picture/20161120/b401c740b4aca457.jpg',1479608711) [ RunTime:0.032849s ]
+
+[ 2016-11-20T10:33:05+08:00 ] 127.0.0.1 /index.php/Shop/Api/editGoods
+ERR: {"width":650,"height":975,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:33:28+08:00 ] 127.0.0.1 /index.php/Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000498s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005255s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005786s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006991s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005983s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005933s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001308s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001791s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006219s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 3 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001773s ]
+SQL: SELECT `ismember` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001464s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.007586s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.001560s ]
+ERR: 错误的查询条件:[aid=>3]
+
+[ 2016-11-20T10:34:03+08:00 ] 127.0.0.1 /index.php/Shop/Api/editGoods
+ERR: {"width":650,"height":975,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:34:09+08:00 ] 127.0.0.1 /index.php/Shop/Api/editGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000682s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006685s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.040373s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006032s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006360s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001628s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.011422s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.003645s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008148s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 3 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001396s ]
+SQL: SELECT `ismember` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001222s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.006489s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.001260s ]
+SQL: UPDATE `tc_goods` SET `sid`=1,`type`=1,`name`='测试商品111',`profile`='商品简介',`sale_price`='10',`original_price`='12',`cheap_price`='8',`is_cheap`=1,`deducted_price`=0,`start_time`='',`end_time`='',`transport_method`=2,`transport_price`='2',`smallUrl`='/Uploads/Picture/20161120/s_16515545020eca94.jpg',`originUrl`='/Uploads/Picture/20161120/s_16515545020eca94.jpg' WHERE ( `id` = 3 ) [ RunTime:0.073522s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.194324s ]
+ERR: 错误的查询条件:[goods_id1=>3]
+
+[ 2016-11-20T10:40:38+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:40:39+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:40:46+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000518s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005345s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006120s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006416s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007529s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001280s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.007514s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001251s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.007153s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001589s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007229s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479571200' AND '1479657599' ) ) LIMIT 1   [ RunTime:0.002062s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001166s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001203s ]
+SQL: INSERT INTO `tc_share` (`uid`,`cateid`,`groupids`,`title`,`content`,`images`,`video`,`createtime`,`address`,`lat`,`lng`,`city`,`province`) VALUES (20000000,1,'1','新版发布分享','新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161120/56c7cb753e1a30ae.jpg\",\"smallUrl\":\"/Uploads/Picture/20161120/s_56c7cb753e1a30ae.jpg\",\"id\":\"4160ca1f4e022c5931714ea7ac36970c\",\"isVideo\":false}]','',1479609638,'地址','36.23141','117.12321','','') [ RunTime:0.027500s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.026902s ]
+ERR: 非法数据对象！:[share_id1=>106]
+
+[ 2016-11-20T10:42:10+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:42:11+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:44:09+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"\u53d1\u5e03\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:44:09+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000534s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006140s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006606s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007215s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007183s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.005882s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.006126s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001486s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479571200' AND '1479657599' ) ) LIMIT 1   [ RunTime:0.001251s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001273s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001353s ]
+SQL: INSERT INTO `tc_share` (`uid`,`cateid`,`groupids`,`title`,`content`,`images`,`video`,`createtime`,`address`,`lat`,`lng`,`city`,`province`) VALUES (20000000,1,'1','新版发布分享','新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161120/1f7e05a177d9642c.jpg\",\"smallUrl\":\"/Uploads/Picture/20161120/s_1f7e05a177d9642c.jpg\",\"id\":\"40deb68b48c1b5edcda4f4d26a3ee697\",\"isVideo\":false}]','',1479609730,'地址','36.23141','117.12321','','') [ RunTime:0.038399s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.028267s ]
+SQL: INSERT INTO `tc_share_gallery` (`content`,`images`,`video`,`create_time`,`share_id`) VALUES ('新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161120/1f7e05a177d9642c.jpg\",\"smallUrl\":\"/Uploads/Picture/20161120/s_1f7e05a177d9642c.jpg\",\"id\":\"40deb68b48c1b5edcda4f4d26a3ee697\",\"isVideo\":false}]','',1479609730,107),('新版内容2','','',1479609730,107),('新版内容3','','',1479609730,107),('新版内容4','','',1479609730,107),('新版内容5','','',1479609730,107),('新版内容6','','',1479609730,107) [ RunTime:0.028368s ]
+
+[ 2016-11-20T10:44:34+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:44:35+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:44:37+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"\u53d1\u5e03\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:44:37+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000840s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006325s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.041564s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006732s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006072s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001292s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.005928s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001457s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.007026s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001288s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006787s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479571200' AND '1479657599' ) ) LIMIT 1   [ RunTime:0.001282s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001321s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.003430s ]
+SQL: INSERT INTO `tc_share` (`uid`,`cateid`,`groupids`,`title`,`content`,`images`,`video`,`createtime`,`address`,`lat`,`lng`,`city`,`province`) VALUES (20000000,1,'1','新版发布分享','新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161120/a08265307c6add62.jpg\",\"smallUrl\":\"/Uploads/Picture/20161120/s_a08265307c6add62.jpg\",\"id\":\"69e4e4ba73e277cc9da79eda3be20096\",\"isVideo\":false}]','',1479609874,'地址','36.23141','117.12321','','') [ RunTime:0.027935s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.008252s ]
+SQL: INSERT INTO `tc_share_gallery` (`content`,`images`,`video`,`create_time`,`share_id`) VALUES ('新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161120/a08265307c6add62.jpg\",\"smallUrl\":\"/Uploads/Picture/20161120/s_a08265307c6add62.jpg\",\"id\":\"69e4e4ba73e277cc9da79eda3be20096\",\"isVideo\":false}]','',1479609874,108),('新版内容2','','',1479609874,108),('新版内容3','','',1479609874,108),('新版内容4','','',1479609874,108),('新版内容5','','',1479609874,108),('新版内容6','','',1479609874,108) [ RunTime:0.122492s ]
+
+[ 2016-11-20T10:44:51+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:44:52+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-20T10:44:54+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{"join":"","string":"","field":""},"msg":"\u53d1\u5e03\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-20T10:44:54+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000563s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006545s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006778s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007326s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008606s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001306s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.007160s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001408s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.007569s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001446s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007475s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479571200' AND '1479657599' ) ) LIMIT 1   [ RunTime:0.001306s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001493s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001240s ]
+SQL: INSERT INTO `tc_share` (`uid`,`cateid`,`groupids`,`title`,`content`,`images`,`video`,`createtime`,`address`,`lat`,`lng`,`city`,`province`) VALUES (20000000,1,'1','新版发布分享','新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161120/a2f52011cef6a30f.jpg\",\"smallUrl\":\"/Uploads/Picture/20161120/s_a2f52011cef6a30f.jpg\",\"id\":\"fcabfd4e05c4294610932a174fcf0a7d\",\"isVideo\":false}]','',1479609891,'地址','36.23141','117.12321','','') [ RunTime:0.395943s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.028300s ]
+SQL: INSERT INTO `tc_share_gallery` (`content`,`images`,`video`,`create_time`,`share_id`) VALUES ('新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161120/a2f52011cef6a30f.jpg\",\"smallUrl\":\"/Uploads/Picture/20161120/s_a2f52011cef6a30f.jpg\",\"id\":\"fcabfd4e05c4294610932a174fcf0a7d\",\"isVideo\":false}]','',1479609891,109),('新版内容2','','',1479609891,109),('新版内容3','','',1479609891,109),('新版内容4','','',1479609891,109),('新版内容5','','',1479609891,109),('新版内容6','','',1479609891,109) [ RunTime:0.031147s ]
+

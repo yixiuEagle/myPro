@@ -1,0 +1,1 @@
+a:4:{i:0;s:3:"uid";i:1;s:4:"udid";i:2;s:7:"bnotice";s:5:"_type";a:3:{s:3:"uid";s:11:"varchar(50)";s:4:"udid";s:12:"varchar(100)";s:7:"bnotice";s:10:"tinyint(1)";}}

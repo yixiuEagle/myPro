@@ -1,0 +1,31 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"jubaoEditForm",theme:'App',onError:function(msg){},onSuccess:savejubaoEdit,inIframe:true});
+})
+function savejubaoEdit(){
+	$.post('{:U('jubao/edit')}', $("#jubaoEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			jubaoRefreshList_{$rand}();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#jubaoEditBox').dialog('close');
+		}
+	})
+}
+</script>
+
+<form id="jubaoEditForm" style="font-size:13px; padding: 5px 0px 5px 5px;">
+<table id="editBox" cellspacing="5">
+
+	<tr>
+		<td width="60" align="right">内容：</td>
+		<td>
+			<input type="hidden" name="id" value="{$info.id}">
+			<textarea name="content" style="width: 250px; height: 44px;">{$info.content}</textarea>
+		</td>
+		<td><div id="edit_jubao_contentTip"></div></td>
+	</tr>
+
+</table>
+</form>

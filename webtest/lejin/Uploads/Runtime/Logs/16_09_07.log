@@ -1,0 +1,203 @@
+[ 2016-09-07T21:46:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/submitOrder
+ERR: {"data":{},"msg":"\u8ba2\u5355\u63d0\u4ea4\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2016-09-07T21:46:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/submitOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002519s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022846s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006312s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006105s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006059s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001338s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005722s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001200s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.006173s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' )  [ RunTime:0.001269s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 535 行.
+NOTIC: [8] Undefined offset: 0 E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 580 行.
+NOTIC: [8] Undefined offset: 0 E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 581 行.
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001144s ]
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.006308s ]
+SQL: SELECT a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( b.start_time <= 1473256002 ) AND ( b.end_time >= 1473256002 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.001425s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 620 行.
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.005495s ]
+SQL: INSERT INTO `tc_order` (`uid`,`sid`,`order_no`,`status`,`transport_method`,`transport_price`,`total_price`,`is_coupon`,`coupon_price`,`is_balances`,`balances_price`,`actual_price`,`shipping_address`,`shipping_name`,`shipping_phone`,`create_time`) VALUES (20000002,1,'2016090751501005',0,null,null,0,0,0,1,0,0,'收货地址','张三','1123455728',1473256002) [ RunTime:0.001093s ]
+ERR: 1048:Column 'transport_method' cannot be null
+ [ SQL语句 ] : INSERT INTO `tc_order` (`uid`,`sid`,`order_no`,`status`,`transport_method`,`transport_price`,`total_price`,`is_coupon`,`coupon_price`,`is_balances`,`balances_price`,`actual_price`,`shipping_address`,`shipping_name`,`shipping_phone`,`create_time`) VALUES (20000002,1,'2016090751501005',0,null,null,0,0,0,1,0,0,'收货地址','张三','1123455728',1473256002)
+
+[ 2016-09-07T21:47:16+08:00 ] 127.0.0.1 /index.php/Shop/Api/updatePayGoods
+ERR: {"data":{},"msg":"\u8be5\u5546\u54c1\u4e0d\u5c5e\u4e8e\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-09-07T21:47:16+08:00 ] 127.0.0.1 /index.php/Shop/Api/updatePayGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000483s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004967s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.037246s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006782s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007093s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001280s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005997s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001239s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006577s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001185s ]
+
+[ 2016-09-07T21:47:26+08:00 ] 127.0.0.1 /index.php/Shop/Api/updatePayGoods
+ERR: {"data":{},"msg":"\u8be5\u5546\u54c1\u4e0d\u5c5e\u4e8e\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-09-07T21:47:26+08:00 ] 127.0.0.1 /index.php/Shop/Api/updatePayGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000463s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004527s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006734s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006157s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006524s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006503s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001127s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005523s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001231s ]
+
+[ 2016-09-07T21:47:55+08:00 ] 127.0.0.1 /index.php/Shop/Api/updatePayGoods
+ERR: {"data":[{"goods_id":"1","pay_count":"1","smallUrl":"\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","pay_price":8}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-07T21:47:55+08:00 ] 127.0.0.1 /index.php/Shop/Api/updatePayGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000462s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004763s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046183s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005491s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007340s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005963s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006207s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 1 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001173s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005317s ]
+SQL: SELECT * FROM `tc_cart` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) AND ( `goods_id` = 1 ) LIMIT 1   [ RunTime:0.001275s ]
+SQL: INSERT INTO `tc_cart` (`uid`,`sid`,`goods_id`,`pay_count`,`create_time`) VALUES (20000002,1,1,1,1473256074) [ RunTime:0.038418s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' )  [ RunTime:0.001204s ]
+
+[ 2016-09-07T21:48:00+08:00 ] 127.0.0.1 /index.php/Shop/Api/submitOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000437s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003818s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004834s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.024432s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006289s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006444s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001337s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007512s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001032s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005514s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' )  [ RunTime:0.001600s ]
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.006554s ]
+SQL: SELECT a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( b.start_time <= 1473256080 ) AND ( b.end_time >= 1473256080 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.001675s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 620 行.
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006754s ]
+SQL: INSERT INTO `tc_order` (`uid`,`sid`,`order_no`,`status`,`transport_method`,`transport_price`,`total_price`,`is_coupon`,`coupon_price`,`is_balances`,`balances_price`,`actual_price`,`shipping_address`,`shipping_name`,`shipping_phone`,`create_time`) VALUES (20000002,1,'2016090748575398',0,2,'2',10,0,0,1,10,0,'收货地址','张三','1123455728',1473256080) [ RunTime:0.035955s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.005810s ]
+SQL: INSERT INTO `tc_order_goods` (`goods_id`,`smallUrl`,`originUrl`,`goods_name`,`price`,`buy_count`,`is_back`,`create_time`,`order_id`) VALUES (1,'/Uploads/Picture/20160828/s_ea213fc0c5b549b3.JPG','/Uploads/Picture/20160828/ea213fc0c5b549b3.JPG','测试商品123','8',1,0,1473256080,1) [ RunTime:0.031214s ]
+
+[ 2016-09-07T21:49:04+08:00 ] 127.0.0.1 /index.php/Shop/Api/submitOrder
+ERR: {"data":{"data":"partner=\"2088121057730282\"&seller_id=\"1549488265@qq.com\"&out_trade_no=\"2016090710252999\"&subject=\"\u4e50\u6d25\u8d2d\u7269\u8d2d\u7269\"&body=\"http:\/\/www.lejin.cn\/index.php\/Shop\/api\/notifyurl\"&total_fee=\"0\"&notify_url=\"http:\/\/www.lejin.cn\/index.php\/user\/api\/notifyurl\"&service=\"mobile.securitypay.pay\"&payment_type=\"1\"&_input_charset=\"utf-8\"&it_b_pay=\"30m\"&show_url=\"m.alipay.com\"&sign=\"WcYKvWh57KhT%2BDTFz1HQ9HZwMxXujrptExJebTGoVdj8uJ0gcOVMzzoHXR346EIiXmMyKdpPNJtJTL9D2LO3QlwpD62qCFqKMCyjD91lDzJVNO6rSOQeIbLRYP6rrEfPJi1PkDiAVGhlCtJkC6bkKxaWkGwwPSqnrFrg5N%2Bgjsw%3D\"&sign_type=\"RSA\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-09-07T21:49:04+08:00 ] 127.0.0.1 /index.php/Shop/Api/submitOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000467s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004832s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006681s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006117s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006598s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001208s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005715s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001060s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005604s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' )  [ RunTime:0.001279s ]
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.005453s ]
+SQL: SELECT a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( b.start_time <= 1473256142 ) AND ( b.end_time >= 1473256142 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.001369s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 620 行.
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.005968s ]
+SQL: INSERT INTO `tc_order` (`uid`,`sid`,`order_no`,`status`,`transport_method`,`transport_price`,`total_price`,`is_coupon`,`coupon_price`,`is_balances`,`balances_price`,`actual_price`,`shipping_address`,`shipping_name`,`shipping_phone`,`create_time`) VALUES (20000002,1,'2016090710252999',0,2,'2',10,0,0,1,10,0,'收货地址','张三','1123455728',1473256142) [ RunTime:0.035848s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.074018s ]
+SQL: INSERT INTO `tc_order_goods` (`goods_id`,`smallUrl`,`originUrl`,`goods_name`,`price`,`buy_count`,`is_back`,`create_time`,`order_id`) VALUES (1,'/Uploads/Picture/20160828/s_ea213fc0c5b549b3.JPG','/Uploads/Picture/20160828/ea213fc0c5b549b3.JPG','测试商品123','8',1,0,1473256142,2) [ RunTime:0.033366s ]
+
+[ 2016-09-07T21:50:21+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+ERR: {"data":[{"id":"2","create_time":"1473256142","status":"0","order_no":"2016090710252999","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]},{"id":"1","create_time":"1473256080","status":"0","order_no":"2016090748575398","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-07T21:50:21+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000453s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004349s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.036284s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006498s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005655s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001612s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( o.uid = '20000002' ) LIMIT 1   [ RunTime:0.001003s ]
+ERR: 1054:Unknown column 'o.uid' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( o.uid = '20000002' ) LIMIT 1  
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 738 行.
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007131s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.uid = '20000002' ) ORDER BY o.create_time desc  [ RunTime:0.001850s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.006609s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 2 )  [ RunTime:0.001085s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 1 )  [ RunTime:0.001215s ]
+
+[ 2016-09-07T21:58:38+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+ERR: {"data":[{"id":"2","create_time":"1473256142","status":"0","order_no":"2016090710252999","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]},{"id":"1","create_time":"1473256080","status":"0","order_no":"2016090748575398","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-07T21:58:38+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000583s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005318s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006389s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005917s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005673s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001247s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( o.uid = '20000002' ) LIMIT 1   [ RunTime:0.001112s ]
+ERR: 1054:Unknown column 'o.uid' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( o.uid = '20000002' ) LIMIT 1  
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 738 行.
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.008580s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.uid = '20000002' ) ORDER BY o.create_time desc  [ RunTime:0.001353s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.006478s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 2 )  [ RunTime:0.001188s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 1 )  [ RunTime:0.001180s ]
+
+[ 2016-09-07T21:59:08+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+ERR: {"data":[{"id":"2","create_time":"1473256142","status":"0","order_no":"2016090710252999","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]},{"id":"1","create_time":"1473256080","status":"0","order_no":"2016090748575398","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]}],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-07T21:59:08+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000514s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004817s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006056s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006282s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006684s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.014358s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.uid = '20000002' ) LIMIT 1   [ RunTime:0.002643s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.uid = '20000002' ) ORDER BY o.create_time desc LIMIT 0,20   [ RunTime:0.001249s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.006347s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 2 )  [ RunTime:0.001671s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 1 )  [ RunTime:0.001329s ]
+

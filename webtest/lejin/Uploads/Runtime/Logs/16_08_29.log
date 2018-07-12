@@ -1,0 +1,221 @@
+[ 2016-08-29T22:09:42+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000493s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003951s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004887s ]
+
+[ 2016-08-29T22:09:42+08:00 ] 127.0.0.1 /index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000514s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005178s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006494s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006299s ]
+
+[ 2016-08-29T22:09:43+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000479s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003989s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004999s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005463s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006136s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.005279s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005590s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006255s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001788s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004746s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006936s ]
+
+[ 2016-08-29T22:09:47+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000534s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004328s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006663s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005769s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.007225s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005872s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.005829s ]
+SQL: SELECT * FROM `tc_times` WHERE ( `username` = 'admin' ) AND ( `isadmin` = 1 ) LIMIT 1   [ RunTime:0.001102s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.001127s ]
+SQL: DELETE FROM `tc_times` WHERE ( `username` = 'admin' ) [ RunTime:0.000853s ]
+SQL: UPDATE `tc_admin` SET `lastloginip`='127.0.0.1',`lastlogintime`=1472479787,`lastlifetime`=1472479787 WHERE ( `userid` = 1 ) [ RunTime:0.001097s ]
+
+[ 2016-08-29T22:09:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000476s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006463s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005511s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005283s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.005420s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006602s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.005770s ]
+SQL: SELECT `rolename` FROM `tc_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.001448s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1472479787 WHERE ( `userid` = 1 ) [ RunTime:0.001213s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 0 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001465s ]
+SQL: SELECT `lastlogintime`,`lastloginip` FROM `tc_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001172s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001737s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004535s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.159713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004955s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005292s ]
+
+[ 2016-08-29T22:09:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_main.html?_=1472479788416
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000946s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006091s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005465s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005587s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.007819s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.009543s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.008576s ]
+SQL: SELECT `rolename` FROM `tc_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.001142s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001315s ]
+
+[ 2016-08-29T22:09:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_menuLeft.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000521s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004083s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.055000s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006200s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006549s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.007287s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.005811s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001338s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 5 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001243s ]
+
+[ 2016-08-29T22:12:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000523s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004569s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005511s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007746s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.005217s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005324s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.005647s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1472479969 WHERE ( `userid` = 1 ) [ RunTime:0.001032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003872s ]
+
+[ 2016-08-29T22:15:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000477s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004489s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006060s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005837s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.051304s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.011911s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.007251s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1472480148 WHERE ( `userid` = 1 ) [ RunTime:0.001092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004072s ]
+
+[ 2016-08-29T22:18:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000476s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004480s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.082260s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006343s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006392s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.007205s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006290s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1472480329 WHERE ( `userid` = 1 ) [ RunTime:0.001062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003988s ]
+
+[ 2016-08-29T22:21:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000475s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004393s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.031234s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005755s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.005935s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005876s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.005874s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1472480508 WHERE ( `userid` = 1 ) [ RunTime:0.000990s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004230s ]
+
+[ 2016-08-29T22:24:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000514s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004431s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005792s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006007s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.005875s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005549s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.005401s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1472480688 WHERE ( `userid` = 1 ) [ RunTime:0.001111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004421s ]
+
+[ 2016-08-29T22:27:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000559s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004455s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.644710s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005886s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006579s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005893s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.005825s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1472480868 WHERE ( `userid` = 1 ) [ RunTime:0.001024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001913s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004104s ]
+

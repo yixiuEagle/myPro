@@ -1,0 +1,274 @@
+[ 2016-11-16T23:27:33+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+ERR: {"data":{},"msg":"\u7528\u6237\u4e0d\u5b58\u5728","debugMsg":"\u7528\u6237uid\u4e0d\u5b58\u5728\u6216uid\u4e3a\u7a7a","code":1,"page":""}
+[ 2016-11-16T23:27:33+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001352s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.026128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032454s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.072707s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.085833s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.015814s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 0 ) LIMIT 1   [ RunTime:0.001716s ]
+
+[ 2016-11-16T23:28:00+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:28:05+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+ERR: {"data":{},"msg":"\u8bf7\u8f93\u5165\u6807\u9898","debugMsg":"","code":1,"page":""}
+[ 2016-11-16T23:28:09+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001341s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010478s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.014711s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.009879s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008971s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001322s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.019236s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.054939s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.017249s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.080289s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001891s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.009866s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479225600' AND '1479311999' ) ) LIMIT 1   [ RunTime:0.026785s ]
+
+[ 2016-11-16T23:28:57+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:29:11+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+ERR: {"data":{},"msg":"\u53d1\u5e03\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:29:11+08:00 ] 127.0.0.1 /index.php/Share/Api/forwardShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000544s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005483s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007427s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.008124s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007579s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.023972s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.007677s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001766s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.008561s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479225600' AND '1479311999' ) ) LIMIT 1   [ RunTime:0.001303s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001769s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001281s ]
+SQL: INSERT INTO `tc_share` (`uid`,`cateid`,`groupids`,`title`,`content`,`images`,`video`,`createtime`,`address`,`lat`,`lng`,`city`,`province`,`rootid`,`type`) VALUES (20000000,1,'','','内容','','',1479310135,'地址','117.1231','36.41231','','',1,1) [ RunTime:0.042488s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.081807s ]
+SQL: INSERT INTO `tc_share_gallery` (`content`,`images`,`video`,`create_time`,`share_id`) VALUES ('内容','','',1479310135,104),('','','',1479310135,104),('','','',1479310135,104),('','','',1479310135,104),('','','',1479310135,104),('','','',1479310135,104) [ RunTime:0.035394s ]
+
+[ 2016-11-16T23:29:57+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:30:03+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-16T23:30:08+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000785s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005030s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007538s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.008939s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.009205s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001266s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.007680s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.002126s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.008680s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001703s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007977s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479225600' AND '1479311999' ) ) LIMIT 1   [ RunTime:0.001910s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.003829s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001553s ]
+
+[ 2016-11-16T23:31:09+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:31:09+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-16T23:31:10+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"\u53d1\u5e03\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:31:10+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005668s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.035071s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.008089s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008378s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.007997s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001402s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.008828s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001298s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.009385s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479225600' AND '1479311999' ) ) LIMIT 1   [ RunTime:0.003347s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.002227s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001770s ]
+SQL: INSERT INTO `tc_share` (`uid`,`cateid`,`groupids`,`title`,`content`,`images`,`video`,`createtime`,`address`,`lat`,`lng`,`city`,`province`) VALUES (20000000,1,'1','新版发布分享','新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161116/8ecd0110da7cd479.jpg\",\"smallUrl\":\"/Uploads/Picture/20161116/s_8ecd0110da7cd479.jpg\",\"id\":\"d22e65c6b8d29da2ee3fc54012a34aaf\",\"isVideo\":false}]','',1479310269,'地址','36.23141','117.12321','','') [ RunTime:0.029999s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.008109s ]
+SQL: INSERT INTO `tc_share_gallery` (`content`,`images`,`video`,`create_time`,`share_id`) VALUES ('新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161116/8ecd0110da7cd479.jpg\",\"smallUrl\":\"/Uploads/Picture/20161116/s_8ecd0110da7cd479.jpg\",\"id\":\"d22e65c6b8d29da2ee3fc54012a34aaf\",\"isVideo\":false}]','',1479310269,105),('新版内容2','','',1479310269,105),('新版内容3','','',1479310269,105),('新版内容4','','',1479310269,105),('新版内容5','','',1479310269,105),('新版内容6','','',1479310269,105) [ RunTime:0.031135s ]
+
+[ 2016-11-16T23:34:30+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/1
+ERR: {"data":{"id":"1","rootid":"0","uid":"20000002","cateid":"2","groupids":"","title":"","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","lat":"25.106845","lng":"102.779703","praisecount":"1","type":"0","province":"","city":"\u5168\u56fd","createtime":"1458385744","ispraise":"1","categoryname":"\u95f2\u8c08\u8da3\u95fb","categorylogo":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160727\/s_0a629e29e2482097.jpg","video_url":"","contentList":[],"user":{"uid":"20000002","name":"A.L","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","sign":"\u95f2\u4eba\u4e00\u4e2a","ismember":1,"isfollow":"0","isblack":"0","group_count":"0","hao_count":"2","coupon_count":"0","headid":"1579bc65e26b87986572f6dd8d7d66d6","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png"},"groups":{},"reply":[],"forward":{}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:34:30+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000525s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006496s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007403s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007536s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008050s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001307s ]
+SQL: SELECT s.*,(select count(*) from `tc_share_praise` where uid=20000000 and shareid=s.id) as ispraise,ifnull((select `name` from `tc_share_category` where id=s.cateid),'') as categoryname,ifnull((select `logo` from `tc_share_category` where id=s.cateid),'') as categorylogo FROM tc_share s WHERE ( `id` = 1 ) ORDER BY createtime desc LIMIT 1   [ RunTime:0.105055s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.077822s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.073678s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.011024s ]
+SQL: SELECT `content`,`images`,`video` FROM `tc_share_gallery` WHERE ( `share_id` = 1 )  [ RunTime:0.001627s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 60 行.
+SQL: SELECT `uid`,`name`,`head`,`sign`,`ismember`,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid=20000002 and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid=20000002 and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=20000002) as group_count,(select count(*) from `tc_groups` where uid=20000002) as hao_count,(select count(*) from `tc_user_coupon` where uid=20000002) as coupon_count FROM tc_user u WHERE ( `uid` = 20000002 ) ORDER BY uid asc LIMIT 1   [ RunTime:0.132703s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.009991s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000002 and time>1479310469 ) LIMIT 1   [ RunTime:0.002182s ]
+SQL: SHOW COLUMNS FROM `tc_share_reply` [ RunTime:0.014464s ]
+SQL: SELECT s.* FROM tc_share_reply s WHERE ( `shareid` = 1 ) ORDER BY createtime desc LIMIT 3   [ RunTime:0.001719s ]
+
+[ 2016-11-16T23:34:47+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/105
+ERR: {"data":{"id":"105","rootid":"0","uid":"20000000","cateid":"1","groupids":"1","title":"\u65b0\u7248\u53d1\u5e03\u5206\u4eab","address":"\u5730\u5740","lat":"36.231410","lng":"117.123210","praisecount":"0","type":"0","province":"","city":"","createtime":"1479310269","ispraise":"0","categoryname":"\u793e\u533a\u2022\u751f\u6d3b","categorylogo":"","video_url":"","contentList":[{"content":"\u65b0\u7248\u5185\u5bb91","images":[{"key":"content1_file","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161116\/8ecd0110da7cd479.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161116\/s_8ecd0110da7cd479.jpg","id":"d22e65c6b8d29da2ee3fc54012a34aaf","isVideo":false}],"video":""},{"content":"\u65b0\u7248\u5185\u5bb92","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb93","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb94","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb95","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb96","images":"","video":""}],"user":[],"groups":{},"reply":[],"forward":{}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:34:47+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/105
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000576s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006062s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008516s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007998s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007355s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001367s ]
+SQL: SELECT s.*,(select count(*) from `tc_share_praise` where uid=20000000 and shareid=s.id) as ispraise,ifnull((select `name` from `tc_share_category` where id=s.cateid),'') as categoryname,ifnull((select `logo` from `tc_share_category` where id=s.cateid),'') as categorylogo FROM tc_share s WHERE ( `id` = 105 ) ORDER BY createtime desc LIMIT 1   [ RunTime:0.001730s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008171s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.007569s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.008095s ]
+SQL: SELECT `content`,`images`,`video` FROM `tc_share_gallery` WHERE ( `share_id` = 105 )  [ RunTime:0.001475s ]
+NOTIC: [8] Undefined index: uid E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 82 行.
+SQL: SELECT `uid`,`name`,`head`,`sign`,`ismember`,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid= and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid= and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=) as group_count,(select count(*) from `tc_groups` where uid=) as hao_count,(select count(*) from `tc_user_coupon` where uid=) as coupon_count FROM tc_user u WHERE ( `uid` = null ) ORDER BY uid asc LIMIT 1   [ RunTime:0.001050s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid= and' at line 1
+ [ SQL语句 ] : SELECT `uid`,`name`,`head`,`sign`,`ismember`,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid= and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid= and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=) as group_count,(select count(*) from `tc_groups` where uid=) as hao_count,(select count(*) from `tc_user_coupon` where uid=) as coupon_count FROM tc_user u WHERE ( `uid` = null ) ORDER BY uid asc LIMIT 1  
+NOTIC: [8] Undefined index: cateid E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 90 行.
+NOTIC: [8] Undefined index: groupids E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `tc_share_reply` [ RunTime:0.007959s ]
+SQL: SELECT s.* FROM tc_share_reply s WHERE ( `shareid` = 0 ) ORDER BY createtime desc LIMIT 3   [ RunTime:0.001335s ]
+NOTIC: [8] Undefined index: rootid E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: categorylogo E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 148 行.
+
+[ 2016-11-16T23:35:01+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/105
+ERR: {"data":{"id":"105","rootid":"0","uid":"20000000","cateid":"1","groupids":"1","title":"\u65b0\u7248\u53d1\u5e03\u5206\u4eab","address":"\u5730\u5740","lat":"36.231410","lng":"117.123210","praisecount":"0","type":"0","province":"","city":"","createtime":"1479310269","ispraise":"0","categoryname":"\u793e\u533a\u2022\u751f\u6d3b","categorylogo":"","video_url":"","contentList":[{"content":"\u65b0\u7248\u5185\u5bb91","images":[{"key":"content1_file","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161116\/8ecd0110da7cd479.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161116\/s_8ecd0110da7cd479.jpg","id":"d22e65c6b8d29da2ee3fc54012a34aaf","isVideo":false}],"video":""},{"content":"\u65b0\u7248\u5185\u5bb92","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb93","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb94","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb95","images":"","video":""},{"content":"\u65b0\u7248\u5185\u5bb96","images":"","video":""}],"user":[],"groups":{},"reply":[],"forward":{}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:35:01+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/105
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000559s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006018s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007957s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007533s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007856s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001332s ]
+SQL: SELECT s.*,(select count(*) from `tc_share_praise` where uid=20000000 and shareid=s.id) as ispraise,ifnull((select `name` from `tc_share_category` where id=s.cateid),'') as categoryname,ifnull((select `logo` from `tc_share_category` where id=s.cateid),'') as categorylogo FROM tc_share s WHERE ( `id` = 105 ) ORDER BY createtime desc LIMIT 1   [ RunTime:0.001469s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007525s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.007817s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.007314s ]
+SQL: SELECT `content`,`images`,`video` FROM `tc_share_gallery` WHERE ( `share_id` = 105 )  [ RunTime:0.001267s ]
+NOTIC: [8] Undefined index: uid E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 82 行.
+SQL: SELECT `uid`,`name`,`head`,`sign`,`ismember`,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid= and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid= and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=) as group_count,(select count(*) from `tc_groups` where uid=) as hao_count,(select count(*) from `tc_user_coupon` where uid=) as coupon_count FROM tc_user u WHERE ( `uid` = null ) ORDER BY uid asc LIMIT 1   [ RunTime:0.001145s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid= and' at line 1
+ [ SQL语句 ] : SELECT `uid`,`name`,`head`,`sign`,`ismember`,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid= and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid= and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=) as group_count,(select count(*) from `tc_groups` where uid=) as hao_count,(select count(*) from `tc_user_coupon` where uid=) as coupon_count FROM tc_user u WHERE ( `uid` = null ) ORDER BY uid asc LIMIT 1  
+NOTIC: [8] Undefined index: cateid E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 90 行.
+NOTIC: [8] Undefined index: groupids E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `tc_share_reply` [ RunTime:0.007771s ]
+SQL: SELECT s.* FROM tc_share_reply s WHERE ( `shareid` = 0 ) ORDER BY createtime desc LIMIT 3   [ RunTime:0.001539s ]
+NOTIC: [8] Undefined index: rootid E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: categorylogo E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 148 行.
+
+[ 2016-11-16T23:38:53+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/1
+ERR: {"data":{"id":"1","rootid":"0","uid":"20000002","cateid":"2","groupids":"","title":"","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","lat":"25.106845","lng":"102.779703","praisecount":"1","type":"0","province":"","city":"\u5168\u56fd","createtime":"1458385744","ispraise":"1","categoryname":"\u95f2\u8c08\u8da3\u95fb","categorylogo":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160727\/s_0a629e29e2482097.jpg","video_url":"","contentList":[],"user":{"uid":"20000002","name":"A.L","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","sign":"\u95f2\u4eba\u4e00\u4e2a","ismember":1,"isfollow":"0","isblack":"0","group_count":"0","hao_count":"2","coupon_count":"0","headid":"1579bc65e26b87986572f6dd8d7d66d6","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png"},"groups":{},"reply":[],"forward":{}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:38:53+08:00 ] 127.0.0.1 /index.php/Share/Api/shareDetail/uid/20000000/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000576s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007663s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007218s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.009003s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007431s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001701s ]
+SQL: SELECT s.*,(select count(*) from `tc_share_praise` where uid=20000000 and shareid=s.id) as ispraise,ifnull((select `name` from `tc_share_category` where id=s.cateid),'') as categoryname,ifnull((select `logo` from `tc_share_category` where id=s.cateid),'') as categorylogo FROM tc_share s WHERE ( `id` = 1 ) ORDER BY createtime desc LIMIT 1   [ RunTime:0.001588s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.010348s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.008353s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.008791s ]
+SQL: SELECT `content`,`images`,`video` FROM `tc_share_gallery` WHERE ( `share_id` = 1 )  [ RunTime:0.002786s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Share\Model\ShareModel.class.php 第 60 行.
+SQL: SELECT `uid`,`name`,`head`,`sign`,`ismember`,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid=20000002 and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid=20000002 and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=20000002) as group_count,(select count(*) from `tc_groups` where uid=20000002) as hao_count,(select count(*) from `tc_user_coupon` where uid=20000002) as coupon_count FROM tc_user u WHERE ( `uid` = 20000002 ) ORDER BY uid asc LIMIT 1   [ RunTime:0.002303s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.007615s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000002 and time>1479310733 ) LIMIT 1   [ RunTime:0.001345s ]
+SQL: SHOW COLUMNS FROM `tc_share_reply` [ RunTime:0.008184s ]
+SQL: SELECT s.* FROM tc_share_reply s WHERE ( `shareid` = 1 ) ORDER BY createtime desc LIMIT 3   [ RunTime:0.001944s ]
+
+[ 2016-11-16T23:38:59+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:38:59+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"\u6ca1\u6709\u6587\u4ef6\u88ab\u4e0a\u4f20\uff01","debugMsg":"","code":1,"page":""}
+[ 2016-11-16T23:38:59+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000568s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006009s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.079551s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007742s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008316s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001623s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.007840s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001291s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.007716s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007518s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479225600' AND '1479311999' ) ) LIMIT 1   [ RunTime:0.001474s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.002363s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001255s ]
+
+[ 2016-11-16T23:39:03+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-16T23:39:11+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"\u6ca1\u6709\u6587\u4ef6\u88ab\u4e0a\u4f20\uff01","debugMsg":"","code":1,"page":""}
+[ 2016-11-16T23:39:11+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000555s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006547s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.034407s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.008515s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008871s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001488s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.007475s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001918s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.011964s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001666s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.007606s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479225600' AND '1479311999' ) ) LIMIT 1   [ RunTime:0.001266s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001349s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001528s ]
+

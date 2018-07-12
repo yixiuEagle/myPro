@@ -1,0 +1,59 @@
+[ 2016-12-05T22:03:42+08:00 ] 127.0.0.1 /index.php/user/api/detail
+ERR: {"data":{"uid":"20000000","phone":"18084839200","name":"\u67312","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_f018f41f6ccc9089.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"\u70ed\u5f97\u5f8822","ismember":1,"lng":null,"lat":null,"extend":"","balance":"783.00","is_supplier":"0","isshield":"0","isfollow":"1","isblack":"0","group_count":"14","hao_count":"4","coupon_count":"18","headid":"44fe6beaa276e3c55974be6736d8d925","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png","gallery":[{"id":"44fe6beaa276e3c55974be6736d8d925","uid":"20000000","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/f018f41f6ccc9089.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_f018f41f6ccc9089.jpg","key":"image1","default":1},{"id":"797a4bc0db601746a192f3a4982c0fbc","uid":"20000000","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/3c6b150ce738556f.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_3c6b150ce738556f.jpg","key":"image3","default":0},{"id":"da5759eb0df2d0a501d00bb1401fcafe","uid":"20000000","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/4c8ec499711155dc.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_4c8ec499711155dc.jpg","key":"image2","default":0}],"myfollowgroup":[{"id":"1","name":"\u7b2c\u4e09\u773c"},{"id":"2","name":"\u822a\u6a215"},{"id":"4","name":"\u54c8\u54c8"},{"id":"9","name":"\u4f4e\u70e737.5'"}],"mycreategroup":[{"id":"2","name":"\u822a\u6a215"},{"id":"5","name":"\u54e6\u5566\u5566\u5566"},{"id":"6","name":"123456"},{"id":"7","name":"\u5a74\u513f\u65f6\u4ee3"}],"group":[{"id":"58","name":"1"},{"id":"59","name":"1"},{"id":"60","name":"1"},{"id":"61","name":"1"},{"id":"62","name":"1"},{"id":"63","name":"\u661f\u671f3"},{"id":"64","name":"\u661f\u671f3"},{"id":"65","name":"\u661f\u671f3"},{"id":"66","name":"\u661f\u671f3"},{"id":"67","name":"\u661f\u671f3"},{"id":"68","name":"\u661f\u671f3"},{"id":"69","name":"\u661f\u671f3"},{"id":"70","name":"\u661f\u671f3"},{"id":"71","name":"\u661f\u671f3"}],"memberAccess":{"id":"4","name":"\u9ad8\u7ea7\u4f1a\u5458","userimage":"1","headcount":"7","groupimage":"1","groupheadcount":"4","groupcount":"4","groupshow":"1","messagecount":"9","isvisible":"2","logo":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png","namecolor":"\u7ea2","monthfee":"8.00","goods_count":"50","goods_img_count":"6","activity_count":"40","source_count":"40","activity_img_count":"30","source_img_count":"30","type":"1","expiretime":"1490253544"},"expiretime":"1490253544","qrcode":"http:\/\/www.lejin.cn\/Uploads\/Picture\/usercode\/user_20000000.png"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-12-05T22:03:42+08:00 ] 127.0.0.1 /index.php/user/api/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000728s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013026s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.062093s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.057396s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.053020s ]
+SQL: SELECT u.*,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid=20000000 and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid=20000000 and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=20000000) as group_count,(select count(*) from `tc_groups` where uid=20000000) as hao_count,(select count(*) from `tc_user_coupon` where uid=20000000) as coupon_count FROM tc_user u WHERE ( `uid` = 20000000 ) ORDER BY uid asc LIMIT 1   [ RunTime:0.055693s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.053904s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.052799s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.055165s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000000 and time>1480946616 ) LIMIT 1   [ RunTime:0.053227s ]
+SQL: SHOW COLUMNS FROM `tc_user_head` [ RunTime:0.056116s ]
+SQL: SELECT * FROM `tc_user_head` WHERE ( `uid` = 20000000 )  [ RunTime:0.057562s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.055551s ]
+SQL: SELECT `id`,`name` FROM `tc_groups` WHERE ( id in(select `groupsid` from `tc_groups_follow` where uid=20000000) )  [ RunTime:0.052315s ]
+SQL: SELECT `id`,`name` FROM `tc_groups` WHERE ( `uid` = 20000000 )  [ RunTime:0.055936s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.054261s ]
+SQL: SELECT `id`,`name` FROM `tc_group` WHERE ( `uid` = '20000000' )  [ RunTime:0.053283s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.054061s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.052013s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.056689s ]
+SQL: SELECT `time` FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.053357s ]
+
+[ 2016-12-05T22:05:12+08:00 ] 127.0.0.1 /index.php/user/api/detail
+ERR: {"data":{"uid":"20000000","phone":"18084839200","name":"\u67312","head":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_f018f41f6ccc9089.jpg","background":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"\u70ed\u5f97\u5f8822","ismember":1,"lng":null,"lat":null,"extend":"","balance":"783.00","is_supplier":"0","isshield":"0","isfollow":"1","isblack":"0","group_count":"14","hao_count":"4","coupon_count":"18","headid":"44fe6beaa276e3c55974be6736d8d925","backgroundlarge":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","lv":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png","gallery":[{"id":"44fe6beaa276e3c55974be6736d8d925","uid":"20000000","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/f018f41f6ccc9089.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_f018f41f6ccc9089.jpg","key":"image1","default":1},{"id":"797a4bc0db601746a192f3a4982c0fbc","uid":"20000000","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/3c6b150ce738556f.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_3c6b150ce738556f.jpg","key":"image3","default":0},{"id":"da5759eb0df2d0a501d00bb1401fcafe","uid":"20000000","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/4c8ec499711155dc.jpg","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_4c8ec499711155dc.jpg","key":"image2","default":0}],"myfollowgroup":[{"id":"1","name":"\u7b2c\u4e09\u773c"},{"id":"2","name":"\u822a\u6a215"},{"id":"4","name":"\u54c8\u54c8"},{"id":"9","name":"\u4f4e\u70e737.5'"}],"mycreategroup":[{"id":"2","name":"\u822a\u6a215"},{"id":"5","name":"\u54e6\u5566\u5566\u5566"},{"id":"6","name":"123456"},{"id":"7","name":"\u5a74\u513f\u65f6\u4ee3"}],"group":[{"id":"58","name":"1"},{"id":"59","name":"1"},{"id":"60","name":"1"},{"id":"61","name":"1"},{"id":"62","name":"1"},{"id":"63","name":"\u661f\u671f3"},{"id":"64","name":"\u661f\u671f3"},{"id":"65","name":"\u661f\u671f3"},{"id":"66","name":"\u661f\u671f3"},{"id":"67","name":"\u661f\u671f3"},{"id":"68","name":"\u661f\u671f3"},{"id":"69","name":"\u661f\u671f3"},{"id":"70","name":"\u661f\u671f3"},{"id":"71","name":"\u661f\u671f3"}],"memberAccess":{"id":"4","name":"\u9ad8\u7ea7\u4f1a\u5458","userimage":"1","headcount":"7","groupimage":"1","groupheadcount":"4","groupcount":"4","groupshow":"1","messagecount":"9","isvisible":"2","logo":"http:\/\/www.lejin.cn\/Uploads\/Lv\/lv3.png","namecolor":"\u7ea2","monthfee":"8.00","goods_count":"50","goods_img_count":"6","activity_count":"40","source_count":"40","activity_img_count":"30","source_img_count":"30","type":"1","expiretime":"1490253544"},"expiretime":"1490253544","qrcode":"http:\/\/www.lejin.cn\/Uploads\/Picture\/usercode\/user_20000000.png"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-12-05T22:05:12+08:00 ] 127.0.0.1 /index.php/user/api/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000580s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005164s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.050916s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.051843s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.052000s ]
+SQL: SELECT u.*,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid=20000000 and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid=20000000 and fuid=u.uid) as isblack,(select count(*) from `tc_group` where uid=20000000) as group_count,(select count(*) from `tc_groups` where uid=20000000) as hao_count,(select count(*) from `tc_user_coupon` where uid=20000000) as coupon_count FROM tc_user u WHERE ( `uid` = 20000000 ) ORDER BY uid asc LIMIT 1   [ RunTime:0.064140s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.052858s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.063349s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.052477s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000000 and time>1480946678 ) LIMIT 1   [ RunTime:0.054040s ]
+SQL: SHOW COLUMNS FROM `tc_user_head` [ RunTime:0.051619s ]
+SQL: SELECT * FROM `tc_user_head` WHERE ( `uid` = 20000000 )  [ RunTime:0.080693s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.053742s ]
+SQL: SELECT `id`,`name` FROM `tc_groups` WHERE ( id in(select `groupsid` from `tc_groups_follow` where uid=20000000) )  [ RunTime:0.056224s ]
+SQL: SELECT `id`,`name` FROM `tc_groups` WHERE ( `uid` = 20000000 )  [ RunTime:0.051433s ]
+NOTIC: [8] Undefined index: memberAccess xdebug://debug-eval 第 1 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.050438s ]
+SQL: SELECT `id`,`name` FROM `tc_group` WHERE ( `uid` = '20000000' )  [ RunTime:0.050948s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.049881s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.050842s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.056609s ]
+SQL: SELECT `time` FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.050458s ]
+

@@ -1,0 +1,113 @@
+[ 2016-12-25T13:11:12+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackInfo?order_id=663
+ERR: {"data":{},"msg":"\u67e5\u8be2\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2016-12-25T13:11:12+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackInfo?order_id=663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000618s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044221s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.045499s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.070639s ]
+SQL: SHOW COLUMNS FROM `tc_order_back` [ RunTime:0.046547s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_order_back` WHERE ( `order_id` = 663 ) LIMIT 1   [ RunTime:0.058792s ]
+SQL: SELECT ob.uid,ob.order_id,ob.goods_id,ob.reason,ob.status,ob.money,ob.type,ob.intro,ob.finish_time,ob.create_time,og.price,og.buy_count FROM tc_order_back ob left join tc_order_goods og on ob.order_id=og.order_id and ob.goods_id=og.goods_id  WHERE ( `order_id` = '663' ) ORDER BY create_time desc  [ RunTime:0.043955s ]
+ERR: 1052:Column 'order_id' in where clause is ambiguous
+ [ SQL语句 ] : SELECT ob.uid,ob.order_id,ob.goods_id,ob.reason,ob.status,ob.money,ob.type,ob.intro,ob.finish_time,ob.create_time,og.price,og.buy_count FROM tc_order_back ob left join tc_order_goods og on ob.order_id=og.order_id and ob.goods_id=og.goods_id  WHERE ( `order_id` = '663' ) ORDER BY create_time desc 
+
+[ 2016-12-25T13:11:58+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackInfo?order_id=663
+ERR: {"data":{},"msg":"\u67e5\u8be2\u5931\u8d25","debugMsg":"","code":1,"page":""}
+[ 2016-12-25T13:11:58+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackInfo?order_id=663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000626s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.021364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025103s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046401s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.046098s ]
+SQL: SHOW COLUMNS FROM `tc_order_back` [ RunTime:0.054298s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_order_back` WHERE ( `order_id` = 663 ) LIMIT 1   [ RunTime:0.051885s ]
+SQL: SELECT ob.uid,ob.order_id,ob.goods_id,ob.reason,ob.status,ob.money,ob.type,ob.intro,ob.finish_time,ob.create_time,og.price,og.buy_count FROM tc_order_back ob left join tc_order_goods og on ob.order_id=og.order_id and ob.goods_id=og.goods_id  WHERE ( `order_id` = '663' ) ORDER BY create_time desc  [ RunTime:0.047844s ]
+ERR: 1052:Column 'order_id' in where clause is ambiguous
+ [ SQL语句 ] : SELECT ob.uid,ob.order_id,ob.goods_id,ob.reason,ob.status,ob.money,ob.type,ob.intro,ob.finish_time,ob.create_time,og.price,og.buy_count FROM tc_order_back ob left join tc_order_goods og on ob.order_id=og.order_id and ob.goods_id=og.goods_id  WHERE ( `order_id` = '663' ) ORDER BY create_time desc 
+
+[ 2016-12-25T13:12:20+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackInfo?order_id=663
+ERR: {"data":[{"uid":"20000108","order_id":"663","goods_id":"115","reason":"5","status":"0","money":"0.00","type":"2","intro":"","finish_time":null,"create_time":"1482640602","price":"20","buy_count":"1"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-12-25T13:12:20+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackInfo?order_id=663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.003983s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049157s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.180579s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.138853s ]
+SQL: SHOW COLUMNS FROM `tc_order_back` [ RunTime:0.050720s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order_back ob WHERE ( ob.order_id = '663' ) LIMIT 1   [ RunTime:0.050492s ]
+SQL: SELECT ob.uid,ob.order_id,ob.goods_id,ob.reason,ob.status,ob.money,ob.type,ob.intro,ob.finish_time,ob.create_time,og.price,og.buy_count FROM tc_order_back ob left join tc_order_goods og on ob.order_id=og.order_id and ob.goods_id=og.goods_id  WHERE ( ob.order_id = '663' ) ORDER BY create_time desc  [ RunTime:0.047519s ]
+
+[ 2016-12-25T22:34:17+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[{"sid":"6","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"6465","lng":"103.978431","lat":"30.738019","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"},{"sid":"26","suid":"20000026","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160505\/s_06a4ce61f46f1103.jpg","name":"\u6211\u7684\u7a7a\u95f4","lng":"117.142505","lat":"36.678467","address":"\u5c71\u4e1c\u7701\u6d4e\u5357\u5e02\u5386\u57ce\u533a\u821c\u534e\u4e1c\u8def","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"}],"msg":"","debugMsg":"","code":0,"page":{"total":2,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-25T22:34:17+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000832s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032010s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.032569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037434s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.051179s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.045208s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.049336s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.050523s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.043843s ]
+SQL: SELECT s.*,((select sum(buy_count)*0.3 from tc_order_goods where goods_id in (select id from tc_goods where sid=s.id) and create_time > -1109323543) + (select count(*)*0.4 from tc_goods_click where goods_id in (select goods_id from tc_goods where sid=s.id) and create_time > -1109323543) + s.score*100*0.3) renqi,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000002' ) AND ( s.cat_id = '2' ) AND ( s.status = 1 ) ORDER BY renqi desc LIMIT 0,20   [ RunTime:0.094502s ]
+
+[ 2016-12-25T22:35:06+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[{"sid":"30","suid":"20000128","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161220\/s_6a2ed770a42c22a0.png","name":"\u897f\u897f","lng":"103.989786","lat":"30.740014","address":"\u6869\u6869\u7891","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"29","suid":"20000129","smallUrl":"http:\/\/www.lejin.cn","name":"\u6d4b\u8bd51","lng":"103.987837","lat":"30.741923","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"28","suid":"20000124","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161212\/s_f2f2a01f55f77604.png","name":"\u65b0\u5e97","lng":"103.835152","lat":"30.691690","address":"\u5b66\u5e9cKTVA\u5ea7","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"25","suid":"20000114","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161031\/s_7d02c7fb564e7d94.png","name":"weqqwqwe","lng":"116.332935","lat":"39.501129","address":"\u5317\u4eac\u56fd\u9645\u7ade\u6280\u573a","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"24","suid":"20000123","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161109\/s_ca90ad59980416db.png","name":"Allen","lng":"30.741402","lat":"103.987372","address":"\u5b81\u56fd\u5c16","cat_id":"6","cat_name":"\u65f6\u5c1a","score":"0","is_collect":"0"},{"sid":"23","suid":"20000123","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161109\/s_ca90ad59980416db.png","name":"add","lng":"103.978431","lat":"30.738019","address":"\u4e1c\u6c9f\u6751","cat_id":"12","cat_name":"\u65c5\u6e38","score":"0","is_collect":"0"},{"sid":"22","suid":"20000124","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161212\/s_f2f2a01f55f77604.png","name":"+668","lng":"103.978431","lat":"30.738019","address":"\u8def\u5bb6\u575d","cat_id":"6","cat_name":"\u65f6\u5c1a","score":"0","is_collect":"0"},{"sid":"20","suid":"20000123","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161109\/s_ca90ad59980416db.png","name":"lo\u2006cati\u2006on","lng":"103.978431","lat":"30.738019","address":"\u7535\u5b50\u79d1\u6280\u5927\u5b66\u533b\u9662","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"19","suid":"20000124","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161212\/s_f2f2a01f55f77604.png","name":"\u6d4b\u8bd5","lng":"103.978431","lat":"30.738019","address":"\u5218\u5bb6\u9662\u5b50","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"18","suid":"20000122","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161108\/s_854fad8dba029d14.jpg","name":"\u5b89\u5353\u6d4b\u8bd5\u7a7a\u95f4","lng":"null","lat":"null","address":"\u6606\u660e\u5e02\u76d8\u9f99\u533a\u5de5\u5546\u884c\u653f\u7ba1\u7406\u5c40","cat_id":"12","cat_name":"\u65c5\u6e38","score":"0","is_collect":"0"},{"sid":"17","suid":"20000120","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161107\/s_e86f71ee6ca582fa.jpg","name":"\u6d4b\u8bd51\u7684\u7a7a\u95f4","lng":"null","lat":"null","address":"\u6c5f\u4e1c\u82b1\u57ce","cat_id":"8","cat_name":"\u623f\u5b50","score":"0","is_collect":"0"},{"sid":"16","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"\u4f60\u4eec\u4e3a\u4ec0\u4e48\u6211","lng":"103.978431","lat":"30.738019","address":"\u7280\u6d66\u7acb\u4ea4\u6865","cat_id":"5","cat_name":"\u5403\u8d27\u65cf","score":"0","is_collect":"0"},{"sid":"14","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"\u6d4b\u8bd5","lng":"103.978431","lat":"30.738019","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"11","suid":"20000108","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161209\/s_2a0ddab65f2e23ed.png","name":"sometime","lng":"103.978431","lat":"30.738019","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"9","suid":"20000109","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161022\/s_328c91d93136cae2.png","name":"\u8fd9\u4e2a\u65f6\u4ee3","lng":"null","lat":"null","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"8","suid":"20000017","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160428\/s_0b18450ac870edb7.png","name":"\u718a\u732b\u5de5\u4f5c2","lng":"null","lat":"null","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u91d1\u7cae\u8def","cat_id":"18","cat_name":null,"score":"0","is_collect":"0"},{"sid":"6","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"6465","lng":"103.978431","lat":"30.738019","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"},{"sid":"3","suid":"20000000","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160923\/s_f018f41f6ccc9089.jpg","name":"\u822a\u6a215","lng":"103.978431","lat":"30.738019","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u91d1\u7cae\u8def","cat_id":"16","cat_name":"\u8fd0\u52a8","score":"0","is_collect":"0"},{"sid":"2","suid":"20000090","smallUrl":"http:\/\/www.lejin.cn","name":"\u552f\u7f8e\u56fe\u7247","lng":"null","lat":"null","address":"\u6210\u90fd\u5e02","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"1","suid":"20000002","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","name":"\u7b2c\u4e09\u773c","lng":"2001231202","lat":"23332","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","cat_id":"2","cat_name":"\u8da3\u95fb","score":"0","is_collect":"0"}],"msg":"","debugMsg":"","code":0,"page":{"total":20,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-25T22:35:06+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000904s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008851s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.048831s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.047043s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.048872s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000026 ) LIMIT 1   [ RunTime:0.046746s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000026' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.046100s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000026 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000026' ) AND ( s.status = 1 ) ORDER BY s.create_time desc LIMIT 0,20   [ RunTime:0.047629s ]
+
+[ 2016-12-25T22:35:39+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+ERR: {"data":[{"sid":"30","suid":"20000128","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161220\/s_6a2ed770a42c22a0.png","name":"\u897f\u897f","lng":"103.989786","lat":"30.740014","address":"\u6869\u6869\u7891","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"29","suid":"20000129","smallUrl":"http:\/\/www.lejin.cn","name":"\u6d4b\u8bd51","lng":"103.987837","lat":"30.741923","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"28","suid":"20000124","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161212\/s_f2f2a01f55f77604.png","name":"\u65b0\u5e97","lng":"103.835152","lat":"30.691690","address":"\u5b66\u5e9cKTVA\u5ea7","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"25","suid":"20000114","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161031\/s_7d02c7fb564e7d94.png","name":"weqqwqwe","lng":"116.332935","lat":"39.501129","address":"\u5317\u4eac\u56fd\u9645\u7ade\u6280\u573a","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"20","suid":"20000123","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161109\/s_ca90ad59980416db.png","name":"lo\u2006cati\u2006on","lng":"103.978431","lat":"30.738019","address":"\u7535\u5b50\u79d1\u6280\u5927\u5b66\u533b\u9662","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"19","suid":"20000124","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161212\/s_f2f2a01f55f77604.png","name":"\u6d4b\u8bd5","lng":"103.978431","lat":"30.738019","address":"\u5218\u5bb6\u9662\u5b50","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"14","suid":"20000107","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161018\/s_dffcac0f35b839e4.png","name":"\u6d4b\u8bd5","lng":"103.978431","lat":"30.738019","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"11","suid":"20000108","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161209\/s_2a0ddab65f2e23ed.png","name":"sometime","lng":"103.978431","lat":"30.738019","address":"\u5b66\u6797\u96c5\u82d1","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"9","suid":"20000109","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20161022\/s_328c91d93136cae2.png","name":"\u8fd9\u4e2a\u65f6\u4ee3","lng":"null","lat":"null","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"},{"sid":"2","suid":"20000090","smallUrl":"http:\/\/www.lejin.cn","name":"\u552f\u7f8e\u56fe\u7247","lng":"null","lat":"null","address":"\u6210\u90fd\u5e02","cat_id":"1","cat_name":"\u793e\u533a","score":"0","is_collect":"0"}],"msg":"","debugMsg":"","code":0,"page":{"total":10,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-12-25T22:35:39+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000796s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005838s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.049082s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.047667s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.048514s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000026 ) LIMIT 1   [ RunTime:0.050268s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000026' ) AND ( s.cat_id = '1' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.046568s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000026 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000026' ) AND ( s.cat_id = '1' ) AND ( s.status = 1 ) ORDER BY s.create_time desc LIMIT 0,20   [ RunTime:0.046576s ]
+
+[ 2016-12-25T22:40:52+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000530s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005270s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046872s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.047021s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046582s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000026 ) LIMIT 1   [ RunTime:0.047163s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.uid <> '20000026' ) AND ( s.cat_id = '1' ) AND ( s.status = 1 ) LIMIT 1   [ RunTime:0.045207s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000026 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.uid <> '20000026' ) AND ( s.cat_id = '1' ) AND ( s.status = 1 ) ORDER BY s.create_time desc LIMIT 0,20   [ RunTime:0.051671s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.048123s ]
+SQL: SELECT SUM(score)/count(score) as score FROM `tc_goods_comment` WHERE ( goods_id IN(SELECT id FROM tc_goods where sid=9) and create_time < 1482606000 and create_time > 1482519600 ) LIMIT 1   [ RunTime:0.045055s ]
+

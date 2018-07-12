@@ -1,0 +1,113 @@
+<script type="text/javascript">
+$(function(){
+	$('#edit_category_upload').uploadify({
+		'swf'      : '__PUBLIC__/js/uploadify/uploadify.swf',
+		'uploader' : '{:U('category/public_upload')}',
+		'buttonText': '选择图片',
+		'width'	: 70,
+		'height': 28,
+		'buttonClass': 'upload_button',
+		'auto'	: true,
+		'removeTimeout' : 0,//文件队列上传完成1秒后删除
+		'fileTypeDesc' : 'Image Files',//只允许上传图像
+		'fileTypeExts' : '*.gif; *.jpg; *.png',//限制允许上传的图片后缀
+		'onUploadSuccess' : function(file, data, response){
+			var data = $.parseJSON(data);
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				var image = data.image;
+				$('#edit_category_image').attr('src','__ROOT__'+image['0']['smallUrl']);
+				$('#edit_category_logo').attr('value',image['0']['smallUrl']);
+			}
+		}
+	});
+	$('#edit_category_upload2').uploadify({
+		'swf'      : '__PUBLIC__/js/uploadify/uploadify.swf',
+		'uploader' : '{:U('category/public_upload')}',
+		'buttonText': '选择点击显示图片',
+		'width'	: 120,
+		'height': 28,
+		'buttonClass': 'upload_button',
+		'auto'	: true,
+		'removeTimeout' : 0,//文件队列上传完成1秒后删除
+		'fileTypeDesc' : 'Image Files',//只允许上传图像
+		'fileTypeExts' : '*.gif; *.jpg; *.png',//限制允许上传的图片后缀
+		'onUploadSuccess' : function(file, data, response){
+			var data = $.parseJSON(data);
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				var image = data.image;
+				$('#edit_category_image2').attr('src','__ROOT__'+image['0']['smallUrl']);
+				$('#edit_category_logo2').attr('value',image['0']['smallUrl']);
+			}
+		}
+	});
+	$.formValidator.initConfig({formID:"categoryEditForm",theme:'App',onError:function(msg){},onSuccess:category_SaveEdit,inIframe:true});
+})
+function category_SaveEdit(){
+	$.post('{:U('category/edit')}', $("#categoryEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			categoryRefreshList_{$rand}()
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#categoryEditBox').dialog('close');
+		}
+	})
+}
+</script>
+<form id="categoryEditForm" style="font-size:13px; padding: 5px 0 0 10px;">
+<table cellspacing="5">
+	<tr>
+		<td></td>
+		<td>
+			<img id="edit_category_image" src="__ROOT__{$info.logo}" height="80px;" style="min-width: 80px;padding: 3px; border: 1px solid #ccc;">
+			<input id="edit_category_logo" name="logo" value="{$info.logo}" type="hidden">
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td colspan="2">
+			<input id="edit_category_upload" name="edit_category_upload" type="file">
+		</td>
+	</tr>
+    <tr>
+        <td></td>
+        <td>
+            <img id="edit_category_image2" src="__ROOT__{$info.press_logo}" height="80px;" style="min-width: 80px;padding: 3px; border: 1px solid #ccc;">
+            <input id="edit_category_logo2" name="press_logo" value="{$info.press_logo}" type="hidden">
+        </td>
+        <td></td>
+    </tr>
+	<tr>
+		<td></td>
+		<td colspan="2">
+			<input id="edit_category_upload2" name="edit_category_upload2" type="file">
+		</td>
+	</tr>
+	<tr>
+		<td>名称：</td>
+		<td><input type="text" name="name" id="category_edit_name" value="{$info.name}" style="width:280px;height:22px;padding: 3px 6px;" /></td>
+		<td><div id="category_edit_nameTip"></div></td>
+	</tr>
+	<tr>
+		<td>别名：</td>
+		<td><input type="text" name="alias" id="category_edit_alias" value="{$info.alias}" style="width:280px;height:22px;padding: 3px 6px;" /></td>
+		<td><div id="category_edit_aliasTip"></div></td>
+	</tr>
+	<tr>
+		<td>是否显示：</td>
+		<td>
+            是<input type="radio" name="is_show" value="0" <eq value="0" name="info.is_show"> checked="checked" </eq>>
+            否<input type="radio" name="is_show" value="1" <eq value="1" name="info.is_show"> checked="checked" </eq>>
+		</td>
+		<td><div id="category_edit_is_showTip"></div></td>
+	</tr>
+	<tr>
+		<td><input type="hidden" name="id" value="{$info.id}"></td>
+	</tr>
+	</table>
+</form>

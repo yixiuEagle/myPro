@@ -1,0 +1,102 @@
+<!-- 资讯列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="newsList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:true,
+	url:'{:U('news/index',array('uid'=>I('uid',0)))}',idField:'uid',border:false,
+	toolbar:'#newsToolbar_{$rand}',pagination:true,singleSelect:true,nowrap:false">
+<thead>
+	<tr>		
+		<th data-options="field:'logo',width:20,align:'center',formatter:buildFace">logo</th>
+		<th data-options="field:'editor',width:20,align:'center'">作者</th>
+		<th data-options="field:'title',width:30,align:'left'">标题</th>
+		<th data-options="field:'description',width:50,align:'left'">简介</th>
+		<th data-options="field:'createtime',width:20,sortable:true">创建时间</th>
+		<th data-options="field:'id',width:10,formatter:newsOperateText">操作</th>
+	</tr>
+</thead>
+</table>
+
+<div id="newsToolbar_{$rand}" style="padding:5px;height:auto">
+	<form id="newsSearchForm_{$rand}">
+		<a href="javascript:;" onclick="newsAdd();" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">添加</a>
+		<a href="javascript:;" onclick="newsRefreshList_{$rand}();" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">刷新</a>
+		<input type="text" name="search[name]" placeholder="根据标题搜索" style="height: 20px; width: 120px;padding-left: 3px;">
+		<a href="javascript:;" onclick="newsSearch_{$rand}();" class="easyui-linkbutton" iconCls="icon-search">确定</a>		
+	</form>
+</div>
+
+<!-- 添加 -->
+<div id="newsAddBox" class="easyui-dialog" title="资讯添加"
+	data-options="modal:true,closed:true,iconCls:'icon-edit',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){$('#newsAddForm').submit();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#newsAddBox').dialog('close');}}]"
+	style="width: 800px; height: 600px;"></div>
+	
+<!-- 编辑 -->
+<div id="newsEditBox" class="easyui-dialog" title="资讯编辑"
+	data-options="modal:true,closed:true,iconCls:'icon-edit',buttons:[{text:'确定',iconCls:'icon-ok',handler:function(){$('#newsEditForm').submit();}},{text:'取消',iconCls:'icon-cancel',handler:function(){$('#newsEditBox').dialog('close');}}]"
+	style="width: 600px; height: 480px;"></div>
+	
+<script type="text/javascript">
+//刷新
+function newsRefreshList_{$rand}(){
+	$('#newsList_{$rand}').datagrid('reload');
+}
+//头像显示
+function buildFace(val,row,index){
+	if(!val){
+		return '<div style="height:60px;padding:3px;margin:auto;"></div>';
+	}else{
+		return '<img src="'+val+'" height="60" style="padding:3px;">';	
+	}
+}
+//操作格式化
+function newsOperateText(val, row, index){
+	var btn = [];
+		btn.push('<a href="javascript:void(0);" onclick="newsEdit('+val+')">编辑</a>');
+		btn.push('<a href="javascript:void(0);" onclick="newsDelete('+val+','+row.uid+')">删除</a>');
+	return btn.join(' | ');
+}
+//搜索用户
+function newsSearch_{$rand}(){
+	var queryParams = $('#newsList_{$rand}').datagrid('options').queryParams;
+	$.each($("#newsSearchForm_{$rand}").form().serializeArray(), function (index) {
+		queryParams[this['name']] = this['value'];
+	});
+	$('#newsList_{$rand}').datagrid('load');
+}
+//添加
+function newsAdd(){
+	var url = '{:U('news/add',array('rand'=>$rand))}';
+	$('#newsAddBox').dialog({href:url});
+	$('#newsAddBox').dialog('open');
+}
+//编辑
+function newsEdit(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择资讯', 'error');
+		return false;
+	}
+	var url = '{:U('news/edit')}';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	url += '&rand={$rand}';
+	$('#newsEditBox').dialog({href:url});
+	$('#newsEditBox').dialog('open');
+}
+//删除 
+function newsDelete(id, uid){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择资讯', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('{:U('news/delete')}', {id: id, uid: uid}, function(data){
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+				newsRefreshList_{$rand}();
+				$.messager.alert('提示信息', data.info, 'info');
+			}
+		}, 'json');
+	});
+}
+</script>

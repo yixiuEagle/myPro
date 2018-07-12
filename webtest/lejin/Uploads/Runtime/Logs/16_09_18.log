@@ -1,0 +1,405 @@
+[ 2016-09-18T10:56:45+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000534s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005658s ]
+
+[ 2016-09-18T10:56:46+08:00 ] 127.0.0.1 /index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000667s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006971s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.061786s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.017697s ]
+
+[ 2016-09-18T10:56:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000530s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005327s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005844s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006509s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.013979s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.031337s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.033398s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001793s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005594s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.247736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.251074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018932s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.043033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.045949s ]
+
+[ 2016-09-18T10:57:42+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+ERR: {"data":{"sid":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","name":"\u5f20\u4e09","lng":"2001231202","lat":"23332","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","cat_id":"2","cat_name":"\u95f2\u8c08\u8da3\u95fb","score":0,"is_collect":"1","goods_list":[{"id":"2","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":""}]},"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-18T10:57:42+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000523s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005163s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006721s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005867s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006452s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001677s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006857s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001810s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001636s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `name` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.id = '1' ) AND ( s.status = 1 ) ORDER BY s.id asc LIMIT 1   [ RunTime:0.001885s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 38 行.
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.014650s ]
+SQL: SELECT SUM(score)/count(score) as score FROM `tc_goods_comment` WHERE ( goods_id IN(SELECT id FROM tc_goods where sid=1) and create_time < 1474138800create_time > 1474052400 ) LIMIT 1   [ RunTime:0.001804s ]
+ERR: 1054:Unknown column '1474138800create_time' in 'where clause'
+ [ SQL语句 ] : SELECT SUM(score)/count(score) as score FROM `tc_goods_comment` WHERE ( goods_id IN(SELECT id FROM tc_goods where sid=1) and create_time < 1474138800create_time > 1474052400 ) LIMIT 1  
+SQL: UPDATE `tc_supplier` SET `score`=0,`last_time`=1474167444 WHERE ( `id` = 1 ) [ RunTime:0.068418s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006368s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001339s ]
+SQL: SELECT g.* FROM tc_goods g WHERE ( `sid` = 1 ) ORDER BY g.id asc LIMIT 0,20   [ RunTime:0.001621s ]
+
+[ 2016-09-18T10:58:05+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+ERR: {"data":{"sid":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","name":"\u5f20\u4e09","lng":"2001231202","lat":"23332","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","cat_id":"2","cat_name":"\u95f2\u8c08\u8da3\u95fb","score":"0","is_collect":"1","goods_list":[{"id":"2","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":""}]},"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-18T10:58:05+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000762s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007042s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005723s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006937s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006241s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006171s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001131s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001286s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `name` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.id = '1' ) AND ( s.status = 1 ) ORDER BY s.id asc LIMIT 1   [ RunTime:0.001581s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.007506s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001232s ]
+SQL: SELECT g.* FROM tc_goods g WHERE ( `sid` = 1 ) ORDER BY g.id asc LIMIT 0,20   [ RunTime:0.001315s ]
+
+[ 2016-09-18T10:58:42+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000525s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005380s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.061742s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006146s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008431s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001275s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007292s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001302s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001267s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `name` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.id = '1' ) AND ( s.status = 1 ) ORDER BY s.id asc LIMIT 1   [ RunTime:0.001660s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.015369s ]
+SQL: SELECT SUM(score)/count(score) as score FROM `tc_goods_comment` WHERE ( goods_id IN(SELECT id FROM tc_goods where sid=1) and create_time < 1474138800 and create_time > 1474052400 ) LIMIT 1   [ RunTime:0.001639s ]
+
+[ 2016-09-18T10:59:56+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000548s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005106s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.138825s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.009597s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005885s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001656s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005815s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001340s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001270s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `name` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.id = '1' ) AND ( s.status = 1 ) ORDER BY s.id asc LIMIT 1   [ RunTime:0.001921s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.008232s ]
+SQL: SELECT SUM(score)/count(score) as score FROM `tc_goods_comment` WHERE ( goods_id IN(SELECT id FROM tc_goods where sid=1) and create_time < 1474138800 and create_time > 1474052400 ) LIMIT 1   [ RunTime:0.001460s ]
+
+[ 2016-09-18T11:00:07+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000531s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006248s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006716s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006408s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007449s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001416s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005927s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002074s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001252s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `name` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.id = '1' ) AND ( s.status = 1 ) ORDER BY s.id asc LIMIT 1   [ RunTime:0.002638s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.009671s ]
+SQL: SELECT SUM(score)/count(score) as score FROM `tc_goods_comment` WHERE ( goods_id IN(SELECT id FROM tc_goods where sid=1) and create_time < 1474138800 and create_time > 1474052400 ) LIMIT 1   [ RunTime:0.001873s ]
+
+[ 2016-09-18T11:01:21+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+ERR: {"data":{"sid":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","name":"\u5f20\u4e09","lng":"2001231202","lat":"23332","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","cat_id":"2","cat_name":"\u95f2\u8c08\u8da3\u95fb","score":2,"is_collect":"1","goods_list":[{"id":"2","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":""}]},"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-18T11:01:21+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000525s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005416s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005897s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007999s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005856s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001189s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006008s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001160s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001167s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `name` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.id = '1' ) AND ( s.status = 1 ) ORDER BY s.id asc LIMIT 1   [ RunTime:0.001456s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.005382s ]
+SQL: SELECT SUM(score)/count(score) as score FROM `tc_goods_comment` WHERE ( goods_id IN(SELECT id FROM tc_goods where sid=1) and create_time < 1474138800 and create_time > 1474052400 ) LIMIT 1   [ RunTime:0.001386s ]
+SQL: UPDATE `tc_supplier` SET `score`=2,`last_time`=1474167663 WHERE ( `id` = 1 ) [ RunTime:0.033024s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008582s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001373s ]
+SQL: SELECT g.* FROM tc_goods g WHERE ( `sid` = 1 ) ORDER BY g.id asc LIMIT 0,20   [ RunTime:0.001252s ]
+
+[ 2016-09-18T21:03:26+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+ERR: {"data":{},"msg":"\u8be5\u5546\u54c1\u4e0d\u5c5e\u4e8e\u8be5\u5546\u5bb6","debugMsg":"","code":1,"page":""}
+[ 2016-09-18T21:03:26+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000486s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004830s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008231s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005705s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006002s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001521s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006220s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001297s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006768s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `id` = 0 ) AND ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001262s ]
+
+[ 2016-09-18T21:05:44+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+ERR: {"data":{"cart":[{"goods_id":"1","pay_count":"1","smallUrl":null,"originUrl":null,"name":null,"sale_price":null,"cheap_price":null,"is_cheap":null,"transport_method":null,"transport_price":null,"type":null,"pay_price":0}],"transport_method":null,"transport_price":null,"sum_price":0,"pay_price":0,"balance_price":0,"coupon_price":0,"is_balance":"1","is_coupon":0},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:05:44+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000544s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004837s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006697s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006978s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005991s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001160s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007041s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001468s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.059104s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' )  [ RunTime:0.001833s ]
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001202s ]
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.049784s ]
+SQL: SELECT a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( b.start_time <= 1474203944 ) AND ( b.end_time >= 1474203944 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.001564s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 629 行.
+
+[ 2016-09-18T21:06:59+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+ERR: {"data":{"cart":[{"goods_id":"1","pay_count":"1","smallUrl":"\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}],"transport_method":"2","transport_price":"2","sum_price":10,"pay_price":0,"balance_price":10,"coupon_price":0,"is_balance":"1","is_coupon":0},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:06:59+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000506s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003938s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004796s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006652s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006644s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005718s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006901s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001588s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.006408s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' )  [ RunTime:0.001224s ]
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001171s ]
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.005897s ]
+SQL: SELECT a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( b.start_time <= 1474204019 ) AND ( b.end_time >= 1474204019 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.001398s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 629 行.
+
+[ 2016-09-18T21:09:42+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+ERR: {"data":{"cart":[{"goods_id":"1","pay_count":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}],"transport_method":"2","transport_price":"2","sum_price":10,"pay_price":0,"balance_price":10,"coupon_price":0,"is_balance":"1","is_coupon":0},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:09:42+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000481s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004681s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007545s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006173s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005680s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001248s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006168s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001278s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005853s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' )  [ RunTime:0.001256s ]
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.006164s ]
+SQL: SELECT a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( b.start_time <= 1474204181 ) AND ( b.end_time >= 1474204181 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.001484s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 631 行.
+
+[ 2016-09-18T21:12:13+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"cart":{"goods_id":"1","pay_count":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:12:13+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000455s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004806s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007114s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006448s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005890s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005725s ]
+SQL: SELECT g.* FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001219s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.006189s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001221s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.006159s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' )  [ RunTime:0.001277s ]
+
+[ 2016-09-18T21:14:38+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"cart":{"goods_id":"1","pay_count":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:14:38+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000488s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003965s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004668s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.030011s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005692s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005734s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001264s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005858s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001369s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.005869s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001224s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.006270s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' )  [ RunTime:0.001272s ]
+
+[ 2016-09-18T21:15:07+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","comment_count":"0","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"cart":{"goods_id":"1","pay_count":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:15:07+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000477s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004879s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006775s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006938s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006461s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001230s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006737s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001746s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.006883s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005781s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' )  [ RunTime:0.001284s ]
+
+[ 2016-09-18T21:36:44+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","comment_count":"0","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"goods_comment":null,"cart":{"goods_id":"1","pay_count":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:36:44+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000481s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004755s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007771s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006628s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005802s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001558s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005783s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001316s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.005539s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001112s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.006197s ]
+SQL: SELECT * FROM `tc_goods_comment` WHERE ( `goods_id` = 1 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001650s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.006368s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' )  [ RunTime:0.001177s ]
+
+[ 2016-09-18T21:37:34+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","comment_count":"0","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"goods_comment":{},"cart":{"goods_id":"1","pay_count":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:37:34+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000487s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001974s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004967s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007677s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006704s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005574s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001231s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006427s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001316s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.006239s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001175s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.006215s ]
+SQL: SELECT * FROM `tc_goods_comment` WHERE ( `goods_id` = 1 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001197s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005715s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' )  [ RunTime:0.001180s ]
+
+[ 2016-09-18T21:37:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"goods_gallery":[],"goods_comment":{"id":"1","order_id":"1","goods_id":"2","uid":"20000002","score":"2","content":"\u8bc4\u4ef7\u5185\u5bb9","intro":null,"create_time":"1474062400"},"cart":{}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:37:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000454s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004732s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006783s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007364s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006351s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001169s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006479s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count FROM tc_goods g WHERE ( `id` = 2 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001232s ]
+NOTIC: [8] Undefined index: id E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 528 行.
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.006154s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = null )  [ RunTime:0.001095s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 513 行.
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.005965s ]
+SQL: SELECT * FROM `tc_goods_comment` WHERE ( `goods_id` = 2 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001350s ]
+NOTIC: [8] Undefined index: sid E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 531 行.
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005542s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.goods_id = '2' )  [ RunTime:0.001153s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 549 行.
+
+[ 2016-09-18T21:43:31+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","comment_count":"0","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"goods_comment":{},"cart":{"goods_id":"1","pay_count":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","cheap_price":"8","is_cheap":"1","transport_method":"2","transport_price":"2","type":"1","pay_price":8}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-18T21:43:31+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000477s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004719s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007173s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006052s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006347s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005979s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001288s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.006010s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001309s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.028337s ]
+SQL: SELECT * FROM `tc_goods_comment` WHERE ( `goods_id` = 1 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001189s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.007807s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' )  [ RunTime:0.001207s ]
+

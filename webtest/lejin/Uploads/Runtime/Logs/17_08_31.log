@@ -1,0 +1,341 @@
+[ 2017-08-31T14:59:20+08:00 ] ::1 /webtest/lejin/index.php/admin/Jubao/jubao
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008485s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.597842s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.002071s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.281182s ]
+SQL: SHOW COLUMNS FROM `tc_jubao` [ RunTime:0.069008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_jubao` LIMIT 1   [ RunTime:0.057495s ]
+SQL: SELECT j.*,(select `name` from `tc_user` where uid=j.uid) as uname FROM tc_jubao j ORDER BY id desc LIMIT 0,10   [ RunTime:0.060124s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008325s ]
+SQL: SELECT `name`,`isshield` FROM `tc_user` WHERE ( `uid` = 20000070 ) LIMIT 1   [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.131858s ]
+SQL: SELECT `name` FROM `tc_groups` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000725s ]
+
+[ 2017-08-31T15:32:48+08:00 ] ::1 /webtest/lejin/index.php/user/api/jubao
+ERR: {"data":{},"msg":"\u8be5\u5730\u5740\u4e0d\u5b58\u5728","debugMsg":"","code":404,"page":""}
+[ 2017-08-31T15:32:48+08:00 ] ::1 /webtest/lejin/index.php/user/api/jubao
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.018971s ]
+
+[ 2017-08-31T15:33:29+08:00 ] ::1 /webtest/lejin/index.php/user/api/report
+ERR: {"data":{},"msg":"\u4e3e\u62a5\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T15:33:29+08:00 ] ::1 /webtest/lejin/index.php/user/api/report
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001243s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000588s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.014683s ]
+SQL: SHOW COLUMNS FROM `tc_jubao` [ RunTime:0.002362s ]
+SQL: INSERT INTO `tc_jubao` (`uid`,`otherid`,`content`,`type`,`createtime`) VALUES (20000316,20000313,'非法',0,1504164808) [ RunTime:0.207247s ]
+
+[ 2017-08-31T16:02:21+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:02:21+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.016490s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.005819s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.011231s ]
+
+[ 2017-08-31T16:07:31+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:07:31+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006124s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.010819s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000368s ]
+
+[ 2017-08-31T16:12:51+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:12:51+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002151s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.002400s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000259s ]
+
+[ 2017-08-31T16:12:58+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:12:58+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.001881s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000229s ]
+
+[ 2017-08-31T16:15:14+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:15:14+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000961s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.001900s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000219s ]
+
+[ 2017-08-31T16:15:14+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:15:14+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.002575s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000334s ]
+
+[ 2017-08-31T16:16:11+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:16:11+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.031983s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.001975s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000315s ]
+
+[ 2017-08-31T16:16:52+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:16:52+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001686s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.041008s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000306s ]
+
+[ 2017-08-31T16:17:31+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:17:31+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001631s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.002027s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000231s ]
+
+[ 2017-08-31T16:18:21+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:18:21+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000929s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.001813s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000231s ]
+
+[ 2017-08-31T16:18:50+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:18:50+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.000489s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000217s ]
+
+[ 2017-08-31T16:19:26+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+ERR: {"data":[{"id":"2","content":"\u8272\u60c5\u2022\u66b4\u529b"},{"id":"3","content":"\u5e7f\u544a\u2022\u63a8\u9500"},{"id":"4","content":"\u653b\u51fb\u2022\u9a9a\u6270"},{"id":"5","content":"\u865a\u5047\u2022\u8bf1\u5bfc"},{"id":"6","content":"\u8ff7\u4fe1\u2022\u90aa\u6559"},{"id":"7","content":"\u4fb5\u6743\u2022\u5b89\u5168"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T16:19:26+08:00 ] ::1 /webtest/lejin/index.php/user/api/reportLists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `tc_jubao_list` [ RunTime:0.001815s ]
+SQL: SELECT * FROM `tc_jubao_list`  [ RunTime:0.000211s ]
+
+[ 2017-08-31T17:20:09+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+ERR: {"data":{},"msg":"\u8be5\u5206\u4eab\u4e0d\u5b58\u5728\u6216\u5df2\u88ab\u5220\u9664","debugMsg":"","code":1,"page":""}
+[ 2017-08-31T17:20:09+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003044s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.100733s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001661s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.001137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `id` = 20000313 ) LIMIT 1   [ RunTime:0.000504s ]
+
+[ 2017-08-31T17:20:35+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+ERR: {"data":{},"msg":"\u8be5\u5206\u4eab\u4e0d\u5b58\u5728\u6216\u5df2\u88ab\u5220\u9664","debugMsg":"","code":1,"page":""}
+[ 2017-08-31T17:20:35+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.002222s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000675s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000354s ]
+
+[ 2017-08-31T17:20:46+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+ERR: {"data":{},"msg":"\u6dfb\u52a0\u8d5e\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T17:20:46+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000968s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.002026s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000738s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000649s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.054460s ]
+SQL: SHOW COLUMNS FROM `tc_share_praise` [ RunTime:0.086456s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share_praise` WHERE ( `uid` = 20000316 ) AND ( `shareid` = 1 ) LIMIT 1   [ RunTime:0.023225s ]
+SQL: INSERT INTO `tc_share_praise` (`uid`,`shareid`,`createtime`) VALUES (20000316,1,1504171246) [ RunTime:0.056976s ]
+SQL: UPDATE `tc_share` SET `praisecount`=praisecount+1 WHERE ( `id` = 1 ) [ RunTime:0.176255s ]
+
+[ 2017-08-31T17:20:53+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+ERR: {"data":{},"msg":"\u4f60\u5df2\u8d5e\u4e86\u8be5\u7559\u8a00","debugMsg":"","code":1,"page":""}
+[ 2017-08-31T17:20:53+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.065023s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006182s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001746s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000881s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `tc_share_praise` [ RunTime:0.005878s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share_praise` WHERE ( `uid` = 20000316 ) AND ( `shareid` = 1 ) LIMIT 1   [ RunTime:0.001058s ]
+
+[ 2017-08-31T17:21:02+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+ERR: {"data":{},"msg":"\u4f60\u5df2\u8d5e\u4e86\u8be5\u7559\u8a00","debugMsg":"","code":1,"page":""}
+[ 2017-08-31T17:21:02+08:00 ] ::1 /webtest/lejin/index.php/share/api/praise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001462s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.002821s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000751s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000371s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `tc_share_praise` [ RunTime:0.001802s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share_praise` WHERE ( `uid` = 20000316 ) AND ( `shareid` = 1 ) LIMIT 1   [ RunTime:0.000395s ]
+
+[ 2017-08-31T18:01:53+08:00 ] ::1 /webtest/lejin/index.php/messages/api/praise
+ERR: {"data":{},"msg":"\u6dfb\u52a0\u8d5e\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-08-31T18:01:53+08:00 ] ::1 /webtest/lejin/index.php/messages/api/praise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006423s ]
+SQL: SHOW COLUMNS FROM `tc_messages` [ RunTime:0.054111s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001617s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.001222s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_messages` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `tc_messages_praise` [ RunTime:0.037632s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_messages_praise` WHERE ( `uid` = 20000316 ) AND ( `msgid` = 1 ) LIMIT 1   [ RunTime:0.000690s ]
+SQL: INSERT INTO `tc_messages_praise` (`uid`,`msgid`,`createtime`) VALUES (20000316,1,1504173713) [ RunTime:0.043807s ]
+SQL: UPDATE `tc_messages` SET `praisecount`=praisecount+1 WHERE ( `id` = 1 ) [ RunTime:0.020567s ]
+
+[ 2017-08-31T18:01:57+08:00 ] ::1 /webtest/lejin/index.php/messages/api/praise
+ERR: {"data":{},"msg":"\u4f60\u5df2\u8d5e\u4e86\u8be5\u7559\u8a00","debugMsg":"","code":1,"page":""}
+[ 2017-08-31T18:01:57+08:00 ] ::1 /webtest/lejin/index.php/messages/api/praise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001516s ]
+SQL: SHOW COLUMNS FROM `tc_messages` [ RunTime:0.002895s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000692s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000442s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_messages` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `tc_messages_praise` [ RunTime:0.001957s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_messages_praise` WHERE ( `uid` = 20000316 ) AND ( `msgid` = 1 ) LIMIT 1   [ RunTime:0.000345s ]
+

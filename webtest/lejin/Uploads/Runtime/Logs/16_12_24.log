@@ -1,0 +1,55 @@
+[ 2016-12-24T19:56:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder?uid=20000102&sid=30&is_balance=1&is_coupon=1
+ERR: {"data":{"cart":[],"transport_method":null,"transport_price":null,"sum_price":0,"pay_price":0,"balance_price":0,"coupon_price":0,"is_balance":0,"is_coupon":"1"},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-12-24T19:56:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/payOrder?uid=20000102&sid=30&is_balance=1&is_coupon=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001187s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039200s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.047873s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.047298s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046987s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000102 ) LIMIT 1   [ RunTime:0.048952s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.064716s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 30 ) LIMIT 1   [ RunTime:0.045743s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.045277s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000102' ) AND ( a.sid = '30' ) AND (  (b.name is not null)  )  [ RunTime:0.046492s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 626 行.
+NOTIC: [8] Undefined offset: 0 E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 673 行.
+NOTIC: [8] Undefined offset: 0 E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 674 行.
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.048328s ]
+SQL: SELECT a.id,a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000102' ) AND ( a.sid = '30' ) AND ( b.start_time <= 1482580586 ) AND ( b.end_time >= 1482580586 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.045822s ]
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000102 ) LIMIT 1   [ RunTime:0.044751s ]
+
+[ 2016-12-24T22:01:59+08:00 ] 127.0.0.1 /index.php/Shop/Api/submitOrder
+ERR: {"data":{"data":"partner=\"2088121057730282\"&seller_id=\"1549488265@qq.com\"&out_trade_no=\"O2016122453981014\"&subject=\"\u4e50\u6d25\u8d2d\u7269\"&body=\"http:\/\/www.lejin.cn\/index.php\/Shop\/Api\/notifyurl\"&total_fee=\"0.01\"&notify_url=\"http:\/\/www.lejin.cn\/index.php\/Shop\/Api\/notifyurl\"&service=\"mobile.securitypay.pay\"&payment_type=\"1\"&_input_charset=\"utf-8\"&it_b_pay=\"30m\"&show_url=\"m.alipay.com\"&sign=\"RGSf%2FsBYHwypE693Z%2B25lPUhYCcXYb7phTwHCivk7nk%2FwYi108wNYK7DE3WIOQf4qsAF%2FqYtP9QGPwfGYMh5N%2FrM2KFMru%2BcizcdQJMvmglrMHgJkKqCMGBWb6JRhRAMu7LA62DdhqxnXShPczBri2zdEyJrobc%2Br2ceG%2FU48ZM%3D\"&sign_type=\"RSA\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-12-24T22:01:59+08:00 ] 127.0.0.1 /index.php/Shop/Api/submitOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000903s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019959s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.046029s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.043971s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.045326s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.046258s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.044272s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.046270s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.048125s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND (  (b.name is not null)  )  [ RunTime:0.047736s ]
+SQL: SHOW COLUMNS FROM `tc_user_coupon` [ RunTime:0.046851s ]
+SQL: SELECT a.id,a.goods_id,b.deducted_price FROM tc_user_coupon a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( b.start_time <= 1482588116 ) AND ( b.end_time >= 1482588116 ) AND ( `is_use` = 0 ) ORDER BY b.deducted_price desc  [ RunTime:0.046885s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 692 行.
+SQL: SELECT `balance` FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.043599s ]
+NOTIC: [8] Undefined index: coupon_id E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 763 行.
+SQL: INSERT INTO `tc_user_coupon` (`uid`,`sid`,`order_no`,`goods_id`,`is_use`,`status`,`create_time`) VALUES (20000002,1,'2016122453981014',12,0,0,1482588116) [ RunTime:0.056832s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.045855s ]
+SQL: INSERT INTO `tc_order` (`uid`,`sid`,`order_no`,`status`,`transport_method`,`transport_price`,`total_price`,`coupon_id`,`is_coupon`,`coupon_price`,`is_balances`,`balances_price`,`actual_price`,`shipping_address`,`shipping_name`,`shipping_phone`,`create_time`) VALUES (20000002,1,'2016122453981014',1,2,'2',30,null,0,0,1,30,0,'收货地址','张三','1123455728',1482588116) [ RunTime:0.055022s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.045871s ]
+SQL: INSERT INTO `tc_order_goods` (`goods_id`,`smallUrl`,`originUrl`,`goods_name`,`price`,`buy_count`,`is_back`,`create_time`,`order_id`) VALUES (2,'http://www.lejin.cn/Uploads/Picture/20160828/s_ea213fc0c5b549b3.JPG','http://www.lejin.cn/Uploads/Picture/20160828/ea213fc0c5b549b3.JPG','测试商品123','8',1,0,1482588116,639),(10,'http://www.lejin.cn/Uploads/Picture/20161013/s_a745ec70385534ec.jpg','http://www.lejin.cn/Uploads/Picture/20161013/a745ec70385534ec.jpg','123123','12',1,0,1482588116,639),(12,'http://www.lejin.cn/Uploads/Picture/20161013/s_7f3a53ad7782d9ed.jpg','http://www.lejin.cn/Uploads/Picture/20161013/7f3a53ad7782d9ed.jpg','测试优惠券','8',1,0,1482588116,639) [ RunTime:0.080176s ]
+SQL: UPDATE `tc_user` SET `balance`=balance-30 WHERE ( `uid` = 20000002 ) [ RunTime:0.055279s ]
+SQL: DELETE FROM `tc_cart` WHERE ( `uid` = 20000002 ) AND ( `sid` = 1 ) [ RunTime:0.044653s ]
+SQL: SELECT * FROM `tc_order` WHERE ( `order_no` = '2016122453981014' ) LIMIT 1   [ RunTime:0.046064s ]
+

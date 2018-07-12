@@ -1,0 +1,17 @@
+<!-- 用户列表 -->
+<?php $rand = round(microtime(true),3)*1000;?>
+<table id="userList_{$rand}" class="easyui-datagrid" title="{$currentpos}" data-options="
+	fit:true,rownumbers:true,animate:true,fitColumns:false,
+	url:'{:U('User/account_log',array('uid'=>I('uid',0)))}',idField:'uid',border:false,
+	toolbar:'#userToolbar_{$rand}',pagination:true,singleSelect:true">
+<thead>
+	<tr>
+		<th data-options="field:'uid',width:80,align:'center'">用户uid</th>
+		<th data-options="field:'current_balance',width:80,align:'center'">余额</th>
+		<th data-options="field:'price',width:80,align:'center'">变动金额</th>
+		<th data-options="field:'type',width:80,align:'center'">变动类型</th>
+		<th data-options="field:'content',width:200">描述</th>
+		<th data-options="field:'create_time',width:150,align:'center'">变动时间</th>
+	</tr>
+</thead>
+</table>

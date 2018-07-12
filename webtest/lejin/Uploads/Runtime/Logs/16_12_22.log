@@ -1,0 +1,13 @@
+[ 2016-12-22T23:08:16+08:00 ] 127.0.0.1 /index.php/user/api/member
+ERR: {"data":[{"id":"1","name":"\u975e\u4f1a\u5458","userimage":"0","headcount":"1","groupimage":"0","groupheadcount":"1","groupcount":"1","groupshow":"0","messagecount":"3","isvisible":"0","logo":"","namecolor":"\u9ed1","monthfee":"0.00","goods_count":"20","goods_img_count":"3","activity_count":"10","source_count":"10","activity_img_count":"5","source_img_count":"5","type":"0"},{"id":"2","name":"\u4e00\u822c\u4f1a\u5458","userimage":"1","headcount":"3","groupimage":"1","groupheadcount":"2","groupcount":"2","groupshow":"1","messagecount":"5","isvisible":"0","logo":"\/Uploads\/Lv\/lv1.png","namecolor":"\u7eff","monthfee":"3.00","goods_count":"50","goods_img_count":"4","activity_count":"20","source_count":"20","activity_img_count":"10","source_img_count":"10","type":"1"},{"id":"3","name":"\u4e2d\u7ea7\u4f1a\u5458","userimage":"1","headcount":"5","groupimage":"1","groupheadcount":"3","groupcount":"3","groupshow":"1","messagecount":"7","isvisible":"1","logo":"\/Uploads\/Lv\/lv2.png","namecolor":"\u84dd","monthfee":"5.50","goods_count":"50","goods_img_count":"5","activity_count":"30","source_count":"30","activity_img_count":"20","source_img_count":"20","type":"1"},{"id":"4","name":"\u9ad8\u7ea7\u4f1a\u5458","userimage":"1","headcount":"7","groupimage":"1","groupheadcount":"4","groupcount":"4","groupshow":"1","messagecount":"9","isvisible":"2","logo":"\/Uploads\/Lv\/lv3.png","namecolor":"\u7ea2","monthfee":"8.00","goods_count":"50","goods_img_count":"6","activity_count":"40","source_count":"40","activity_img_count":"30","source_img_count":"30","type":"1"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-12-22T23:08:16+08:00 ] 127.0.0.1 /index.php/user/api/member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001668s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022702s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.053428s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.060138s ]
+SQL: SELECT * FROM `tc_user_member`  [ RunTime:0.048836s ]
+

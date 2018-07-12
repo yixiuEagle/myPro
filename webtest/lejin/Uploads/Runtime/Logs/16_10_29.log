@@ -1,0 +1,1036 @@
+[ 2016-10-29T19:44:49+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-10-29T19:44:49+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000524s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005800s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.147859s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006881s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007472s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007188s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.id = '1' ) AND ( o.status = 1 ) LIMIT 1   [ RunTime:0.024695s ]
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 903 行.
+SQL: SELECT o.* FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.id = '1' ) AND ( o.status = 1 ) ORDER BY o.create_time desc  [ RunTime:0.001673s ]
+
+[ 2016-10-29T19:45:00+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-10-29T19:45:00+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000670s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006346s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006826s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006212s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007553s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001214s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006442s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000000) ) AND ( o.status = 1 ) LIMIT 1   [ RunTime:0.017994s ]
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 903 行.
+SQL: SELECT o.* FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000000) ) AND ( o.status = 1 ) ORDER BY o.create_time desc  [ RunTime:0.002000s ]
+
+[ 2016-10-29T19:45:08+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+ERR: {"data":[{"id":"3","sid":"1","uid":"20000002","create_time":"1473339931","status":"1","order_no":"2016090898565710","goods_list":[{"id":"1","goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}],"address":"\u6536\u8d27\u5730\u5740","receiver":"\u5f20\u4e09","phone":"1123455728","back_info":{}}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-10-29T19:45:08+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000512s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005669s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007219s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006412s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006142s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001276s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.005782s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) LIMIT 1   [ RunTime:0.001189s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) ORDER BY o.create_time desc LIMIT 0,20   [ RunTime:0.001528s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.138240s ]
+SQL: SELECT goods_id as id,`goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 3 )  [ RunTime:0.001212s ]
+
+[ 2016-10-29T22:32:17+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000542s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005927s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.012921s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.054466s ]
+
+[ 2016-10-29T22:32:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000520s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005378s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007250s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007289s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.007915s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.007813s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.007127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.009813s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.585174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.588811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.030779s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.035702s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.074399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.081204s ]
+
+[ 2016-10-29T22:32:26+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000616s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005248s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006556s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006302s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006925s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006691s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006940s ]
+SQL: SELECT * FROM `tc_times` WHERE ( `username` = 'admin' ) AND ( `isadmin` = 1 ) LIMIT 1   [ RunTime:0.032556s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.002956s ]
+SQL: DELETE FROM `tc_times` WHERE ( `username` = 'admin' ) [ RunTime:0.053088s ]
+SQL: UPDATE `tc_admin` SET `lastloginip`='127.0.0.1',`lastlogintime`=1477751545,`lastlifetime`=1477751545 WHERE ( `userid` = 1 ) [ RunTime:0.062472s ]
+
+[ 2016-10-29T22:32:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000512s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005619s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006864s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006734s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006972s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.007216s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006376s ]
+SQL: SELECT `rolename` FROM `tc_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.024128s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477751546 WHERE ( `userid` = 1 ) [ RunTime:0.001072s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 0 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.017937s ]
+SQL: SELECT `lastlogintime`,`lastloginip` FROM `tc_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001506s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001765s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004682s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.247171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.250308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.023499s ]
+
+[ 2016-10-29T22:32:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_main.html?_=1477751547412
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000543s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005048s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006332s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.008124s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.009923s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.009039s ]
+SQL: SELECT `rolename` FROM `tc_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.001129s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001197s ]
+
+[ 2016-10-29T22:32:28+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_menuLeft.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000504s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005024s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007245s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006821s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006663s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006819s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006718s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001410s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 5 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001308s ]
+
+[ 2016-10-29T22:32:30+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_menuLeft.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000482s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004216s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006184s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007197s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006038s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005866s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006899s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 4 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001392s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 41 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001201s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 58 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001257s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 55 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001252s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 53 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001476s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 48 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001338s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 51 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001577s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 36 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001293s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 39 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001505s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 60 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001301s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 15 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.002088s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `parentid` = 17 ) AND ( `display` = 1 ) ORDER BY `listorder` ASC LIMIT 1000   [ RunTime:0.001600s ]
+
+[ 2016-10-29T22:32:35+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477751554526
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000712s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004790s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006178s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006389s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.009139s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001270s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001287s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001236s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001941s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004484s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.095654s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004712s ]
+
+[ 2016-10-29T22:32:35+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000513s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004424s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005838s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006422s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006610s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001408s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.021308s ]
+
+[ 2016-10-29T22:33:24+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000619s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004293s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005390s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006145s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.007000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001249s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001298s ]
+
+[ 2016-10-29T22:33:25+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_main.html?_=1477751604985
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005364s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006578s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007136s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.008255s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.007612s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.007993s ]
+SQL: SELECT `rolename` FROM `tc_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.001458s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001178s ]
+
+[ 2016-10-29T22:33:26+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477751606326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000511s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004851s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007103s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007446s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008424s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001362s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001090s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001388s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001699s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002983s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002225s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005359s ]
+
+[ 2016-10-29T22:33:27+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000784s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004124s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006764s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007404s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006551s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001190s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001193s ]
+
+[ 2016-10-29T22:34:21+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_main.html?_=1477751661617
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000521s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005766s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007258s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007379s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.007302s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006537s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.010204s ]
+SQL: SELECT `rolename` FROM `tc_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.001299s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001230s ]
+
+[ 2016-10-29T22:34:23+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477751662732
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000516s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004856s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007163s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006788s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006897s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001247s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001456s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001812s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006573s ]
+
+[ 2016-10-29T22:34:23+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000529s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004645s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005699s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005853s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006958s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001114s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001654s ]
+
+[ 2016-10-29T22:34:56+08:00 ] 127.0.0.1 /index.php/Shop/Order/index/menuid/62.html?_=1477751696054
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000484s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005018s ]
+ERR: 无法加载控制器:Order
+
+[ 2016-10-29T22:35:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000524s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005918s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007210s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007226s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.005988s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.007034s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.007355s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477751727 WHERE ( `userid` = 1 ) [ RunTime:0.001150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004929s ]
+
+[ 2016-10-29T22:38:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000878s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005484s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.038620s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006955s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.008748s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.007759s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.007245s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477751907 WHERE ( `userid` = 1 ) [ RunTime:0.001392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002266s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005144s ]
+
+[ 2016-10-29T22:41:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001695s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004661s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007223s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006766s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006714s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.005935s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.007335s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477752087 WHERE ( `userid` = 1 ) [ RunTime:0.001513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006075s ]
+
+[ 2016-10-29T22:43:29+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477752208833
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000608s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004932s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.021143s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.062716s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.009221s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001310s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001208s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001316s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001714s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003979s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078362s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007005s ]
+
+[ 2016-10-29T22:43:29+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000527s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004645s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005846s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006020s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008075s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001150s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001235s ]
+
+[ 2016-10-29T22:43:31+08:00 ] 127.0.0.1 /index.php/Shop/Order/index/menuid/62.html?_=1477752210704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000548s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004986s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007225s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007515s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007810s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 62 ) LIMIT 1   [ RunTime:0.001592s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001285s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.002166s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002711s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005870s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004885s ]
+
+[ 2016-10-29T22:43:31+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000519s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004996s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006831s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.008115s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005668s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001468s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001434s ]
+
+[ 2016-10-29T22:43:49+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477752229197
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001144s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005028s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006720s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006893s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006161s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001244s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001310s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001216s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001743s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004645s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006491s ]
+
+[ 2016-10-29T22:43:50+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000617s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004249s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006649s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007486s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.007158s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001262s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.002470s ]
+
+[ 2016-10-29T22:43:51+08:00 ] 127.0.0.1 /index.php/Shop/Order/index/menuid/62.html?_=1477752230803
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000516s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004590s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006811s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006400s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007621s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 62 ) LIMIT 1   [ RunTime:0.001335s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001157s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001402s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001920s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002074s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004411s ]
+
+[ 2016-10-29T22:43:51+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000523s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004769s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006306s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006005s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006609s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g LIMIT 1   [ RunTime:0.001158s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001652s ]
+
+[ 2016-10-29T22:44:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000517s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004482s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007119s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006480s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.008964s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006729s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006577s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477752267 WHERE ( `userid` = 1 ) [ RunTime:0.001218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004445s ]
+
+[ 2016-10-29T22:47:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000792s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009996s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005270s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006031s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006593s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.005861s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006115s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006220s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477752447 WHERE ( `userid` = 1 ) [ RunTime:0.001805s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008028s ]
+
+[ 2016-10-29T22:47:37+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477752456956
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000661s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004858s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006421s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007485s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008202s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001310s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001132s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001404s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001777s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.119595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003677s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002856s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006008s ]
+
+[ 2016-10-29T22:47:37+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000875s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005865s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005720s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006201s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.008696s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001896s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001717s ]
+
+[ 2016-10-29T22:47:38+08:00 ] 127.0.0.1 /index.php/Shop/Order/index/menuid/62.html?_=1477752458077
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000550s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007694s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006642s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006501s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.008460s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 62 ) LIMIT 1   [ RunTime:0.001528s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001259s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004499s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004284s ]
+
+[ 2016-10-29T22:47:38+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000518s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004659s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006599s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007142s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006686s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g LIMIT 1   [ RunTime:0.001633s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001357s ]
+
+[ 2016-10-29T22:48:03+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477752482772
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000537s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004882s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007832s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007005s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006637s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001153s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001162s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.002074s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001897s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004480s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004801s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005230s ]
+
+[ 2016-10-29T22:48:03+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000483s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004810s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005784s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007295s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.007246s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001166s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001214s ]
+
+[ 2016-10-29T22:48:04+08:00 ] 127.0.0.1 /index.php/Shop/Order/index/menuid/62.html?_=1477752483825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000554s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004835s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007125s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006182s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006160s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 62 ) LIMIT 1   [ RunTime:0.001267s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001695s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001394s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001646s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003884s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006940s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004928s ]
+
+[ 2016-10-29T22:48:04+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000519s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004734s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005399s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006443s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007787s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g LIMIT 1   [ RunTime:0.001136s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001402s ]
+
+[ 2016-10-29T22:48:31+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000543s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004229s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006972s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006087s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.005856s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%a%' ) LIMIT 1   [ RunTime:0.023976s ]
+ERR: 1054:Unknown column 'u.name' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%a%' ) LIMIT 1  
+
+[ 2016-10-29T22:48:33+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000542s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007247s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006427s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007089s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A%' ) LIMIT 1   [ RunTime:0.001078s ]
+ERR: 1054:Unknown column 'u.name' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A%' ) LIMIT 1  
+
+[ 2016-10-29T22:48:37+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000566s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004500s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006389s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006792s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g LIMIT 1   [ RunTime:0.001455s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001397s ]
+
+[ 2016-10-29T22:48:48+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000748s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004612s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.005721s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006414s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006686s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A.L%' ) LIMIT 1   [ RunTime:0.000955s ]
+ERR: 1054:Unknown column 'u.name' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A.L%' ) LIMIT 1  
+
+[ 2016-10-29T22:48:50+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000612s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004138s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006817s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006879s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007568s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A.L%' ) LIMIT 1   [ RunTime:0.001054s ]
+ERR: 1054:Unknown column 'u.name' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A.L%' ) LIMIT 1  
+
+[ 2016-10-29T22:48:52+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000528s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005685s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.008014s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006922s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006515s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g LIMIT 1   [ RunTime:0.001081s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001275s ]
+
+[ 2016-10-29T22:48:57+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001461s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004403s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007558s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006915s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006699s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A.L%' ) LIMIT 1   [ RunTime:0.000950s ]
+ERR: 1054:Unknown column 'u.name' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order g WHERE ( u.name LIKE '%A.L%' ) LIMIT 1  
+
+[ 2016-10-29T22:49:36+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000540s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005071s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006903s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006502s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( u.name LIKE '%A.L%' ) LIMIT 1   [ RunTime:0.002422s ]
+ERR: 1054:Unknown column 'u.name' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( u.name LIKE '%A.L%' ) LIMIT 1  
+
+[ 2016-10-29T22:50:21+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000893s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006198s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006914s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006326s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007705s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o left join user u on o.uid=u.uid  WHERE ( u.name LIKE '%A.L%' ) LIMIT 1   [ RunTime:0.021327s ]
+ERR: 1146:Table 'lejin.user' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order o left join user u on o.uid=u.uid  WHERE ( u.name LIKE '%A.L%' ) LIMIT 1  
+
+[ 2016-10-29T22:50:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000783s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004529s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007168s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006057s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.006955s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006369s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006005s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477752627 WHERE ( `userid` = 1 ) [ RunTime:0.001069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004145s ]
+
+[ 2016-10-29T22:50:48+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000730s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006513s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006147s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.005722s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006257s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o left join user u on o.uid=u.uid  LIMIT 1   [ RunTime:0.001721s ]
+ERR: 1146:Table 'lejin.user' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order o left join user u on o.uid=u.uid  LIMIT 1  
+
+[ 2016-10-29T22:51:13+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000973s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004542s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.007098s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006237s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.011049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o left join user u on o.uid=u.uid  LIMIT 1   [ RunTime:0.002021s ]
+ERR: 1146:Table 'lejin.user' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tc_order o left join user u on o.uid=u.uid  LIMIT 1  
+
+[ 2016-10-29T22:53:28+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_sessionLife.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000847s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005291s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006247s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.007451s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.007170s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006684s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.007484s ]
+SQL: UPDATE `tc_admin` SET `lastlifetime`=1477752808 WHERE ( `userid` = 1 ) [ RunTime:0.001241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002230s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004638s ]
+
+[ 2016-10-29T22:54:06+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001538s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005893s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.017578s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006212s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.007075s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o left join tc_user u on o.uid=u.uid  LIMIT 1   [ RunTime:0.001150s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.017601s ]
+
+[ 2016-10-29T22:54:10+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000512s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004866s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.017892s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.030877s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.008652s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o left join tc_user u on o.uid=u.uid  WHERE ( u.name LIKE '%A.L%' ) LIMIT 1   [ RunTime:0.024050s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  WHERE ( u.name LIKE '%A.L%' ) ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001618s ]
+
+[ 2016-10-29T22:54:12+08:00 ] 127.0.0.1 /index.php/Shop/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000520s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005184s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006811s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006957s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.008045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o left join tc_user u on o.uid=u.uid  WHERE ( u.name LIKE '%A.L%' ) LIMIT 1   [ RunTime:0.001338s ]
+SQL: SELECT o.*,u.name FROM tc_order o left join tc_user u on o.uid=u.uid  WHERE ( u.name LIKE '%A.L%' ) ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001647s ]
+
+[ 2016-10-29T22:54:19+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index/menuid/61.html?_=1477752859151
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000512s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005367s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006176s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006744s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.007312s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.001362s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 60 ) LIMIT 1   [ RunTime:0.001213s ]
+SQL: SELECT * FROM `tc_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001332s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001945s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004305s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004597s ]
+
+[ 2016-10-29T22:54:20+08:00 ] 127.0.0.1 /index.php/Shop/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000489s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004358s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006127s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006739s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006545s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g LIMIT 1   [ RunTime:0.001193s ]
+SQL: SELECT g.*,s.shop_name FROM tc_goods g left join tc_supplier s on g.sid=s.id  ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.001320s ]
+
+[ 2016-10-29T22:54:20+08:00 ] 127.0.0.1 /index.php/Admin/Index/public_main.html?_=1477752860200
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000723s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008392s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.006464s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.006905s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.007654s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.006722s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.006394s ]
+SQL: SELECT `rolename` FROM `tc_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.001362s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001329s ]
+

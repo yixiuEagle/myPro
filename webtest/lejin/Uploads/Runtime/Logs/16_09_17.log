@@ -1,0 +1,109 @@
+[ 2016-09-17T19:11:53+08:00 ] 127.0.0.1 /index.php/User/Api/goodsComment
+ERR: {"data":{},"msg":"\u8be5\u5730\u5740\u4e0d\u5b58\u5728","debugMsg":"","code":404,"page":""}
+[ 2016-09-17T19:11:53+08:00 ] 127.0.0.1 /index.php/User/Api/goodsComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000566s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020785s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015651s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.028751s ]
+
+[ 2016-09-17T19:12:12+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsComment
+ERR: {"data":{},"msg":"\u8bc4\u4ef7\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-09-17T19:12:12+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000465s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004875s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005606s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.050532s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005994s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001322s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.005710s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods_comment` WHERE ( `uid` = 20000002 ) AND ( `order_id` = 1 ) AND ( `goods_id` = 2 ) LIMIT 1   [ RunTime:0.001431s ]
+SQL: INSERT INTO `tc_goods_comment` (`uid`,`order_id`,`goods_id`,`score`,`content`,`create_time`) VALUES (20000002,1,2,2,'评价内容',1474110732) [ RunTime:0.042690s ]
+
+[ 2016-09-17T19:12:16+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+ERR: {"data":[{"smallUrl":"\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","originUrl":"\/Uploads\/Picture\/20160502\/8e0e71199b07cb4e.jpg","uid":"20000002","score":"2","content":"\u8bc4\u4ef7\u5185\u5bb9","create_time":"1474110732"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-17T19:12:16+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000575s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004856s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.031689s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005100s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006574s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001167s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.005594s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods_comment a WHERE ( a.goods_id = '2' ) LIMIT 1   [ RunTime:0.001154s ]
+SQL: SELECT c.smallUrl,c.originUrl,a.uid,a.score,a.content,a.create_time FROM tc_goods_comment a left join tc_user b on a.uid=b.uid left join tc_user_head c on b.head=c.id  WHERE ( a.goods_id = '2' ) LIMIT 0,20   [ RunTime:0.034913s ]
+
+[ 2016-09-17T19:39:17+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+ERR: {"data":[{"id":"3","create_time":"1473339931","status":"0","order_no":"2016090898565710","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]},{"id":"2","create_time":"1473256142","status":"2","order_no":"2016090710252999","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]},{"id":"1","create_time":"1473256080","status":"3","order_no":"2016090748575398","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]}],"msg":"","debugMsg":"","code":0,"page":{"total":3,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-17T19:39:17+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000462s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004821s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005331s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005290s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004967s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001255s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.005157s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.uid = '20000002' ) LIMIT 1   [ RunTime:0.001130s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.uid = '20000002' ) ORDER BY o.create_time desc LIMIT 0,20   [ RunTime:0.001310s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.050643s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 3 )  [ RunTime:0.001633s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 2 )  [ RunTime:0.001177s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 1 )  [ RunTime:0.001205s ]
+
+[ 2016-09-17T19:39:23+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+ERR: {"data":[{"id":"3","create_time":"1473339931","status":"0","order_no":"2016090898565710","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]},{"id":"2","create_time":"1473256142","status":"2","order_no":"2016090710252999","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]},{"id":"1","create_time":"1473256080","status":"3","order_no":"2016090748575398","goods_list":[{"goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}]}],"msg":"","debugMsg":"","code":0,"page":{"total":3,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-17T19:39:23+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000548s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005596s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005142s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005409s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005148s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001248s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.005315s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.uid = '20000002' ) LIMIT 1   [ RunTime:0.001114s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.uid = '20000002' ) ORDER BY o.create_time desc LIMIT 0,20   [ RunTime:0.001313s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.006753s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 3 )  [ RunTime:0.001201s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 2 )  [ RunTime:0.001130s ]
+SQL: SELECT `goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 1 )  [ RunTime:0.001129s ]
+
+[ 2016-09-17T19:40:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+ERR: {"data":{"sid":"1","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160502\/s_8e0e71199b07cb4e.jpg","name":"\u5f20\u4e09","lng":"2001231202","lat":"23332","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","cat_id":"2","cat_name":"\u95f2\u8c08\u8da3\u95fb","score":"0","is_collect":"1","goods_list":[{"id":"1","sid":"1","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":""}]},"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-17T19:40:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000516s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005046s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004803s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005090s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005052s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001248s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005083s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001261s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) AND ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001328s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `name` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000002 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.id = '1' ) AND ( s.status = 1 ) ORDER BY s.id asc LIMIT 1   [ RunTime:0.040746s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 38 行.
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.005819s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_goods` WHERE ( `sid` = 1 ) LIMIT 1   [ RunTime:0.001406s ]
+SQL: SELECT g.* FROM tc_goods g WHERE ( `sid` = 1 ) ORDER BY g.id asc LIMIT 0,20   [ RunTime:0.001347s ]
+

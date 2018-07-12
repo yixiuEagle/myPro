@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        hr{
+            height: 10px;
+            background: #AAA;
+            margin: 20px 0;
+        }
+        .title{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="title">1.申请商家</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/regSupplier" method="post" enctype="multipart/form-data">
+    <input type="text" name="uid" value="20000002">
+    <input type="text" name="groups_id" value="1">
+    <input type="text" name="name" value="张三">
+    <input type="text" name="phone" value="1827266">
+    <input type="text" name="lng" value="2001231202">
+    <input type="text" name="lat" value="23332">
+    <input type="file" name="img1" >
+    <input type="file" name="img2">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">2.添加商品</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/addGoods" method="post" enctype="multipart/form-data">
+    <input type="text" name="uid" value="20000002">
+    <input type="text" name="sid" value="1">
+    <input type="text" name="type" value="1">
+    <input type="text" name="name" value="测试商品">
+    <input type="text" name="profile" value="商品简介">
+    <input type="text" name="sale_price" value="10">
+    <input type="text" name="original_price" value="12">
+    <input type="text" name="cheap_price" value="8">
+    <input type="text" name="is_cheap" value="1">
+    <input type="text" name="transport_method" value="2">
+    <input type="text" name="transport_price" value="2">
+    <input type="file" name="img1" >
+    <input type="file" name="img2">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">2.添加优惠券</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/addGoods" method="post" enctype="multipart/form-data">
+    <input type="text" name="uid" value="20000002">
+    <input type="text" name="sid" value="1">
+    <input type="text" name="type" value="2">
+    <input type="text" name="name" value="测试优惠券">
+    <input type="text" name="profile" value="优惠券简介">
+    <input type="text" name="sale_price" value="10">
+    <input type="text" name="original_price" value="12">
+    <input type="text" name="cheap_price" value="8">
+    <input type="text" name="is_cheap" value="1">
+    <input type="text" name="transport_method" value="1">
+    <input type="text" name="transport_price" value="0">
+    <input type="text" name="deducted_price" value="2">
+    <input type="text" name="start_time" value="1473308124">
+    <input type="text" name="end_time" value="1473408124">
+    <input type="file" name="img1" >
+    <input type="file" name="img2">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">3.编辑商品</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/editGoods" method="post" enctype="multipart/form-data">
+    <input type="text" name="goods_id" value="1">
+    <input type="text" name="uid" value="20000002">
+    <input type="text" name="sid" value="1">
+    <input type="text" name="type" value="1">
+    <input type="text" name="name" value="测试商品">
+    <input type="text" name="profile" value="商品简介">
+    <input type="text" name="sale_price" value="10">
+    <input type="text" name="original_price" value="12">
+    <input type="text" name="cheap_price" value="8">
+    <input type="text" name="is_cheap" value="1">
+    <input type="text" name="transport_method" value="2">
+    <input type="text" name="transport_price" value="2">
+    <input type="text" name="original_images" value="http://www.lejin.cn/Uploads/Picture/20160905/s_8964c76bcc7b6acb.jpg,http://www.lejin.cn/Uploads/Picture/20160905/s_8ae4a8c2d09c6323.jpg">
+    <input type="file" name="img1" >
+    <input type="file" name="img2">
+    <input type="file" name="img3">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">4.商家商品列表</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/goodsList" method="post" enctype="multipart/form-data">
+    <input type="text" name="uid" value="20000002">
+    <input type="text" name="sid" value="1">
+    <input type="text" name="type" value="1">
+    <input type="text" name="page" value="1">
+    <input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">5.商品详情</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/goodsDetail" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    goods_id<input type="text" name="goods_id" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">6.增加或减少购买商品</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/updatePayGoods" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    sid<input type="text" name="sid" value="1">
+    goods_id<input type="text" name="goods_id" value="1">
+    new_count<input type="text" name="new_count" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">7.付款订单</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/payOrder" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    sid<input type="text" name="sid" value="1">
+    is_balance<input type="text" name="is_balance" value="1">
+    is_coupon<input type="text" name="is_coupon" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">8.提交订单</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/submitOrder" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    sid<input type="text" name="sid" value="1">
+    address<input type="text" name="address" value="收货地址">
+    receiver<input type="text" name="receiver" value="张三">
+    phone<input type="text" name="phone" value="1123455728">
+    is_balance<input type="text" name="is_balance" value="1">
+    is_coupon<input type="text" name="is_coupon" value="1">
+    is_hdfk<input type="text" name="is_hdfk" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">9.买家订单</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/orderList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">10.卖家订单</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/supplierOrderList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    type<input type="text" name="type" value="1">
+    order_id<input type="text" name="order_id" value="1">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">11.订单操作</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/orderOperate" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    order_id<input type="text" name="order_id" value="1">
+    type<input type="text" name="type" value="1">
+    remark<input type="text" name="remark" value="">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">12.发货</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/deliveryOrder" method="post" enctype="multipart/form-data">
+    sid<input type="text" name="sid" value="1">
+    order_id<input type="text" name="order_id" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">13.创建活动</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/createActivity" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    title<input type="text" name="title" value="测试活动">
+    address<input type="text" name="address" value="测试活动地点">
+    start_time<input type="text" name="start_time" value="1473557855">
+    end_time<input type="text" name="end_time" value="1474556952">
+    fees_price<input type="text" name="fees_price" value="10">
+    remark<input type="text" name="remark" value="活动文字说明">
+    <input type="file" name="img" >
+    <input type="file" name="img1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">14.创建闲置资源</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/createSource" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    title<input type="text" name="title" value="测试闲置资源">
+    address<input type="text" name="address" value="测试闲置资源地点">
+    start_time<input type="text" name="start_time" value="1473557855">
+    end_time<input type="text" name="end_time" value="1474556952">
+    fees_price<input type="text" name="fees_price" value="10">
+    fees_type<input type="text" name="fees_type" value="3">
+    remark<input type="text" name="remark" value="闲置资源文字说明">
+    <input type="file" name="img" >
+    <input type="file" name="img1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">15.活动详情</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/activityDetail" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    activity_id<input type="text" name="activity_id" value="7">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">16.闲置资源详情</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/sourceDetail" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    source_id<input type="text" name="source_id" value="10">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">17.报名</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/sign" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    name<input type="text" name="name" value="报名姓名">
+    activity_id<input type="text" name="activity_id" value="7">
+    phone<input type="text" name="phone" value="182628326218">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">18.活动列表</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/activityList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    type<input type="text" name="type" value="1">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">19.闲置资源列表</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/sourceList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    type<input type="text" name="type" value="1">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">20.发布活动评论</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/activityComment" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    activity_id<input type="text" name="activity_id" value="1">
+    content<input type="text" name="content" value="活动评论测试">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">21.发布闲置资源评论</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/sourceComment" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    source_id<input type="text" name="source_id" value="2">
+    content<input type="text" name="content" value="闲置资源评论测试">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">22.活动评论列表</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/activityCommentList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    activity_id<input type="text" name="activity_id" value="1">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">23.闲置资源评论列表</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/sourceCommentList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    source_id<input type="text" name="source_id" value="2">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">24.搜索</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/search" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    search<input type="text" name="search" value="">
+    type<input type="text" name="type" value="1">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">25.支付</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/pay" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    pay_price<input type="text" name="pay_price" value="10">
+    is_balance<input type="text" name="is_balance" value="0">
+    activity_id<input type="text" name="activity_id" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">26.个人资料</div>
+<form action="http://www.lejin.cn/index.php/Find/Api/pay" method="post" enctype="multipart/form-data">
+    <!--uid<input type="text" name="uid" value="20000002">-->
+    <!--pay_price<input type="text" name="pay_price" value="10">-->
+    <!--is_balance<input type="text" name="type" value="0">-->
+    <!--activity_id<input type="text" name="activity_id" value="1">-->
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">27.申请提现</div>
+<form action="http://www.lejin.cn/index.php/User/Api/extract" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    price<input type="text" name="price" value="10">
+    account_name<input type="text" name="account_name" value="张三">
+    account_number<input type="text" name="account_number" value="18272537826">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">28.我的优惠券</div>
+<form action="http://www.lejin.cn/index.php/User/Api/myCoupon" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">29.评价商品</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/goodsComment" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    order_id<input type="text" name="order_id" value="1">
+    goods_id<input type="text" name="goods_id" value="2">
+    score<input type="text" name="score" value="2">
+    content<input type="text" name="content" value="评价内容">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">30.商品评价列表</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/goodsCommentList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    goods_id<input type="text" name="goods_id" value="2">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">31.卖单售后</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/supplierOrderBack" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    sid<input type="text" name="sid" value="1">
+    order_id<input type="text" name="order_id" value="1">
+    intro<input type="text" name="intro" value="同意退货">
+    status<input type="text" name="status" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">32.卖单售后退款</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/orderBackMoney" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    sid<input type="text" name="sid" value="1">
+    order_id<input type="text" name="order_id" value="1">
+    back_uid<input type="text" name="back_uid" value="20000002">
+    money<input type="text" name="money" value="10">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">33.用户群列表</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/groupList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">34.群详情</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/detail" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    groups_id<input type="text" name="groupid" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">35.查询店铺申请状态</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/searchShopStatus" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    groups_id<input type="text" name="groups_id" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">36.商家回复评论</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/returnComment" method="post" enctype="multipart/form-data">
+    sid<input type="text" name="sid" value="1">
+    order_id<input type="text" name="order_id" value="1">
+    goods_id<input type="text" name="goods_id" value="1">
+    intro<input type="text" name="intro" value="商家回复评论信息">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">37.商家列表</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/supplierList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    type<input type="text" name="type" value="2">
+    lng<input type="text" name="lng" value="117">
+    lat<input type="text" name="lat" value="36">
+    catId<input type="text" name="catId" value="2">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">38.删除群组</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/delete" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    groupid<input type="text" name="groupid" value="2">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">39.编辑群组</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/edit" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    groupid<input type="text" name="groupid" value="2">
+    name<input type="text" name="name" value="群名称">
+    description<input type="text" name="description" value="群描述">
+    cat_id<input type="text" name="cat_id" value="1">
+    address<input type="text" name="address" value="地址">
+    logosmall<input type="file" name="logosmall">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">40.群成员</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/groupUserList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    groupid<input type="text" name="groupid" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">41.所建群</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/createGroupList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">42.创建群</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/add" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000002">
+    name<input type="text" name="name" value="群组限制字数群组限制字数群组限制字数群组限制字数">
+    description<input type="text" name="description" value="群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数">
+    rule<input type="text" name="rule" value="群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数群组限制字数">
+    cat_id<input type="text" name="cat_id" value="1">
+    address<input type="text" name="address" value="群组限制字数">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">43.查询订单退货信息</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/orderBackInfo" method="post" enctype="multipart/form-data">
+    order_id<input type="text" name="order_id" value="16">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">44.支付返回支付宝信息</div>
+<form action="http://www.lejin.cn/index.php/Shop/Api/pay" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    order_no<input type="text" name="order_no" value="2016100910152975">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">45.发布分享</div>
+<form action="http://www.lejin.cn/index.php/Share/Api/addShare" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    cateid<input type="text" name="cateid" value="1">
+    groupids<input type="text" name="groupids" value="1">
+    title<input type="text" name="title" value="新版发布分享">
+    content1<input type="text" name="content1" value="新版内容1">
+    content2<input type="text" name="content2" value="新版内容2">
+    content3<input type="text" name="content3" value="新版内容3">
+    content4<input type="text" name="content4" value="新版内容4">
+    content5<input type="text" name="content5" value="新版内容5">
+    content6<input type="text" name="content6" value="新版内容6">
+    address<input type="text" name="address" value="地址">
+    lng<input type="text" name="lng" value="117.12321">
+    lat<input type="text" name="lat" value="36.23141">
+    <input type="file" name="content1_file">
+    <input type="file" name="content2_file">
+    <input type="file" name="content3_file">
+    <input type="file" name="content4_file">
+    <input type="file" name="content5_file">
+    <input type="file" name="content6_file">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">46.转发分享</div>
+<form action="http://www.lejin.cn/index.php/Share/Api/forwardShare" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    id<input type="text" name="id" value="1">
+    cateid<input type="text" name="cateid" value="1">
+    content1<input type="text" name="content1" value="内容">
+    address<input type="text" name="address" value="地址">
+    lat<input type="text" name="lat" value="117.1231">
+    lng<input type="text" name="lng" value="36.41231">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">47.用户详细资料</div>
+<form action="http://www.lejin.cn/index.php/user/api/detail" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">48.邀请好友</div>
+<form action="http://www.lejin.cn/index.php/user/api/invite" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    phone<input type="text" name="phone" value="18888888">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">49.会员等级列表</div>
+<form action="http://www.lejin.cn/index.php/user/api/member" method="post" enctype="multipart/form-data">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">50.附近的人</div>
+<form action="http://www.lejin.cn/index.php/User/Api/nearby" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000026">
+    lng<input type="text" name="lng" value="117.5234">
+    lat<input type="text" name="lat" value="36.5234">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">51.登录</div>
+<form action="http://www.lejin.cn/index.php/User/Api/login" method="post" enctype="multipart/form-data">
+    phone<input type="text" name="phone" value="18254127300">
+    password<input type="text" name="password" value="123456">
+    lng<input type="text" name="lng" value="117.5234">
+    lat<input type="text" name="lat" value="36.5234">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">52.创建空间号</div>
+<form action="http://www.lejin.cn/index.php/share/api/addGroups" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    logo<input type="file" name="logo">
+    name<input type="text" name="name" value="name">
+    address<input type="text" name="address" value="address">
+    lng<input type="text" name="lng" value="117.5234">
+    lat<input type="text" name="lat" value="36.5234">
+    cateid<input type="text" name="cateid" value="1">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">53.空间号列表</div>
+<form action="http://www.lejin.cn/index.php/share/api/groupsList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    action<input type="text" name="action" value="0">
+    lng<input type="text" name="lng" value="117.5234">
+    lat<input type="text" name="lat" value="36.5234">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">54.定时任务</div>
+<form action="http://www.lejin.cn/index.php/shop/api/task" method="post" enctype="multipart/form-data">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">55.分享回复列表</div>
+<form action="http://www.lejin.cn/index.php/messages/api/replyList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    id<input type="text" name="id" value="211">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">56.群组消息记录</div>
+<form action="http://www.lejin.cn/index.php/group/api/getGroupMessage" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000000">
+    groupid<input type="text" name="groupid" value="16">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">57.类别下的群组</div>
+<form action="http://www.lejin.cn/index.php/Group/Api/catGroupList" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000168">
+    cat_id<input type="text" name="cat_id" value="">
+    type<input type="text" name="type" value="2">
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="title">58.号外列表</div>
+<form action="http://www.lejin.cn/index.php/Share/Api/shareLists" method="post" enctype="multipart/form-data">
+    uid<input type="text" name="uid" value="20000168">
+    action<input type="text" name="action" value="0">
+    lat<input type="text" name="lat" value="30.738195">
+    lng<input type="text" name="lng" value="103.978124">
+    page<input type="text" name="page" value="1">
+    pageSize<input type="text" name="pageSize" value="20">
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

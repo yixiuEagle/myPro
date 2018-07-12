@@ -1,0 +1,53 @@
+[ 2016-11-21T22:13:29+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-21T22:13:31+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"\u6ca1\u6709\u6587\u4ef6\u88ab\u4e0a\u4f20\uff01","debugMsg":"","code":1,"page":""}
+[ 2016-11-21T22:13:31+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000699s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005173s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007496s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.009030s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006694s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001566s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.006899s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001460s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.007514s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001474s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006521s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479657600' AND '1479743999' ) ) LIMIT 1   [ RunTime:0.001754s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001258s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001324s ]
+
+[ 2016-11-21T22:13:57+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-21T22:14:05+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"width":650,"height":1155,"type":"jpeg","mime":"image\/jpeg"}
+[ 2016-11-21T22:14:09+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+ERR: {"data":{},"msg":"\u53d1\u5e03\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-11-21T22:14:09+08:00 ] 127.0.0.1 /index.php/Share/Api/addShare
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000562s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005873s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007881s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006606s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007947s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001240s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.005526s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001668s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.005921s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001350s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.006453s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_share` WHERE ( `uid` = 20000000 ) AND (  (`createtime` BETWEEN '1479657600' AND '1479743999' ) ) LIMIT 1   [ RunTime:0.001291s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000000 ) LIMIT 1   [ RunTime:0.001201s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001267s ]
+SQL: INSERT INTO `tc_share` (`uid`,`cateid`,`groupids`,`title`,`content`,`images`,`video`,`createtime`,`address`,`lat`,`lng`,`city`,`province`) VALUES (20000000,1,'1','新版发布分享','新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161121/7c92f011b0b37da1.jpg\",\"smallUrl\":\"/Uploads/Picture/20161121/s_7c92f011b0b37da1.jpg\",\"id\":\"147b94265b77790711f2c9103859595e\",\"isVideo\":false}]','',1479737637,'地址','36.23141','117.12321','','') [ RunTime:0.040062s ]
+SQL: SHOW COLUMNS FROM `tc_share_gallery` [ RunTime:0.007674s ]
+SQL: INSERT INTO `tc_share_gallery` (`content`,`images`,`video`,`create_time`,`share_id`) VALUES ('新版内容1','[{\"key\":\"content1_file\",\"originUrl\":\"/Uploads/Picture/20161121/7c92f011b0b37da1.jpg\",\"smallUrl\":\"/Uploads/Picture/20161121/s_7c92f011b0b37da1.jpg\",\"id\":\"147b94265b77790711f2c9103859595e\",\"isVideo\":false}]','',1479737637,110),('新版内容2','','',1479737637,110),('新版内容3','','',1479737637,110),('新版内容4','','',1479737637,110),('新版内容5','','',1479737637,110),('新版内容6','','',1479737637,110) [ RunTime:0.028291s ]
+

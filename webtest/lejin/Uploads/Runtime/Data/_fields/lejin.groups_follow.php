@@ -1,0 +1,1 @@
+a:4:{i:0;s:3:"uid";i:1;s:8:"groupsid";i:2;s:7:"addtime";s:5:"_type";a:3:{s:3:"uid";s:16:"int(11) unsigned";s:8:"groupsid";s:16:"int(11) unsigned";s:7:"addtime";s:7:"int(11)";}}

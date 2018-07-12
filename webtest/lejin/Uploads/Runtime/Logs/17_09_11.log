@@ -1,0 +1,224 @@
+[ 2017-09-11T00:00:51+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%85%94&type=1
+ERR: {"data":[{"id":"3","title":"\u5154\u5b50","pic":[{"smallUrl":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170324\/s_7915dea4f2844a9a.jpg","originUrl":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170324\/7915dea4f2844a9a.jpg"}],"address":"\u4e2d\u56fd\u5927\u5b66\u751f\u521b\u4e1a\u56ed\u897f\u90e8\u56ed\u533a\u5b75\u5316\u56ed","start_time":"1490332200","end_time":"1491109860","sign_count":"2","fees_price":"0","is_sign":"0","sign_id":"","order_no":null,"status":null,"remark":"\u54c8\u54c8","create_time":"1490332270"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:00:51+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%85%94&type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003853s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.004452s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000725s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.000927s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_activity_source a WHERE ( a.title LIKE '%兔%' ) AND ( a.type = '1' ) LIMIT 1   [ RunTime:0.000486s ]
+SQL: SELECT a.*,(select count(*) from `tc_activity_sign` b where b.activity_id=a.id and b.uid=20000316 and b.status=1) as is_sign,(select count(*) from `tc_activity_sign` b where b.activity_id=a.id) as sign_count,c.activity_id as sign_id,c.status,c.order_no FROM tc_activity_source a left join tc_activity_sign c on a.id=c.activity_id and c.uid=20000316  WHERE ( a.title LIKE '%兔%' ) AND ( a.type = '1' ) ORDER BY a.id asc LIMIT 0,20   [ RunTime:0.005787s ]
+
+[ 2017-09-11T00:02:38+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E4%B9%A6&type=2
+ERR: {"data":[{"id":"1","title":"\u4e66\u684c","pic":[{"smallUrl":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170323\/s_54e49d2d3e69d8a9.jpg","originUrl":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170323\/54e49d2d3e69d8a9.jpg"}],"address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","start_time":"1490198400","end_time":"1490371200","fees_type":"1","fees_price":"","remark":"\u65e0","create_time":"1490263347"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:02:38+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E4%B9%A6&type=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001817s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003403s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.003550s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001261s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.000997s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_activity_source a WHERE ( a.title LIKE '%书%' ) AND ( a.type = '2' ) LIMIT 1   [ RunTime:0.001227s ]
+SQL: SELECT a.*,(select count(*) from `tc_activity_sign` b where b.activity_id=a.id and b.uid=20000316 and b.status=1) as is_sign,(select count(*) from `tc_activity_sign` b where b.activity_id=a.id) as sign_count,c.activity_id as sign_id,c.status,c.order_no FROM tc_activity_source a left join tc_activity_sign c on a.id=c.activity_id and c.uid=20000316  WHERE ( a.title LIKE '%书%' ) AND ( a.type = '2' ) ORDER BY a.id asc LIMIT 0,20   [ RunTime:0.007797s ]
+
+[ 2017-09-11T00:11:15+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E8%BE%A3&type=3
+ERR: {"data":[{"id":"11","sid":"3","suid":"20000313","group_id":"4","shop_name":"\u4e50\u89c6","profile":"\u54c8\u54c8","smallUrl":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170324\/s_17a6e99b046e4420.jpg","originUrl":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170324\/17a6e99b046e4420.jpg","name":"\u8fa3\u6761","sale_price":"0","original_price":"5","cheap_price":"0","type":"1","transport_method":"2","transport_price":"2","is_cheap":"0","deducted_price":"0","start_time":"","end_time":"","is_join_cart":"0","is_join":"1","comment_count":"4","create_time":"1490324247"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:11:15+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E8%BE%A3&type=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001417s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003131s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.003008s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000682s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.003122s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods g WHERE ( g.name LIKE '%辣%' ) LIMIT 1   [ RunTime:0.000694s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.014616s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count,(select uid from tc_supplier where id=g.sid) as uid,(select shop_name from tc_supplier where id=g.sid) as shop_name,(select count(*) from tc_cart where goods_id=g.id and uid=20000316) as is_join_cart,(select b.group_id from tc_supplier a left join tc_groups b on a.groups_id=b.id where a.id=g.sid) as group_id,(select count(*) from tc_group_user where groupid in (select b.group_id from tc_supplier a left join tc_groups b on a.groups_id=b.id where a.id=g.sid) and uid=20000316) as is_join FROM tc_goods g WHERE ( g.name LIKE '%辣%' ) ORDER BY g.create_time asc LIMIT 0,20   [ RunTime:0.062783s ]
+
+[ 2017-09-11T00:17:31+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E6%9E%9C&type=4
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-11T00:17:31+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E6%9E%9C&type=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002147s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005660s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.003608s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001150s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.002295s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.shop_name LIKE '%果%' ) LIMIT 1   [ RunTime:0.000272s ]
+NOTIC: [8] Undefined variable: limit D:\SUB\php project\webtest\lejin\Application\Find\Controller\ApiController.class.php 第 335 行.
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.000718s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000316 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.shop_name LIKE '%果%' ) ORDER BY s.id asc  [ RunTime:0.085722s ]
+
+[ 2017-09-11T00:18:20+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%B0%8F&type=4
+ERR: {"data":[{"sid":"4","suid":"20000317","smallUrl":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170327\/s_cd16e44611313f55.jpg","name":"\u5c0f\u65f6\u4ee3","lng":"103.978674","lat":"30.738571","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u897f\u82af\u5927\u90534\u53f7","cat_id":"3","cat_name":"\u7f8e\u98df","score":"5","is_collect":"0"}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:18:20+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%B0%8F&type=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002544s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.002256s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000992s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.003229s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_supplier s WHERE ( s.shop_name LIKE '%小%' ) LIMIT 1   [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.000751s ]
+SQL: SELECT s.*,(select `smallUrl` from `tc_user` a left join `tc_user_head` b on a.head=b.id where a.uid=s.uid) as smallUrl,(select `alias` from `tc_share_category` where id=s.cat_id) as cat_name,(select count(*) from `tc_collect_supplier` where uid=20000316 and sid=s.id) as is_collect FROM tc_supplier s WHERE ( s.shop_name LIKE '%小%' ) ORDER BY s.id asc LIMIT 0,20   [ RunTime:0.058106s ]
+
+[ 2017-09-11T00:23:22+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%93%A5&type=5
+ERR: {"data":[{"uid":"20000009","phone":"17096689955","name":"\u670b\u54e5","head":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20160323\/s_71898872ad51af4e.jpg","background":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"\u7ed3\u4ea4\u670b\u53cb","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","integral":"0","is_supplier":"0","isshield":"0","last_time":"","isfollow":"0","isblack":"0","isblack2":"0","group_count":"4","hao_count":"3","coupon_count":"0","headid":"07436261626b47228d470b9f7f7fdaf3","backgroundlarge":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","memberid":"","lv":"","distance":0},{"uid":"20000049","phone":"13331177163","name":"\u5c0f\u9a6c\u54e5\u54e5i","head":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20160617\/s_bbe72ef7fdfc67fd.jpg","background":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","integral":"0","is_supplier":"0","isshield":"0","last_time":"","isfollow":"0","isblack":"0","isblack2":"0","group_count":"4","hao_count":"3","coupon_count":"0","headid":"761655df2999f84408a80ecb4aee3de2","backgroundlarge":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","memberid":"","lv":"","distance":0},{"uid":"20000144","phone":"15029512881","name":"\u6d0b\u54e5\u8303er","head":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20161004\/s_878affba7d5a5316.jpg","background":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","integral":"0","is_supplier":"0","isshield":"0","last_time":"","isfollow":"0","isblack":"0","isblack2":"0","group_count":"4","hao_count":"3","coupon_count":"0","headid":"d12b731031bfb1982fa5d9fcdaad23c0","backgroundlarge":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","memberid":"","lv":"","distance":0},{"uid":"20000259","phone":"15025021888","name":"\u4e5d\u54e5","head":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170203\/s_6ed715bda0186c02.jpg","background":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","integral":"0","is_supplier":"0","isshield":"0","last_time":"","isfollow":"0","isblack":"0","isblack2":"0","group_count":"4","hao_count":"3","coupon_count":"0","headid":"8c1f4eca3cdba8dd8697597b3de95526","backgroundlarge":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","memberid":"","lv":"","distance":0},{"uid":"20000279","phone":"13697501140","name":"\u5c0f\u9177\u54e5","head":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20170224\/s_346969172c39b864.jpg","background":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"","ismember":0,"lng":null,"lat":null,"extend":"","balance":"0.00","integral":"0","is_supplier":"0","isshield":"0","last_time":"","isfollow":"0","isblack":"0","isblack2":"0","group_count":"4","hao_count":"3","coupon_count":"0","headid":"e3e2cb51bb2fc5dec0099a765ee3df47","backgroundlarge":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","memberid":"","lv":"","distance":0}],"msg":"","debugMsg":"","code":0,"page":{"total":5,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:23:22+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%93%A5&type=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001340s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003776s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.004479s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001216s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000576s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE ( (u.name LIKE '%哥%') OR (u.phone LIKE '%哥%') ) LIMIT 1   [ RunTime:0.049946s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000647s ]
+SQL: SELECT u.*,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid=20000316 and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid=20000316 and fuid=u.uid) as isblack,(select count(*) from `tc_user_black` where uid=u.uid and fuid=20000316) as isblack2,(select count(*) from `tc_group` where uid=20000316) as group_count,(select count(*) from `tc_groups` where uid=20000316) as hao_count,(select count(*) from `tc_user_coupon` a left join tc_goods b on a.goods_id=b.id where a.uid=20000316 and a.status = 1 and a.is_use = 0 and b.start_time<=1505060601 and b.end_time>=1505060601) as coupon_count FROM tc_user u WHERE ( (u.name LIKE '%哥%') OR (u.phone LIKE '%哥%') ) ORDER BY uid asc LIMIT 0,20   [ RunTime:0.082125s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.012852s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.016029s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000009 and time>1505060601 ) LIMIT 1   [ RunTime:0.010198s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000354s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000049 and time>1505060601 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000176s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000144 and time>1505060601 ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000162s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000259 and time>1505060601 ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000172s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000279 and time>1505060601 ) LIMIT 1   [ RunTime:0.000205s ]
+
+[ 2017-09-11T00:23:42+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E6%9C%B12&type=5
+ERR: {"data":[{"uid":"20000000","phone":"18084839200","name":"\u67312","head":"","background":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/s_e26b3f037f5ed0ff.jpg","sign":"\u70ed\u5f97\u5f8822","ismember":0,"lng":"-122.0416030883788","lat":"37.39366910675608","extend":"","balance":"856.00","integral":"2","is_supplier":"0","isshield":"0","last_time":"1490565912","isfollow":"0","isblack":"0","isblack2":"0","group_count":"4","hao_count":"3","coupon_count":"0","headid":"98057bdef256507ff0f819573d8ef840","backgroundlarge":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20151210\/e26b3f037f5ed0ff.jpg","memberid":"","lv":"","distance":12771536}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:23:42+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E6%9C%B12&type=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001809s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004129s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.003562s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001295s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000580s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_user u WHERE ( (u.name LIKE '%朱2%') OR (u.phone LIKE '%朱2%') ) LIMIT 1   [ RunTime:0.001515s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001295s ]
+SQL: SELECT u.*,(select `smallUrl` from `tc_user_head` where id=u.head) as face,(select count(*) from `tc_user_follow` where uid=20000316 and fuid=u.uid) as isfollow,(select count(*) from `tc_user_black` where uid=20000316 and fuid=u.uid) as isblack,(select count(*) from `tc_user_black` where uid=u.uid and fuid=20000316) as isblack2,(select count(*) from `tc_group` where uid=20000316) as group_count,(select count(*) from `tc_groups` where uid=20000316) as hao_count,(select count(*) from `tc_user_coupon` a left join tc_goods b on a.goods_id=b.id where a.uid=20000316 and a.status = 1 and a.is_use = 0 and b.start_time<=1505060622 and b.end_time>=1505060622) as coupon_count FROM tc_user u WHERE ( (u.name LIKE '%朱2%') OR (u.phone LIKE '%朱2%') ) ORDER BY uid asc LIMIT 0,20   [ RunTime:0.015097s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.002895s ]
+SQL: SELECT `background_user` FROM `tc_background` LIMIT 1   [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.003910s ]
+SQL: SELECT *,(select `logo` from `tc_user_member` where id=memberid) as lv FROM `tc_user_member_time` WHERE ( uid=20000000 and time>1505060622 ) LIMIT 1   [ RunTime:0.002383s ]
+
+[ 2017-09-11T00:29:10+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E7%86%8A2&type=6
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-11T00:29:10+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E7%86%8A2&type=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003670s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.001159s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001282s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.003813s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_groups u WHERE ( u.name LIKE '%熊2%' ) LIMIT 1   [ RunTime:0.000801s ]
+NOTIC: [8] Undefined variable: limit D:\SUB\php project\webtest\lejin\Application\Find\Controller\ApiController.class.php 第 335 行.
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001021s ]
+SQL: SELECT u.*,ifnull((select `smallUrl` from `tc_groups_head` where id=u.logo),'') as logo,(select count(*) from `tc_groups_follow` where uid=20000316 and groupsid=u.id) as isfollow,(select `name` from `tc_share_category` where id=u.cateid) as categoryname,(select count(*) from `tc_groups_follow` where groupsid=u.id) as followcount,(select count(*) from `tc_groups_black` where uid=20000316 and groupsid=u.id) as isblack,(select count(*) from `tc_supplier` where groups_id=u.id and status=1) as is_shop,(select status from `tc_supplier` where groups_id=u.id) as status,(select count(*) from `tc_group_user` where groupid=u.group_id and uid=20000316) as is_join,(select count(*) from `tc_look_record` where look_id=u.id and uid=20000316 and type=1) as look_count,s.id as sid FROM tc_groups u  left join tc_supplier s on u.id=s.groups_id  WHERE ( u.name LIKE '%熊2%' ) ORDER BY id desc  [ RunTime:0.098662s ]
+NOTIC: [2] array_multisort(): Argument #1 is expected to be an array or a sort flag D:\SUB\php project\webtest\lejin\Application\Find\Controller\ApiController.class.php 第 291 行.
+
+[ 2017-09-11T00:29:22+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E7%86%8A&type=6
+ERR: {"data":[{"id":"3","uid":"20000017","sort":"x","background":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20160728\/s_bde4c8462054f74b.jpg","logo":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20160509\/s_69a92a24aeb2daa3.jpg","number":"512277817","group_id":"0","name":"\u718a\u732b\u5de5\u4f5c2","sign":"\u6025\u6025\u60251","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u91d1\u7cae\u8def","lat":"30.740601","lng":"103.992271","cateid":"18","isdefault":"1","createtime":"1459347150","city":"\u6210\u90fd\u5e02","isshow":"0","isfollow":"0","categoryname":null,"followcount":"1","isblack":"0","is_shop":"0","status":0,"is_join":"0","look_count":"0","sid":0,"supplier_name":"","supplier_phone":"","supplier_ID_card_picture":"","backgroundlarge":"http:\/\/localhost\/webtest\/lejin\/Uploads\/Picture\/20160728\/bde4c8462054f74b.jpg","distance":11334145}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:29:22+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E7%86%8A&type=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001310s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.001010s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001024s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.006522s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_groups u WHERE ( u.name LIKE '%熊%' ) LIMIT 1   [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000868s ]
+SQL: SELECT u.*,ifnull((select `smallUrl` from `tc_groups_head` where id=u.logo),'') as logo,(select count(*) from `tc_groups_follow` where uid=20000316 and groupsid=u.id) as isfollow,(select `name` from `tc_share_category` where id=u.cateid) as categoryname,(select count(*) from `tc_groups_follow` where groupsid=u.id) as followcount,(select count(*) from `tc_groups_black` where uid=20000316 and groupsid=u.id) as isblack,(select count(*) from `tc_supplier` where groups_id=u.id and status=1) as is_shop,(select status from `tc_supplier` where groups_id=u.id) as status,(select count(*) from `tc_group_user` where groupid=u.group_id and uid=20000316) as is_join,(select count(*) from `tc_look_record` where look_id=u.id and uid=20000316 and type=1) as look_count,s.id as sid FROM tc_groups u  left join tc_supplier s on u.id=s.groups_id  WHERE ( u.name LIKE '%熊%' ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.018543s ]
+SQL: SHOW COLUMNS FROM `tc_background` [ RunTime:0.002322s ]
+SQL: SELECT `background_group` FROM `tc_background` LIMIT 1   [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000669s ]
+NOTIC: [8] Undefined variable: mylat D:\SUB\php project\webtest\lejin\Application\Find\Controller\ApiController.class.php 第 284 行.
+NOTIC: [8] Undefined variable: mylng D:\SUB\php project\webtest\lejin\Application\Find\Controller\ApiController.class.php 第 284 行.
+
+[ 2017-09-11T00:36:30+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%A4%A9&type=7
+ERR: {"data":[{"id":"1","uid":"20000314","creator":"yYY","name":"\u5929\u65b9\u591c\u8c2d","rule":"\u6211\u997f\u513f\u7ae5\u4f53\u80b2\u5c40\u574e\u574e\u5777\u5777\u6025\u6025\u6025\u597d\u5427v\u64e6\u64e6\u563b\u563b\u563b\u5403v","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4ecb\u5c11","isblack":"0","count":"4","isjoin":1,"role":"0","getmsg":"1","createtime":"1490263550","distance":11334140}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2017-09-11T00:36:30+08:00 ] ::1 /webtest/lejin/index.php/find/Api/search?uid=20000316&search=%E5%A4%A9&type=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001233s ]
+NOTIC: [2048] Declaration of Find\Model\FindModel::create() should be compatible with Think\Model::create($data = '', $type = '') D:\SUB\php project\webtest\lejin\Application\Find\Model\FindModel.class.php 第 446 行.
+SQL: SHOW COLUMNS FROM `tc_activity_source` [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001725s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000316 ) LIMIT 1   [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.003491s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_group g WHERE ( g.name LIKE '%天%' ) AND ( g.cat_id <> 0 ) LIMIT 1   [ RunTime:0.000598s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 890 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000785s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000316) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000316 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000316 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.name LIKE '%天%' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc LIMIT 0,20   [ RunTime:0.050024s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000653s ]
+NOTIC: [8] Undefined variable: mylat D:\SUB\php project\webtest\lejin\Application\Find\Controller\ApiController.class.php 第 302 行.
+NOTIC: [8] Undefined variable: mylng D:\SUB\php project\webtest\lejin\Application\Find\Controller\ApiController.class.php 第 302 行.
+

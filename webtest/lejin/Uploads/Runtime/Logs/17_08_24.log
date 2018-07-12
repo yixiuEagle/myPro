@@ -1,0 +1,342 @@
+[ 2017-08-24T18:17:10+08:00 ] ::1 /web02/lejin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-08-24T18:17:11+08:00 ] ::1 /web02/lejin/index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.195261s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.093736s ]
+
+[ 2017-08-24T18:17:12+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.045939s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.047168s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.068812s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.049871s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.055366s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000367s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000764s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.115023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2017-08-24T18:17:42+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.053270s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.051101s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.053463s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.049807s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.049353s ]
+SQL: SELECT * FROM `tc_times` WHERE ( `username` = 'zhongyi' ) AND ( `isadmin` = 1 ) LIMIT 1   [ RunTime:0.150840s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `username` = 'zhongyi' ) LIMIT 1   [ RunTime:0.130459s ]
+
+[ 2017-08-24T18:18:25+08:00 ] ::1 /web02/lejin/index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.046529s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.047253s ]
+
+[ 2017-08-24T18:18:25+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.045616s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.046766s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.047828s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.059381s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.046807s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000669s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002773s ]
+
+[ 2017-08-24T18:18:44+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.066578s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.055685s ]
+
+[ 2017-08-24T18:18:45+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.087960s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.054377s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.049696s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.066222s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.049465s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000396s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001214s ]
+
+[ 2017-08-24T18:20:37+08:00 ] ::1 /web02/lejin/index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.048065s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.049971s ]
+
+[ 2017-08-24T18:20:38+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.049218s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.049972s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.050203s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.050056s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.048885s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000644s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027119s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002219s ]
+
+[ 2017-08-24T18:28:06+08:00 ] ::1 /web02/lejin/index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+ERR: 无法加载控制器:Index
+
+[ 2017-08-24T18:28:30+08:00 ] ::1 /web02/lejin/index.php/User/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001454s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:1.178533s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.922386s ]
+
+[ 2017-08-24T18:28:38+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:1.707170s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:1.137119s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:1.299597s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:1.158092s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:1.129962s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000664s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028926s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001270s ]
+
+[ 2017-08-24T18:28:59+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.048983s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.051231s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.055603s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.046524s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.046917s ]
+SQL: SELECT * FROM `tc_times` WHERE ( `username` = 'zhangyuanzhang' ) AND ( `isadmin` = 1 ) LIMIT 1   [ RunTime:0.126570s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `username` = 'zhangyuanzhang' ) LIMIT 1   [ RunTime:0.047557s ]
+
+[ 2017-08-24T18:29:03+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.049617s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.050556s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.048825s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.048787s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.049087s ]
+SQL: SELECT * FROM `tc_times` WHERE ( `username` = 'zhangyuanzhang' ) AND ( `isadmin` = 1 ) LIMIT 1   [ RunTime:0.108638s ]
+SQL: SELECT * FROM `tc_admin` WHERE ( `username` = 'zhangyuanzhang' ) LIMIT 1   [ RunTime:0.048537s ]
+
+[ 2017-08-24T18:31:19+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.059903s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.049550s ]
+
+[ 2017-08-24T18:31:19+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.052439s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.051233s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.077907s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.048568s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.046061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000679s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003083s ]
+
+[ 2017-08-24T18:31:34+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.050429s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.047802s ]
+
+[ 2017-08-24T18:31:35+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.063309s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.072003s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.084846s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.092671s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.168711s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000427s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001860s ]
+
+[ 2017-08-24T18:31:48+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.076988s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.050013s ]
+
+[ 2017-08-24T18:31:49+08:00 ] ::1 /web02/lejin/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role_priv` [ RunTime:0.047248s ]
+SQL: SHOW COLUMNS FROM `tc_menu` [ RunTime:0.050761s ]
+SQL: SHOW COLUMNS FROM `tc_admin` [ RunTime:0.047866s ]
+SQL: SHOW COLUMNS FROM `tc_admin_role` [ RunTime:0.047629s ]
+SQL: SHOW COLUMNS FROM `tc_times` [ RunTime:0.047913s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001322s ]
+

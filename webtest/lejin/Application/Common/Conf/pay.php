@@ -1,0 +1,105 @@
+<?php
+//支付宝配置参数
+return array(
+    'alipay_config'=>array(
+        'partner'       => '2088611546665789',   //这里是你在成功申请支付宝接口后获取到的PID；
+        'key'           => 'yxqsqeoc34zkrk0oxcvcuo3pdq9tc5oh',//这里是你在成功申请支付宝接口后获取到的Key
+        'sign_type'     => strtoupper('MD5'),
+        'input_charset' => strtolower('utf-8'),
+        'cacert'        => COMMON_PATH.'Alipay\\cacert.pem',
+        'transport'     => 'http',
+    ),
+    'alipay'   =>array(
+        //这里是卖家的支付宝账号，也就是你申请接口时注册的支付宝账号
+        'seller_email'=>'13621032@qq.com',
+        //这里是异步通知页面url，提交到项目的Pay控制器的notifyurl方法；
+        'notify_url'=>'http://120.24.61.200/lejin/index.php/Shop/Api/notifyurl',
+        //这里是页面跳转通知url，提交到项目的Pay控制器的returnurl方法；
+        'return_url'=>'http://120.24.61.200/lejin/index.php/Shop/Api/notifyurl',
+        //支付成功跳转到的页面，我这里跳转到项目的User控制器，myorder方法，并传参payed（已支付列表）
+        'successpage'=>'User/myorder?ordtype=payed',
+        //支付失败跳转到的页面，我这里跳转到项目的User控制器，myorder方法，并传参unpay（未支付列表）
+        'errorpage'=>'User/myorder?ordtype=unpay',
+    ),
+    'mobilepay_config'=>array(
+        'partner'             => '2088121057730282',   //这里是你在成功申请支付宝接口后获取到的PID；
+        'private_key_path'    => getcwd().ltrim(COMMON_PATH,'.').'Pay/AppAli/key/rsa_private_key.pem',//商户的私钥（后缀是.pen）文件相对路径
+        'ali_public_key_path' => getcwd().ltrim(COMMON_PATH,'.').'Pay/AppAli/key/alipay_public_key.pem',////支付宝公钥（后缀是.pen）文件相对路径
+        'sign_type'           => strtoupper('RSA'),
+        'input_charset'       => strtolower('utf-8'),
+        'cacert'              => getcwd().ltrim(COMMON_PATH,'.').'Pay\\AppAli\\cacert.pem',
+        'transport'           => 'http',
+        'notify_url'          => SITE_PROTOCOL.SITE_URL.'/index.php/Shop/Api/notifyurl',
+        'seller_id'           => '1549488265@qq.com',
+    ),
+    'wxpay' => array(
+        'DEBUG_'        => false,
+        'PARTNER'       => '1231442901',//财付通商户号
+        'PARTNER_KEY'   => 'ff1eb569d98fbfbbd07be12ea5a30a60',//财付通密钥
+        'APP_ID'        => 'wx69d3e89b87b174d6',//appid
+        'APP_SECRET'    => '918e31139e336f6d48e7c1a80347e494', //appsecret
+        'APP_KEY'       => 'R4ARusBGIWGdj9dXApdehVjnVpyS4eL8htb4TMXsaOSiY1Bp9iUYpZvNZgLVK1oHotd9IO2Np8gEJzXm9bqR8bOiN3gZ3sIRQvZfPqbMBS7texQ8rKxdx9oeroxBJxw8',//paysignkey(非appkey)
+        'notify_url'    => SITE_PROTOCOL.SITE_URL.'/index.php/order/api/wxnotifyurl',//支付完成后的回调处理页面,*替换成notify_url.asp所在路径
+    ),
+    'upay'  => array(
+        'SDK_CVN2_ENC'  => 0,// cvn2加密 1：加密 0:不加密
+        'SDK_DATE_ENC'  => 0,// 有效期加密 1:加密 0:不加密
+        'SDK_PAN_ENC'   => 0,// 卡号加密 1：加密 0:不加密
+        
+        // ######(以下配置为PM环境：入网测试环境用，生产环境配置见文档说明)#######
+        // 签名证书路径
+        'SDK_SIGN_CERT_PATH'    => getcwd().ltrim(COMMON_PATH,'.').'/Pay/AppUpay/cert/898510154111001.pfx',
+        // 签名证书密码
+        'SDK_SIGN_CERT_PWD'     => '1213',
+        // 验签证书
+        'SDK_VERIFY_CERT_PATH'  => getcwd().ltrim(COMMON_PATH,'.').'/Pay/AppUpay/cert/verify_sign_acp.cer',
+        // 密码加密证书（这条用不到的请随便配）
+        'SDK_ENCRYPT_CERT_PATH' => getcwd().ltrim(COMMON_PATH,'.').'/Pay/AppUpay/cert/encrypt.cer',
+        // 验签证书路径（请配到文件夹，不要配到具体文件）
+        'SDK_VERIFY_CERT_DIR'   => getcwd().ltrim(COMMON_PATH,'.').'/Pay/AppUpay/cert/',
+        
+        /*
+        // 前台请求地址
+        'SDK_FRONT_TRANS_URL'   => 'https://101.231.204.80:5000/gateway/api/frontTransReq.do',
+        // 后台请求地址
+        'SDK_BACK_TRANS_URL'    => 'https://101.231.204.80:5000/gateway/api/backTransReq.do',
+        // 批量交易
+        'SDK_BATCH_TRANS_URL'   => 'https://101.231.204.80:5000/gateway/api/batchTrans.do',
+        //单笔查询请求地址
+        'SDK_SINGLE_QUERY_URL'  => 'https://101.231.204.80:5000/gateway/api/queryTrans.do',
+        //文件传输请求地址
+        'SDK_FILE_QUERY_URL'    => 'https://101.231.204.80:9080/',
+        //有卡交易地址
+        'SDK_Card_Request_Url'  => 'https://101.231.204.80:5000/gateway/api/cardTransReq.do',
+        //App交易地址
+        'SDK_App_Request_Url'   => 'https://101.231.204.80:5000/gateway/api/appTransReq.do',
+        */
+        // 前台请求地址
+        'SDK_FRONT_TRANS_URL'   => 'https://gateway.95516.com/gateway/api/frontTransReq.do',
+        // 后台请求地址
+        'SDK_BACK_TRANS_URL'    => 'https://gateway.95516.com/gateway/api/backTransReq.do',
+        // 批量交易
+        'SDK_BATCH_TRANS_URL'   => 'https://gateway.95516.com/gateway/api/batchTrans.do',
+        //单笔查询请求地址
+        'SDK_SINGLE_QUERY_URL'  => 'https://gateway.95516.com/gateway/api/queryTrans.do',
+        //文件传输请求地址
+        'SDK_FILE_QUERY_URL'    => 'https://filedownload.95516.com/',
+        //有卡交易地址
+        'SDK_Card_Request_Url'  => 'https://gateway.95516.com/gateway/api/cardTransReq.do',
+        //App交易地址
+        'SDK_App_Request_Url'   => 'https://gateway.95516.com/gateway/api/appTransReq.do',
+        
+        
+        // 前台通知地址 (商户自行配置通知地址)
+        'SDK_FRONT_NOTIFY_URL'  => SITE_PROTOCOL.SITE_URL.'/index.php/order/api/FrontReceive.php',
+        // 后台通知地址 (商户自行配置通知地址)
+        'SDK_BACK_NOTIFY_URL'   => SITE_PROTOCOL.SITE_URL.'/index.php/order/api/upaynotifyurl',
+        
+        //文件下载目录
+        'SDK_FILE_DOWN_PATH'    => 'd:/file/',        
+        //日志 目录
+        'SDK_LOG_FILE_PATH'     => 'logs/',
+        //日志级别
+        'SDK_LOG_LEVEL'         => 'INFO',
+    ),
+);

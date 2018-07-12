@@ -1,0 +1,1 @@
+a:7:{i:0;s:8:"username";i:1;s:2:"ip";i:2;s:9:"logintime";i:3;s:7:"isadmin";i:4;s:5:"times";s:3:"_pk";s:7:"isadmin";s:5:"_type";a:5:{s:8:"username";s:8:"char(40)";s:2:"ip";s:8:"char(15)";s:9:"logintime";s:16:"int(10) unsigned";s:7:"isadmin";s:10:"tinyint(1)";s:5:"times";s:19:"tinyint(1) unsigned";}}

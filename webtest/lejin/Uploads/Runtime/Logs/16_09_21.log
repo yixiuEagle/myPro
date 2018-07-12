@@ -1,0 +1,207 @@
+[ 2016-09-21T22:39:07+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+ERR: {"data":[{"id":"3","sid":"1","create_time":"1473339931","status":"1","order_no":"2016090898565710","goods_list":[{"id":"3","goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}],"address":"\u6536\u8d27\u5730\u5740","receiver":"\u5f20\u4e09","phone":"1123455728","back_info":[]}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-21T22:39:07+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000487s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004883s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006942s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006854s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006239s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001307s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.005866s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) LIMIT 1   [ RunTime:0.001313s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) ORDER BY o.create_time desc LIMIT 0,20   [ RunTime:0.001619s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.006310s ]
+SQL: SELECT `id`,`goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 3 )  [ RunTime:0.001758s ]
+
+[ 2016-09-21T22:40:27+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+ERR: {"data":[{"id":"3","sid":"1","create_time":"1473339931","status":"1","order_no":"2016090898565710","goods_list":[{"id":"3","goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}],"address":"\u6536\u8d27\u5730\u5740","receiver":"\u5f20\u4e09","phone":"1123455728","back_info":{"status":"1","reason":"\u6536\u8d27\u5730\u5740"}}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-21T22:40:27+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001099s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005667s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007259s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006225s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006582s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001578s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006287s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) LIMIT 1   [ RunTime:0.001272s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) ORDER BY o.create_time desc LIMIT 0,20   [ RunTime:0.001520s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.007645s ]
+SQL: SELECT `id`,`goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 3 )  [ RunTime:0.001190s ]
+
+[ 2016-09-21T22:40:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+ERR: {"data":[{"id":"3","sid":"1","create_time":"1473339931","status":"1","order_no":"2016090898565710","goods_list":[{"id":"3","goods_name":"\u6d4b\u8bd5\u5546\u54c1123","buy_count":"1","price":"8"}],"address":"\u6536\u8d27\u5730\u5740","receiver":"\u5f20\u4e09","phone":"1123455728","back_info":{}}],"msg":"","debugMsg":"","code":0,"page":{"total":1,"count":20,"pageCount":1,"page":1,"page_next":1,"page_previous":1,"offset":0,"limit":20}}
+[ 2016-09-21T22:40:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000495s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005868s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.051764s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006683s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006273s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001206s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006745s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) LIMIT 1   [ RunTime:0.001239s ]
+SQL: SELECT o.* FROM tc_order o WHERE ( o.sid in (select id from tc_supplier where uid=20000002) ) AND ( o.status = 1 ) ORDER BY o.create_time desc LIMIT 0,20   [ RunTime:0.001522s ]
+SQL: SHOW COLUMNS FROM `tc_order_goods` [ RunTime:0.006295s ]
+SQL: SELECT `id`,`goods_name`,`buy_count`,`price` FROM `tc_order_goods` WHERE ( `order_id` = 3 )  [ RunTime:0.001187s ]
+
+[ 2016-09-21T23:19:36+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderOperate
+ERR: {"data":{},"msg":"\u64cd\u4f5c\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-09-21T23:19:36+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderOperate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000452s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004778s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007120s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005765s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005944s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001670s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006468s ]
+SQL: SELECT * FROM `tc_order` WHERE ( `uid` = 20000002 ) AND ( `id` = 1 ) LIMIT 1   [ RunTime:0.001797s ]
+SQL: UPDATE `tc_order` SET `status`=6,`remark`='测试退货' WHERE ( `id` = 1 ) [ RunTime:0.041480s ]
+SQL: SHOW COLUMNS FROM `tc_order_status` [ RunTime:0.007054s ]
+SQL: INSERT INTO `tc_order_status` (`order_id`,`type`,`remark`,`create_time`) VALUES (1,6,'退货',1474471176) [ RunTime:0.037286s ]
+SQL: SHOW COLUMNS FROM `tc_order_back` [ RunTime:0.067337s ]
+SQL: INSERT INTO `tc_order_back` (`uid`,`order_id`,`reason`,`status`,`money`,`type`,`create_time`) VALUES (20000002,1,'测试退货',0,'0',1,1474471176) [ RunTime:0.037582s ]
+
+[ 2016-09-21T23:19:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderOperate
+ERR: {"data":{},"msg":"\u6b64\u8ba2\u5355\u5df2\u7533\u8bf7\u9000\u8d27","debugMsg":"","code":1,"page":""}
+[ 2016-09-21T23:19:51+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderOperate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000503s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005680s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007143s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.008368s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006061s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001967s ]
+SQL: SHOW COLUMNS FROM `tc_order` [ RunTime:0.006167s ]
+SQL: SELECT * FROM `tc_order` WHERE ( `uid` = 20000002 ) AND ( `id` = 1 ) LIMIT 1   [ RunTime:0.001266s ]
+
+[ 2016-09-21T23:22:29+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+ERR: {"data":null,"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-21T23:22:29+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000675s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004919s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007262s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006009s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006588s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001359s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.006798s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods_comment a WHERE ( a.goods_id = '' ) LIMIT 1   [ RunTime:0.001288s ]
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 941 行.
+SQL: SELECT b.name,c.smallUrl,c.originUrl,a.uid,a.score,a.content,a.intro,a.create_time FROM tc_goods_comment a left join tc_user b on a.uid=b.uid left join tc_user_head c on b.head=c.id  WHERE ( a.goods_id = '' )  [ RunTime:0.001591s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 942 行.
+
+[ 2016-09-21T23:22:48+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+ERR: {"data":null,"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-21T23:22:48+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000484s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004830s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007955s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005945s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006913s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.006837s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods_comment a WHERE ( a.goods_id = '' ) LIMIT 1   [ RunTime:0.001528s ]
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 941 行.
+SQL: SELECT b.name,c.smallUrl,c.originUrl,a.uid,a.score,a.content,a.intro,a.create_time FROM tc_goods_comment a left join tc_user b on a.uid=b.uid left join tc_user_head c on b.head=c.id  WHERE ( a.goods_id = '' )  [ RunTime:0.001538s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 942 行.
+
+[ 2016-09-21T23:23:04+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+ERR: {"data":null,"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-21T23:23:04+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000530s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005377s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.026594s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006611s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006670s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001277s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.005962s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods_comment a WHERE ( a.goods_id = '' ) LIMIT 1   [ RunTime:0.001115s ]
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 941 行.
+SQL: SELECT b.name,c.smallUrl,c.originUrl,a.uid,a.score,a.content,a.intro,a.create_time FROM tc_goods_comment a left join tc_user b on a.uid=b.uid left join tc_user_head c on b.head=c.id  WHERE ( a.goods_id = '' )  [ RunTime:0.001320s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 942 行.
+
+[ 2016-09-21T23:23:13+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+ERR: {"data":null,"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-09-21T23:23:13+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsCommentList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000611s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005384s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006797s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006686s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008200s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001356s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.006694s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tc_goods_comment a WHERE ( a.goods_id = '' ) LIMIT 1   [ RunTime:0.001283s ]
+NOTIC: [8] Undefined variable: limit E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 941 行.
+SQL: SELECT b.name,c.smallUrl,c.originUrl,a.uid,a.score,a.content,a.intro,a.create_time FROM tc_goods_comment a left join tc_user b on a.uid=b.uid left join tc_user_head c on b.head=c.id  WHERE ( a.goods_id = '' )  [ RunTime:0.001260s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 942 行.
+
+[ 2016-09-21T23:23:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderBack
+ERR: {"data":{},"msg":"\u64cd\u4f5c\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-09-21T23:23:43+08:00 ] 127.0.0.1 /index.php/Shop/Api/supplierOrderBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000503s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006035s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006948s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.006720s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.007688s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001428s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007363s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001342s ]
+SQL: SHOW COLUMNS FROM `tc_order_back` [ RunTime:0.006775s ]
+SQL: SELECT * FROM `tc_order_back` WHERE ( `order_id` = 1 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001929s ]
+SQL: UPDATE `tc_order_back` SET `order_id`=1,`intro`='同意退货',`status`=1,`finish_time`=1474471419 WHERE ( `id` = 1 ) [ RunTime:0.037649s ]
+
+[ 2016-09-21T23:26:31+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackMoney
+ERR: {"data":{"data":"partner=\"2088121057730282\"&seller_id=\"1549488265@qq.com\"&out_trade_no=\"1\"&subject=\"\u4e50\u6d25\u9000\u6b3e\u9000\u6b3e\"&body=\"http:\/\/www.lejin.cn\/index.php\/Shop\/api\/back_notifyurl\"&total_fee=\"10\"&notify_url=\"http:\/\/www.lejin.cn\/index.php\/user\/api\/notifyurl\"&service=\"mobile.securitypay.pay\"&payment_type=\"1\"&_input_charset=\"utf-8\"&it_b_pay=\"30m\"&show_url=\"m.alipay.com\"&sign=\"NnhA%2BJLIEfcN55vwt0KPPVmZodTty6gEGCH1RzRNudgQGxR1Lu0OFwbqZ0kcZbOcqWG5Mf3lOMJh0MKltgqZagCse%2FXJzmJ1JPH4S7U17Xqi6khSNtCXU6Ar9beEEawA6Q0IjdP1mMkD%2FOV3rqtP2CvTaCnDOAUvAUiUZ3UEJzw%3D\"&sign_type=\"RSA\""},"msg":"\u52a0\u5bc6\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2016-09-21T23:26:31+08:00 ] 127.0.0.1 /index.php/Shop/Api/orderBackMoney
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000611s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004934s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.017986s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007493s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005588s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001621s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005812s ]
+SQL: SELECT * FROM `tc_supplier` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001277s ]
+SQL: SHOW COLUMNS FROM `tc_order_back` [ RunTime:0.006427s ]
+SQL: SELECT * FROM `tc_order_back` WHERE ( `order_id` = 1 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001264s ]
+

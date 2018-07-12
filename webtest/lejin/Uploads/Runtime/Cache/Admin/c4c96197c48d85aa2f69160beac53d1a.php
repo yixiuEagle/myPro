@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><div style="padding: 3px 6px;"><?php echo ($content); ?></div>

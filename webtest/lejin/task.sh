@@ -1,0 +1,1 @@
+curl http://120.24.61.200/lejin/index.php/Shop/api/task

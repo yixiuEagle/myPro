@@ -1,0 +1,10 @@
+[ 2017-08-30T17:09:27+08:00 ] ::1 /webtest/lejin/index.php/shop/api/supplierOrderBack
+WARN: <<<<<2017-08-30 17:09:27 supplierOrderBack------------{"order_id":"60","uid":"20000313","goods_id":"31","type":"2","sid":"1","status":"3"}>>>>>
+[ 2017-08-30T17:28:27+08:00 ] ::1 /webtest/lejin/index.php/shop/api/supplierOrderBack
+WARN: <<<<<2017-08-30 17:28:27 supplierOrderBack------------{"order_id":"18","uid":"20000316","goods_id":"12","sid":"3","status":"3"}>>>>>
+[ 2017-08-30T17:32:37+08:00 ] ::1 /webtest/lejin/index.php/shop/api/supplierOrderBack
+WARN: <<<<<2017-08-30 17:32:37 supplierOrderBack------------{"order_id":"18","uid":"20000316","goods_id":"12","sid":"3","status":"3"}>>>>>
+[ 2017-08-30T17:33:45+08:00 ] ::1 /webtest/lejin/index.php/shop/api/supplierOrderBack
+WARN: <<<<<2017-08-30 17:33:45 supplierOrderBack------------{"order_id":"18","uid":"20000316","goods_id":"12","sid":"3","status":"3"}>>>>>
+[ 2017-08-30T17:36:30+08:00 ] ::1 /webtest/lejin/index.php/shop/api/supplierOrderBack
+WARN: <<<<<2017-08-30 17:36:30 supplierOrderBack------------{"order_id":"18","uid":"20000316","goods_id":"12","sid":"3","status":"3"}>>>>>

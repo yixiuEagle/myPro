@@ -1,0 +1,52 @@
+[ 2016-11-13T21:14:18+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","suid":"20000002","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","comment_count":"1","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"goods_comment":{"id":"1","order_id":"1","goods_id":"1","uid":"20000002","score":"2","content":"\u8bc4\u4ef7\u5185\u5bb9","intro":null,"create_time":"1474062400"},"score":"0","cart":{}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-13T21:14:18+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001349s ]
+INFO: [ app_init ] --END-- [ RunTime:0.041049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.031983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039593s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.048194s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.037425s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006234s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001724s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.069967s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count,(select uid from tc_supplier where id=g.sid) as uid,(select count(*) from tc_cart where goods_id=g.sid and uid=20000002) as is_join_cart FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.056267s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.011623s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001680s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.005226s ]
+SQL: SELECT * FROM `tc_goods_comment` WHERE ( `goods_id` = 1 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001319s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005391s ]
+SQL: SELECT `score` FROM `tc_supplier` WHERE ( id = (select sid from tc_goods where id=1) ) LIMIT 1   [ RunTime:0.001185s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.005173s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' ) AND (  (b.name is not null)  )  [ RunTime:0.001259s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 612 行.
+SQL: UPDATE `tc_goods` SET `click_count`=click_count+1 WHERE ( `id` = 1 ) [ RunTime:0.041082s ]
+
+[ 2016-11-13T21:14:45+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+ERR: {"data":{"id":"1","sid":"1","suid":"20000002","profile":"\u5546\u54c1\u7b80\u4ecb","smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/s_ea213fc0c5b549b3.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160828\/ea213fc0c5b549b3.JPG","name":"\u6d4b\u8bd5\u5546\u54c1123","sale_price":"10","original_price":"12","cheap_price":"8","type":"1","transport_method":"2","transport_price":"2","is_cheap":"1","deducted_price":"0","start_time":"","end_time":"","is_join_cart":"0","comment_count":"1","goods_gallery":[{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4b174b904a60131e.JPG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4b174b904a60131e.JPG"},{"smallUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/s_4991713bd0371169.PNG","originUrl":"http:\/\/www.lejin.cn\/Uploads\/Picture\/20160827\/4991713bd0371169.PNG"}],"goods_comment":{"id":"1","order_id":"1","goods_id":"1","uid":"20000002","score":"2","content":"\u8bc4\u4ef7\u5185\u5bb9","intro":null,"create_time":"1474062400"},"score":"0","cart":{}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2016-11-13T21:14:45+08:00 ] 127.0.0.1 /index.php/Shop/Api/goodsDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000751s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007162s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.008041s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.007664s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.005968s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000002 ) LIMIT 1   [ RunTime:0.001492s ]
+SQL: SHOW COLUMNS FROM `tc_goods` [ RunTime:0.006135s ]
+SQL: SELECT g.*,(select count(*) from tc_goods_comment where goods_id=g.id) as comment_count,(select uid from tc_supplier where id=g.sid) as uid,(select count(*) from tc_cart where goods_id=g.sid and uid=20000002) as is_join_cart FROM tc_goods g WHERE ( `id` = 1 ) ORDER BY g.id asc LIMIT 1   [ RunTime:0.001421s ]
+SQL: SHOW COLUMNS FROM `tc_goods_gallery` [ RunTime:0.005423s ]
+SQL: SELECT * FROM `tc_goods_gallery` WHERE ( `goods_id` = 1 )  [ RunTime:0.001286s ]
+SQL: SHOW COLUMNS FROM `tc_goods_comment` [ RunTime:0.005483s ]
+SQL: SELECT * FROM `tc_goods_comment` WHERE ( `goods_id` = 1 ) ORDER BY create_time desc LIMIT 1   [ RunTime:0.001212s ]
+SQL: SHOW COLUMNS FROM `tc_supplier` [ RunTime:0.005412s ]
+SQL: SELECT `score` FROM `tc_supplier` WHERE ( id = (select sid from tc_goods where id=1) ) LIMIT 1   [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `tc_cart` [ RunTime:0.143770s ]
+SQL: SELECT a.goods_id,a.pay_count,b.smallUrl,b.originUrl,b.name,b.sale_price,b.cheap_price,b.is_cheap,b.transport_method,b.transport_price,b.type FROM tc_cart a left join tc_goods b on a.goods_id=b.id  WHERE ( a.uid = '20000002' ) AND ( a.sid = '1' ) AND ( a.goods_id = '1' ) AND (  (b.name is not null)  )  [ RunTime:0.001199s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\WorkerSpace\PHP\lejin\Application\Shop\Model\ShopModel.class.php 第 613 行.
+SQL: UPDATE `tc_goods` SET `click_count`=click_count+1 WHERE ( `id` = 1 ) [ RunTime:0.043886s ]
+

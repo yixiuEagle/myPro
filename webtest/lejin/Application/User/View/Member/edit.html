@@ -1,0 +1,169 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"memberEditForm",theme:'App',onError:function(msg){},onSuccess:savememberEdit,inIframe:true});
+})
+function savememberEdit(){
+	$.post('{:U('member/edit')}', $("#memberEditForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			memberRefreshList_{$rand}();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#memberEditBox').dialog('close');
+		}
+	})
+}
+</script>
+<style type="text/css">
+.input-small {padding: 3px 6px; height: 18px;}
+td span {font-weight: bold;margin-left: 10px; font-size: 16px;}
+</style>
+
+<form id="memberEditForm" style="font-size:13px;">
+<table id="editBox" cellspacing="5">
+	<tr>
+		<td colspan="3"><span>个人资料</span></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">主图：</td>
+		<td>
+			<input type="hidden" name="id" value="{$info.id}">
+			是<input type="radio" name="userimage" value="1" <eq value="1" name="info.userimage"> checked="checked" </eq>>
+			否<input type="radio" name="userimage" value="0" <eq value="0" name="info.userimage"> checked="checked" </eq>>
+
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">头像：</td>
+		<td>
+			<input type="text" name="headcount" value="{$info.headcount}" class="input-small">
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="3"><span>号资料</span></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">主图：</td>
+		<td>
+			是<input type="radio" name="groupimage" value="1" <eq value="1" name="info.groupimage"> checked="checked" </eq>>
+			否<input type="radio" name="groupimage" value="0" <eq value="0" name="info.groupimage"> checked="checked" </eq>>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">头像：</td>
+		<td>
+			<input type="text" name="groupheadcount" value="{$info.groupheadcount}" class="input-small">
+		</td>
+		<td></td>
+	</tr>
+		<tr>
+		<td width="120" align="right">可创建号：</td>
+		<td>
+			<input type="text" name="groupcount" value="{$info.groupcount}" class="input-small">
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">位置信息：</td>
+		<td>
+			是<input type="radio" name="groupshow" value="1" <eq value="1" name="info.groupshow"> checked="checked" </eq>>
+			否<input type="radio" name="groupshow" value="0" <eq value="0" name="info.groupshow"> checked="checked" </eq>>
+		</td>
+		<td></td>
+	</tr>
+		<tr>
+		<td colspan="3"><span>信息发布</span></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">数量/每天：</td>
+		<td>
+			<input type="text" name="messagecount" value="{$info.messagecount}" class="input-small">
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">可见范围：</td>
+		<td>
+			<select name="isvisible" style="width:100px;">
+				<option value="0" <eq value="0" name="info.isvisible">selected="selected"</eq>>本地</option>
+				<option value="1" <eq value="1" name="info.isvisible">selected="selected"</eq>>本省</option>
+				<option value="2" <eq value="2" name="info.isvisible">selected="selected"</eq>>全国</option>
+			</select>
+		</td>
+		<td></td>
+	</tr>
+		<tr>
+		<td colspan="3"><span>其他</span></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">会员标识：</td>
+		<td>
+			<if condition="$info['logo']">
+			<img src="__ROOT__{$info.logo}" height="40" style="padding:3px;">
+			</if>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td width="120" align="right">会费/月：</td>
+		<td>
+			<input type="text" name="monthfee" value="{$info.monthfee}" class="input-small">
+		</td>
+		<td></td>
+	</tr>
+    <tr>
+        <td colspan="3"><span>商品</span></td>
+    </tr>
+    <tr>
+        <td width="120" align="right">商品数量/月：</td>
+        <td>
+            <input type="text" name="goods_count" value="{$info.goods_count}" class="input-small">
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td width="120" align="right">商品图片数量/次：</td>
+        <td>
+            <input type="text" name="goods_img_count" value="{$info.goods_img_count}" class="input-small">
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3"><span>活动</span></td>
+    </tr>
+    <tr>
+        <td width="120" align="right">活动数量/月：</td>
+        <td>
+            <input type="text" name="activity_count" value="{$info.activity_count}" class="input-small">
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td width="120" align="right">活动图片数量/次：</td>
+        <td>
+            <input type="text" name="activity_img_count" value="{$info.activity_img_count}" class="input-small">
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3"><span>资源</span></td>
+    </tr>
+    <tr>
+        <td width="120" align="right">资源数量/月：</td>
+        <td>
+            <input type="text" name="source_count" value="{$info.source_count}" class="input-small">
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td width="120" align="right">资源图片数量/次：</td>
+        <td>
+            <input type="text" name="source_img_count" value="{$info.source_img_count}" class="input-small">
+        </td>
+        <td></td>
+    </tr>
+</table>
+</form>

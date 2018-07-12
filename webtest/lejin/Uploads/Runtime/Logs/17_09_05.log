@@ -1,0 +1,1089 @@
+[ 2017-09-05T10:07:17+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+ERR: {"data":{"follow_group":[{"id":"1","uid":"20000314","creator":"yYY","name":"\u5929\u65b9\u591c\u8c2d","rule":"\u6211\u997f\u513f\u7ae5\u4f53\u80b2\u5c40\u574e\u574e\u5777\u5777\u6025\u6025\u6025\u597d\u5427v\u64e6\u64e6\u563b\u563b\u563b\u5403v","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4ecb\u5c11","isblack":"0","count":"4","isjoin":1,"role":"0","getmsg":"1","createtime":"1490263550"},{"id":"3","uid":"20000315","creator":"\u5440\u5440","name":"\u79d1\u6280\u521b\u65b0","rule":"","cat_id":"0","cat_name":null,"address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","lat":"20.740621","lng":"13.992223","logosmall":"http:\/\/localhost\/webtest\/lejinf0cc6fe385285058fca5cc3243f1234a","logolarge":"http:\/\/localhost\/webtest\/lejinf0cc6fe385285058fca5cc3243f1234a","extend":"","description":"","isblack":"0","count":"3","isjoin":1,"role":"0","getmsg":"1","createtime":"1490265960"}],"group_cat":[{"id":"1","name":"\u793e\u533a\u2022\u751f\u6d3b"},{"id":"2","name":"\u4e50\u5427"},{"id":"3","name":"\u7f8e\u98df\u6c47"},{"id":"5","name":"\u65f6\u5c1a\u2022\u4e3d\u4eba"},{"id":"7","name":"\u5bb6\u5c45\u2022\u6742\u767e"},{"id":"8","name":"\u623f\u5b50\u90a3\u4e8b"},{"id":"10","name":"\u8f66\u751f\u6d3b"},{"id":"12","name":"\u65c5\u6e38\u2022\u7279\u4ea7"},{"id":"13","name":"\u5a31\u4e50\u2022\u5f71\u97f3"},{"id":"15","name":"\u6570\u7801\u2022\u7535\u5668"},{"id":"16","name":"\u8fd0\u52a8\u2022\u6237\u5916"},{"id":"17","name":"\u5065\u5eb7\u2022\u4fdd\u5065"},{"id":"19","name":"\u5a5a\u5e86\u2022\u6bcd\u5a74"},{"id":"20","name":"\u5546\u754c\u2022\u804c\u573a"},{"id":"22","name":"\u6821\u56ed\u2022\u6559\u80b2"},{"id":"25","name":"\u5176\u5b83"}]},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T10:07:17+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.065920s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038801s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.424223s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.037390s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001571s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.181745s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.026240s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000313 )  [ RunTime:0.000689s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000313) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000313 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000313 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('1','3') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.354498s ]
+SQL: SHOW COLUMNS FROM `tc_share_category` [ RunTime:0.045919s ]
+SQL: SELECT `id`,`name` FROM `tc_share_category`  [ RunTime:0.000685s ]
+
+[ 2017-09-05T10:51:14+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+ERR: {"data":{"follow_group":[],"group_cat":[{"id":"1","name":"\u793e\u533a\u2022\u751f\u6d3b"},{"id":"2","name":"\u4e50\u5427"},{"id":"3","name":"\u7f8e\u98df\u6c47"},{"id":"5","name":"\u65f6\u5c1a\u2022\u4e3d\u4eba"},{"id":"7","name":"\u5bb6\u5c45\u2022\u6742\u767e"},{"id":"8","name":"\u623f\u5b50\u90a3\u4e8b"},{"id":"10","name":"\u8f66\u751f\u6d3b"},{"id":"12","name":"\u65c5\u6e38\u2022\u7279\u4ea7"},{"id":"13","name":"\u5a31\u4e50\u2022\u5f71\u97f3"},{"id":"15","name":"\u6570\u7801\u2022\u7535\u5668"},{"id":"16","name":"\u8fd0\u52a8\u2022\u6237\u5916"},{"id":"17","name":"\u5065\u5eb7\u2022\u4fdd\u5065"},{"id":"19","name":"\u5a5a\u5e86\u2022\u6bcd\u5a74"},{"id":"20","name":"\u5546\u754c\u2022\u804c\u573a"},{"id":"22","name":"\u6821\u56ed\u2022\u6559\u80b2"},{"id":"25","name":"\u5176\u5b83"}]},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T10:51:14+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.006304s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002456s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000884s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.024551s ]
+SQL: SELECT `groupsid`,`logo`,`name`,`address`,`lat`,`lng` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000313 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000313) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.017563s ]
+ERR: 1054:Unknown column 'logo' in 'field list'
+ [ SQL语句 ] : SELECT `groupsid`,`logo`,`name`,`address`,`lat`,`lng` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000313 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000313) and `uid` not in(select `uid` from `tc_user` where isshield=1) ) 
+SQL: SHOW COLUMNS FROM `tc_share_category` [ RunTime:0.002904s ]
+SQL: SELECT `id`,`name` FROM `tc_share_category`  [ RunTime:0.000412s ]
+
+[ 2017-09-05T10:53:08+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+ERR: {"data":{"follow_group":[],"group_cat":[{"id":"1","name":"\u793e\u533a\u2022\u751f\u6d3b"},{"id":"2","name":"\u4e50\u5427"},{"id":"3","name":"\u7f8e\u98df\u6c47"},{"id":"5","name":"\u65f6\u5c1a\u2022\u4e3d\u4eba"},{"id":"7","name":"\u5bb6\u5c45\u2022\u6742\u767e"},{"id":"8","name":"\u623f\u5b50\u90a3\u4e8b"},{"id":"10","name":"\u8f66\u751f\u6d3b"},{"id":"12","name":"\u65c5\u6e38\u2022\u7279\u4ea7"},{"id":"13","name":"\u5a31\u4e50\u2022\u5f71\u97f3"},{"id":"15","name":"\u6570\u7801\u2022\u7535\u5668"},{"id":"16","name":"\u8fd0\u52a8\u2022\u6237\u5916"},{"id":"17","name":"\u5065\u5eb7\u2022\u4fdd\u5065"},{"id":"19","name":"\u5a5a\u5e86\u2022\u6bcd\u5a74"},{"id":"20","name":"\u5546\u754c\u2022\u804c\u573a"},{"id":"22","name":"\u6821\u56ed\u2022\u6559\u80b2"},{"id":"25","name":"\u5176\u5b83"}]},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T10:53:08+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004727s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002048s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000587s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001693s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000313 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000313) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.032061s ]
+SQL: SHOW COLUMNS FROM `tc_share_category` [ RunTime:0.001807s ]
+SQL: SELECT `id`,`name` FROM `tc_share_category`  [ RunTime:0.000256s ]
+
+[ 2017-09-05T10:54:08+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002019s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000637s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001780s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000313 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000313) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.003929s ]
+
+[ 2017-09-05T10:54:28+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002149s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001891s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000518s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001756s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000313 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000313) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001684s ]
+
+[ 2017-09-05T10:57:04+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.004752s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.003573s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001577s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.002418s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.002388s ]
+
+[ 2017-09-05T10:58:22+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002034s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.004608s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001937s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.002351s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001896s ]
+
+[ 2017-09-05T11:06:29+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002091s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002007s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000599s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001777s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001828s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.056823s ]
+SQL: SELECT `id`,`logo`,`name`,`address`,`lat`,`lng` FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000735s ]
+SQL: SELECT `id`,`logo`,`name`,`address`,`lat`,`lng` FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000602s ]
+
+[ 2017-09-05T11:07:11+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002466s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001822s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000505s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001688s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.001046s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.009704s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.002391s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.002182s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001845s ]
+SQL: SELECT `id`,`logo`,`name`,`address`,`lat`,`lng` FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SELECT `id`,`logo`,`name`,`address`,`lat`,`lng` FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000183s ]
+
+[ 2017-09-05T11:08:19+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003830s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002874s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001035s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002723s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000398s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.010586s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001841s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001788s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001891s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000240s ]
+
+[ 2017-09-05T11:21:55+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002147s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002020s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000577s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001691s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000230s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.011534s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.002242s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.002049s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001870s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000195s ]
+
+[ 2017-09-05T11:24:24+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003607s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002041s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003095s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002748s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000253s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.007403s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001770s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.003857s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.003197s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000510s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000280s ]
+ERR: Think\Model:getDistance方法不存在！
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-09-05T11:29:13+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003150s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002217s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000742s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001943s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000306s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.012940s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.002593s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001696s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001775s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000206s ]
+ERR: Think\Model:getDistance方法不存在！
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-09-05T11:29:42+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.003015s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001975s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002892s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.001264s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002228s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000365s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.007484s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001727s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.003887s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.004616s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000479s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000335s ]
+
+[ 2017-09-05T11:32:01+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002541s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002232s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000697s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001929s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000402s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.008797s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.003742s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.002003s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001864s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000196s ]
+
+[ 2017-09-05T11:32:36+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002130s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.003105s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001040s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002968s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000598s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.011808s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001895s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.002012s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.002042s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000361s ]
+ERR: Think\Model:getDistance方法不存在！
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-09-05T11:39:41+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000475s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.000402s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000184s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.001423s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.004427s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.003830s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.003091s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000558s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000293s ]
+
+[ 2017-09-05T11:40:59+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001113s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000895s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000720s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001941s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000292s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.009201s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000444s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001762s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.003924s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000202s ]
+ERR: Think\Model:getDistance方法不存在！
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:649) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:649) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-09-05T11:43:47+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001262s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001658s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000522s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002076s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000260s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.010477s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.002079s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.002243s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000395s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000416s ]
+
+[ 2017-09-05T11:50:19+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001359s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001335s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000496s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001744s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000227s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.007777s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.002518s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.002412s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000416s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000264s ]
+
+[ 2017-09-05T11:50:47+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002784s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001224s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000722s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001897s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000285s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.015035s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000599s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.002173s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000405s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000304s ]
+ERR: Think\Model:getDistance方法不存在！
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-09-05T11:53:13+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001129s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.002637s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000732s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002011s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000295s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.008488s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000426s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001443s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.004071s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000193s ]
+ERR: Think\Model:getDistance方法不存在！
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-09-05T12:01:10+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000112s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001301s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000535s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.001813s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000431s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.009663s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000577s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.002362s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000193s ]
+ERR: Think\Model:getDistance方法不存在！
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php:648) D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2017-09-05T12:05:06+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001425s ]
+
+[ 2017-09-05T13:52:29+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000965s ]
+
+[ 2017-09-05T13:54:40+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001434s ]
+
+[ 2017-09-05T13:55:17+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+ERR: {"data":{},"msg":"\u7528\u6237\u4e0d\u5b58\u5728","debugMsg":"\u7528\u6237uid\u4e0d\u5b58\u5728\u6216uid\u4e3a\u7a7a","code":1,"page":""}
+[ 2017-09-05T13:55:17+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001929s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 787 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001788s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000881s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 0 ) LIMIT 1   [ RunTime:0.000615s ]
+
+[ 2017-09-05T13:55:24+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001008s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 787 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000782s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.000564s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000360s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.001972s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001063s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.002046s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.002513s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000627s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000458s ]
+
+[ 2017-09-05T13:56:20+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000782s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 787 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000836s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.000614s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000269s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.002408s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.001011s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000926s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000885s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000294s ]
+
+[ 2017-09-05T13:58:12+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001424s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000658s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.002586s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002445s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.001076s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.002381s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000709s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000935s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000422s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000281s ]
+
+[ 2017-09-05T13:59:40+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001464s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000963s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000721s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.000981s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000473s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.002007s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000652s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.001875s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.003156s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000410s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000205s ]
+
+[ 2017-09-05T14:00:26+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000766s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000499s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.001783s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002855s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000532s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.001722s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000456s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000549s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000191s ]
+
+[ 2017-09-05T14:14:18+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001305s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000940s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001066s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000996s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.000845s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000389s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.001844s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000674s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001210s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000436s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000259s ]
+
+[ 2017-09-05T14:17:57+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001170s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001131s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 790 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000678s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.002218s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002874s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000485s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.002839s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000778s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001120s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000646s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000392s ]
+
+[ 2017-09-05T14:20:54+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+ERR: {"data":{"order_follow_group":{"785710":{"id":"6","uid":"20000316","creator":"uu","name":"\u5f88\u5065\u5eb7","rule":"\u628a","cat_id":"3","cat_name":"\u623f\u5c4b","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4f30\u8ba1","isblack":"0","count":"2","isjoin":1,"role":"0","getmsg":"1","createtime":"1490342997"},"786970":{"id":"26","uid":"20000313","sort":"c","background":"","logo":"0bcceb23ea18b38006ab1af43de2aacd","number":"538075834","group_id":"12","name":"\u5403\u5c31\u5403","sign":"","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.738780","lng":"103.979069","cateid":"5","isdefault":"0","createtime":"1490344362","city":"\u6210\u90fd\u5e02","isshow":"1"},"787004":{"id":"20","uid":"20000313","sort":"l","background":"","logo":"54934b011b2f450ff3f9598212417087","number":"976617991","group_id":"4","name":"\u4e50\u89c6","sign":"","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.738772","lng":"103.978710","cateid":"13","isdefault":"0","createtime":"1490321530","city":"\u6210\u90fd\u5e02","isshow":"0"},"1375748":{"id":"4","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u4e50\u89c6","rule":"","cat_id":"0","cat_name":null,"address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"40.740621","lng":"103.392223","logosmall":"http:\/\/localhost\/webtest\/lejin54934b011b2f450ff3f9598212417087","logolarge":"http:\/\/localhost\/webtest\/lejin54934b011b2f450ff3f9598212417087","extend":"","description":"","isblack":"0","count":"4","isjoin":1,"role":"0","getmsg":"1","createtime":"1490321530"}},"group_cat":[{"id":"1","name":"\u793e\u533a\u2022\u751f\u6d3b"},{"id":"2","name":"\u4e50\u5427"},{"id":"3","name":"\u7f8e\u98df\u6c47"},{"id":"5","name":"\u65f6\u5c1a\u2022\u4e3d\u4eba"},{"id":"7","name":"\u5bb6\u5c45\u2022\u6742\u767e"},{"id":"8","name":"\u623f\u5b50\u90a3\u4e8b"},{"id":"10","name":"\u8f66\u751f\u6d3b"},{"id":"12","name":"\u65c5\u6e38\u2022\u7279\u4ea7"},{"id":"13","name":"\u5a31\u4e50\u2022\u5f71\u97f3"},{"id":"15","name":"\u6570\u7801\u2022\u7535\u5668"},{"id":"16","name":"\u8fd0\u52a8\u2022\u6237\u5916"},{"id":"17","name":"\u5065\u5eb7\u2022\u4fdd\u5065"},{"id":"19","name":"\u5a5a\u5e86\u2022\u6bcd\u5a74"},{"id":"20","name":"\u5546\u754c\u2022\u804c\u573a"},{"id":"22","name":"\u6821\u56ed\u2022\u6559\u80b2"},{"id":"25","name":"\u5176\u5b83"}]},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T14:20:54+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/groupCatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001138s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001068s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000952s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.002714s ]
+SQL: SHOW COLUMNS FROM `tc_group_follw` [ RunTime:0.002397s ]
+SQL: SELECT `group_id` FROM `tc_group_follw` WHERE ( `uid` = 20000315 )  [ RunTime:0.000441s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.id IN ('4','12','6') ) ORDER BY look_count desc LIMIT 20   [ RunTime:0.001893s ]
+SQL: SHOW COLUMNS FROM `tc_groups_follow` [ RunTime:0.000610s ]
+SQL: SELECT `groupsid` FROM `tc_groups_follow` WHERE ( `groupsid`>0 and `uid` =20000315 and `groupsid` not in(select `groupsid` from tc_groups_black where uid=20000315) and `uid` not in(select `uid` from `tc_user` where isshield=1) )  [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000761s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000463s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `tc_share_category` [ RunTime:0.000889s ]
+SQL: SELECT `id`,`name` FROM `tc_share_category`  [ RunTime:0.000648s ]
+
+[ 2017-09-05T15:32:31+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T15:32:31+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002357s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000809s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000626s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000529s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = 0 ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.010090s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 18 行.
+
+[ 2017-09-05T15:33:47+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T15:33:47+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000978s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000743s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000499s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000313) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000313 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000313 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = 0 ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.008959s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 18 行.
+
+[ 2017-09-05T15:35:37+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+ERR: {"data":[{"id":"29","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504538902"},{"id":"28","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af9","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504520245"},{"id":"27","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504519287"},{"id":"26","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504519162"},{"id":"25","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504519088"},{"id":"24","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518872"},{"id":"23","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518843"},{"id":"22","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518746"},{"id":"21","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518720"},{"id":"20","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518609"},{"id":"19","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518002"},{"id":"18","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517954"},{"id":"18","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517954"},{"id":"17","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af95","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517870"},{"id":"17","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af95","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517870"},{"id":"16","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af94","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517568"},{"id":"16","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af94","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517568"},{"id":"15","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af93","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"0.000000","lng":"0.000000","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517463"},{"id":"15","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af93","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"0.000000","lng":"0.000000","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517463"},{"id":"5","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u804a\u4e00\u804a","rule":"\u65e0","cat_id":"4","cat_name":"\u88c5\u4fee\u2022\u5bb6\u5c45","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u5c31\u770b\u770b","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1490342874"},{"id":"2","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u7ecf\u6d4e\u754c","rule":"twww\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154\u4e0b\u96e8\u5929\u6765\u4e86\u53e5QQ\u56fe\u56fe\u56fe\u56fe\u54af\u6839\u636e\u5177\u4f53\u601d\u8def\u66f4\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","lat":"32.740621","lng":"153.992223","logosmall":"","logolarge":"","extend":"","description":"\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154\u4e0b\u96e8\u5929\u6765\u4e86\u53e5QQ\u56fe\u56fe\u56fe\u56fe\u54af\u6839\u636e\u5177\u4f53\u601d\u8def\u66f4\u53ef\u6076t\u54af\u5fae\u4fe1\u6211\u54e6lo\u2006mo\u2006yjwwwwww","isblack":"0","count":"3","isjoin":1,"role":"1","getmsg":"1","createtime":"1490263631"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T15:35:37+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000986s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000587s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000313) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000313 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000313 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000313' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.004679s ]
+
+[ 2017-09-05T15:36:01+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+ERR: {"data":[{"id":"1","uid":"20000314","creator":"yYY","name":"\u5929\u65b9\u591c\u8c2d","rule":"\u6211\u997f\u513f\u7ae5\u4f53\u80b2\u5c40\u574e\u574e\u5777\u5777\u6025\u6025\u6025\u597d\u5427v\u64e6\u64e6\u563b\u563b\u563b\u5403v","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4ecb\u5c11","isblack":"0","count":"4","isjoin":1,"role":"1","getmsg":"1","createtime":"1490263550"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T15:36:01+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000717s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 788 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000834s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.001357s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000314) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000314 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000314 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000314' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.001953s ]
+
+[ 2017-09-05T17:22:54+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+ERR: {"data":[{"id":"29","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504538902"},{"id":"28","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af9","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504520245"},{"id":"27","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504519287"},{"id":"26","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504519162"},{"id":"25","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504519088"},{"id":"24","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518872"},{"id":"23","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518843"},{"id":"22","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518746"},{"id":"21","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518720"},{"id":"20","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518609"},{"id":"19","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1504518002"},{"id":"18","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517954"},{"id":"18","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af96","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517954"},{"id":"17","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af95","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517870"},{"id":"17","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af95","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517870"},{"id":"16","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af94","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517568"},{"id":"16","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af94","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517568"},{"id":"15","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af93","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"0.000000","lng":"0.000000","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517463"},{"id":"15","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af93","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"0.000000","lng":"0.000000","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":1,"role":"1","getmsg":"1","createtime":"1504517463"},{"id":"5","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u804a\u4e00\u804a","rule":"\u65e0","cat_id":"4","cat_name":"\u88c5\u4fee\u2022\u5bb6\u5c45","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u5c31\u770b\u770b","isblack":"0","count":"1","isjoin":1,"role":"1","getmsg":"1","createtime":"1490342874"},{"id":"2","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u7ecf\u6d4e\u754c","rule":"twww\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154\u4e0b\u96e8\u5929\u6765\u4e86\u53e5QQ\u56fe\u56fe\u56fe\u56fe\u54af\u6839\u636e\u5177\u4f53\u601d\u8def\u66f4\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","lat":"32.740621","lng":"153.992223","logosmall":"","logolarge":"","extend":"","description":"\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154\u4e0b\u96e8\u5929\u6765\u4e86\u53e5QQ\u56fe\u56fe\u56fe\u56fe\u54af\u6839\u636e\u5177\u4f53\u601d\u8def\u66f4\u53ef\u6076t\u54af\u5fae\u4fe1\u6211\u54e6lo\u2006mo\u2006yjwwwwww","isblack":"0","count":"3","isjoin":1,"role":"1","getmsg":"1","createtime":"1490263631"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:22:54+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001483s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001225s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 793 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001479s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000313 ) LIMIT 1   [ RunTime:0.000720s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000313) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000313 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000313 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000313' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.006131s ]
+
+[ 2017-09-05T17:23:43+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+ERR: {"data":[],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:23:43+08:00 ] ::1 /webtest/lejin/index.php/Group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000957s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 793 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000540s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000315 ) LIMIT 1   [ RunTime:0.000388s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000315) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000315 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000315 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000315' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.000687s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 18 行.
+
+[ 2017-09-05T17:34:28+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:34:28+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"\u8bf7\u4e0a\u4f20\u7fa4\u5934\u50cf","debugMsg":"","code":1,"page":""}
+[ 2017-09-05T17:34:28+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001326s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.037100s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000813s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.012485s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.020699s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.045887s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001516s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000778s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( uid=20000314 and time>1504604068 ) LIMIT 1   [ RunTime:0.000734s ]
+
+[ 2017-09-05T17:35:20+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:35:20+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"\u8bf7\u4e0a\u4f20\u7fa4\u5934\u50cf","debugMsg":"","code":1,"page":""}
+[ 2017-09-05T17:35:20+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.002080s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001414s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.001077s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.001744s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.001877s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000529s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( uid=20000314 and time>1504604120 ) LIMIT 1   [ RunTime:0.000329s ]
+
+[ 2017-09-05T17:35:48+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:35:48+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"\u8bf7\u4e0a\u4f20\u7fa4\u5934\u50cf","debugMsg":"","code":1,"page":""}
+[ 2017-09-05T17:35:48+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001172s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.005420s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000782s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.001819s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.001845s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000584s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( uid=20000314 and time>1504604148 ) LIMIT 1   [ RunTime:0.000444s ]
+
+[ 2017-09-05T17:36:40+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:36:40+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"\u8bf7\u4e0a\u4f20\u7fa4\u5934\u50cf","debugMsg":"","code":1,"page":""}
+[ 2017-09-05T17:36:40+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000950s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.002081s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000623s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000841s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.001971s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.001827s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000998s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000550s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( uid=20000314 and time>1504604200 ) LIMIT 1   [ RunTime:0.000358s ]
+
+[ 2017-09-05T17:38:54+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:38:54+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"\u8bf7\u9009\u62e9\u7c7b\u522b","debugMsg":"","code":1,"page":""}
+[ 2017-09-05T17:38:54+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.001963s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000695s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.002354s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.002031s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000651s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000347s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( uid=20000314 and time>1504604333 ) LIMIT 1   [ RunTime:0.000383s ]
+
+[ 2017-09-05T17:39:33+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:39:34+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+ERR: {"data":{},"msg":"\u53d1\u5e03\u6210\u529f","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:39:34+08:00 ] ::1 /webtest/lejin/index.php/share/Api/addGroups
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000205s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001594s ]
+SQL: SHOW COLUMNS FROM `tc_share` [ RunTime:0.002526s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000935s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001183s ]
+SQL: SHOW COLUMNS FROM `tc_user_member_time` [ RunTime:0.002867s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `tc_user_member` [ RunTime:0.003157s ]
+SQL: SELECT * FROM `tc_user_member` WHERE ( `type` = 0 ) LIMIT 1   [ RunTime:0.001281s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.001088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tc_groups` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000522s ]
+SQL: SELECT * FROM `tc_user_member_time` WHERE ( uid=20000314 and time>1504604373 ) LIMIT 1   [ RunTime:0.000382s ]
+SQL: INSERT INTO `tc_groups` (`uid`,`background`,`logo`,`number`,`name`,`sign`,`remark`,`address`,`lat`,`lng`,`cateid`,`isdefault`,`createtime`,`isshow`,`sort`,`city`) VALUES (20000314,'','',860080351,'kaokao','sa','123','cdd','30.62661','112.21452',3,0,1504604373,0,'k','荆门市') [ RunTime:0.119156s ]
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001443s ]
+SQL: INSERT INTO `tc_group` (`uid`,`name`,`logosmall`,`description`,`rule`,`cat_id`,`address`,`lat`,`lng`,`extend`,`createtime`) VALUES ('20000314','kaokao','','','123',0,'cdd','30.62661','112.21452','',1504604373) [ RunTime:0.016460s ]
+SQL: SHOW COLUMNS FROM `tc_group_user` [ RunTime:0.001614s ]
+SQL: INSERT INTO `tc_group_user` (`groupid`,`uid`,`addtime`,`role`) VALUES (30,'20000314',1504604373,1) [ RunTime:0.028510s ]
+SQL: UPDATE `tc_groups` SET `group_id`=30 WHERE ( `id` = 29 ) [ RunTime:0.077688s ]
+
+[ 2017-09-05T17:43:45+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+ERR: {"data":[{"id":"1","uid":"20000314","creator":"yYY","name":"\u5929\u65b9\u591c\u8c2d","rule":"\u6211\u997f\u513f\u7ae5\u4f53\u80b2\u5c40\u574e\u574e\u5777\u5777\u6025\u6025\u6025\u597d\u5427v\u64e6\u64e6\u563b\u563b\u563b\u5403v","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4ecb\u5c11","isblack":"0","count":"4","isjoin":1,"role":"1","getmsg":"1","createtime":"1490263550"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T17:43:45+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001039s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 793 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000630s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000314) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000314 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000314 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000314' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.000985s ]
+
+[ 2017-09-05T18:07:37+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+ERR: {"data":[{"id":"1","uid":"20000314","creator":"yYY","name":"\u5929\u65b9\u591c\u8c2d","rule":"\u6211\u997f\u513f\u7ae5\u4f53\u80b2\u5c40\u574e\u574e\u5777\u5777\u6025\u6025\u6025\u597d\u5427v\u64e6\u64e6\u563b\u563b\u563b\u5403v","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4ecb\u5c11","isblack":"0","count":"4","isjoin":1,"role":"1","getmsg":"1","createtime":"1490263550"},null],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T18:07:37+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001417s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 798 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000765s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000454s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000314) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000314 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000314 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000314' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.001206s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000968s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `uid` = 20000314 ) AND ( `cateid` <> 0 )  [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `tc_groups_black` [ RunTime:0.000636s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` = 20000314 ) AND ( `groupsid` = 29 ) LIMIT 1   [ RunTime:0.000370s ]
+
+[ 2017-09-05T18:08:19+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+ERR: {"data":[{"id":"1","uid":"20000314","creator":"yYY","name":"\u5929\u65b9\u591c\u8c2d","rule":"\u6211\u997f\u513f\u7ae5\u4f53\u80b2\u5c40\u574e\u574e\u5777\u5777\u6025\u6025\u6025\u597d\u5427v\u64e6\u64e6\u563b\u563b\u563b\u5403v","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4ecb\u5c11","isblack":"0","count":"4","isjoin":1,"role":"1","getmsg":"1","createtime":"1490263550"},{"id":"29","uid":"20000314","sort":"k","background":"","logo":"","number":"860080351","group_id":"30","name":"kaokao","sign":"sa","remark":"123","address":"cdd","lat":"30.626610","lng":"112.214520","cateid":"3","isdefault":"0","createtime":"1504604373","city":"\u8346\u95e8\u5e02","isshow":"0"}],"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T18:08:19+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000832s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 798 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000619s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000314) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000314 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000314 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000314' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000701s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `uid` = 20000314 ) AND ( `cateid` <> 0 )  [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `tc_groups_black` [ RunTime:0.000492s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` = 20000314 ) AND ( `groupsid` = 29 ) LIMIT 1   [ RunTime:0.000240s ]
+
+[ 2017-09-05T18:19:14+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+ERR: {"data":{"0":{"id":"29","uid":"20000314","sort":"k","background":"","logo":"","number":"860080351","group_id":"30","name":"kaokao","sign":"sa","remark":"123","address":"cdd","lat":"30.626610","lng":"112.214520","cateid":"3","isdefault":"0","createtime":"1504604373","city":"\u8346\u95e8\u5e02","isshow":"0"},"785710":{"id":"1","uid":"20000314","creator":"yYY","name":"\u5929\u65b9\u591c\u8c2d","rule":"\u6211\u997f\u513f\u7ae5\u4f53\u80b2\u5c40\u574e\u574e\u5777\u5777\u6025\u6025\u6025\u597d\u5427v\u64e6\u64e6\u563b\u563b\u563b\u5403v","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u4ecb\u5c11","isblack":"0","count":"4","isjoin":1,"role":"1","getmsg":"1","createtime":"1490263550"}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T18:19:14+08:00 ] ::1 /webtest/lejin/index.php/group/Api/createGroupList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.001050s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 807 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000490s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000314) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000314 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000314 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid = '20000314' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.001091s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000693s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `uid` = 20000314 ) AND ( `cateid` <> 0 )  [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `tc_groups_black` [ RunTime:0.002222s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` = 20000314 ) AND ( `groupsid` = 29 ) LIMIT 1   [ RunTime:0.000662s ]
+
+[ 2017-09-05T19:24:30+08:00 ] ::1 /webtest/lejin/index.php/group/Api/allGrouplist
+ERR: {"data":{"433229":{"id":"8","uid":"20000024","sort":"q","background":"","logo":"dc5d3e5a777d553525a31b6542d58176","number":"296161218","group_id":"0","name":"\u7a7a","sign":"kneel","remark":"","address":"\u4e1c\u4e61\u9547\u4e1c\u5357\u536b\u751f\u9662","lat":"31.357673","lng":"107.747003","cateid":"1","isdefault":"0","createtime":"1461848570","city":"\u8fbe\u5dde\u5e02","isshow":"0"},"539714":{"id":"13","uid":"20000092","sort":"n","background":"","logo":"8cc69952e12d56438529d7b543ea9a31","number":"117929805","group_id":"0","name":"\u4f60\u597d","sign":"","remark":"","address":"\u6c49\u4e2d\u5e02","lat":"33.148490","lng":"107.324756","cateid":"1","isdefault":"0","createtime":"1471009589","city":"\u6c49\u4e2d\u5e02","isshow":"0"},"677432":{"id":"15","uid":"20000177","sort":"d","background":"","logo":"9c56e5bb02cbddf9d785058355ccb653","number":"160640512","group_id":"0","name":"\u7b49\u5f85","sign":"","remark":"","address":"\u5c71\u4e1c\u7701\u67a3\u5e84\u5e02\u6ed5\u5dde\u5e02S345","lat":"35.041243","lng":"117.221093","cateid":"1","isdefault":"0","createtime":"1476949076","city":"\u67a3\u5e84\u5e02","isshow":"0"},"696628":{"id":"18","uid":"20000273","sort":"0","background":"","logo":"05cacccc89190247091dd9ef528a0536","number":"729273509","group_id":"0","name":"\u6d45\u6d45","sign":"\u5439\u8fc7\u6e05\u98ce\u559d\u8fc7\u70c8\u9152\u7231\u8fc7\u4f60","remark":"","address":"\u6c5f\u82cf\u7701\u6dee\u5b89\u5e02\u91d1\u6e56\u53bfX103(\u5229\u519c\u5357\u8def)","lat":"33.015881","lng":"119.037593","cateid":"1","isdefault":"0","createtime":"1487185589","city":"\u6dee\u5b89\u5e02","isshow":"0"},"785705":{"id":"3","uid":"20000017","sort":"x","background":"","logo":"f279b60a2b5a48c73866fafe8fa2f011","number":"512277817","group_id":"0","name":"\u718a\u732b\u5de5\u4f5c2","sign":"\u6025\u6025\u60251","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u91d1\u7cae\u8def","lat":"30.740601","lng":"103.992271","cateid":"18","isdefault":"1","createtime":"1459347150","city":"\u6210\u90fd\u5e02","isshow":"0"},"785710":{"id":"5","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u804a\u4e00\u804a","rule":"\u65e0","cat_id":"4","cat_name":"\u88c5\u4fee\u2022\u5bb6\u5c45","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.740621","lng":"103.992223","logosmall":"","logolarge":"","extend":"","description":"\u5c31\u770b\u770b","isblack":"0","count":"1","isjoin":0,"role":-1,"getmsg":-1,"createtime":"1490342874"},"786125":{"id":"14","uid":"20000096","sort":"t","background":"","logo":"960cb6348699e0257b46b850c9f827bd","number":"744295823","group_id":"0","name":"test","sign":"testContent","remark":"","address":"\u5b66\u6797\u96c5\u82d1","lat":"30.741923","lng":"103.987837","cateid":"1","isdefault":"0","createtime":"1476094838","city":"\u6210\u90fd\u5e02","isshow":"0"},"786850":{"id":"12","uid":"20000089","sort":"z","background":"","logo":"1674a548026567fb98c44cbade48bc5e","number":"381758373","group_id":"0","name":"\u8bc1\u4ef6\u7167","sign":"\u54c8\u54c8\u54c8","remark":"","address":"\u6210\u90fd\u5e02","lat":"30.739537","lng":"103.980308","cateid":"2","isdefault":"0","createtime":"1470888314","city":"\u6210\u90fd\u5e02","isshow":"0"},"786970":{"id":"26","uid":"20000313","sort":"c","background":"","logo":"0bcceb23ea18b38006ab1af43de2aacd","number":"538075834","group_id":"12","name":"\u5403\u5c31\u5403","sign":"","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.738780","lng":"103.979069","cateid":"5","isdefault":"0","createtime":"1490344362","city":"\u6210\u90fd\u5e02","isshow":"1"},"786979":{"id":"23","uid":"20000316","sort":"e","background":"","logo":"902e7f8471969416ee4eb6b85f65ca9b","number":"815758220","group_id":"9","name":"\u989d","sign":"","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.738687","lng":"103.978979","cateid":"17","isdefault":"0","createtime":"1490343082","city":"\u6210\u90fd\u5e02","isshow":"1"},"786992":{"id":"24","uid":"20000313","sort":"b","background":"","logo":"f7d6bc20fb71149f3256ed5bc9684ba7","number":"234980570","group_id":"10","name":"\u5e2e\u4f60","sign":"","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.738718","lng":"103.978835","cateid":"3","isdefault":"0","createtime":"1490343679","city":"\u6210\u90fd\u5e02","isshow":"1"},"787001":{"id":"6","uid":"20000000","sort":"h","background":"\/Uploads\/Picture\/20160506\/s_06a5b61879f55eae.jpg","logo":"51b42e108dd3c65d866776bfe339b834","number":"620912306","group_id":"0","name":"123456","sign":"hi all","remark":"","address":"\u6210\u90fd\u5e02","lat":"30.739078","lng":"103.978732","cateid":"1","isdefault":"0","createtime":"1461575165","city":"\u6210\u90fd\u5e02","isshow":"1"},"787004":{"id":"20","uid":"20000313","sort":"l","background":"","logo":"54934b011b2f450ff3f9598212417087","number":"976617991","group_id":"4","name":"\u4e50\u89c6","sign":"","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u5929\u8fb0\u8def","lat":"30.738772","lng":"103.978710","cateid":"13","isdefault":"0","createtime":"1490321530","city":"\u6210\u90fd\u5e02","isshow":"0"},"787006":{"id":"10","uid":"20000028","sort":"j","background":"","logo":"37723d384cd55cacc2375dcd8ee3e116","number":"892356801","group_id":"0","name":"\u4eca\u5929","sign":"hi,gril","remark":"","address":"\u6210\u90fd\u5e02","lat":"30.739162","lng":"103.978686","cateid":"1","isdefault":"1","createtime":"1463623006","city":"\u6210\u90fd\u5e02","isshow":"0"},"787008":{"id":"28","uid":"20000317","sort":"x","background":"","logo":"e299d7120a9e2bd12397ca4f8873bbee","number":"806131017","group_id":"14","name":"\u5c0f\u65f6\u4ee3","sign":"","remark":"","address":"\u56db\u5ddd\u7701\u6210\u90fd\u5e02\u90eb\u53bf\u897f\u82af\u5927\u90534\u53f7","lat":"30.738571","lng":"103.978674","cateid":"3","isdefault":"0","createtime":"1490605016","city":"\u6210\u90fd\u5e02","isshow":"0"},"787034":{"id":"27","uid":"20000315","sort":"f","background":"","logo":"ebec59a09e634d8f45cbcf56fa602516","number":"529042746","group_id":"13","name":"\u53d1\u4e2a\u521a\u521a","sign":"","remark":"","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","lat":"30.738012","lng":"103.978422","cateid":"10","isdefault":"0","createtime":"1490345377","city":"\u6210\u90fd\u5e02","isshow":"1"},"787045":{"id":"25","uid":"20000313","sort":"g","background":"","logo":"a2d0b11459930317fad605237de48a9d","number":"323349887","group_id":"11","name":"\u521a\u521a\u547c\u547c","sign":"","remark":"","address":"\u4e2d\u56fd\u5927\u5b66\u751f\u521b\u4e1a\u56ed\u897f\u90e8\u56ed\u533a\u5b75\u5316\u56ed","lat":"30.738051","lng":"103.978296","cateid":"3","isdefault":"0","createtime":"1490343825","city":"\u6210\u90fd\u5e02","isshow":"1"},"787115":{"id":"7","uid":"20000000","sort":"y","background":"\/Uploads\/Picture\/20160428\/s_faf56d45e65d1d0c.png","logo":"adb3b947316173dd9e747fd4f5295fbb","number":"697407232","group_id":"0","name":"\u5a74\u513f\u65f6\u4ee3","sign":"\u5a74\u513f\u65f6\u4ee3","remark":"","address":"\u7f8a\u897f\u5317\u52a0\u6cb9\u7ad9","lat":"30.739308","lng":"103.977533","cateid":"1","isdefault":"0","createtime":"1461753890","city":"\u6210\u90fd\u5e02","isshow":"1"},"921853":{"id":"11","uid":"20000077","sort":"0","background":"\/Uploads\/Picture\/20160728\/s_5813b4d3310d7f2b.jpeg","logo":"d9ba7ddcbdc5507d7434be282c873c4d","number":"584524434","group_id":"0","name":",,,,,","sign":"","remark":"","address":"\u5e7f\u4e1c\u7701\u6c55\u5934\u5e02\u9f99\u6e56\u533a\u5e7f\u5bff\u885721-\u300122-\u300123\u53f7","lat":"23.376976","lng":"116.745898","cateid":"6","isdefault":"0","createtime":"1469407522","city":"\u6c55\u5934\u5e02","isshow":"0"},"1110712":{"id":"1","uid":"20000002","sort":"s","background":"\/Uploads\/Picture\/20160510\/s_682ea8f7739223a0.jpg","logo":"74df05d80f5705cdb40f12c44b3483c5","number":"997972887","group_id":"0","name":"\u7b2c\u4e09\u773c","sign":"abc","remark":"","address":"\u4e91\u5357\u7701\u6606\u660e\u5e02\u76d8\u9f99\u533aG56(\u676d\u745e\u9ad8\u901f\u516c\u8def)","lat":"25.106831","lng":"102.779654","cateid":"2","isdefault":"1","createtime":"1458541345","city":"\u6606\u660e\u5e02","isshow":"1"},"1116381":{"id":"9","uid":"20000002","sort":"d","background":"\/Uploads\/Picture\/20160516\/s_c6f955a19df3027a.jpg","logo":"43c9dc4c0d1d4c4ce2b1730bf3607ed1","number":"874826551","group_id":"0","name":"\u4f4e\u70e737.5'","sign":"","remark":"","address":"\u65f6\u5c1a\u5bb6\u56ed","lat":"25.079802","lng":"102.731736","cateid":"13","isdefault":"0","createtime":"1463385094","city":"\u6606\u660e\u5e02","isshow":"1"},"1139711":{"id":"17","uid":"20000229","sort":"y","background":"","logo":"dbd1751adae46f9a43d2dc16f86cb56a","number":"605277351","group_id":"0","name":"\u9896\u5b50","sign":"\u4e0d\u5fd8\u521d\u5fc3\uff0c\u65b9\u5f97\u59cb\u7ec8","remark":"","address":"\u5c71\u4e1c\u7701\u70df\u53f0\u5e02\u829d\u7f58\u533a\u9752\u534e\u885798\u53f7\u96443\u53f7","lat":"37.540831","lng":"121.376989","cateid":"13","isdefault":"0","createtime":"1481568980","city":"\u70df\u53f0\u5e02","isshow":"0"},"1432911":{"id":"16","uid":"20000209","sort":"m","background":"","logo":"351b0e663a17b16693a23c2159065533","number":"415089337","group_id":"0","name":"\u8ff7\u604b\u4f60\u7684\u6e29\u67d4","sign":"","remark":"","address":"\u8fbd\u5b81\u7701\u9526\u5dde\u5e02\u51cc\u6d77\u5e02\u9526\u51cc\u8def","lat":"41.186607","lng":"121.387246","cateid":"2","isdefault":"0","createtime":"1479455784","city":"\u9526\u5dde\u5e02","isshow":"0"},"3932113":{"id":"2","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u7ecf\u6d4e\u754c","rule":"twww\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154\u4e0b\u96e8\u5929\u6765\u4e86\u53e5QQ\u56fe\u56fe\u56fe\u56fe\u54af\u6839\u636e\u5177\u4f53\u601d\u8def\u66f4\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154","cat_id":"2","cat_name":"\u65f6\u5c1a\u2022\u7f8e\u5986","address":"\u6210\u90fd\u9ad8\u65b0\u6280\u672f\u521b\u65b0\u670d\u52a1\u4e2d\u5fc3","lat":"32.740621","lng":"153.992223","logosmall":"","logolarge":"","extend":"","description":"\u501f\u94b1\u7ed9\u6211\u770b\u6211\u5c0f\u5fc3\u7ffc\u7ffc\u5c0f\u5fc3\u7ffc\u7ffc\u4e0e\u5154\u5154\u5154\u4e0b\u96e8\u5929\u6765\u4e86\u53e5QQ\u56fe\u56fe\u56fe\u56fe\u54af\u6839\u636e\u5177\u4f53\u601d\u8def\u66f4\u53ef\u6076t\u54af\u5fae\u4fe1\u6211\u54e6lo\u2006mo\u2006yjwwwwww","isblack":"0","count":"3","isjoin":1,"role":"0","getmsg":"1","createtime":"1490263631"},"4739590":{"id":"16","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af94","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"30.626610","lng":"162.214520","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":0,"role":-1,"getmsg":-1,"createtime":"1504517568"},"12111074":{"id":"15","uid":"20000313","creator":"\u54c8\u54c8\u54c8","name":"\u897f\u7af93","rule":"ad","cat_id":"3","cat_name":"\u623f\u5c4b","address":"cdd","lat":"0.000000","lng":"0.000000","logosmall":"","logolarge":"","extend":"","description":"dsds","isblack":"0","count":"2","isjoin":0,"role":-1,"getmsg":-1,"createtime":"1504517463"}},"msg":"","debugMsg":"","code":0,"page":""}
+[ 2017-09-05T19:24:30+08:00 ] ::1 /webtest/lejin/index.php/group/Api/allGrouplist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000172s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\SUB\php project\webtest\lejin\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.002421s ]
+NOTIC: [2048] Declaration of Group\Model\GroupModel::follow() should be compatible with User\Model\UserModel::follow($uid, $fuid) D:\SUB\php project\webtest\lejin\Application\Group\Model\GroupModel.class.php 第 836 行.
+SQL: SHOW COLUMNS FROM `tc_group` [ RunTime:0.001045s ]
+SQL: SHOW COLUMNS FROM `tc_user` [ RunTime:0.000784s ]
+SQL: SELECT * FROM `tc_user` WHERE ( `uid` = 20000314 ) LIMIT 1   [ RunTime:0.000561s ]
+SQL: SELECT g.*,gu.getmsg,gu.role,gc.name as cat_name,(SELECT name FROM tc_user WHERE uid=g.uid) as creator,(SELECT count(*) FROM `tc_group_user` WHERE groupid=g.id) as join_count,(select count(*) from tc_user_black where uid=g.uid and fuid=20000314) isblack,(select count(*) from tc_look_record where look_id=g.id and uid=20000314 and type=2) look_count FROM tc_group g left join `tc_group_user` gu on gu.groupid=g.id and gu.uid=20000314 left join tc_group_category gc on g.cat_id=gc.id  WHERE ( g.uid <> '20000314' ) AND ( g.cat_id <> 0 ) ORDER BY createtime desc  [ RunTime:0.006599s ]
+SQL: SHOW COLUMNS FROM `tc_groups` [ RunTime:0.000969s ]
+SQL: SELECT * FROM `tc_groups` WHERE ( `uid` <> '20000314' ) AND ( `cateid` <> 0 )  [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `tc_groups_black` [ RunTime:0.000804s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 1 ) LIMIT 1   [ RunTime:0.000670s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 2 ) LIMIT 1   [ RunTime:0.000273s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 3 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 4 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 5 ) LIMIT 1   [ RunTime:0.000335s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 6 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 7 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 8 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 9 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 10 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 11 ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 12 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 13 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 14 ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 15 ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 16 ) LIMIT 1   [ RunTime:0.000253s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 17 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 18 ) LIMIT 1   [ RunTime:0.001466s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 19 ) LIMIT 1   [ RunTime:0.000549s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 20 ) LIMIT 1   [ RunTime:0.000417s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 21 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 22 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 23 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 24 ) LIMIT 1   [ RunTime:0.000253s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 25 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 26 ) LIMIT 1   [ RunTime:0.000473s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 27 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `tc_groups_black` WHERE ( `uid` <> '20000314' ) AND ( `groupsid` = 28 ) LIMIT 1   [ RunTime:0.000246s ]
+

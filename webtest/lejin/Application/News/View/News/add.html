@@ -1,0 +1,186 @@
+<script type="text/javascript">
+$(function(){
+	//主图
+	$('#add_news_upload').uploadify({
+		'swf'      : '__PUBLIC__/js/uploadify/uploadify.swf',
+		'uploader' : "{:U('news/public_upload',array('session_id'=>session_id()))}",
+		'buttonText': '选择图片',
+		'removeTimeout':0,
+		'buttonClass': 'upload_button',
+		'auto'	: true,
+		'fileTypeDesc' : 'Image Files',//只允许上传图像
+		'fileTypeExts' : '*.gif; *.jpg; *.png',//限制允许上传的图片后缀
+		'onUploadSuccess' : function(file, data, response){
+			var data = $.parseJSON(data);
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+                $("#images-box").html(
+                        '<input name="logo" value="'+data.url+'" type="hidden"><img style="padding:5px;" src="__ROOT__' + data.url + '"/>'
+                );
+			}
+		}
+	});
+	//附图
+	$('#add_news_upload-1').uploadify({
+		'swf'      : '__PUBLIC__/js/uploadify/uploadify.swf',
+		'uploader' : "{:U('news/public_upload',array('session_id'=>session_id()))}",
+		'buttonText': '选择图片',
+		'removeTimeout':0,
+		'buttonClass': 'upload_button',
+		'auto'	: true,
+		'fileTypeDesc' : 'Image Files',//只允许上传图像
+		'fileTypeExts' : '*.gif; *.jpg; *.png',//限制允许上传的图片后缀
+		'onUploadSuccess' : function(file, data, response){
+			var data = $.parseJSON(data);
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+                $("#images-box-1").append(
+                        '<input name="images[]" value="'+data.url+'" type="hidden"><img style="padding:5px;" src="__ROOT__' + data.url + '"/>'
+                );
+			}
+		}
+	});
+	$('#add_news_upload-2').uploadify({
+		'swf'      : '__PUBLIC__/js/uploadify/uploadify.swf',
+		'uploader' : "{:U('news/public_upload',array('session_id'=>session_id()))}",
+		'buttonText': '选择图片',
+		'removeTimeout':0,
+		'buttonClass': 'upload_button',
+		'auto'	: true,
+		'fileTypeDesc' : 'Image Files',//只允许上传图像
+		'fileTypeExts' : '*.gif; *.jpg; *.png',//限制允许上传的图片后缀
+		'onUploadSuccess' : function(file, data, response){
+			var data = $.parseJSON(data);
+			if(!data.status){
+				$.messager.alert('提示信息', data.info, 'error');
+			}else{
+                $("#images-box-2").html(
+                        '<input name="sponsor" value="'+data.url+'" type="hidden"><img style="padding:5px;" src="__ROOT__' + data.url + '"/>'
+                );
+			}
+		}
+	});
+	$.formValidator.initConfig({formID:"newsAddForm",theme:'App',onError:function(msg){},onSuccess:saveNewsAdd,inIframe:true});
+})
+function saveNewsAdd(){
+	$.post('{:U('news/add')}', $("#newsAddForm").serialize(), function(data){
+		if(!data.status){
+			$.messager.alert('提示信息', data.info, 'error');
+		}else{
+			newsRefreshList_{$rand}();
+			$.messager.alert('提示信息', data.info, 'info');
+			$('#newsAddBox').dialog('close');
+		}
+	})
+}
+</script>
+<style type="text/css">
+#newsAddForm input{padding: 2px; padding-left: 4px;width:500px;height:22px;}
+</style>
+<form id="newsAddForm" style="font-size:13px; padding: 5px 0px 5px 5px;">
+<table id="editBox" cellspacing="5">
+	<tr>
+		<td width="120" align="right">主图：</td>
+		<td colspan="2">
+			<input id="logo-hidden" name="logo" value="" type="hidden">
+			<div id="images-box"></div>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input id="add_news_upload" type="file"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">附图：</td>
+		<td colspan="2">
+			<div id="images-box-1"></div>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input id="add_news_upload-1" type="file"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">城市</td>
+		<td>
+		    <select class="easyui-combobox" name="cityid" style="width:200px;" data-options="editable:false" >
+		    	<option value="0">请选择</option>
+		    	<foreach name="city" item="v">
+		    		<option value="{$v.id}">{$v.name}</option>
+		    	</foreach>
+			</select>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">类别1</td>
+		<td>
+		    <select class="easyui-combobox" name="cateid1" style="width:200px;" data-options="editable:false" >
+		    	<option value="0">请选择</option>
+		    	<foreach name="cate1" item="v">
+		    		<option value="{$v.id}">{$v.name}</option>
+		    	</foreach>
+			</select>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">类别2</td>
+		<td>
+			<select class="easyui-combobox" name="cateid2" style="width:200px;" data-options="editable:false" >
+		    	<option value="0">请选择</option>
+				<foreach name="cate2" item="v">
+		    		<option value="{$v.id}">{$v.name}</option>
+		    	</foreach>			
+		    </select>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">作者：</td>
+		<td><input id="add_news_editor" type="text" name="editor"></td>
+		<td><div id="add_news_editorTip"></div></td>
+	</tr>
+	<tr>
+		<td align="right">标题：</td>
+		<td><input id="add_news_title" name="title" type="text"  value=""/></td>
+		<td><div id="add_news_titleTip"></div></td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">简介：</td>
+		<td>
+			<textarea id="add_news_description" name="description" style="height: 66px; width: 500px; padding: 2px;"></textarea>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">内容：</td>
+		<td>
+			<textarea id="add_news_content" name="content" style="height: 66px; width: 500px; padding: 2px;"></textarea>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">赞助商：</td>
+		<td colspan="2">
+			<div id="images-box-2"></div>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input id="add_news_upload-2" type="file"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">赞助商链接地址：</td>
+		<td>
+			<input id="add_news_sponsorurl" name="sponsorurl">
+		</td>
+		<td></td>
+	</tr>
+</table>
+</form>
